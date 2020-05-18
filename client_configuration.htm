@@ -1,0 +1,939 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Insight Configuration &gt; Client Configuration</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+   <meta name="description" content="Client Configuration">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet">
+   <link type="text/css" href="custom.css" rel="stylesheet">
+   <script type="text/javascript" src="nsh.js"></script>
+
+<script type="text/javascript">   
+// Toggle Toggler 
+
+var toggleCount=false;
+var switchState;
+
+function toggleToggles() {
+
+    if (!toggleCount) {
+     toggleCount = true;
+     HMToggleExpandAll(true);
+     switchState = true;
+     }
+   
+     else if (switchState) {
+        HMToggleExpandAll(false);
+        switchState = false;
+        }
+        
+     else  {
+        HMToggleExpandAll(true);
+        switchState = true;
+        } 
+    }
+</script>
+   
+<!-- non-scrolling headers for CHM and browser-based help, local styles-->
+<style type="text/css" media="screen"> 
+html, body {    
+      margin:0; 
+      padding:0; 
+      overflow: hidden; 
+      background: #FFFFFF; 
+   }
+ 
+div#printheader { 
+   display: none;
+   }
+   #idheader { 
+      width:100%; 
+      height:auto; 
+      padding: 0; 
+      margin: 0; 
+} 
+    #idheaderbg  {
+    background: #6F6F6F; 
+}
+   #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+   #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+   #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+   #callout-table a {text-decoration: none; color: blue;}
+   #callout-table a:visited {text-decoration: none; color: blue;}
+   #overview-table a {text-decoration: none; color: black;}
+   #overview-table a:visited {text-decoration: none; color: black;}
+   #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}
+   p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+   .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+   .sync-toc a:visited { color: #ffffff; }
+   .sync-toc a:hover { text-decoration: underline; }
+   </style>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+<style type="text/css" media="print">
+span.f_Heading1 { color: black; }
+#idheader, #printheader img { display:none; }
+#printheader { display: block; margin-top: 20px; }
+#idcontent { margin-top: 10px; }
+</style>   
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "client_configuration.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!--ZOOMSTOP-->
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Client Configuration</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" 
+       style="margin: 0px; background: url(header_bg.jpg);">
+
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?client_configuration.htm" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   
+   <a href="configuration.htm">Insight Configuration</a>&nbsp;&gt;</p>
+   <h1 class="p_Heading1"><span class="f_Heading1">Client Configuration</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <a href="ref456617933.htm"
+        onmouseover="document.images.prev.src='btn_prev_h.gif'" 
+        onmouseout="document.images.prev.src='btn_prev_n.gif'"
+        ><img name=prev src="btn_prev_n.gif" border=0 alt="Previous page"
+        ></a><a href="configuration.htm"
+        onmouseover="document.images.main.src='btn_home_h.gif'" 
+        onmouseout="document.images.main.src='btn_home_n.gif'"><img name=main src="btn_home_n.gif" border=0 alt="Return to chapter overview"
+        ></a><a href="static_content.htm"
+        onmouseover="document.images.next.src='btn_next_h.gif'" 
+        onmouseout="document.images.next.src='btn_next_n.gif'"><img name=next src="btn_next_n.gif" border=0 alt="Next page"
+        ></a>
+    </td>
+  </tr>
+  <tr><td colspan="2" style="height: 3px; background: url(header_bg_shadow.gif)"></td></tr>
+</table>
+</div>
+
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+
+</div>  
+
+
+
+<div id="idcontent"><div id="innerdiv"> 
+<!--ZOOMRESTART-->
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1">The insight-mobile and -web applications can be configured with the Client Configuration. Each application has its own file.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1">insight-web (Table entries with Web)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 77px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1">In the folder of insight-web must be a file called: config.js</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 77px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1">Example content:</span></td></tr></table></div><p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 74px;"><span class="f__GiS_Codeexample">var Config = {</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 74px;"><span class="f__GiS_Codeexample"> &nbsp; &nbsp;&quot;server&quot;: &quot;/&quot;,</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 74px;"><span class="f__GiS_Codeexample"> &nbsp; &nbsp;&quot;eamType&quot;: &quot;maximo&quot;</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 74px;"><span class="f__GiS_Codeexample">}</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1">insight-mobile (Table entries with Mobile)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 77px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1" style="font-weight: bold;">For Browser</span><span class="f__GiS_Aufz-1">:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 107px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#9642;</span></td><td style="border:none"><span class="f__GiS_Aufz-1">In the folder of insight-mobile must be a file called: config.js</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 107px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#9642;</span></td><td style="border:none"><span class="f__GiS_Aufz-1">Example content:</span></td></tr></table></div><p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 122px;"><span class="f__GiS_Codeexample">var Config = {</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 122px;"><span class="f__GiS_Codeexample"> &nbsp; &nbsp;&quot;server&quot;: &quot;/&quot;,</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 122px;"><span class="f__GiS_Codeexample"> &nbsp; &nbsp;&quot;eamType&quot;: &quot;maximo&quot;</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 122px;"><span class="f__GiS_Codeexample">}</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 77px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1" style="font-weight: bold;">For Mobile-App</span><span class="f__GiS_Aufz-1">:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 107px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#9642;</span></td><td style="border:none"><span class="f__GiS_Aufz-1">The app must know which insight server has to be used. On first app start you have to configure the server URL. This server URL can be a valid insight Server or a configuration file. The app automatically checks for different paths on the server. Here are some examples:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 137px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Aufz-1" style="font-weight: bold;">For all examples: insight is installed on https://your-insight-server.com/insight/...</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 137px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Aufz-1" style="font-weight: bold;">Without config.json</span><span class="f__GiS_Aufz-1"> (all defaults)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 167px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1">Server URL in app: https://your-insight-server.com/</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 137px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Aufz-1">Config at </span><span class="f__GiS_Aufz-1" style="font-weight: bold;">default location</span><span class="f__GiS_Aufz-1">: https://your-insight-server.com/</span><span class="f__GiS_Aufz-1" style="font-weight: bold;">insight/mobile/config.json  </span><span class="f__GiS_Aufz-1" style="font-weight: bold; color: #ff0000;">(We advise on this variant.)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 167px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1">Server URL in app: <a href="https://your-insight-server.com/" target="_blank" class="weblink">https://your-insight-server.com/</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 167px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Codeexample"></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 167px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1">config.json can be empty.</span></td></tr></table></div><p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 194px;"><span class="f__GiS_Codeexample">{}</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 137px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Aufz-1">Config at </span><span class="f__GiS_Aufz-1" style="font-weight: bold;">other location or filename different</span><span class="f__GiS_Aufz-1">: https://your-insight-server.com/</span><span class="f__GiS_Aufz-1" style="font-weight: bold;">other-folder/prod.json</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 167px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1">Server URL in app: https://your-insight-server.com/</span><span class="f__GiS_Aufz-1" style="font-weight: bold;">other-folder/prod.json</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 167px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1">prod.json</span></td></tr></table></div><p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 194px;"><span class="f__GiS_Codeexample">{</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 194px;"><span class="f__GiS_Codeexample"> &nbsp; &nbsp;&quot;server</span><span class="f__GiS_Codeexample">&quot;: &quot;</span><span class="f__GiS_Aufz-1">https://your-insight-server.com/</span><span class="f__GiS_Codeexample">&quot;</span><span class="f__GiS_Codeexample">}</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 137px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Aufz-1">Config at </span><span class="f__GiS_Aufz-1" style="font-weight: bold;">other location</span><span class="f__GiS_Aufz-1" style="font-weight: bold;"> different server</span><span class="f__GiS_Aufz-1">: https://your-insight-server.com/</span><span class="f__GiS_Aufz-1" style="font-weight: bold;">other-folder/prod.json</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 167px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1">Server URL in app: https://your-insight-server.com/</span><span class="f__GiS_Aufz-1" style="font-weight: bold;">other-folder/prod.json</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 167px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1">prod.json</span></td></tr></table></div><p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 194px;"><span class="f__GiS_Codeexample">{</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 194px;"><span class="f__GiS_Codeexample"> &nbsp; &nbsp;&quot;server</span><span class="f__GiS_Codeexample">&quot;: &quot;</span><span class="f__GiS_Aufz-1">https://your-insight-</span><span class="f__GiS_Aufz-1">server-</span><span class="f__GiS_Aufz-1" style="font-weight: bold;">prod</span><span class="f__GiS_Aufz-1">.com</span><span class="f__GiS_Aufz-1">/</span><span class="f__GiS_Codeexample">&quot;</span><span class="f__GiS_Codeexample">}</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 137px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Aufz-1">Config </span><span class="f__GiS_Aufz-1" style="font-weight: bold;">with multiple endpoints</span><span class="f__GiS_Aufz-1">: https://your-insight-server.com/</span><span class="f__GiS_Aufz-1" style="font-weight: bold;">insight/mobile/config.json</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 167px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1">Server URL in app: https://your-insight-server.com/</span><span class="f__GiS_Aufz-1" style="font-weight: bold;">insight/mobile/config.json</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 167px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1">In the mobile can be switched between the endpoints</span><span class="f__GiS_Aufz-1" style="background-color: #9bbb59;">.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 167px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1">config.json</span></td></tr></table></div><p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 194px;"><span class="f__GiS_Codeexample">{</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 194px;"><span class="f__GiS_Codeexample"> &nbsp;&quot;endpoints&quot;: {</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 194px;"><span class="f__GiS_Codeexample"> &nbsp; &nbsp;&quot;external&quot;:{</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 194px;"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;&quot;label&quot;: &quot;External&quot;,</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 194px;"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;&quot;server&quot;: &quot;https://external-insight-server.com&quot;</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 194px;"><span class="f__GiS_Codeexample"> &nbsp; &nbsp;},</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 194px;"><span class="f__GiS_Codeexample"> &nbsp; &nbsp;&quot;internal&quot;:{</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 194px;"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;&quot;label&quot;: &quot;Internal&quot;,</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 194px;"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;&quot;server&quot;: &quot;https://internal-insight-server.com&quot;</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 194px;"><span class="f__GiS_Codeexample"> &nbsp; &nbsp;}</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 194px;"><span class="f__GiS_Codeexample"> &nbsp;}</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 194px;"><span class="f__GiS_Codeexample">}</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 137px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a id="configbarcode"></a><span class="f__GiS_Aufz-1" style="background-color: #9bbb59;">The Config can be scanned via barcode. QR-Codes are suitable. There are two variants of barcode content:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 167px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1" style="background-color: #9bbb59;">Only the server url:&nbsp;<a href="https://your-insight-server.com" target="_blank" class="weblink">https://your-insight-server.com</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 167px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1" style="background-color: #9bbb59;">Initial, minimal Config (all of the following parameters from table are supported): {&quot;clientConfigUrl&quot;:&quot;<a href="https://your-insight-server.com" target="_blank" class="weblink">https://your-insight-server.com</a>&quot;}</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1" style="font-weight: bold;">Parameters:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; background-color:#f2f2f2; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_fett">Parameter</span></p>
+</td>
+<td style="vertical-align:top; width:218px; background-color:#f2f2f2; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_fett">Werte</span></p>
+</td>
+<td style="vertical-align:top; width:246px; background-color:#f2f2f2; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_fett">Standard</span></p>
+</td>
+<td style="vertical-align:top; width:781px; background-color:#f2f2f2; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_fett">Beschreibung</span></p>
+</td>
+<td style="vertical-align:top; width:56px; background-color:#f2f2f2; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_fett">Mobile</span></p>
+</td>
+<td style="vertical-align:top; width:57px; background-color:#f2f2f2; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_fett">Web</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">server</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">config.js: &quot;/&quot;</span></p>
+<p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">config.json: &quot;https://example.com&quot;</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">config.js: &quot;/&quot;</span></p>
+<p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">config.json: the host without 'insight/mobile/config.json'</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">The server base URL to the Insight-Endpoints. Normally the host of the HTTP-Server.</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">eamType</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">&quot;maximo&quot;, &quot;open&quot;</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">&quot;maximo&quot;</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">The EAM-Type to connect to. </span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">eamUrl</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">&quot;https://example.com/other/eam&quot;</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">&lt;server&gt;/insight/eam</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Divergent-&quot;/insight/eam&quot;-Endpoints. Only needed if insight is not behind HTTP-Server.</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">downloadUrl</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">&quot;https://example.com/other/download&quot;</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">&lt;server&gt;/insight/download</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Divergent-&quot;/insight/download&quot;-Endpoints. Only needed if insight is not behind HTTP-Server.</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">heartbeatUrl</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">&quot;https://example.com/heartbeat.txt&quot;</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">&lt;server&gt;/insight/user/data</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Divergent-Heartbeat-Endpoint. Only needed if insight is not behind HTTP-Server or you dont want a heartbeat to the EAM-Backend</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">maximoRestApp</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">&quot;/maximo&quot;</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">&quot;/maxrest&quot;</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">MAXIMO ONLY: If the &quot;/maxrest&quot;-Endpoint of Maximo can't be used.</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">autoSync</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">true</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Automatically upload and download of data records</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">appParams</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">{ &quot;key&quot;: &quot;value&quot;, &quot;key2&quot;: &quot;value2&quot; }</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">no default</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Can be used in replacements: <a href="working_with_variables.htm" class="topiclink">Working with variables/values</a></span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">disableOfflineSupport</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Offline-data-records can be disabled. For example: insight-mobile in browser but without offline support.</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">downloadInterval</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">any positive number</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">15</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Download interval in minutes. How often the data records are downloaded.</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><a id="downloadvalidateinterval"></a><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">downloadValidateInterval</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">any positive number</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">1</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">Download validate interval in minutes. How often the client asks the server for new downloads/deltas.&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">downloadOnOnline</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Downloads data records when online. Normally used for &quot;mostly-offline-devices&quot; (Dockingstation)</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">websocketNotification</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">insight-web can be notified for data changes by websocket.</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">portalMode</span><br />
+<span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">No login screen, the host application must trigger the login. </span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">notificationWebsocketUrl</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">&quot;https://example.com:8080/insight-indexer/notification&quot;</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">&lt;server&gt;:8080/insight-indexer/notification</span></p>
+<p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Normally used if the HTTP-Server don't support WebSocket-Proxy. (IBM-HTTP-Server don't support WebSocket-Proxy)</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">searchServer</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">&quot;https://example.com:9222/&quot;</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile">&lt;server&gt;/insight/search</p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Divergent-Elasticsearch-Endpoint. Only needed if insight is not behind HTTP-Server</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">disableSettings</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Hides the insight-mobile menu item &quot;Settings&quot;</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">disableXRay</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Hides the insight-mobile menu item &quot;XRay&quot;</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">pushNotification</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Enables support of PushNotifications to the insight-mobile-app</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">offlineTimeout</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">180</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">no timeout</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Logout after interval of inactivity in minutes</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">startPage</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Examples: </span></p>
+<p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">&quot;upload&quot;</span></p>
+<p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">&quot;push&quot;</span></p>
+<p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">&quot;tree/workorder-quickrep&quot;</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">no default</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Page to be shown after login.</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; height:27px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">admin</span></p>
+</td>
+<td style="vertical-align:top; width:218px; height:27px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; height:27px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; height:27px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Admins can login if someone else has unsynced, offline changes. There are also two buttons to reset the app on the login screen.</span></p>
+</td>
+<td style="vertical-align:top; width:56px; height:27px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; height:27px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">heartbeatInterval</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Heartbeat off: 0 or -1</span></p>
+<p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Heartbeat on: any positive number</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">5</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Heartbeat interval in seconds</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; height:26px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">clientLogging</span></p>
+</td>
+<td style="vertical-align:top; width:218px; height:26px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; height:26px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; height:26px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Tracks logs in the client. There is a new menu item for the logs.</span></p>
+</td>
+<td style="vertical-align:top; width:56px; height:26px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; height:26px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">clientLogSize</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">any positive number</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">100</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Amount of queued client logs</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">name</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">any string</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">no default</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">For Example: server-, system-, or project-name. Will be visible on: information popup; mobile server config header; mobile menu header; mobile login header</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">disableOffline</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Hides the insight-mobile menu item &quot;Offline&quot;</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">fingerprint</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Enables iOS TouchId/FaceId authentication</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">barcodeOptions</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">{ &quot;key&quot; : &quot;value&quot; }</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">no default</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Configuration for the native app barcode scanner plugin (Android, iOS). All parameters are given to the plugin. See: https://github.com/phonegap/phonegap-plugin-barcodescanner</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">disableBarcode</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Hides all barcode icons</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">maxDocuments</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">any positive number</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">100</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Max file download count per tree config.</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><a id="legacytoobar"></a><span class="f__GiS_Tabellenzeile">legacyToobar</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Switch to the multi line behavior of the toolbar in mobile</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><a id="showuserinheader"></a><span class="f__GiS_Tabellenzeile">showUserInHeader</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Shows the logged in user on the top of each page</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><a id="heartbeattimeout"></a><span class="f__GiS_Tabellenzeile">heartbeatTimeout</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">any positive number</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">5000</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile">Heartbeat request timeout in milliseconds</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><a id="searchpattern"></a><span style="background-color: #9bbb59;">searchPattern</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">&quot;startsWith&quot;, &quot;endsWith&quot;, &quot;contains&quot;</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">no default</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;"><a href="toc464133685.htm#searchpattern" class="topiclink">see here</a></span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">+</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><a id="listtextoverflow"></a><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">listTextOverflow</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">&quot;ellipsis&quot;</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">no default</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">see here</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><a id="selectfromtreeenabled"></a><span style="background-color: #9bbb59;">selectFromTreeEnabled</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">Activate manual inputs on all &quot;selectFromTree&quot;-attributes.</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span style="background-color: #9bbb59;">navbar</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">{size: 'small'}, {size: 'big'}</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">{size:'small'}</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">Changes the size of the navbar</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span style="background-color: #9bbb59;">searchDelay</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">any positive number</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">100</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">Delay time in ms after which any search or filter action is triggered</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><a id="newofflineatend"></a><span style="background-color: #9bbb59;">newOfflineAtEnd</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">New offline created records are shown at the end of the root list.</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><a id="changedofflineatend"></a><span style="background-color: #9bbb59;">changedOfflineAtEnd</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">Offline changed records are shown at the end of the root list.</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><a id="footerbuttons"></a><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">footerButtons</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Aufz-1" style="background-color: #9bbb59;">Displays the save and cancel button in an always visible footer</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span style="background-color: #9bbb59;">ldapAuth</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Aufz-1" style="background-color: #9bbb59;">Execute Maximo-Ui-Login, which is only needed without LDAP authentication</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><a id="barcodecameradisabled"></a><span style="background-color: #9bbb59;">barcodeCameraDisabled</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">[&quot;TC8000&quot;,&quot;MYDEVICE&quot;]</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">no default</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Aufz-1" style="background-color: #9bbb59;">Use the barcode scanner hardware for specific device models.&nbsp;<a href="barcode_scanner_devices.htm" class="topiclink">see</a></span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span style="background-color: #9bbb59;">configTimeout</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">any positive number</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">30000</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Aufz-1" style="background-color: #9bbb59;">Timout to load all tree configurations in milliseconds</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">+</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span style="background-color: #9bbb59;">showOfflineAnnotation</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Aufz-1" style="background-color: #9bbb59;">Shows the offline downloaded annotation on each record.</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span style="background-color: #9bbb59;">disableDefaultTab</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Aufz-1" style="background-color: #9bbb59;">Suppresses the creation of a Start-Center tab when working with Maximo</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">-</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span style="background-color: #9bbb59;">disableMaximoUi</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Aufz-1" style="background-color: #9bbb59;">Completly disable the integration of the Maximo User-Interface, sets disableDefaultTab=true when enabled</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><a id="enablenfc"></a><span style="background-color: #9bbb59;">enableNfc</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Aufz-1" style="background-color: #9bbb59;">Shows the nfc icon on the search field.</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span style="background-color: #9bbb59;">barcodeIcon</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">icon class string</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">no default</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Aufz-1" style="background-color: #9bbb59;">Overrides the default barcode icon.</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:155px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span style="background-color: #9bbb59;">disableExpertSearch</span></p>
+</td>
+<td style="vertical-align:top; width:218px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">true, false</span></p>
+</td>
+<td style="vertical-align:top; width:246px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Tabellenzeile" style="background-color: #9bbb59;">false</span></p>
+</td>
+<td style="vertical-align:top; width:781px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile"><span class="f__GiS_Aufz-1" style="background-color: #9bbb59;">Removes the Expert-Search option in web-client</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:57px; padding:4px; border:solid 1px #000000;"><p class="p__GiS_Tabellenzeile" style="text-align: center;"><span class="f__GiS_Tabellenzeile">+</span></p>
+</td>
+</tr>
+</table>
+</div>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

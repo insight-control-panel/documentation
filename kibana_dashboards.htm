@@ -1,0 +1,213 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Insight Configuration &gt; Kibana Dashboards</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+   <meta name="description" content="Kibana Dashboards">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet">
+   <link type="text/css" href="custom.css" rel="stylesheet">
+   <script type="text/javascript" src="nsh.js"></script>
+
+<script type="text/javascript">   
+// Toggle Toggler 
+
+var toggleCount=false;
+var switchState;
+
+function toggleToggles() {
+
+    if (!toggleCount) {
+     toggleCount = true;
+     HMToggleExpandAll(true);
+     switchState = true;
+     }
+   
+     else if (switchState) {
+        HMToggleExpandAll(false);
+        switchState = false;
+        }
+        
+     else  {
+        HMToggleExpandAll(true);
+        switchState = true;
+        } 
+    }
+</script>
+   
+<!-- non-scrolling headers for CHM and browser-based help, local styles-->
+<style type="text/css" media="screen"> 
+html, body {    
+      margin:0; 
+      padding:0; 
+      overflow: hidden; 
+      background: #FFFFFF; 
+   }
+ 
+div#printheader { 
+   display: none;
+   }
+   #idheader { 
+      width:100%; 
+      height:auto; 
+      padding: 0; 
+      margin: 0; 
+} 
+    #idheaderbg  {
+    background: #6F6F6F; 
+}
+   #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+   #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+   #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+   #callout-table a {text-decoration: none; color: blue;}
+   #callout-table a:visited {text-decoration: none; color: blue;}
+   #overview-table a {text-decoration: none; color: black;}
+   #overview-table a:visited {text-decoration: none; color: black;}
+   #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}
+   p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+   .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+   .sync-toc a:visited { color: #ffffff; }
+   .sync-toc a:hover { text-decoration: underline; }
+   </style>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+<style type="text/css" media="print">
+span.f_Heading1 { color: black; }
+#idheader, #printheader img { display:none; }
+#printheader { display: block; margin-top: 20px; }
+#idcontent { margin-top: 10px; }
+</style>   
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "kibana_dashboards.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!--ZOOMSTOP-->
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Kibana Dashboards</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" 
+       style="margin: 0px; background: url(header_bg.jpg);">
+
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?kibana_dashboards.htm" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   
+   <a href="configuration.htm">Insight Configuration</a>&nbsp;&gt;</p>
+   <h1 class="p_Heading1"><span class="f_Heading1">Kibana Dashboards</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <a href="table.htm"
+        onmouseover="document.images.prev.src='btn_prev_h.gif'" 
+        onmouseout="document.images.prev.src='btn_prev_n.gif'"
+        ><img name=prev src="btn_prev_n.gif" border=0 alt="Previous page"
+        ></a><a href="configuration.htm"
+        onmouseover="document.images.main.src='btn_home_h.gif'" 
+        onmouseout="document.images.main.src='btn_home_n.gif'"><img name=main src="btn_home_n.gif" border=0 alt="Return to chapter overview"
+        ></a><a href="insight_dashboard.htm"
+        onmouseover="document.images.next.src='btn_next_h.gif'" 
+        onmouseout="document.images.next.src='btn_next_n.gif'"><img name=next src="btn_next_n.gif" border=0 alt="Next page"
+        ></a>
+    </td>
+  </tr>
+  <tr><td colspan="2" style="height: 3px; background: url(header_bg_shadow.gif)"></td></tr>
+</table>
+</div>
+
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+
+</div>  
+
+
+
+<div id="idcontent"><div id="innerdiv"> 
+<!--ZOOMRESTART-->
+<p class="p_heading2"><span class="f_heading2">Installation</span></p>
+<p>No steps required.</p>
+<p class="p_heading2"><span class="f_heading2">Configuration</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">The Insight-Kibana components has one menu action to be called:</span></p>
+<p class="p_heading4"><span class="f_heading4" style="font-weight: normal;">action: &quot;kibanaOpen&quot;</span></p>
+<p class="p__GiS_Std" style="margin: 15px 0px 15px 24px;"><span class="f__GiS_Std">Opens the configured Kibana URL/Dashboard with filter in a new tab on the right.</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">The first object in actionValues is responsible for the configuration.</span></p>
+<p class="p__GiS_Aufz-1"><span class="f__GiS_Aufz-1" style="font-weight: bold; text-decoration: underline;">Possible configuration parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Aufz-1">tab</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 77px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1">label -- Defines the label of the newly created tab. May contain variable names.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Aufz-1">dashboard</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 77px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1">id: id or name of the Kibana dashboard to be open</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 77px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1">filter: filter part of the Kibana URL. May contain variable names.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 77px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1">url: Full URL to an Kibana URL. May contain variable names. Ignored when &quot;id&quot; and/or &quot;filter&quot; are defined!</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Aufz-1">mapping</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 77px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1">label: for non-insight indices a label-template can be defined. Properties are based on the retrieved elasticsearch document.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 77px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1">mapping: for non-insight-indices a query should be defined to retrieve the matching node. Used for focusing the node in the tree as well as getting the context menu.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 77px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f__GiS_Aufz-1">config: tree configuration used for fetching node data and menu configuration</span></td></tr></table></div><p class="p_heading2"><span class="f_heading2">Example menu entries:</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 21px;"><span class="f__GiS_Codeexample">{</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 21px;"><span style="width:76px">&nbsp;</span><span class="f__GiS_Codeexample">&quot;tab&quot;: {</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 21px;"><span style="width:76px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f__GiS_Codeexample">&quot;label&quot;: &quot;Freigaben - ${LOCATION}&quot;</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 21px;"><span style="width:76px">&nbsp;</span><span class="f__GiS_Codeexample">},</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 21px;"><span style="width:76px">&nbsp;</span><span class="f__GiS_Codeexample">&quot;dashboard&quot;: {</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 21px;"><span style="width:76px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f__GiS_Codeexample">&quot;id&quot;: &quot;c3d89540-2b3d-11e7-b90b-e303c14ae3ec&quot;,</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 21px;"><span style="width:76px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f__GiS_Codeexample">&quot;filter&quot;: &quot;_g=()&amp;_a=(filters:!(('$state':(store:appState),meta:(alias:!n,disabled:!f,index:workorder-freigabe,key:properties.LOCATION,negate:!f,value:</span><span class="f__GiS_Codeexample" style="color: #ff0000; background-color: #d7e4bc;">${LOCATION}</span><span class="f__GiS_Codeexample">),query:(match:(properties.LOCATION:(query:</span><span class="f__GiS_Codeexample" style="color: #ff0000; background-color: #d7e4bc;">${LOCATION}</span><span class="f__GiS_Codeexample">,type:phrase))))),options:(darkTheme:!f),panels:!((col:1,id:wo-freigabe-location,panelIndex:2,row:1,size_x:5,size_y:3,type:visualization),(col:7,id:wo-freigabe-status,panelIndex:3,row:1,size_x:6,size_y:3,type:visualization),(col:7,id:wo-freigabe-wonum,panelIndex:4,row:4,size_x:6,size_y:3,type:visualization),(col:1,id:wo-freigabe-priority,panelIndex:5,row:4,size_x:5,size_y:3,type:visualization),(col:1,columns:!(properties.WONUM,properties.OWNER,properties.STATUS,properties.WOPRIORITY,properties.LOCATION,properties.DESCRIPTION),id:workorder-freigabe-empty,panelIndex:6,row:7,size_x:10,size_y:2,sort:!(_score,desc),type:search)),query:(query_string:(analyze_wildcard:!t,query:'*')),title:wo-freigabe-notable,uiState:(P-2:(vis:(legendOpen:!t))))&quot;</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 21px;"><span style="width:76px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f__GiS_Codeexample">&quot;url&quot;: &quot;/insight/kibana/app/kibana#/dashboard/Kennzeichen-DB?embed=true&amp;_g=()&quot; </span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 21px;"><span style="width:76px">&nbsp;</span><span class="f__GiS_Codeexample">},</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 21px;"><span style="width:76px">&nbsp;</span><span class="f__GiS_Codeexample">&quot;mapping&quot;: {</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 21px;"><span style="width:76px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f__GiS_Codeexample">&quot;label&quot;: &quot;${WONUM} - ${DESCRIPTION}&quot;,</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 21px;"><span style="width:76px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f__GiS_Codeexample">&quot;query&quot;: &quot;_type:Auftrag_S AND properties.WONUM:${WONUM} AND properties.SITEID:HD&quot;,</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 21px;"><span style="width:76px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f__GiS_Codeexample">&quot;config: &quot;workorder-quickrep&quot;</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 21px;"><span style="width:76px">&nbsp;</span><span class="f__GiS_Codeexample">} &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 21px;"><span class="f__GiS_Codeexample">}</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">&nbsp;</span></p>
+<p class="p_heading2" style="margin: 15px 0px 15px 48px;"><span class="f_heading2">Embed external Kibana Dashboard</span></p>
+<p class="p__GiS_Std" style="margin: 7px 0px 15px 0px;"><span class="f__GiS_Std">Kibana Dashboards are embedded with iframes. Modern browsers do not allow direct access from the embedding website into an iframe when the iframes URL is based on a different domain. Currently this kind of access is mandatory to be able to provided functionality based on the resulting Kibana dashboard data.</span></p>
+<p class="p__GiS_Aufz-1"><span class="f__GiS_Aufz-1" style="font-weight: bold;">If you want to embed external Kibana dashboards there are two options:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 5px 65px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial';color:#000000;">1.</span></td><td style="border:none"><span class="f__GiS_Aufz-2">Make the external Kibana available under the same domain name</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 5px 65px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial';color:#000000;">2.</span></td><td style="border:none"><span class="f__GiS_Aufz-2">Proxy the external Kibana through the existing http-server.</span></td></tr></table></div><p class="p_heading4"><span class="f_heading4">Same domain name:</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">If the Insight hostname is &quot;</span><span class="f__GiS_Std" style="font-weight: bold;">some-server</span><span class="f__GiS_Std" style="font-weight: bold; color: #ff0000; background-color: #d7e4bc;">.domain.tld</span><span class="f__GiS_Std">&quot; than make the Kibana available on &quot;</span><span class="f__GiS_Std" style="font-weight: bold;">some-other-server</span><span class="f__GiS_Std" style="font-weight: bold; color: #ff0000; background-color: #d7e4bc;">.domain.tld</span><span class="f__GiS_Std">&quot;. This can be easily achieved by using an DNS alias.</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std" style="font-weight: bold;">=&gt; dashboard.url:</span><span class="f__GiS_Std"> &quot;http://some-other-server.domain.tld/app/kibana#/dashboard/some-dashboard-name-or-id?..........&quot;</span></p>
+<p class="p_heading4"><span class="f_heading4">Proxy:</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">Corresponding to the existing proxy configuration for &quot;/insight/kibana&quot; in the httpd insight.conf another part can be added to proxy another Kibana instance:</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 21px;"><span class="f__GiS_Codeexample">&lt;Location &quot;/insight/kibana-monitoring&quot;&gt;</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 21px;"><span style="width:76px">&nbsp;</span><span class="f__GiS_Codeexample">ProxyPass http://monitoring.domain.tld:5601</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 21px;"><span style="width:76px">&nbsp;</span><span class="f__GiS_Codeexample">ProxyPassReverse http://monitoring.domain.tld:5601</span></p>
+<p class="p__GiS_Codeexample" style="margin: 3px 45px 3px 21px;"><span class="f__GiS_Codeexample">&lt;/Location&gt;</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std" style="font-weight: bold;">=&gt; dashboard.url:</span><span class="f__GiS_Std"> &quot;/insight/kibana-monitoring/app/kibana#/dashboard/some-dashboard-name-or-id?..........&quot;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

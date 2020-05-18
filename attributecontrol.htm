@@ -1,0 +1,208 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Insight Configuration &gt; Data Model &gt; Attributes &gt; attributeControl</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+   <meta name="description" content="attributeControl">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet">
+   <link type="text/css" href="custom.css" rel="stylesheet">
+   <script type="text/javascript" src="nsh.js"></script>
+
+<script type="text/javascript">   
+// Toggle Toggler 
+
+var toggleCount=false;
+var switchState;
+
+function toggleToggles() {
+
+    if (!toggleCount) {
+     toggleCount = true;
+     HMToggleExpandAll(true);
+     switchState = true;
+     }
+   
+     else if (switchState) {
+        HMToggleExpandAll(false);
+        switchState = false;
+        }
+        
+     else  {
+        HMToggleExpandAll(true);
+        switchState = true;
+        } 
+    }
+</script>
+   
+<!-- non-scrolling headers for CHM and browser-based help, local styles-->
+<style type="text/css" media="screen"> 
+html, body {    
+      margin:0; 
+      padding:0; 
+      overflow: hidden; 
+      background: #FFFFFF; 
+   }
+ 
+div#printheader { 
+   display: none;
+   }
+   #idheader { 
+      width:100%; 
+      height:auto; 
+      padding: 0; 
+      margin: 0; 
+} 
+    #idheaderbg  {
+    background: #6F6F6F; 
+}
+   #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+   #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+   #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+   #callout-table a {text-decoration: none; color: blue;}
+   #callout-table a:visited {text-decoration: none; color: blue;}
+   #overview-table a {text-decoration: none; color: black;}
+   #overview-table a:visited {text-decoration: none; color: black;}
+   #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}
+   p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+   .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+   .sync-toc a:visited { color: #ffffff; }
+   .sync-toc a:hover { text-decoration: underline; }
+   </style>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+<style type="text/css" media="print">
+span.f_Heading1 { color: black; }
+#idheader, #printheader img { display:none; }
+#printheader { display: block; margin-top: 20px; }
+#idcontent { margin-top: 10px; }
+</style>   
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "attributecontrol.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!--ZOOMSTOP-->
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">attributeControl</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" 
+       style="margin: 0px; background: url(header_bg.jpg);">
+
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?attributecontrol.htm" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   
+   <a href="configuration.htm">Insight Configuration</a> &gt; <a href="ref456688161.htm">Data Model</a> &gt; <a href="ref456701241.htm">Attributes</a>&nbsp;&gt;</p>
+   <h1 class="p_Heading1"><span class="f_Heading1">attributeControl</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <a href="validation.htm"
+        onmouseover="document.images.prev.src='btn_prev_h.gif'" 
+        onmouseout="document.images.prev.src='btn_prev_n.gif'"
+        ><img name=prev src="btn_prev_n.gif" border=0 alt="Previous page"
+        ></a><a href="ref456701241.htm"
+        onmouseover="document.images.main.src='btn_home_h.gif'" 
+        onmouseout="document.images.main.src='btn_home_n.gif'"><img name=main src="btn_home_n.gif" border=0 alt="Return to chapter overview"
+        ></a><a href="ref457922217.htm"
+        onmouseover="document.images.next.src='btn_next_h.gif'" 
+        onmouseout="document.images.next.src='btn_next_n.gif'"><img name=next src="btn_next_n.gif" border=0 alt="Next page"
+        ></a>
+    </td>
+  </tr>
+  <tr><td colspan="2" style="height: 3px; background: url(header_bg_shadow.gif)"></td></tr>
+</table>
+</div>
+
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+
+</div>  
+
+
+
+<div id="idcontent"><div id="innerdiv"> 
+<!--ZOOMRESTART-->
+<p class="p__GiS_Std"><span class="f__GiS_Std">ClientProperty &quot;attributeControl&quot; </span><span style="font-size: 11pt; font-family: Calibri;"> provides a set of functions and params to set the attribute properties dynamically (see </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">Field validation - validation</span><span style="font-size: 11pt; font-family: Calibri;">).</span></p>
+<p><span style="font-size: 11pt; font-family: Calibri;">Trigger:</span></p>
+<p><span style="font-size: 11pt; font-family: Calibri;">  &nbsp;* each change to one of the form fields, having validation or attributeControl, will cause the execution of each defined code snipped</span></p>
+<p><span style="font-size: 11pt; font-family: Calibri;">  &nbsp;* on form creation</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-family: Calibri;">Paramters and functions are much the same as in the 'validation' section except the next()/validAndNext() functions. These are not accessible during execution of </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">attributeControl.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-family: Calibri;">Params:</span></p>
+<p><span style="font-size: 11pt; font-family: Calibri;">  &nbsp;* </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">value</span><span style="font-size: 11pt; font-family: Calibri;"> represents the actual value</span></p>
+<p><span style="font-size: 11pt; font-family: Calibri;">  &nbsp;* </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">attribute</span><span style="font-size: 11pt; font-family: Calibri;"> &nbsp;JS-Attribute object</span></p>
+<p><span style="font-size: 11pt; font-family: Calibri;">  &nbsp;* </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">attributes</span><span style="font-size: 11pt; font-family: Calibri;"> &nbsp;all JS-Attribute objects of current detail view</span></p>
+<p><span style="font-size: 11pt; font-family: Calibri;"> &nbsp; * </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">save</span><span style="font-size: 11pt; font-family: Calibri;"> &nbsp;Boolean: Indicates whether validation is performed due to saving or due to user input.  </span></p>
+<p><span style="font-size: 11pt; font-family: Calibri;"> &nbsp; * </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">object</span><span style="font-size: 11pt; font-family: Calibri;"> &nbsp;server representation of the current object; current changes are not reflected; </span></p>
+<p><span style="font-size: 11pt; font-family: Calibri;">  &nbsp;* </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">isNew</span><span style="font-size: 11pt; font-family: Calibri;"> &nbsp;Boolean: Indicates whether the record is to create</span></p>
+<p><span style="font-size: 11pt; font-family: Calibri;">  &nbsp;* </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">userData</span><span style="font-size: 11pt; font-family: Calibri;"> &nbsp;Properties of the logged in user. (<a href="working_with_variables.htm" class="topiclink">Working with variables/values)</a></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-family: Calibri;">Functions:</span></p>
+<p><span style="font-size: 11pt; font-family: Calibri;">  &nbsp;* </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">valid</span><span style="font-size: 11pt; font-family: Calibri;"> &nbsp;marks the input field as valid: e.g. valid();</span></p>
+<p><span style="font-size: 11pt; font-family: Calibri;">  &nbsp;* </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">warn</span><span style="font-size: 11pt; font-family: Calibri;"> &nbsp;presents a given warning to the user but does not prevent the data set to be stored, e.g.: warn('Input exceeds max value. Proceed?');</span></p>
+<p><span style="font-size: 11pt; font-family: Calibri;">  &nbsp;* </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">invalid</span><span style="font-size: 11pt; font-family: Calibri;"> presents a given error message to the user and prevents data from being storde, e.g.: invalid('Not valid ...');</span></p>
+<p><span style="font-size: 11pt; font-family: Calibri;">  &nbsp;* </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">attributeForName</span><span style="font-size: 11pt; font-family: Calibri;"> &nbsp;retrieves attribute object by its name. e.g.: var attribute = attributeForName('DESCRIPTION');</span></p>
+<p><span style="font-size: 11pt; font-family: Calibri;">  &nbsp;* </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">getValueForName</span><span style="font-size: 11pt; font-family: Calibri;"> &nbsp;retrieves attribute value by its name (replaces </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">valueForAttributeName</span><span style="font-size: 11pt; font-family: Calibri;">). e.g.: var value = getValueForName('DESCRIPTION');</span></p>
+<p><span style="font-size: 11pt; font-family: Calibri;">  &nbsp;* </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">setValue</span><span style="font-size: 11pt; font-family: Calibri;"> &nbsp;Sets the value of the current field; e.g. setValue('Foo');</span></p>
+<p><span style="font-size: 11pt; font-family: Calibri;">  &nbsp;* </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">setValueForName</span><span style="font-size: 11pt; font-family: Calibri;"> &nbsp;Sets the value of given field; e.g. setValueForName('DESCRIPTION', 'Foo');</span></p>
+<p><span style="font-size: 11pt; font-family: Calibri; background-color: #9bbb59;">  &nbsp;*&nbsp;</span><span style="font-size: 11pt; font-family: Calibri; font-style: italic; background-color: #9bbb59;">sound</span><span style="font-size: 11pt; font-family: Calibri; background-color: #9bbb59;">&nbsp;&nbsp;Plays a sound. There are two default sound files: positive and negative; e.g. sound('positive'); &nbsp;Own sound files can be integrated via&nbsp;<a href="static_content.htm" class="topiclink">static-content</a>. e.g. sound('static-content/my-sound.mp3');</span><span style="font-size: 11pt; font-family: Calibri;"> </span></p>
+<p><span style="font-size: 11pt; font-family: Calibri; background-color: #9bbb59;">&nbsp;&nbsp; * remote.validate('middleware/check', {value: value}); -- calls the remote script with the given data-object and executes valid()/invalid() depending on the success (HTTP-Status 200) or failure (HTTP-Status 500) of the script</span></p>
+<p><span style="font-size: 11pt; font-family: Calibri; background-color: #9bbb59;">&nbsp;&nbsp; * remote.action('middleware/uuid').then((data) =&gt; { setValue(data.uuid); }); -- calls the remote script with the given data-object, you need to handle the returned object/failure in the method through a promise</span></p>
+<p><span style="font-size: 11pt; font-family: Calibri; background-color: #9bbb59;">&nbsp;&nbsp; * setReadonly Sets UI control readonly or not. e.g. setReadonly(true);</span></p>
+<p><span style="font-size: 11pt; font-family: Calibri; background-color: #9bbb59;">&nbsp;&nbsp; * setReadonlyForName Sets UI control readonly or not for attribute name. e.g. setReadonlyForName('DESCRIPTION', true);</span></p>
+<p>&nbsp;</p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">&quot;attributeControl&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span style="width:76px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f__GiS_Codeexample">&quot;js&quot;: &quot;attribute.readonly = valueForAttributeName('PROBLEMCODE') == undefined || valueForAttributeName('PROBLEMCODE') == '';  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;attribute.styleClass = attribute.readonly ? '' : 'bg-color-light-red'&quot;</span></p>
+<p class="p__GiS_Codeexample"><span style="width:76px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f__GiS_Codeexample">}</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

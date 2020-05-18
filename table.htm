@@ -1,0 +1,351 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Insight Configuration &gt; Table</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+   <meta name="description" content="Table">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet">
+   <link type="text/css" href="custom.css" rel="stylesheet">
+   <script type="text/javascript" src="nsh.js"></script>
+
+<script type="text/javascript">   
+// Toggle Toggler 
+
+var toggleCount=false;
+var switchState;
+
+function toggleToggles() {
+
+    if (!toggleCount) {
+     toggleCount = true;
+     HMToggleExpandAll(true);
+     switchState = true;
+     }
+   
+     else if (switchState) {
+        HMToggleExpandAll(false);
+        switchState = false;
+        }
+        
+     else  {
+        HMToggleExpandAll(true);
+        switchState = true;
+        } 
+    }
+</script>
+   
+<!-- non-scrolling headers for CHM and browser-based help, local styles-->
+<style type="text/css" media="screen"> 
+html, body {    
+      margin:0; 
+      padding:0; 
+      overflow: hidden; 
+      background: #FFFFFF; 
+   }
+ 
+div#printheader { 
+   display: none;
+   }
+   #idheader { 
+      width:100%; 
+      height:auto; 
+      padding: 0; 
+      margin: 0; 
+} 
+    #idheaderbg  {
+    background: #6F6F6F; 
+}
+   #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+   #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+   #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+   #callout-table a {text-decoration: none; color: blue;}
+   #callout-table a:visited {text-decoration: none; color: blue;}
+   #overview-table a {text-decoration: none; color: black;}
+   #overview-table a:visited {text-decoration: none; color: black;}
+   #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}
+   p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+   .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+   .sync-toc a:visited { color: #ffffff; }
+   .sync-toc a:hover { text-decoration: underline; }
+   </style>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+<style type="text/css" media="print">
+span.f_Heading1 { color: black; }
+#idheader, #printheader img { display:none; }
+#printheader { display: block; margin-top: 20px; }
+#idcontent { margin-top: 10px; }
+</style>   
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "table.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!--ZOOMSTOP-->
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Table</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" 
+       style="margin: 0px; background: url(header_bg.jpg);">
+
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?table.htm" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   
+   <a href="configuration.htm">Insight Configuration</a>&nbsp;&gt;</p>
+   <h1 class="p_Heading1"><span class="f_Heading1">Table</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <a href="planning.htm"
+        onmouseover="document.images.prev.src='btn_prev_h.gif'" 
+        onmouseout="document.images.prev.src='btn_prev_n.gif'"
+        ><img name=prev src="btn_prev_n.gif" border=0 alt="Previous page"
+        ></a><a href="configuration.htm"
+        onmouseover="document.images.main.src='btn_home_h.gif'" 
+        onmouseout="document.images.main.src='btn_home_n.gif'"><img name=main src="btn_home_n.gif" border=0 alt="Return to chapter overview"
+        ></a><a href="kibana_dashboards.htm"
+        onmouseover="document.images.next.src='btn_next_h.gif'" 
+        onmouseout="document.images.next.src='btn_next_n.gif'"><img name=next src="btn_next_n.gif" border=0 alt="Next page"
+        ></a>
+    </td>
+  </tr>
+  <tr><td colspan="2" style="height: 3px; background: url(header_bg_shadow.gif)"></td></tr>
+</table>
+</div>
+
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+
+</div>  
+
+
+
+<div id="idcontent"><div id="innerdiv"> 
+<!--ZOOMRESTART-->
+<p class="p__GiS_Std"><span class="f__GiS_Std">With tables you can visualize rows of data.</span></p>
+<p class="p_heading2"><span class="f_heading2">Configuration</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">To open tables from menus, use the menu action <a href="table_open_menu.htm" class="topiclink">table open</a>.</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">To configure tables the <a href="list.htm" class="topiclink">list</a> configuration applies.</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">Tables can be displayed below Insight Planning Gantt charts, as standalone or inside a Details View. The following is an example of opening a table as part of Insight Planning.</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">{</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &quot;label&quot;: &quot;Teamplanung&quot;,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &quot;action&quot;: &quot;planning&quot;,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &quot;icon&quot;: &quot;icon-new-tab&quot;,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &quot;actionValues&quot;: [</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;{</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &quot;gantt&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;tree&quot;: &quot;team-workorder-planning&quot;</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; },</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &quot;tab&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;label&quot;: &quot;Planung Teams&quot;</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; },</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &quot;table&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;tree&quot;: &quot;jobtask&quot;</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; ]</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">},</span></p>
+<p class="p_heading2"><span class="f_heading2">Default Filter Button</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">Any table will have a default filter button for usability if certain criteria are met. Clicking the default filter button will color cells blue that are clickable for the now activated filter mode. Clicking any blue cell selects it's value to filter against instead of having to type it manually. A default filter button is automatically displayed when:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 15px 0px 15px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Std">There is at least one columns that is configured as filterable</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 15px 0px 15px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Std">At least one of the filterable columns does not have filterSupressed: true configured</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 15px 0px 15px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Std">The table has data to visualize</span></td></tr></table></div><p class="p_heading2"><span class="f_heading2">Reload Button</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">A reload button is automatically displayed at the top of every table. The reload button clears all locally cached rows of data and forces the client to reload all data from server.</span></p>
+<p class="p_heading2"><span class="f_heading2">Filter Actions</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">Pre-configured filter actions can be displayed in the table menu for easier filtering. See<a href="filter.htm" class="topiclink"> filter actions</a> for configuration details. </span></p>
+<p class="p_heading2"><span class="f_heading2">Table settings</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">A table can have different settings.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 15px 0px 15px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Std">pageSize: The number of rows shown per page. Default 10.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 15px 0px 15px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Std">pageSizeOptions: List of pageSize options the user can select from. Default [].</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 15px 0px 15px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Std">hideCsvDownload: Hides the Csv Download button: Default false.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 15px 0px 15px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Std">hidePdfDownload: Hides the Pdf Download button. Default false.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 15px 0px 15px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Std">hideSorter: Hides the sort row of the table ui. Default false.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 15px 0px 15px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Std">useSelectedItems: Activates the ability to collect selected tree nodes by user clicks. These selectedItems are then forwarded to the js filter function, if configured. Default false.</span></td></tr></table></div><p class="p_heading2"><span class="f_heading2">Column filtering</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">To enable column based filtering, you can specify all or specific columns that will only show rows that match the entered value. Examples:</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">&quot;filter&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &quot;attributes&quot;: true</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">}</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">&nbsp;</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">&quot;filter&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &quot;attributes&quot;: [</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;&quot;MESSAGE&quot;,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;&quot;REPORTDATE&quot;</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; ]</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">}</span></p>
+<p class="p_heading2"><span class="f_heading2">Column filtering through JavaScript function</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">To enable column based javascript filtering specify a javascript function in filter.js that returns true for objects to show in the result.</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">&nbsp;</span><br />
+<span class="f__GiS_Std">Available variables are</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 15px 0px 15px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Std">userData</span><br />
+<span class="f__GiS_Std">The data of the userprofile</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 15px 0px 15px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Std">object</span><br />
+<span class="f__GiS_Std">The record of the current processed row.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 15px 0px 15px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f__GiS_Std">selectedObjects</span><br />
+<span class="f__GiS_Std">The items of the filtered objects</span></td></tr></table></div><p class="p__GiS_Std"><span class="f__GiS_Std">Example:</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">&quot;filter&quot;: {</span><br />
+<span style="width:76px">&nbsp;</span><span class="f__GiS_Codeexample">&quot;js&quot;: &quot;return containsAll(object.properties.qualificationNames,'|',filterObjects,'classificationName')&quot;</span><br />
+<span class="f__GiS_Codeexample">}</span></p>
+<p class="p_heading2"><span class="f_heading2">Column sorting</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">To enable column based sorting, you can specify all or specific columns that can be sorted. Examples:</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">&quot;sort&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &quot;attributes&quot;: true</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">}</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">&nbsp;</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">&quot;sort&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &quot;attributes&quot;: [</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;&quot;MESSAGE&quot;,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;&quot;REPORTDATE&quot;</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; ]</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">}</span></p>
+<p class="p_heading2"><span class="f_heading2">Tooltips</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">You can define custom tooltips für each table cell.</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">&quot;list&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &quot;attributes&quot;: [</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;{</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &quot;name&quot;: &quot;CREATEBY&quot;,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &quot;tooltip&quot;: &quot;Message: ${MESSAGE}, Created on: ${CREATEDDATE}&quot;</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; ]</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">}</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">If you configure a tooltip for regular nodeConfig attributes, that tooltip is shown as the table column header tooltip.</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">{ </span></p>
+<p class="p__GiS_Codeexample"><span style="width:76px">&nbsp;</span><span class="f__GiS_Codeexample">&quot;name&quot;: &quot;someNode&quot;,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &quot;attributes&quot;: [</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;{</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &quot;name&quot;: &quot;CREATEBY&quot;, </span></p>
+<p class="p__GiS_Codeexample"><span style="width:76px">&nbsp;</span><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &quot;clientProperties&quot;: [</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;&quot;tooltip&quot;: &quot;Message: ${MESSAGE}, Created on: ${CREATEDDATE}&quot; </span></p>
+<p class="p__GiS_Codeexample"><span style="width:76px">&nbsp;</span><span class="f__GiS_Codeexample"> &nbsp; &nbsp; }</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; ]</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">}</span></p>
+<p class="p_heading2"><span class="f_heading2">Colors</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">You can choose which colors to display the table in. The color config applies.</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">&quot;list&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &quot;attributes&quot;: [</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;{</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &quot;name&quot;: &quot;systemId&quot;,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &quot;clientProperties&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;colorClass&quot;: &quot;bg-color-light-yellow color-red&quot;,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;headerColorClasses&quot;: &quot;bg-color-light-yellow color-red&quot;</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; ]</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">}</span></p>
+<p class="p_heading2"><span class="f_heading2">PDF Export</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">By default a PDF Export button is displayed for each table. You can permanently disable the button with:</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">&quot;list&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &quot;settings&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;&quot;hidePdfDownload&quot;: true</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; }</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">}</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">&nbsp;</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">When exporting a table to pdf, the standard attribute.style settings are used, if set. If you need to adapt the way each attribute is exported to pdf, you can override the style settings of an attribute or choose to not export a column at all with:</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">&quot;list&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &quot;settings&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;&quot;pdf&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &quot;attributes&quot;: [</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;name&quot;: &quot;CREATEBY&quot;,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;control&quot;: &quot;hidden&quot;</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;name&quot;: &quot;CREATEDATE&quot;,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;style&quot;: &quot;two&quot;</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; ]</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; }</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">}</span></p>
+<p class="p_heading2"><a id="csvexport"></a><span class="f_heading2">CSV Export</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">By default a CSV Export button is displayed for each table. You can permanently disable the button with:</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">&quot;list&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &quot;settings&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;&quot;hideCsvDownload&quot;: true</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; }</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">}</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">&nbsp;</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">When exporting a table to CSV, the standard attribute settings are used. If you need to adapt the way each attribute is exported to CSV, you can override the settings of an attribute with:</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">&quot;list&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &quot;settings&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;&quot;csv&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &quot;attributes&quot;: [</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;name&quot;: &quot;CREATEBY&quot;,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;control&quot;: &quot;hidden&quot;</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp; &nbsp; ]</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; }</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">}</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">&nbsp;</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">Additional export settings for the csv you can set are:</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">- charset: Sets the charset the csv is encoded in. Default &quot;utf-8&quot;.</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">- delimiter: Sets the delimiter used for dividing cells in the csv. Default &quot;;&quot;.</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">- title. Sets the title used in the exported csv.</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">- useBOM: Defined if a universalBOM will be added to the beginning of the csv. Default true.</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">&nbsp;</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">Additional information about csv exporting: Excel does not open files in utf-8 by default, even though that is the international standard. You have to force Excel to open any exported csv file in utf-8. This can be done by adding a universal BOM at the start of the file. In order to do so, set useBOM to true in the config (which is the default). This will force excel to open the exported csv in utf-8 and therefore not have encoding problems for special characters. If you want to export a csv with anything other than the standard delimiter &quot;;&quot;, this will clash with the universalBOM as the custom delimiter needs to be at the start of the csv as well. This means that when setting a custom delimiter AND a universalBOM at the same time to prevent encoding problems only one will work. Therefore, Insight gives priority to encoding (BOM) instead of custom delimiters.</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">&nbsp;</span></p>
+<p class="p_heading3"><a id="masterdetailtable"></a><span class="f_heading3">Master Detail</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">You can configure a Master-Detail view for Insight Tables. When activated and a user clicks on any given row in the table, the details view of that object will be loaded next to the table. Additionally, you can also configure the sizes of the table &nbsp;and appearing details view.</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">&nbsp;</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">&quot;list&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &quot;width&quot;: &quot;ten&quot;,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &quot;details&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;&quot;width&quot;: &quot;six&quot;</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; },</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &quot;attributes&quot;: [ ...</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; ]</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">}</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">&nbsp;</span></p>
+<p class="p_heading3"><span class="f_heading3">Editing</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">Table can be toggled into edit mode via their configuration:</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">&quot;list&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &quot;settings&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;&quot;edit&quot;: true</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; }</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">}</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

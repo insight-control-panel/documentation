@@ -1,0 +1,214 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Insight Configuration &gt; Menus and actions</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+   <meta name="description" content="Menus and actions">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet">
+   <link type="text/css" href="custom.css" rel="stylesheet">
+   <script type="text/javascript" src="nsh.js"></script>
+
+<script type="text/javascript">   
+// Toggle Toggler 
+
+var toggleCount=false;
+var switchState;
+
+function toggleToggles() {
+
+    if (!toggleCount) {
+     toggleCount = true;
+     HMToggleExpandAll(true);
+     switchState = true;
+     }
+   
+     else if (switchState) {
+        HMToggleExpandAll(false);
+        switchState = false;
+        }
+        
+     else  {
+        HMToggleExpandAll(true);
+        switchState = true;
+        } 
+    }
+</script>
+   
+<!-- non-scrolling headers for CHM and browser-based help, local styles-->
+<style type="text/css" media="screen"> 
+html, body {    
+      margin:0; 
+      padding:0; 
+      overflow: hidden; 
+      background: #FFFFFF; 
+   }
+ 
+div#printheader { 
+   display: none;
+   }
+   #idheader { 
+      width:100%; 
+      height:auto; 
+      padding: 0; 
+      margin: 0; 
+} 
+    #idheaderbg  {
+    background: #6F6F6F; 
+}
+   #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+   #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+   #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+   #callout-table a {text-decoration: none; color: blue;}
+   #callout-table a:visited {text-decoration: none; color: blue;}
+   #overview-table a {text-decoration: none; color: black;}
+   #overview-table a:visited {text-decoration: none; color: black;}
+   #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}
+   p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+   .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+   .sync-toc a:visited { color: #ffffff; }
+   .sync-toc a:hover { text-decoration: underline; }
+   </style>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+<style type="text/css" media="print">
+span.f_Heading1 { color: black; }
+#idheader, #printheader img { display:none; }
+#printheader { display: block; margin-top: 20px; }
+#idcontent { margin-top: 10px; }
+</style>   
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "menus_and_action.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!--ZOOMSTOP-->
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Menus and actions</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" 
+       style="margin: 0px; background: url(header_bg.jpg);">
+
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?menus_and_action.htm" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   
+   <a href="configuration.htm">Insight Configuration</a>&nbsp;&gt;</p>
+   <h1 class="p_Heading1"><span class="f_Heading1">Menus and actions</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <a href="toc464133704.htm"
+        onmouseover="document.images.prev.src='btn_prev_h.gif'" 
+        onmouseout="document.images.prev.src='btn_prev_n.gif'"
+        ><img name=prev src="btn_prev_n.gif" border=0 alt="Previous page"
+        ></a><a href="configuration.htm"
+        onmouseover="document.images.main.src='btn_home_h.gif'" 
+        onmouseout="document.images.main.src='btn_home_n.gif'"><img name=main src="btn_home_n.gif" border=0 alt="Return to chapter overview"
+        ></a><a href="common_actions.htm"
+        onmouseover="document.images.next.src='btn_next_h.gif'" 
+        onmouseout="document.images.next.src='btn_next_n.gif'"><img name=next src="btn_next_n.gif" border=0 alt="Next page"
+        ></a>
+    </td>
+  </tr>
+  <tr><td colspan="2" style="height: 3px; background: url(header_bg_shadow.gif)"></td></tr>
+</table>
+</div>
+
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+
+</div>  
+
+
+
+<div id="idcontent"><div id="innerdiv"> 
+<!--ZOOMRESTART-->
+<p class="p__GiS_Std"><span class="f__GiS_Std" style="font-style: italic;">“menus” </span><span class="f__GiS_Std">lists an array of menu items.</span></p>
+<p class="p__GiS_Std"><span class="f__GiS_Std">Each item can be configured as follows with some parts of the configuration <a href="working_with_variables.htm" class="topiclink">being dynamic</a>:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1" style="font-style: italic;">label </span><span class="f__GiS_Aufz-1">helps user to identify the meaning of a menu item (web </span><span class="f__GiS_Aufz-1" style="font-family: Wingdings;">à</span><span class="f__GiS_Aufz-1"> Context Menu, mobile </span><span class="f__GiS_Aufz-1" style="font-family: Wingdings;">à</span><span class="f__GiS_Aufz-1"> Button in header of the detail section)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1" style="font-style: italic;">icon </span><span class="f__GiS_Aufz-1">specifies the icon of an action.</span><span class="f__GiS_Aufz-1" style="font-style: italic;"> </span><span class="f__GiS_Aufz-1">(mobile </span><span class="f__GiS_Aufz-1" style="font-family: Wingdings;">à</span><span class="f__GiS_Aufz-1"> slide left/swipe on an entry in the list view)</span><span class="f__GiS_Aufz-1" style="font-style: italic;"> </span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1" style="font-style: italic;">shortLabel </span><span class="f__GiS_Aufz-1">(mobile </span><span class="f__GiS_Aufz-1" style="font-family: Wingdings;">à</span><span class="f__GiS_Aufz-1"> slide left/swipe on an entry in the list view)</span><span class="f__GiS_Aufz-1" style="font-style: italic;"> </span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1" style="font-style: italic;">action </span><span class="f__GiS_Aufz-1">specifies the type of action </span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1" style="font-style: italic;">actionValues </span><span class="f__GiS_Aufz-1">are specifying special parameters corresponding to the listed action (see chapter </span><span class="f__GiS_Aufz-1" style="font-style: italic;">Actions</span><span class="f__GiS_Aufz-1">)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1" style="font-style: italic;">roles </span><span class="f__GiS_Aufz-1">optional. Confines availability to the listed security roles  </span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1" style="font-style: italic;">visibleIn</span><span class="f__GiS_Aufz-1"> optional. The visibility of a menu can be set to mobile or web. If not set, the menu is displayed. Possible values are &quot;mobile&quot; and &quot;web&quot;.</span></td></tr></table></div><p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">&quot;visibleIn&quot;: [</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp;&quot;mobile&quot;</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">]</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><a id="swipehidden"></a><span class="f__GiS_Aufz-1" style="font-style: italic; background-color: #9bbb59;">swipeHidden</span><span class="f__GiS_Aufz-1" style="background-color: #9bbb59;">&nbsp;Hides the menu action in insight-mobile's list swipe. (can also be set on clientProperties)</span></td></tr></table></div><p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample" style="background-color: #9bbb59;">&quot;swipeHidden&quot;: true</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1">clientProperties</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 77px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1" style="font-style: italic;">visible</span><span class="f__GiS_Aufz-1"> checks the attribute values of the record. If all hits the condition, the menu is visible. &quot;*&quot; is a wildcard for any value. </span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 77px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1">tooltip: Displays a tooltip when hovering over the menu action's button. Insight Explorer only.</span></td></tr></table></div><p>&nbsp;</p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">&quot;clientProperties&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp;&quot;visible&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp;&quot;FOLDER&quot;: &quot;true&quot;,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp;&quot;USER&quot;: &quot;${userData.personid}&quot;,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp;&quot;GROUP&quot;: &quot;*&quot;</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp;}</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">}</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 107px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1" style="font-style: italic;">js</span><span class="f__GiS_Aufz-1"> can be used to implement a JavaScript validation function. </span></td></tr></table></div><p style="margin: 0px 0px 0px 96px;"><span style="font-size: 11pt; font-family: Calibri;">Params:</span></p>
+<p style="margin: 0px 0px 0px 96px;"><span style="font-size: 11pt; font-family: Calibri;"> &nbsp; * </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">object</span><span style="font-size: 11pt; font-family: Calibri;"> &nbsp;server representation of the current object </span></p>
+<p style="margin: 0px 0px 0px 96px;"><span style="font-size: 11pt; font-family: Calibri;">  &nbsp;* </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">userData</span><span style="font-size: 11pt; font-family: Calibri;"> &nbsp;Properties of the logged in user. (<a href="working_with_variables.htm" class="topiclink">Working with variables/values)</a></span></p>
+<p style="margin: 0px 0px 0px 96px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 96px;"><span style="font-size: 11pt; font-family: Calibri;">Functions:</span></p>
+<p style="margin: 0px 0px 0px 96px;"><span style="font-size: 11pt; font-family: Calibri;"> &nbsp; * </span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;">isSet</span><span style="font-size: 11pt; font-family: Calibri;"> &nbsp;checks if the given property is set. &nbsp;You can check if it is not set like this: !</span><span class="f__GiS_Codeexample">isSet(object, 'OWNER');</span></p>
+<p style="margin: 0px 0px 0px 96px;">&nbsp;</p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">&quot;clientProperties&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp;&quot;visible&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp;&quot;js&quot;: &quot;return isSet(object, 'OWNER');&quot;</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp;}</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">}</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1" style="font-style: italic;">when</span><span class="f__GiS_Aufz-1"> specifies the moment an action can be triggered without user interaction, only valid for tree-level menu items</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 77px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1">&quot;onInit&quot; -- the first time a tree is selected</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 77px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1">&quot;onSelect&quot; -- every time a tree is selected</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><a id="menu_item_on"></a><span class="f__GiS_Aufz-1">on specifies where the menu-entry should be placed:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 77px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1">&quot;top&quot; -- on table header instead of context-menu</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><a id="menu-then"></a><span class="f__GiS_Aufz-1" style="font-style: italic;">then</span><span class="f__GiS_Aufz-1"> Further action to be executed if the previous action was successful. Any number of actions can be linked, this can be archived by another &quot;then&quot; property.</span></td></tr></table></div><p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">{</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp;&quot;label&quot;: &quot;Request and to list&quot;,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp;&quot;icon&quot;: &quot;icon-site-map&quot;,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp;&quot;action&quot;: &quot;request&quot;,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp;&quot;actionValues&quot;:...,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp;&quot;then&quot;: {</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp;&quot;action&quot;: &quot;goto&quot;,</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp;&quot;actionValues&quot;: [{</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp; &nbsp;&quot;dstTree&quot;: &quot;demo-menu-flow&quot;</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp; &nbsp;}]</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample"> &nbsp;}</span></p>
+<p class="p__GiS_Codeexample"><span class="f__GiS_Codeexample">}</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 47px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.20;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:30px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#10065;</span></td><td style="border:none"><span class="f__GiS_Aufz-1">js. Processing of the objects.</span><br />
+<span class="f__GiS_Aufz-1">Execute a Javascript function, that will get the objects as an array and return the object for the action as an array or a single object. If your js transforms multiple objects to one object and you want to call an action that does not support multiple objects please set an actionValue with &quot;allowMultipleObjects&quot; to true.</span></td></tr></table></div>
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
