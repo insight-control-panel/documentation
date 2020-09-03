@@ -2300,7 +2300,7 @@
 <pre><code>    "attributes": [
       {
         "name": "DEFSITE",
-        "label": "**siteid**",
+        "label": "siteid",
         "readonly": true,
         "type": "String"
       }
@@ -2313,7 +2313,7 @@
           "constraint": "type='STOREROOM'"
         },
         "queryParams": [{
-          "name": "**siteid**",
+          "name": "siteid",
           "attribute": "SITEID"
         }],
 </code></pre>
@@ -2325,7 +2325,7 @@
         "actionValues": [
           {
             "_tree": "en-service",
-            "SITEID": **"${userData.siteid}",**
+            "SITEID": "${userData.siteid}",
             "LOCATION": "${LOCATION}",
           }
         ]
