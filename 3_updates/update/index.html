@@ -19,7 +19,7 @@
     
     
       
-        <title>Standard-Update - Insight Configuration</title>
+        <title>Standard - Insight Configuration</title>
       
     
     
@@ -53,7 +53,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#standard-update" class="md-skip">
+        <a href="#standard" class="md-skip">
           Skip to content
         </a>
       
@@ -81,7 +81,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Standard-Update
+              Standard
             
           </span>
         </div>
@@ -726,18 +726,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../" title="Standard-Update" class="md-nav__link">
-      Standard-Update
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -749,14 +737,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Standard-Update
+        Standard
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="Standard-Update" class="md-nav__link md-nav__link--active">
-      Standard-Update
+    <a href="./" title="Standard" class="md-nav__link md-nav__link--active">
+      Standard
     </a>
     
       
@@ -777,6 +765,13 @@
         <li class="md-nav__item">
   <a href="#update-insight-connector-for-maximo" class="md-nav__link">
     Update Insight Connector for Maximo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-server" class="md-nav__link">
+    HTTP-Server
   </a>
   
 </li>
@@ -840,6 +835,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../update_middleware/" title="Middleware" class="md-nav__link">
+      Middleware
+    </a>
   </li>
 
         
@@ -1455,18 +1462,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../5_configuration/maps/" title="Maps" class="md-nav__link">
-      Maps
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../5_configuration/menu-and-action/" title="Menus and Actions" class="md-nav__link">
       Menus and Actions
     </a>
@@ -1600,16 +1595,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-31" type="checkbox" id="nav-7-31">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-30" type="checkbox" id="nav-7-30">
     
-    <label class="md-nav__link" for="nav-7-31">
+    <label class="md-nav__link" for="nav-7-30">
       Client configuration
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Client configuration" data-md-level="2">
-      <label class="md-nav__title" for="nav-7-31">
+      <label class="md-nav__title" for="nav-7-30">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -2381,6 +2376,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#http-server" class="md-nav__link">
+    HTTP-Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#update-insight-web" class="md-nav__link">
     Update Insight Web
   </a>
@@ -2451,10 +2453,16 @@
                   
                 
                 
-                <h1 id="standard-update">Standard-Update</h1>
+                <h1 id="standard">Standard</h1>
 <h2 id="update-insight-connector-for-maximo">Update Insight Connector for Maximo</h2>
 <p>If major version of insight changes the insight-connector must be updated (i.ie 15.n.n =\&gt; 16.n.n) It is not necessary if only the minor or patch-version of insight changed.</p>
 <p>Please follow the steps of chapter <strong>Installation Insight Connector for Maximo</strong></p>
+<h2 id="http-server">HTTP-Server</h2>
+<ul>
+<li>Remove old Proxypath-Entries for insight except include for insight-<system>.conf</li>
+<li>Copy the httpd-config/insight-<system>.conf from the insight-middleware-<version>.zip to  <HTTPServer>/conf </li>
+<li>Restart HTTP-Server</li>
+</ul>
 <h2 id="update-insight-web">Update Insight Web</h2>
 <ul>
 <li>
@@ -2654,144 +2662,6 @@
 </ul>
 <h2 id="checks">Checks</h2>
 <p>Check Urls for <strong>Insight Indexer</strong> and <strong>insight/web, insight/mobile</strong></p>
-<h1 id="standard-middleware-update">Standard-Middleware-Update</h1>
-<p><strong>1. stop and uninstall all insight-services:</strong></p>
-<ul>
-<li>Elastic</li>
-</ul>
-<p><strong>elasticsearch\bin\elasticsearch-service.bat remove</strong></p>
-<ul>
-<li>Kibana</li>
-</ul>
-<p><strong>kibana\bin\service.bat uninstall</strong></p>
-<ul>
-<li>insight-logstash</li>
-</ul>
-<p><strong>logstash\bin\insight-logstash-service.bat uninstall</strong></p>
-<ul>
-<li>insight-status</li>
-</ul>
-<p><strong>monitoring\insight-status-service.bat uninstall</strong></p>
-<ul>
-<li><strong>if wildfly is used</strong></li>
-</ul>
-<p><strong>wildfly\bin\service\service.bat uninstall</strong></p>
-<ul>
-<li><strong>if tomee is used</strong></li>
-</ul>
-<p><strong>tomee\bin\service.remove.as.admin.bat</strong></p>
-<p><strong>2. create new folder for new middleware</strong></p>
-<ul>
-<li>
-<p>rename existing &quot;insight&quot; folder to insight-old</p>
-</li>
-<li>
-<p>create empty folder &quot;insight&quot;</p>
-</li>
-<li>
-<p>unzip insight-middleware.zip to empty folder &quot;insight&quot;</p>
-</li>
-</ul>
-<p><strong>3. Adjustments:</strong></p>
-<ul>
-<li>
-<p>Elasticsearch</p>
-</li>
-<li>
-<p>copy insight-old\elasticsearch\data\ to insight\elasticsearch\data\ (reuse of stored data in elasticsearch)</p>
-</li>
-<li>
-<p>edit insight\elasticsearch\bin\elasticsearch.bat , search for &quot;Gis&quot; and adjust JRE: Use absoute path to JRE</p>
-</li>
-<li>
-<p>edit insight\elasticsearch\bin\elasticsearch-service.bat , search for &quot;Gis&quot; and adjust JRE: Use absoute path to JRE</p>
-</li>
-<li>
-<p>edit insight\elasticsearch\config\jvm.options and adjust values of &quot;-Xms256m&quot; and &quot;-Xmx1g&quot; to the values of insight-old\elaticsearch\config\jvm.options</p>
-</li>
-<li>
-<p>Logstash</p>
-</li>
-<li>
-<p>copy insight-old\logstash\config\insight-logging.conf to insight\logstash\config\insight-logging.conf</p>
-</li>
-<li>
-<p>edit insight\logstash\bin\insight-logstash.bat and adjust JRE: Use absoute path to JRE</p>
-</li>
-<li>
-<p>Kibana:</p>
-</li>
-</ul>
-<p>nothing to do</p>
-<ul>
-<li>
-<p>monitoring</p>
-</li>
-<li>
-<p>edit insight\monitoring\insight-status.bat and adjust JRE: Use absoute path to JRE</p>
-</li>
-<li>
-<p>wildfly (only if used)</p>
-</li>
-<li>
-<p>copy insight-old\wildfly\standalone\configuration\ <strong>insight.properties</strong> to insight\wildfly\standalone\configuration\insight.properties</p>
-</li>
-<li>
-<p>copy all <strong>subfolders</strong> except &quot;i18n&quot; if exist from insight-old\wildfly\standalone\configuration\insight to insight\wildfly\standalone\configuration\insight</p>
-</li>
-<li>
-<p>check insight-old\wildfly\bin\ <strong>standalone.conf.bat</strong> and copy additional entries to insigh\wildfly\bin\standalone.conf.bat</p>
-</li>
-<li>
-<p>edit insight\wildfly\standalone\configuration\ <strong>standalone.xml</strong> and copy all relevant entries from old standalone.xml to the new one:</p>
-</li>
-<li>
-<p>delete all lines between \&lt;datasources\&gt; and \&lt;/datasources\&gt; in insight\wildfly\standalone\configuration\standalone.xml and copy all lines between \&lt;datasources\&gt; and \&lt;/datasources\&gt; from insight-old\wildfly\standalone\configuration\standalone.xml to insight\wildfly\standalone\configuration\standalone.xml</p>
-</li>
-<li>
-<p>copy &quot;security-domain&quot; entries if exists to node <strong>\&lt;subsystem xmlns=&quot;urn:jboss:domain:security:2.0&quot;\&gt;</strong></p>
-</li>
-<li>
-<p>copy additional logging-properties if exists (i.e. SAP)</p>
-</li>
-<li>
-<p>copy &quot;\&lt;system-properties\&gt;&quot; sections if exists</p>
-</li>
-<li>
-<p>check properties for SSL , see also <a href="#topic_SSL_for_JEE-Container">SSL for JEE-Container</a></p>
-</li>
-<li>
-<p>check database driver:</p>
-</li>
-<li>
-<p>if you use MSSQL-Server: please copy *.jar and modules.xml in wildfly\modules\system\layers\base\com\microsoft\main from insight-old to insight</p>
-</li>
-<li>
-<p>if you use MySQL: please copy *.jar and modules.xml in wildfly\modules\system\layers\base\com\mysql\driver\main from insight-old to insight</p>
-</li>
-<li>
-<p>If H2 database is used: Please copy db-files from insight-old to insight. (Filelocations are configured in standalone.xml)</p>
-</li>
-<li>
-<p>tomee (only if used)</p>
-</li>
-<li>
-<p>copy insight-old\tomee\conf\insight.properties to insight\tomee\conf\insight.properties</p>
-</li>
-<li>
-<p>copy all subfolders except &quot;i18n&quot; if exist from insight-old\tomee\conf\insight to insight\tomee\conf\insight</p>
-</li>
-<li>
-<p>copy insight-old\tomee\conf\tomee.xml to insight\tomee\conf\tomee.xml</p>
-</li>
-<li>
-<p>check properties for SSL , see also <a href="#topic_SSL_for_JEE-Container">SSL for JEE-Container</a></p>
-</li>
-<li>
-<p>check database-drivers in tomee/lib</p>
-</li>
-</ul>
-<p><strong>4. install and start all insight-services</strong></p>
                 
               
               
@@ -2810,7 +2680,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../" title="Standard-Update" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../2_installation/requirements/user/" title="User for insight-middleware components" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -2819,19 +2689,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Standard-Update
+                User for insight-middleware components
               </div>
             </div>
           </a>
         
         
-          <a href="../v13/" title="Version: 13" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../update_middleware/" title="Middleware" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Version: 13
+                Middleware
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

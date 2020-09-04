@@ -19,7 +19,7 @@
     
     
       
-        <title>Maps - Insight Configuration</title>
+        <title>Middleware - Insight Configuration</title>
       
     
     
@@ -53,7 +53,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#maps" class="md-skip">
+        <a href="#middleware" class="md-skip">
           Skip to content
         </a>
       
@@ -81,7 +81,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Maps
+              Middleware
             
           </span>
         </div>
@@ -699,10 +699,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Updates
@@ -726,9 +728,193 @@
 
 
   <li class="md-nav__item">
-    <a href="../../3_updates/" title="Standard-Update" class="md-nav__link">
-      Standard-Update
+    <a href="../update/" title="Standard" class="md-nav__link">
+      Standard
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Middleware
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Middleware" class="md-nav__link md-nav__link--active">
+      Middleware
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stop-and-uninstall-services" class="md-nav__link">
+    Stop and uninstall services
+  </a>
+  
+    <nav class="md-nav" aria-label="Stop and uninstall services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elastic" class="md-nav__link">
+    Elastic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kibana" class="md-nav__link">
+    Kibana
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insight-logstash" class="md-nav__link">
+    insight-logstash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insight-status" class="md-nav__link">
+    insight-status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-wildfly-is-used" class="md-nav__link">
+    if wildfly is used
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-tomee-is-used" class="md-nav__link">
+    if tomee is used
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-new-versions" class="md-nav__link">
+    Install new versions
+  </a>
+  
+    <nav class="md-nav" aria-label="Install new versions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-new-folder-for-new-middleware" class="md-nav__link">
+    create new folder for new middleware
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjustments" class="md-nav__link">
+    Adjustments:
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjustments:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elasticsearch" class="md-nav__link">
+    Elasticsearch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logstash" class="md-nav__link">
+    Logstash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kibana_1" class="md-nav__link">
+    Kibana
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring" class="md-nav__link">
+    monitoring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wildfly-only-if-used" class="md-nav__link">
+    wildfly (only if used)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tomee-only-if-used" class="md-nav__link">
+    tomee (only if used)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-and-start-all-insight-services" class="md-nav__link">
+    install and start all insight-services
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -738,19 +924,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../3_updates/update/" title="Standard-Update" class="md-nav__link">
-      Standard-Update
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../3_updates/v13/" title="Version: 13" class="md-nav__link">
+    <a href="../v13/" title="Version: 13" class="md-nav__link">
       Version: 13
     </a>
   </li>
@@ -762,7 +936,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../3_updates/v14/" title="Version: 14" class="md-nav__link">
+    <a href="../v14/" title="Version: 14" class="md-nav__link">
       Version: 14
     </a>
   </li>
@@ -774,7 +948,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../3_updates/v15/" title="Version: 15" class="md-nav__link">
+    <a href="../v15/" title="Version: 15" class="md-nav__link">
       Version: 15
     </a>
   </li>
@@ -786,7 +960,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../3_updates/v16/" title="Version: 16" class="md-nav__link">
+    <a href="../v16/" title="Version: 16" class="md-nav__link">
       Version: 16
     </a>
   </li>
@@ -798,7 +972,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../3_updates/v17/" title="Version: 17" class="md-nav__link">
+    <a href="../v17/" title="Version: 17" class="md-nav__link">
       Version: 17
     </a>
   </li>
@@ -810,7 +984,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../3_updates/v18/" title="Version: 18" class="md-nav__link">
+    <a href="../v18/" title="Version: 18" class="md-nav__link">
       Version: 18
     </a>
   </li>
@@ -1113,12 +1287,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
       Configuration
@@ -1142,7 +1314,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="Overview" class="md-nav__link">
+    <a href="../../5_configuration/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -1154,7 +1326,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../basic-rules/" title="Basic Rules" class="md-nav__link">
+    <a href="../../5_configuration/basic-rules/" title="Basic Rules" class="md-nav__link">
       Basic Rules
     </a>
   </li>
@@ -1166,7 +1338,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../client-url-params/" title="Client URL Parameters" class="md-nav__link">
+    <a href="../../5_configuration/client-url-params/" title="Client URL Parameters" class="md-nav__link">
       Client URL Parameters
     </a>
   </li>
@@ -1178,7 +1350,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../dashboard-visu/" title="Dashboard Visualizations with Kibana" class="md-nav__link">
+    <a href="../../5_configuration/dashboard-visu/" title="Dashboard Visualizations with Kibana" class="md-nav__link">
       Dashboard Visualizations with Kibana
     </a>
   </li>
@@ -1190,7 +1362,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../data-model/" title="Data Model" class="md-nav__link">
+    <a href="../../5_configuration/data-model/" title="Data Model" class="md-nav__link">
       Data Model
     </a>
   </li>
@@ -1202,7 +1374,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../default-tree/" title="Default tree configurations" class="md-nav__link">
+    <a href="../../5_configuration/default-tree/" title="Default tree configurations" class="md-nav__link">
       Default tree configurations
     </a>
   </li>
@@ -1214,7 +1386,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../defined-searches/" title="Defined searches" class="md-nav__link">
+    <a href="../../5_configuration/defined-searches/" title="Defined searches" class="md-nav__link">
       Defined searches
     </a>
   </li>
@@ -1226,7 +1398,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../drag-and-drop/" title="Drag and Drop (dnd)" class="md-nav__link">
+    <a href="../../5_configuration/drag-and-drop/" title="Drag and Drop (dnd)" class="md-nav__link">
       Drag and Drop (dnd)
     </a>
   </li>
@@ -1238,7 +1410,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../extend-languages/" title="Extend Languages" class="md-nav__link">
+    <a href="../../5_configuration/extend-languages/" title="Extend Languages" class="md-nav__link">
       Extend Languages
     </a>
   </li>
@@ -1250,7 +1422,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../favorites-menu/" title="Favorites and Menu on Tabs" class="md-nav__link">
+    <a href="../../5_configuration/favorites-menu/" title="Favorites and Menu on Tabs" class="md-nav__link">
       Favorites and Menu on Tabs
     </a>
   </li>
@@ -1262,7 +1434,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../filelink/" title="FileLink" class="md-nav__link">
+    <a href="../../5_configuration/filelink/" title="FileLink" class="md-nav__link">
       FileLink
     </a>
   </li>
@@ -1274,7 +1446,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../fingerprinting/" title="Fingerprint" class="md-nav__link">
+    <a href="../../5_configuration/fingerprinting/" title="Fingerprint" class="md-nav__link">
       Fingerprint
     </a>
   </li>
@@ -1286,7 +1458,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../ict/" title="Insight Configuration Tools" class="md-nav__link">
+    <a href="../../5_configuration/ict/" title="Insight Configuration Tools" class="md-nav__link">
       Insight Configuration Tools
     </a>
   </li>
@@ -1298,7 +1470,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../insight-config-editor/" title="Insight Config Editor" class="md-nav__link">
+    <a href="../../5_configuration/insight-config-editor/" title="Insight Config Editor" class="md-nav__link">
       Insight Config Editor
     </a>
   </li>
@@ -1310,7 +1482,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../insight-config/" title="Insight Configurations" class="md-nav__link">
+    <a href="../../5_configuration/insight-config/" title="Insight Configurations" class="md-nav__link">
       Insight Configurations
     </a>
   </li>
@@ -1322,7 +1494,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../json/" title="insight-userprofile.json" class="md-nav__link">
+    <a href="../../5_configuration/json/" title="insight-userprofile.json" class="md-nav__link">
       insight-userprofile.json
     </a>
   </li>
@@ -1334,7 +1506,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../kibana-dashboards/" title="Kibana Dashboards" class="md-nav__link">
+    <a href="../../5_configuration/kibana-dashboards/" title="Kibana Dashboards" class="md-nav__link">
       Kibana Dashboards
     </a>
   </li>
@@ -1346,7 +1518,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../layout/" title="Layout" class="md-nav__link">
+    <a href="../../5_configuration/layout/" title="Layout" class="md-nav__link">
       Layout
     </a>
   </li>
@@ -1356,30 +1528,9 @@
           
           
 
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Maps" class="md-nav__link md-nav__link--active">
-      Maps
-    </a>
-    
-  </li>
-
-        
-          
-          
-          
-
 
   <li class="md-nav__item">
-    <a href="../menu-and-action/" title="Menus and Actions" class="md-nav__link">
+    <a href="../../5_configuration/menu-and-action/" title="Menus and Actions" class="md-nav__link">
       Menus and Actions
     </a>
   </li>
@@ -1391,7 +1542,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../nfc/" title="NFC" class="md-nav__link">
+    <a href="../../5_configuration/nfc/" title="NFC" class="md-nav__link">
       NFC
     </a>
   </li>
@@ -1403,7 +1554,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../offline/" title="Offline - Data synchronization" class="md-nav__link">
+    <a href="../../5_configuration/offline/" title="Offline - Data synchronization" class="md-nav__link">
       Offline - Data synchronization
     </a>
   </li>
@@ -1415,7 +1566,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../permissions/" title="Permissions" class="md-nav__link">
+    <a href="../../5_configuration/permissions/" title="Permissions" class="md-nav__link">
       Permissions
     </a>
   </li>
@@ -1427,7 +1578,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../planning/" title="Planning" class="md-nav__link">
+    <a href="../../5_configuration/planning/" title="Planning" class="md-nav__link">
       Planning
     </a>
   </li>
@@ -1439,7 +1590,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../public-searches/" title="Public searches" class="md-nav__link">
+    <a href="../../5_configuration/public-searches/" title="Public searches" class="md-nav__link">
       Public searches
     </a>
   </li>
@@ -1451,7 +1602,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../push-data/" title="Push data" class="md-nav__link">
+    <a href="../../5_configuration/push-data/" title="Push data" class="md-nav__link">
       Push data
     </a>
   </li>
@@ -1463,7 +1614,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../push/" title="Push" class="md-nav__link">
+    <a href="../../5_configuration/push/" title="Push" class="md-nav__link">
       Push
     </a>
   </li>
@@ -1475,7 +1626,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../requirements/" title="Requirements" class="md-nav__link">
+    <a href="../../5_configuration/requirements/" title="Requirements" class="md-nav__link">
       Requirements
     </a>
   </li>
@@ -1487,7 +1638,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../table/" title="Table" class="md-nav__link">
+    <a href="../../5_configuration/table/" title="Table" class="md-nav__link">
       Table
     </a>
   </li>
@@ -1499,7 +1650,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../variables-values/" title="Working with variables/values" class="md-nav__link">
+    <a href="../../5_configuration/variables-values/" title="Working with variables/values" class="md-nav__link">
       Working with variables/values
     </a>
   </li>
@@ -1512,16 +1663,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-31" type="checkbox" id="nav-7-31">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-30" type="checkbox" id="nav-7-30">
     
-    <label class="md-nav__link" for="nav-7-31">
+    <label class="md-nav__link" for="nav-7-30">
       Client configuration
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Client configuration" data-md-level="2">
-      <label class="md-nav__title" for="nav-7-31">
+      <label class="md-nav__title" for="nav-7-30">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -1536,7 +1687,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../client-configuration/cookie/" title="Cookie" class="md-nav__link">
+    <a href="../../5_configuration/client-configuration/cookie/" title="Cookie" class="md-nav__link">
       Cookie
     </a>
   </li>
@@ -1548,7 +1699,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../client-configuration/general/" title="General" class="md-nav__link">
+    <a href="../../5_configuration/client-configuration/general/" title="General" class="md-nav__link">
       General
     </a>
   </li>
@@ -1560,7 +1711,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../client-configuration/language/" title="Language" class="md-nav__link">
+    <a href="../../5_configuration/client-configuration/language/" title="Language" class="md-nav__link">
       Language
     </a>
   </li>
@@ -1572,7 +1723,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../client-configuration/loginparams/" title="LoginParams" class="md-nav__link">
+    <a href="../../5_configuration/client-configuration/loginparams/" title="LoginParams" class="md-nav__link">
       LoginParams
     </a>
   </li>
@@ -1584,7 +1735,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../client-configuration/static-content/" title="Static Content" class="md-nav__link">
+    <a href="../../5_configuration/client-configuration/static-content/" title="Static Content" class="md-nav__link">
       Static Content
     </a>
   </li>
@@ -2277,6 +2428,153 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stop-and-uninstall-services" class="md-nav__link">
+    Stop and uninstall services
+  </a>
+  
+    <nav class="md-nav" aria-label="Stop and uninstall services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elastic" class="md-nav__link">
+    Elastic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kibana" class="md-nav__link">
+    Kibana
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insight-logstash" class="md-nav__link">
+    insight-logstash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insight-status" class="md-nav__link">
+    insight-status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-wildfly-is-used" class="md-nav__link">
+    if wildfly is used
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-tomee-is-used" class="md-nav__link">
+    if tomee is used
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-new-versions" class="md-nav__link">
+    Install new versions
+  </a>
+  
+    <nav class="md-nav" aria-label="Install new versions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-new-folder-for-new-middleware" class="md-nav__link">
+    create new folder for new middleware
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjustments" class="md-nav__link">
+    Adjustments:
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjustments:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elasticsearch" class="md-nav__link">
+    Elasticsearch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logstash" class="md-nav__link">
+    Logstash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kibana_1" class="md-nav__link">
+    Kibana
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring" class="md-nav__link">
+    monitoring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wildfly-only-if-used" class="md-nav__link">
+    wildfly (only if used)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tomee-only-if-used" class="md-nav__link">
+    tomee (only if used)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-and-start-all-insight-services" class="md-nav__link">
+    install and start all insight-services
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2291,54 +2589,79 @@
                   
                 
                 
-                <h1 id="maps">Maps</h1>
-<p><strong>Installation</strong></p>
-<p>To be able to create maps you need to make sure the "insight-maps.war"
-is deployed into the running Wildfly.</p>
-<p>Inside the insight.properties file the property "map.store.folder"
-controls where uploaded maps are stored:</p>
-<pre><code>    map.store.folder=D:/insight/map-store/
+                <h1 id="middleware">Middleware</h1>
+<h2 id="stop-and-uninstall-services">Stop and uninstall services</h2>
+<h4 id="elastic">Elastic</h4>
+<pre><code>elasticsearch\bin\elasticsearch-service.bat remove
 </code></pre>
-<p>Please make sure to backup that folder regularly!</p>
-<p><strong>Configuration</strong></p>
-<p>The Insight-Map components has three menu actions to be called from any
-trees context menu.</p>
-<p><strong>Map-Administration:</strong> action: "mapCreate"</p>
-<p>Opens the administrative view where maps can be created and edited. This
-menu entry should be available to administrative users only!</p>
-<p><strong>Map-Attachment:</strong> action: "mapAttachNode"</p>
-<p>Opens a view where an object can be "attached" to one or many maps.
-Attached objects must not have a marker on the map but represent the
-whole map. This menu entry should be available to administrative users
-only!</p>
-<p><strong>Map-Open:</strong> action: "mapOpen"</p>
-<p>Opens the map view for the object it got execute on. If the actionValue
-"allowEditMode" is set to true the user is able to create/move/delete
-markers on the map. Without that option users can only see existing
-markers.</p>
-<p><strong>Example menu entries:</strong></p>
-<pre><code>    {
-      "label": "Karten-Administration",
-      "icon": "icon-new-tab"
-      "action": "mapCreate",
-    },
-    {
-      "label": "Karte öffnen",
-      "icon": "icon-arrow-right",
-      "action": "mapOpen",
-      "actionValues": [{
-        "allowEditMode": true
-      }]
-    },
-    {
-      "label": "Karte Verknüpfen",
-      "icon": "icon-map-marker-down",
-      "action": "mapAttachNode",
-    }
+<h4 id="kibana">Kibana</h4>
+<pre><code>kibana\bin\service.bat uninstall
 </code></pre>
-<p><strong>Map Integration</strong></p>
-<p>To enable map-links in your tree set "clientProperties.checkForMaps: true".</p>
-<p><img alt="" src="../5_20.png" /></p>
+<h4 id="insight-logstash">insight-logstash</h4>
+<pre><code>logstash\bin\insight-logstash-service.bat uninstall
+</code></pre>
+<h4 id="insight-status">insight-status</h4>
+<pre><code>monitoring\insight-status-service.bat uninstall
+</code></pre>
+<h4 id="if-wildfly-is-used">if wildfly is used</h4>
+<pre><code>wildfly\bin\service\service.bat uninstall
+</code></pre>
+<h4 id="if-tomee-is-used">if tomee is used</h4>
+<pre><code>tomee\bin\service.remove.as.admin.bat
+</code></pre>
+<h2 id="install-new-versions">Install new versions</h2>
+<h4 id="create-new-folder-for-new-middleware">create new folder for new middleware</h4>
+<ul>
+<li>rename existing "insight" folder to insight-old</li>
+<li>create empty folder "insight"</li>
+<li>unzip insight-middleware.zip to empty folder "insight"</li>
+</ul>
+<h2 id="adjustments">Adjustments:</h2>
+<h4 id="elasticsearch">Elasticsearch</h4>
+<ul>
+<li>copy insight-old\elasticsearch\data\ to insight\elasticsearch\data\ (reuse of stored data in elasticsearch)</li>
+<li>edit insight\elasticsearch\bin\elasticsearch.bat , search for &quot;Gis&quot; and adjust JRE: Use absoute path to JRE</li>
+<li>edit insight\elasticsearch\bin\elasticsearch-service.bat , search for &quot;Gis&quot; and adjust JRE: Use absoute path to JRE</li>
+<li>edit insight\elasticsearch\config\jvm.options and adjust values of &quot;-Xms256m&quot; and &quot;-Xmx1g&quot; to the values of insight-old\elaticsearch\config\jvm.options</li>
+</ul>
+<h4 id="logstash">Logstash</h4>
+<ul>
+<li>copy insight-old\logstash\config\insight-logging.conf to insight\logstash\config\insight-logging.conf</li>
+<li>edit insight\logstash\bin\insight-logstash.bat and adjust JRE: Use absoute path to JRE</li>
+</ul>
+<h4 id="kibana_1">Kibana</h4>
+<ul>
+<li>nothing to do</li>
+</ul>
+<h4 id="monitoring">monitoring</h4>
+<ul>
+<li>edit insight\monitoring\insight-status.bat and adjust JRE: Use absoute path to JRE</li>
+</ul>
+<h4 id="wildfly-only-if-used">wildfly (only if used)</h4>
+<ul>
+<li>copy insight-old\wildfly\standalone\configuration\ insight.properties to insight\wildfly\standalone\configuration\insight.properties</li>
+<li>copy all subfolders except &quot;i18n&quot; if exist from insight-old\wildfly\standalone\configuration\insight to insight\wildfly\standalone\configuration\insight</li>
+<li>check insight-old\wildfly\bin\ standalone.conf.bat and copy additional entries to insigh\wildfly\bin\standalone.conf.bat</li>
+<li>edit insight\wildfly\standalone\configuration\ standalone.xml and copy all relevant entries from old standalone.xml to the new one:</li>
+<li>delete all lines between \&lt;datasources\&gt; and \&lt;/datasources\&gt; in insight\wildfly\standalone\configuration\standalone.xml and copy all lines between \&lt;datasources\&gt; and \&lt;/datasources\&gt; from insight-old\wildfly\standalone\configuration\standalone.xml to insight\wildfly\standalone\configuration\standalone.xml</li>
+<li>copy &quot;security-domain&quot; entries if exists to node \&lt;subsystem xmlns=&quot;urn:jboss:domain:security:2.0&quot;\&gt;</li>
+<li>copy additional logging-properties if exists (i.e. SAP)</li>
+<li>copy &quot;\&lt;system-properties\&gt;&quot; sections if exists</li>
+<li>check properties for SSL , see also <a href="#topic_SSL_for_JEE-Container">SSL for JEE-Container</a></li>
+<li>check database driver:</li>
+<li>if you use MSSQL-Server: please copy *.jar and modules.xml in wildfly\modules\system\layers\base\com\microsoft\main from insight-old to insight</li>
+<li>if you use MySQL: please copy *.jar and modules.xml in wildfly\modules\system\layers\base\com\mysql\driver\main from insight-old to insight</li>
+<li>If H2 database is used: Please copy db-files from insight-old to insight. (Filelocations are configured in standalone.xml)</li>
+</ul>
+<h4 id="tomee-only-if-used">tomee (only if used)</h4>
+<ul>
+<li>copy insight-old\tomee\conf\insight.properties to insight\tomee\conf\insight.properties</li>
+<li>copy all subfolders except &quot;i18n&quot; if exist from insight-old\tomee\conf\insight to insight\tomee\conf\insight</li>
+<li>copy insight-old\tomee\conf\tomee.xml to insight\tomee\conf\tomee.xml</li>
+<li>check properties for SSL , see also <a href="#topic_SSL_for_JEE-Container">SSL for JEE-Container</a></li>
+<li>check database-drivers in tomee/lib</li>
+</ul>
+<h2 id="install-and-start-all-insight-services">install and start all insight-services</h2>
                 
               
               
@@ -2357,7 +2680,7 @@ markers.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../layout/" title="Layout" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../update/" title="Standard" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -2366,19 +2689,19 @@ markers.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Layout
+                Standard
               </div>
             </div>
           </a>
         
         
-          <a href="../menu-and-action/" title="Menus and Actions" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../v13/" title="Version: 13" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Menus and Actions
+                Version: 13
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
