@@ -1,0 +1,4431 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Insight Devevlopment Team">
+      
+      <link rel="shortcut icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.5">
+    
+    
+      
+        <title>Data Model - Insight Manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.63b94e9e.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-model" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Insight Manual" class="md-header-nav__button md-logo" aria-label="Insight Manual">
+      
+  <img src="../../images/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Insight Manual
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Data Model
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Overview
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../0_release-notes/17.0/" class="md-tabs__link">
+          Release-Notes
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../2_installation/general/" class="md-tabs__link">
+          Installation
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../3_updates/update/" class="md-tabs__link">
+          Updates
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../4_monitoring/overview/" class="md-tabs__link">
+          Monitoring
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../" class="md-tabs__link md-tabs__link--active">
+          Configuration
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../6_operating-manual/address/" class="md-tabs__link">
+          Operating Manual
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../7_user-manual/electron-client/" class="md-tabs__link">
+          User Manual
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../8_third-party-components/server-common/" class="md-tabs__link">
+          3rd party components
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Insight Manual" class="md-nav__button md-logo" aria-label="Insight Manual">
+      
+  <img src="../../images/favicon.png" alt="logo">
+
+    </a>
+    Insight Manual
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Release-Notes
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Release-Notes" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Release-Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../0_release-notes/17.0/" title="v17.0" class="md-nav__link">
+      v17.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../0_release-notes/18.0/" title="v18.0" class="md-nav__link">
+      v18.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../0_release-notes/19.0/" title="v19.0*" class="md-nav__link">
+      v19.0*
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Installation
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Installation" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2_installation/general/" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Connectors
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Connectors" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Connectors
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1" type="checkbox" id="nav-4-2-1">
+    
+    <label class="md-nav__link" for="nav-4-2-1">
+      Maximo
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Maximo" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Maximo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2_installation/connectors/maximo/steps/" title="Backup" class="md-nav__link">
+      Backup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2_installation/connectors/maximo/replication/gistx/" title="Replication of changed data" class="md-nav__link">
+      Replication of changed data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2_installation/connectors/openjet/steps/" title="OpenJET" class="md-nav__link">
+      OpenJET
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Dockers
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Dockers" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Dockers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2_installation/dockers/basic/" title="Basic" class="md-nav__link">
+      Basic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2_installation/dockers/configuration/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2_installation/dockers/faq/" title="FAQ & Examples" class="md-nav__link">
+      FAQ & Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2_installation/dockers/images/" title="Images" class="md-nav__link">
+      Images
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-5" type="checkbox" id="nav-4-3-5">
+    
+    <label class="md-nav__link" for="nav-4-3-5">
+      Installation
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Installation" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2_installation/dockers/installation/basic/" title="Basic Setup" class="md-nav__link">
+      Basic Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2_installation/dockers/installation/kibana/" title="Kibana" class="md-nav__link">
+      Kibana
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2_installation/dockers/installation/log_access/" title="Log Access" class="md-nav__link">
+      Log Access
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2_installation/dockers/installation/log_aggregation/" title="Log Aggregation" class="md-nav__link">
+      Log Aggregation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2_installation/dockers/installation/monitoring/" title="Monitoring" class="md-nav__link">
+      Monitoring
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2_installation/dockers/installation/ssl-proxy/" title="SSL-Proxy" class="md-nav__link">
+      SSL-Proxy
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Requirements
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Requirements" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Requirements
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2_installation/requirements/basic/" title="Basic" class="md-nav__link">
+      Basic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2_installation/requirements/browsers/" title="Browsers" class="md-nav__link">
+      Browsers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2_installation/requirements/environments/" title="Environments" class="md-nav__link">
+      Environments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2_installation/requirements/files/" title="Files" class="md-nav__link">
+      Files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2_installation/requirements/user/" title="User for insight-middleware components" class="md-nav__link">
+      User for insight-middleware components
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Updates
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Updates" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Updates
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../3_updates/update/" title="Standard" class="md-nav__link">
+      Standard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../3_updates/update_middleware/" title="Middleware" class="md-nav__link">
+      Middleware
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../3_updates/v17/" title="Version: 17" class="md-nav__link">
+      Version: 17
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../3_updates/v18/" title="Version: 18" class="md-nav__link">
+      Version: 18
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../3_updates/v19/" title="Version: 19" class="md-nav__link">
+      Version: 19
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Monitoring
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Monitoring" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Monitoring
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4_monitoring/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
+    
+    <label class="md-nav__link" for="nav-6-2">
+      Gateway
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Gateway" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Gateway
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4_monitoring/gateway/gateway-dashboard_json/" title="Gateway-Dashboard.json" class="md-nav__link">
+      Gateway-Dashboard.json
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4_monitoring/gateway/general/" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+    
+    <label class="md-nav__link" for="nav-6-3">
+      Logfiles
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Logfiles" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Logfiles
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4_monitoring/logfiles/general/" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4_monitoring/logfiles/insight-logstash_aas/" title="insight-logstash as a Service" class="md-nav__link">
+      insight-logstash as a Service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4_monitoring/logfiles/logstash-dashboard/" title="Logstash-Dashboard" class="md-nav__link">
+      Logstash-Dashboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4_monitoring/logfiles/requirements/" title="Requirements" class="md-nav__link">
+      Requirements
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+    
+    <label class="md-nav__link" for="nav-6-4">
+      Processes
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Processes" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Processes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4_monitoring/processes/general/" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4_monitoring/processes/insight-status_aaws/" title="insight-status as a Windows Service" class="md-nav__link">
+      insight-status as a Windows Service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4_monitoring/processes/insight-status_fl/" title="insight-status for Linux" class="md-nav__link">
+      insight-status for Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4_monitoring/processes/insight-status_script/" title="insight-status Script" class="md-nav__link">
+      insight-status Script
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4_monitoring/processes/loop_script/" title="Loop Script" class="md-nav__link">
+      Loop Script
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4_monitoring/processes/monitoring-dashboard_json/" title="Monitoring-Dashboard.json" class="md-nav__link">
+      Monitoring-Dashboard.json
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4_monitoring/processes/requirements/" title="Requirements" class="md-nav__link">
+      Requirements
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      Configuration
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Configuration" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basic-rules/" title="Basic Rules" class="md-nav__link">
+      Basic Rules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../client-url-params/" title="Client URL Parameters" class="md-nav__link">
+      Client URL Parameters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dashboard-visu/" title="Dashboard Visualizations with Kibana" class="md-nav__link">
+      Dashboard Visualizations with Kibana
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Data Model
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Data Model" class="md-nav__link md-nav__link--active">
+      Data Model
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nodes" class="md-nav__link">
+    Nodes
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-properties" class="md-nav__link">
+    Base properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    query
+  </a>
+  
+    <nav class="md-nav" aria-label="query">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constraint" class="md-nav__link">
+    constraint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relation" class="md-nav__link">
+    relation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#db" class="md-nav__link">
+    db
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orderby-deprecated" class="md-nav__link">
+    orderBy (deprecated)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexer" class="md-nav__link">
+    indexer
+  </a>
+  
+    <nav class="md-nav" aria-label="indexer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stopandnochildren" class="md-nav__link">
+    stopandnochildren
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parentmapping" class="md-nav__link">
+    parentMapping
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root" class="md-nav__link">
+    Root
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#children" class="md-nav__link">
+    Children
+  </a>
+  
+    <nav class="md-nav" aria-label="Children">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loop" class="md-nav__link">
+    loop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queryparams" class="md-nav__link">
+    queryParams
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queryparams-example-maximo" class="md-nav__link">
+    queryParams-Example-Maximo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortby" class="md-nav__link">
+    sortBy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-properties" class="md-nav__link">
+    Advanced properties
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insertcreate-nodes" class="md-nav__link">
+    insert/create nodes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classification" class="md-nav__link">
+    Classification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documents" class="md-nav__link">
+    Documents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excludeexpertsearch" class="md-nav__link">
+    excludeExpertSearch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#labelwidth" class="md-nav__link">
+    labelWidth
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inlineonly" class="md-nav__link">
+    inlineOnly
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    Attributes
+  </a>
+  
+    <nav class="md-nav" aria-label="Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-properties_1" class="md-nav__link">
+    Base properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    Types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readwrite" class="md-nav__link">
+    Read/write
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#include-attribute-of-a-subsequent-node" class="md-nav__link">
+    include attribute of a subsequent node
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#barcode" class="md-nav__link">
+    Barcode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phone" class="md-nav__link">
+    Phone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sms" class="md-nav__link">
+    Sms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mail" class="md-nav__link">
+    mail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value-lists" class="md-nav__link">
+    Value lists
+  </a>
+  
+    <nav class="md-nav" aria-label="Value lists">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectfromtree" class="md-nav__link">
+    selectFromTree
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-validation" class="md-nav__link">
+    Field validation
+  </a>
+  
+    <nav class="md-nav" aria-label="Field validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required" class="md-nav__link">
+    required
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#existsvalidator" class="md-nav__link">
+    existsValidator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation" class="md-nav__link">
+    validation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributecontrol" class="md-nav__link">
+    attributeControl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assignment" class="md-nav__link">
+    Assignment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formfield" class="md-nav__link">
+    formField
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excludeexpertsearch_1" class="md-nav__link">
+    excludeExpertSearch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date" class="md-nav__link">
+    Date
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dirtycheck" class="md-nav__link">
+    dirtyCheck
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mustwrite" class="md-nav__link">
+    mustWrite
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#derived-attributes" class="md-nav__link">
+    Derived Attributes
+  </a>
+  
+    <nav class="md-nav" aria-label="Derived Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#derived-date-pattern-attributes" class="md-nav__link">
+    Derived Date Pattern Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#derived-regex-attributes" class="md-nav__link">
+    Derived Regex Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#derived-replace-attributes" class="md-nav__link">
+    Derived Replace Attributes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../default-tree/" title="Default tree configurations" class="md-nav__link">
+      Default tree configurations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../defined-searches/" title="Defined searches" class="md-nav__link">
+      Defined searches
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../drag-and-drop/" title="Drag and Drop (dnd)" class="md-nav__link">
+      Drag and Drop (dnd)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../extend-languages/" title="Extend Languages" class="md-nav__link">
+      Extend Languages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../favorites-menu/" title="Favorites and Menu on Tabs" class="md-nav__link">
+      Favorites and Menu on Tabs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filelink/" title="FileLink" class="md-nav__link">
+      FileLink
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fingerprinting/" title="Fingerprint" class="md-nav__link">
+      Fingerprint
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ict/" title="Insight Configuration Tools" class="md-nav__link">
+      Insight Configuration Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../insight-config-editor/" title="Insight Config Editor" class="md-nav__link">
+      Insight Config Editor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../insight-config/" title="Insight Configurations" class="md-nav__link">
+      Insight Configurations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../json/" title="insight-userprofile.json" class="md-nav__link">
+      insight-userprofile.json
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kibana-dashboards/" title="Kibana Dashboards" class="md-nav__link">
+      Kibana Dashboards
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../layout/" title="Layout" class="md-nav__link">
+      Layout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../menu-and-action/" title="Menus and Actions" class="md-nav__link">
+      Menus and Actions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nfc/" title="NFC" class="md-nav__link">
+      NFC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../offline/" title="Offline - Data synchronization" class="md-nav__link">
+      Offline - Data synchronization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../permissions/" title="Permissions" class="md-nav__link">
+      Permissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../planning/" title="Planning" class="md-nav__link">
+      Planning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../public-searches/" title="Public searches" class="md-nav__link">
+      Public searches
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../push-data/" title="Push data" class="md-nav__link">
+      Push data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../push/" title="Push" class="md-nav__link">
+      Push
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../requirements/" title="Requirements" class="md-nav__link">
+      Requirements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../table/" title="Table" class="md-nav__link">
+      Table
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../variables-values/" title="Working with variables/values" class="md-nav__link">
+      Working with variables/values
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-30" type="checkbox" id="nav-7-30">
+    
+    <label class="md-nav__link" for="nav-7-30">
+      Client configuration
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Client configuration" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-30">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Client configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../client-configuration/cookie/" title="Cookie" class="md-nav__link">
+      Cookie
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../client-configuration/general/" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../client-configuration/language/" title="Language" class="md-nav__link">
+      Language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../client-configuration/loginparams/" title="LoginParams" class="md-nav__link">
+      LoginParams
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../client-configuration/static-content/" title="Static Content" class="md-nav__link">
+      Static Content
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Operating Manual
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Operating Manual" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Operating Manual
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/address/" title="Address already in use" class="md-nav__link">
+      Address already in use
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/barcode/" title="Barcode Scanner Devices" class="md-nav__link">
+      Barcode Scanner Devices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/blocking/" title="Blocking user or IP" class="md-nav__link">
+      Blocking user or IP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/continous-login/" title="continous login" class="md-nav__link">
+      continous login
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/dataimport/" title="Dataimport and Update Elasticsearch" class="md-nav__link">
+      Dataimport and Update Elasticsearch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/deep-link-mobile/" title="Deep Link Mobile" class="md-nav__link">
+      Deep Link Mobile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/default-elastic/" title="Changing Default-Port of ElasticSearch" class="md-nav__link">
+      Changing Default-Port of ElasticSearch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/default-kibana/" title="Changing Default-Port of Kibana" class="md-nav__link">
+      Changing Default-Port of Kibana
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/eam-properties/" title="Indexerspecific EAM-properties" class="md-nav__link">
+      Indexerspecific EAM-properties
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/encrypt/" title="Encrypt DB-Password" class="md-nav__link">
+      Encrypt DB-Password
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/general/" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/heapdump/" title="Heapdump" class="md-nav__link">
+      Heapdump
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/image-quality/" title="Using images with appropriate quality" class="md-nav__link">
+      Using images with appropriate quality
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/insight-migration/" title="Insight Migration" class="md-nav__link">
+      Insight Migration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/kibana-insight/" title="Kibana only with Insight-Login" class="md-nav__link">
+      Kibana only with Insight-Login
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/logging/" title="Logging SQLs" class="md-nav__link">
+      Logging SQLs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/mapping/" title="Adaption of ElasticSearch-Mapping" class="md-nav__link">
+      Adaption of ElasticSearch-Mapping
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/massdata/" title="Massdata" class="md-nav__link">
+      Massdata
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/new-download/" title="New Download" class="md-nav__link">
+      New Download
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/old-notifications/" title="Scheduled deletion of old notifications" class="md-nav__link">
+      Scheduled deletion of old notifications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/properties/" title="Properties" class="md-nav__link">
+      Properties
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/pw-encryption/" title="Password Encryption" class="md-nav__link">
+      Password Encryption
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/queue-admin/" title="Wildfly ActiveMQ queue administration" class="md-nav__link">
+      Wildfly ActiveMQ queue administration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/scheduler/" title="Scheduler" class="md-nav__link">
+      Scheduler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/self-service/" title="Self Service" class="md-nav__link">
+      Self Service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/ssl/" title="SSL for JEE-Container" class="md-nav__link">
+      SSL for JEE-Container
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/update-mechanism/" title="Update-Mechanism" class="md-nav__link">
+      Update-Mechanism
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/war-files/" title="Deploy/undeploy war-files" class="md-nav__link">
+      Deploy/undeploy war-files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/wildfly-service/" title="Wildfly Service" class="md-nav__link">
+      Wildfly Service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-31" type="checkbox" id="nav-8-31">
+    
+    <label class="md-nav__link" for="nav-8-31">
+      Gateway
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Gateway" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-31">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Gateway
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/gateway/general/" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/gateway/timeouts/" title="Timeouts" class="md-nav__link">
+      Timeouts
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-32" type="checkbox" id="nav-8-32">
+    
+    <label class="md-nav__link" for="nav-8-32">
+      Use o o d i o h2
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Use o o d i o h2" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-32">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Use o o d i o h2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/use-o-o-d-i-o-h2/general/" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../6_operating-manual/use-o-o-d-i-o-h2/use-of-mysql/" title="Use of MySQL" class="md-nav__link">
+      Use of MySQL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      User Manual
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="User Manual" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        User Manual
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../7_user-manual/electron-client/" title="Electron-Client" class="md-nav__link">
+      Electron-Client
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../7_user-manual/search/" title="Search" class="md-nav__link">
+      Search
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      3rd party components
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="3rd party components" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        3rd party components
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../8_third-party-components/server-common/" title="Server" class="md-nav__link">
+      Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10-2" type="checkbox" id="nav-10-2">
+    
+    <label class="md-nav__link" for="nav-10-2">
+      Client
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Client" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Client
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../8_third-party-components/client/client-common/" title="Common Libraries" class="md-nav__link">
+      Common Libraries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../8_third-party-components/client/client-mobile/" title="Mobile Libraries" class="md-nav__link">
+      Mobile Libraries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../8_third-party-components/client/client-web/" title="Web Libraries" class="md-nav__link">
+      Web Libraries
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nodes" class="md-nav__link">
+    Nodes
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-properties" class="md-nav__link">
+    Base properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    query
+  </a>
+  
+    <nav class="md-nav" aria-label="query">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constraint" class="md-nav__link">
+    constraint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relation" class="md-nav__link">
+    relation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#db" class="md-nav__link">
+    db
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orderby-deprecated" class="md-nav__link">
+    orderBy (deprecated)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexer" class="md-nav__link">
+    indexer
+  </a>
+  
+    <nav class="md-nav" aria-label="indexer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stopandnochildren" class="md-nav__link">
+    stopandnochildren
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parentmapping" class="md-nav__link">
+    parentMapping
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root" class="md-nav__link">
+    Root
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#children" class="md-nav__link">
+    Children
+  </a>
+  
+    <nav class="md-nav" aria-label="Children">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loop" class="md-nav__link">
+    loop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queryparams" class="md-nav__link">
+    queryParams
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queryparams-example-maximo" class="md-nav__link">
+    queryParams-Example-Maximo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortby" class="md-nav__link">
+    sortBy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-properties" class="md-nav__link">
+    Advanced properties
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insertcreate-nodes" class="md-nav__link">
+    insert/create nodes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classification" class="md-nav__link">
+    Classification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documents" class="md-nav__link">
+    Documents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excludeexpertsearch" class="md-nav__link">
+    excludeExpertSearch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#labelwidth" class="md-nav__link">
+    labelWidth
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inlineonly" class="md-nav__link">
+    inlineOnly
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    Attributes
+  </a>
+  
+    <nav class="md-nav" aria-label="Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-properties_1" class="md-nav__link">
+    Base properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    Types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readwrite" class="md-nav__link">
+    Read/write
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#include-attribute-of-a-subsequent-node" class="md-nav__link">
+    include attribute of a subsequent node
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#barcode" class="md-nav__link">
+    Barcode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phone" class="md-nav__link">
+    Phone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sms" class="md-nav__link">
+    Sms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mail" class="md-nav__link">
+    mail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value-lists" class="md-nav__link">
+    Value lists
+  </a>
+  
+    <nav class="md-nav" aria-label="Value lists">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectfromtree" class="md-nav__link">
+    selectFromTree
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-validation" class="md-nav__link">
+    Field validation
+  </a>
+  
+    <nav class="md-nav" aria-label="Field validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required" class="md-nav__link">
+    required
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#existsvalidator" class="md-nav__link">
+    existsValidator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation" class="md-nav__link">
+    validation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributecontrol" class="md-nav__link">
+    attributeControl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assignment" class="md-nav__link">
+    Assignment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formfield" class="md-nav__link">
+    formField
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excludeexpertsearch_1" class="md-nav__link">
+    excludeExpertSearch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date" class="md-nav__link">
+    Date
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dirtycheck" class="md-nav__link">
+    dirtyCheck
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mustwrite" class="md-nav__link">
+    mustWrite
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#derived-attributes" class="md-nav__link">
+    Derived Attributes
+  </a>
+  
+    <nav class="md-nav" aria-label="Derived Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#derived-date-pattern-attributes" class="md-nav__link">
+    Derived Date Pattern Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#derived-regex-attributes" class="md-nav__link">
+    Derived Regex Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#derived-replace-attributes" class="md-nav__link">
+    Derived Replace Attributes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="data-model">Data Model<a class="headerlink" href="#data-model" title="Permanent link">&para;</a></h1>
+<p>The definition of the data model is independent of the used perspective(s). It is based on object types and relations common to the backend specific database model. It defines how data is read from the backend and how data is pushed to the backend.</p>
+<p>Characteristics:</p>
+<ul>
+<li>
+<p>Hierarchical tree structure (of related nodes)</p>
+</li>
+<li>
+<p>One distinct root node ("root")</p>
+</li>
+<li>
+<p>Nodes may have several sub nodes ("children")</p>
+</li>
+<li>
+<p>Relations are used to traverse from nodes to sub nodes ("query")</p>
+</li>
+<li>
+<p>Constraints are used to define the right subset of data records ("query")</p>
+</li>
+<li>
+<p>Nodes may have several attributes (persistent, transient) ("attributes")</p>
+</li>
+</ul>
+<h2 id="nodes">Nodes<a class="headerlink" href="#nodes" title="Permanent link">&para;</a></h2>
+<p>Nodes are representing a backend specific entity in an Insight configuration.</p>
+<p>Characteristics:</p>
+<ul>
+<li>
+<p>Hierarchical tree structure (of related nodes)</p>
+</li>
+<li>
+<p>One distinct root node ("root")</p>
+</li>
+<li>
+<p>Nodes may have several sub nodes ("children")</p>
+</li>
+<li>
+<p>Relations or queries are used to traverse from nodes to sub nodes</p>
+</li>
+<li>
+<p>Constraints are used to define the right subset of data records</p>
+</li>
+</ul>
+<h3 id="base-properties">Base properties<a class="headerlink" href="#base-properties" title="Permanent link">&para;</a></h3>
+<p>The following properties must be set</p>
+<pre><code>    "name": "Standort"
+    "type": "LOCATIONS"
+    "title": "Standort",
+    "label": "${LOCATION} - ${DESCRIPTION}",
+    "query": {...}
+</code></pre>
+<ul>
+<li>
+<p><em>name</em> defines name of the node <br />
+    o unique  <br />
+    o For technical reasons the name must not contain dots (such as package names).   <br />
+    o is used for standard aggregation of search results (Insight Explorer)</p>
+</li>
+<li>
+<p><em>type</em> defines backend specific object type</p>
+</li>
+<li>
+<p><em>title</em> defines label for UI presentation (details (Insight Explorer), header (Insight Mobile))</p>
+</li>
+<li>
+<p><em>label</em> is used in perspectives to help users identifying the data record</p>
+</li>
+<li>
+<p>${ATTRIBUTENAME} is dynamically replaced with the value of the attribute with the name ATTRIBUTENAME</p>
+</li>
+<li>
+<p><em>query</em> is used to describe the subset of data records</p>
+</li>
+</ul>
+<h3 id="query">query<a class="headerlink" href="#query" title="Permanent link">&para;</a></h3>
+<p>A node&#39;s "query"-section defines the subset of data that will be retrieved (criteria) and how the data will be retrieved (MboSet or Database).</p>
+<h4 id="constraint">constraint<a class="headerlink" href="#constraint" title="Permanent link">&para;</a></h4>
+<p>"constraint" constrains the data set that will be retrieved.</p>
+<p>"constraint" is optional in root or child nodes.</p>
+<p>If given, the "constraint" will be part of the WHERE-clause, so it has to be valid SQL.</p>
+<pre><code>    "root": {
+      "name": "pm",
+      "type": "PM",
+      "query": {
+        "constraint": "PARENT IS NULL"
+      },
+</code></pre>
+<p>The data set for child nodes is typically constrained by a Maximo relationship.</p>
+<p>In cases where relations can&#39;t be used, "constraint" comes to the rescue.</p>
+<p>Placeholders are used to define the parent&#39;s properties.</p>
+<pre><code>    "children": [{
+      "name": "problemcode",
+      "type": "FAILURECODE",
+      "query": {
+        "constraint": "FAILURECODE='${PROBLEMCODE}'"
+      },
+</code></pre>
+<h4 id="relation">relation<a class="headerlink" href="#relation" title="Permanent link">&para;</a></h4>
+<p>"relation" constrains the data set of child nodes to the associated objects.</p>
+<p>"relation" must be the name of a Maximo relationship that points from parent&#39;s type to child&#39;s type.</p>
+<pre><code>    "children": [{
+      "name": "asset",
+      "type": "ASSET",
+      "query": {
+        "relation": "ASSET"
+      },
+</code></pre>
+<p>A child node must provide at least one of "relation" or "constraint".</p>
+<h4 id="db">db<a class="headerlink" href="#db" title="Permanent link">&para;</a></h4>
+<p>"db" is used to define if data is collected by means of MboSets or by direct database access.</p>
+<p>"db" can have one out of three values.</p>
+<ul>
+<li>
+<p>false a node&#39;s attribute values as well as the idents leading to it are collected with MboSets</p>
+</li>
+<li>
+<p>true a node&#39;s attribute values as well as the idents leading to it are collected with direct database access</p>
+</li>
+<li>
+<p>null a node&#39;s attribute values are collected with MboSets, but the idents leading to it are collected by direct database access</p>
+</li>
+</ul>
+<p>Full database access:</p>
+<pre><code>    "query": {
+      "db": true
+</code></pre>
+<p>This setting yields the best performance. The attribute values will be read directly from the database, bypassing the MBO layer entirely.</p>
+<p>Use this setting only when</p>
+<ul>
+<li>
+<p>you can forgo business logic of the MBO layer</p>
+</li>
+<li>
+<p>all the node&#39;s attributes are persistent</p>
+</li>
+</ul>
+<p>Mixed mode:</p>
+<pre><code>    "query": {
+      "db": null
+</code></pre>
+<p>That&#39;s the default case, when "db" is not declared at all.</p>
+<p>The attribute values will be collected by means of MboSets, so the MBO layer&#39;s business rules will be obeyed.</p>
+<p>You can have transient attributes declared.</p>
+<p>A parent&#39;s child idents, concerning the node in question (or the root idents, if the node is the root node), will be collected with direct database access.</p>
+<p>In almost all cases, this strategy leads to the same result as if the idents were collected by MboSets.</p>
+<p>MboSet-only:</p>
+<pre><code>    "query": {
+      "db": false
+</code></pre>
+<p>In this mode, even the idents leading to the node are collected by means of MboSets.</p>
+<p>Use this mode if and only if the MBO layer&#39;s business rules must be obeyed to determine the proper child set (or root set).</p>
+<p>Downloading many data instances with this setting applied will be considerably slower.</p>
+<h4 id="orderby-deprecated">orderBy (deprecated)<a class="headerlink" href="#orderby-deprecated" title="Permanent link">&para;</a></h4>
+<p>"orderBy" is supported for backward compatibility reasons, but is considered deprecated.</p>
+<p>You should use <a href="#topic_SortBy">sortBy</a> to define the order in which siblings are listed.</p>
+<h4 id="indexer">indexer<a class="headerlink" href="#indexer" title="Permanent link">&para;</a></h4>
+<p>"indexer" helps with reconciling the redundant data that are held in elastic search indices.</p>
+<p>It is used to traverse the tree bottom up.</p>
+<p>A change in an object can affect its parent&#39;s child set. In order to reconsider the parent&#39;s child set,</p>
+<p>the "indexer" hint is needed.</p>
+<p>Without defining "indexer", changes to the parent&#39;s child set will be reflected only with the next &#39;full build&#39;</p>
+<pre><code>    "children": [{
+      "name": "asset",
+      "type": "ASSET",
+      "query": {
+        "relation": "ASSET",
+        "indexer": {
+          "parentRelation": "ALLWO"
+        }
+      },
+</code></pre>
+<h5 id="stopandnochildren">stopandnochildren<a class="headerlink" href="#stopandnochildren" title="Permanent link">&para;</a></h5>
+<p>Optimizing redundant data and cut off nodes and whole branches can be done with "stop" or "noChildren" in "indexer"</p>
+<pre><code>    "children": [{
+      "name": "asset",
+      "type": "ASSET",
+      "query": {
+        "relation": "ASSET",
+        "indexer": {
+          "mode": "noChildren"
+        }
+      },
+</code></pre>
+<ul>
+<li>
+<p>mode "noChildren" means, that objects for this node will be store in redundant data store (Elastic) but no children.</p>
+</li>
+<li>
+<p>mode "stop" means, that no objects for this node and no children will be stored.</p>
+</li>
+<li>
+<p>mode "stop" in root-node means that this treeConfig wont be indexed at all</p>
+</li>
+</ul>
+<h4 id="parentmapping">parentMapping<a class="headerlink" href="#parentmapping" title="Permanent link">&para;</a></h4>
+<p>"parentMapping" can be used to define foreign keys to parent nodes. This is necessary to create offline objects with subobjects. The foreign key attributes of the child node are replaced after creating the parent object.</p>
+<p>Example tree config:</p>
+<pre><code>    {
+      ...
+      "menus": [ {
+        "label": "Workorder",
+        "action": "create",
+        "icon": "icon-plus",
+        "actionValues": [{
+          "\_node": "workorder",
+          "DESCRIPTION": "Static value"
+        }]
+      }],
+      "root": {
+        "name": "workorder",
+        ...
+        "menus": [ {
+          "label": "Worklog",
+          "action": "create",
+          "icon": "icon-plus",
+          "actionValues": [{
+            "\_node": "worklog",
+            "DESCRIPTION": "Static value"
+          }]
+        }],
+        "attributes": [{
+          "name": "WONUM",
+          "label": "Number",
+          "type": "String",
+          "readonly": true
+        }, {
+          "name": "DESCRIPTION",
+          "label": "Description",
+          "type": "String"
+        }, {
+          "name": "SITEID",
+          "label": "SITEID",
+          "type": "String",
+          "control": "disabled"
+        }],
+        "children": [{
+          "name": "worklog",
+          ...
+          "query": {
+            ...
+            "parentMapping": {
+              "RECORDKEY": "WONUM",
+              "SITEID": "SITEID"
+            }
+          },
+          "attributes": [
+            {
+              "name": "DESCRIPTION",
+              "label": "Überschrift",
+              "type": "String",
+              "control": "createOnly"
+            },
+            {
+              "name": "SITEID",
+              "label": "SITEID",
+              "type": "String",
+              "readonly": true
+            },
+            {
+              "name": "RECORDKEY",
+              "label": "Arbeitsauftrag",
+              "type": "String",
+              "readonly": true
+            }
+          ]
+        }]
+      }
+    }
+</code></pre>
+<h3 id="root">Root<a class="headerlink" href="#root" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><em>root</em> defines the root node of the data model</p>
+</li>
+<li>
+<p>Except properties loop and query there is no difference between a root node and a child node. For further information see chapter Node properties.</p>
+</li>
+<li>
+<p><em>query:</em> is used to describe the subset of data records, according to the current use case.</p>
+<pre><code>{
+  "name": "locations",
+  "root": {
+    "query": {
+      ...
+    }
+  }
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="children">Children<a class="headerlink" href="#children" title="Permanent link">&para;</a></h3>
+<p>Children are nodes. For further information see chapter Node properties. Root nodes and child nodes are almost the same excluding the following properties:</p>
+<ul>
+<li><em>"query"</em> is used to describe the subset of data records (traverse parent  this child node)</li>
+</ul>
+<p>Configured with a backend specific <em>relation</em> and/or a <em>constraint</em> and an optional <em>orderBy</em> property</p>
+<ul>
+<li><em>"loop"</em> Node/sub nodes relations may be recursive</li>
+</ul>
+<h4 id="loop">loop<a class="headerlink" href="#loop" title="Permanent link">&para;</a></h4>
+<p>Node/sub nodes relations may be recursive.</p>
+<pre><code>    "children": [{
+            "loop": true,
+            "query": "..."
+</code></pre>
+<ul>
+<li>
+<p>"query" is specified as described in the topic below (children - query)</p>
+</li>
+<li>
+<p>"loop" nodes derive their properties (such as <em>attributes</em> and <em>menus</em> sections) from the parent node;</p>
+</li>
+<li>
+<p>Attention : properties derived from parent node must not be redefined</p>
+</li>
+</ul>
+<h3 id="queryparams">queryParams<a class="headerlink" href="#queryparams" title="Permanent link">&para;</a></h3>
+<p>"queryParams" are used to refine constraints. queryParams can therefore help to reduce the number of root-records/child-records.</p>
+<p>While the query-section&#39;s constraint is applied independent of the calling user, queryParams are applied in behalf of the calling user.</p>
+<p>The constraining values are obtained from the calling user&#39;s profile at runtime.</p>
+<p>Syntax</p>
+<p>queryParams take one of the following forms:</p>
+<pre><code>    "queryParams": {
+      "name": name,
+      "attribute": attribute
+    }
+</code></pre>
+<p>Here <em>name</em> and <em>attribute</em> are to be replaced by the parameter name and the attribute name respectively.</p>
+<pre><code>    "queryParams": {
+      "and": [
+        c1, 
+        c2, ...
+      ]
+    }
+</code></pre>
+<p>Here <em>c1</em>, <em>c2</em>, ... are queryParam-Constraints themselves. The supported logical operators are "and" and "or".</p>
+<p>You can nest and/or. The array-length must be at least 2.</p>
+<p>Due to backward-compatibility the historical (pre-2.7) syntax is also supported:</p>
+<pre><code>    "queryParams": [
+      {
+        "name": name,
+        "attribute": attribute
+      }, ...
+    ]
+</code></pre>
+<h3 id="queryparams-example-maximo">queryParams-Example-Maximo<a class="headerlink" href="#queryparams-example-maximo" title="Permanent link">&para;</a></h3>
+<pre><code>    "query": {
+      "constraint": "HISTORYFLAG=0 AND STATUS IN ('APPR', 'INPRG')"
+    }
+    "queryParams": {
+      "and": [
+        {
+          "name": "siteid",
+          "attribute": "SITEID"
+        },
+        {
+          "or": [
+            {
+              "name": "personid",
+              "attribute": "OWNER"
+            },
+            {
+              "name": "persongroup",
+              "attribute": "OWNERGROUP"
+            }
+          ]
+        }
+      ]
+    }
+</code></pre>
+<h3 id="sortby">sortBy<a class="headerlink" href="#sortby" title="Permanent link">&para;</a></h3>
+<p>"sortBy" is used to define the order in which the client should list siblings.</p>
+<p>"sortBy" has the following members:</p>
+<ul>
+<li>
+<p>"attribute" mandatory String denotes the attribute which defines the order</p>
+</li>
+<li>
+<p>"descending" optional boolean, default = false list hi values before low values</p>
+</li>
+<li>
+<p>"thenBy" optional Map subordinated ordering definition (recursion)</p>
+</li>
+</ul>
+<p>Examples:</p>
+<pre><code>    ...
+    "sortBy": {
+      "attribute": "billingDate",
+      "descending": true
+    }
+    ...
+    "sortBy": {
+      "attribute": "lastname",
+      "thenBy": {
+        "attribute": "firstname"
+      }
+    }
+</code></pre>
+<p>Only persistent attributes are allowed to define the order.</p>
+<p>If "sortBy" is not defined, then the order will be derived from the node&#39;s label.
+ The order is then defined by the label&#39;s persistent attributes that are local to the node.</p>
+<h3 id="advanced-properties">Advanced properties<a class="headerlink" href="#advanced-properties" title="Permanent link">&para;</a></h3>
+<h4 id="insertcreate-nodes">insert/create nodes<a class="headerlink" href="#insertcreate-nodes" title="Permanent link">&para;</a></h4>
+<p>In some backend systems data base tables have non-canonical names for their key attributes. To enable Insight to present data sets immediately after their creation, it is mandatory to register those key attributes.</p>
+<pre><code>    "clientProperties": {
+      "IDKEY": "TICKETUID"
+    },
+</code></pre>
+<h3 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">&para;</a></h3>
+<p>Classification can be used in every node that is configured with a class using classifications.</p>
+<pre><code>    "root": {
+      ....
+      "classification": {
+        "enabled": true,
+        "insertBefore": &lt;attribute&gt;
+      },
+</code></pre>
+<p>List of classification attributes is dynamically inserted before/after the attribute &lt;attribute&gt; in the "attributes":[] Array. (Option "insertBefore"/"insertAfter")</p>
+<p>"showClassifier": The classifier attribute is hidden by default. With this boolean property, the classifier can be shown.</p>
+<h3 id="documents">Documents<a class="headerlink" href="#documents" title="Permanent link">&para;</a></h3>
+<p>A node of type Documents represents a special kind of child-node.</p>
+<p>It enables Insight Mobile clients to</p>
+<p>capture pictures and to</p>
+<p>bind these pictures to its parent node and to</p>
+<p>push this data to an upload service</p>
+<p>There is a default upload service which performs the following steps:</p>
+<ul>
+<li>
+<p>creating of a DOCLINK record</p>
+</li>
+<li>
+<p>linking this record to the parent node object and</p>
+</li>
+<li>
+<p>storing the picture to the directory configured in the Maximo System Properties.</p>
+</li>
+</ul>
+<p>With "backendParams" it is possible to pass additional (parent) node specific meta data to the upload service.</p>
+<p>"minCount": number of documents/fotos which have to be uploaded</p>
+<p>"attributes": Attributes that can be filled in for a document. These attributes are transferred to the server when uploading. The names are not allowed to overlap with those from backendParams. See also: <a href="#topic_Ref456701241">node attributes</a></p>
+<pre><code>    "documents": [
+      {
+        "name": "foto",
+        "label": "Fotos",
+        "type": "Foto",
+        "backendParams": {
+          "OWNERTABLE": "WORKORDER",
+          "OWNERID": "${WORKORDERID}",
+          "SITEID": "${userData.siteid}"
+        },
+        "clientProperties": {
+          "minCount": 1
+        },
+        "attributes": [
+          {
+            "name": "REQUIRED",
+            "label": "Required",
+            "type": "String",
+            "required": true
+          }
+        ]
+      }
+    ],
+</code></pre>
+<h3 id="excludeexpertsearch">excludeExpertSearch<a class="headerlink" href="#excludeexpertsearch" title="Permanent link">&para;</a></h3>
+<p>To exclude an node from expert search use the following clientProperty:</p>
+<pre><code>    "clientProperties: {
+      "excludeExpertSearch": true
+    }
+</code></pre>
+<h3 id="labelwidth">labelWidth<a class="headerlink" href="#labelwidth" title="Permanent link">&para;</a></h3>
+<p>To set a fix label width for the form use the following clientProperty:</p>
+<pre><code>    "clientProperties": {
+      "labelWidth": "130"
+    }
+</code></pre>
+<h3 id="inlineonly">inlineOnly<a class="headerlink" href="#inlineonly" title="Permanent link">&para;</a></h3>
+<p>inlineOnly can be set for nodes which are only used for <a href="#topic_Inline">inline fields</a>. These nodes are not displayed on the UI.</p>
+<pre><code>    "inlineOnly": true,
+</code></pre>
+<h2 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h2>
+<h3 id="base-properties_1">Base properties<a class="headerlink" href="#base-properties_1" title="Permanent link">&para;</a></h3>
+<p>The following base properties must be configured.</p>
+<p>"name" : "ATTRIBUTEID" (ATTRIBUTEID specifies the Attribute in the given backend)</p>
+<p>"label" : "xyz" xyz is used in the detail view to help the user to identify the attribute</p>
+<p>"type" : Specifies the (Insight specific) data type of the attribute</p>
+<h3 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h3>
+<p>Attention: Value of "type" must match the type in the backend.</p>
+<ul>
+<li>
+<p>"String"</p>
+</li>
+<li>
+<p>"Boolean"</p>
+</li>
+<li>
+<p>"Date"</p>
+</li>
+<li>
+<p>"Text"</p>
+</li>
+<li>
+<p>"Decimal"</p>
+</li>
+<li>
+<p>"Born" Boolean or null.</p>
+<pre><code>"root": {
+    "name": "Standort",
+      "attributes": [{
+        "name": "LOCATION",
+        "label": "Standort",
+        "type": "String",
+        "readonly": true
+      }, {
+        "name": "DESCRIPTION",
+        "label": "Zusammenfassung",
+        "type": "String"
+      }, {
+        "name": "SITEID",
+        "label": "Niederlassung",
+        "type": "String",
+        "hidden": true
+    }],
+</code></pre>
+</li>
+</ul>
+<h3 id="readwrite">Read/write<a class="headerlink" href="#readwrite" title="Permanent link">&para;</a></h3>
+<ul>
+<li>"readonly": Boolean (default false). The form field is disabled and the insight middleware prevents the field from being written. 
+    o true --&gt; field is disabled  <br />
+    o false --&gt; field is enabled</li>
+</ul>
+<p>To disable, hide or enable at create - see <a href="#topic_Control">control</a></p>
+<ul>
+<li>"clientProperties.mustWrite": Boolean (default false). Normally, only the changed attributes are sent when saving. With this property, this attribute is always sent.</li>
+</ul>
+<h3 id="include-attribute-of-a-subsequent-node">include attribute of a subsequent node<a class="headerlink" href="#include-attribute-of-a-subsequent-node" title="Permanent link">&para;</a></h3>
+<p>Inline:</p>
+<p>To Include an attribute of a subsequent node in the detail view of the current node, use the following notation:</p>
+<p>attributes[</p>
+<p>{</p>
+<p>"name": "nodename/attributename"</p>
+<p>}</p>
+<p>Nodes can also be flagged with <a href="#topic_InlineOnly">inlineOnly</a>.</p>
+<h3 id="barcode">Barcode<a class="headerlink" href="#barcode" title="Permanent link">&para;</a></h3>
+<p>To include Barcode reading via Cam (smart phone, tablet, webcam,..) use barcode property</p>
+<pre><code>    "attributes": [{
+        "name": "LOCATION",
+        "label": "Standort",
+        "type": "String",
+        "barcode": true
+    }
+</code></pre>
+<p>Supported barcode types on iOS and Android</p>
+<p>Barcode Type Android iOS</p>
+<p>QR_CODE ✔ ✔</p>
+<p>DATA_MATRIX ✔✔</p>
+<p>UPC_A ✔✔</p>
+<p>UPC_E ✔✔</p>
+<p>EAN_8 ✔✔</p>
+<p>EAN_13 ✔✔</p>
+<p>CODE_39 ✔✔</p>
+<p>CODE_93 ✔✖</p>
+<p>CODE_128 ✔✔</p>
+<p>CODABAR ✔✖</p>
+<p>ITF ✔✔</p>
+<p>RSS14 ✔✖</p>
+<p>PDF_417 ✔✔</p>
+<p>RSS_EXPANDED ✔✖</p>
+<h3 id="phone">Phone<a class="headerlink" href="#phone" title="Permanent link">&para;</a></h3>
+<p>To include <em>tel protocol</em> use the following clientProperty:</p>
+<pre><code>    attributes[
+    {
+      "name": "PHONE",
+      ...
+      "clientProperties": {
+        "phone": true
+      }
+    ]
+</code></pre>
+<p>The attribute value is passed to the tel:// protocol which starts dialing the given number if there is a phone service available on the client device.</p>
+<h3 id="sms">Sms<a class="headerlink" href="#sms" title="Permanent link">&para;</a></h3>
+<p>To include <em>sms protocol</em> use the following clientProperty:</p>
+<pre><code>    attributes[
+    {
+      "name": "PHONE",
+      ...
+      "clientProperties": {
+        "sms": true
+      }
+    ]
+</code></pre>
+<p>The attribute value is passed to the sms:// protocol which starts the default sms app.</p>
+<h3 id="mail">mail<a class="headerlink" href="#mail" title="Permanent link">&para;</a></h3>
+<p>To include <em>mailto protocol</em> use the following clientProperty:</p>
+<pre><code>    attributes[
+    {
+      "name": "E-Mail",
+      ...
+      "clientProperties": {
+        "mail": true
+      }
+    ]
+</code></pre>
+<p>The attribute value is passed to the mailto:// protocol which starts the default mail app.</p>
+<h3 id="value-lists">Value lists<a class="headerlink" href="#value-lists" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>"options": Values</p>
+</li>
+<li>
+<p>"dictionary" Values can be listed directly</p>
+</li>
+<li>
+<p>"hint" Values retrieved from a backend specific dictionary</p>
+</li>
+<li>
+<p>"selectFromTree" : Values of attributes retrieved from node items of another Insight Config configuration</p>
+</li>
+</ul>
+<h4 id="options">options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h4>
+<p>_dictionary:_Values can be listed directly</p>
+<pre><code>    "options": {
+      "dictionary": [
+        {
+          "label": "true",
+          "value": "J"
+        },
+        {
+          "label": "false",
+          "value": "N"
+        },
+        {
+          "label": "null",
+          "value": "LEER"
+        }
+      ]
+</code></pre>
+<p><em>hint:</em> Values of a Domain can be included</p>
+<pre><code>    {
+      "name": "DESCRIPTION",
+      "label": "DESCRIPTION",
+      "type": "String",
+      "options": {
+        "hint": "VMMANUFACT"
+      }
+    },
+    {
+      "name": "TOTALCOST",
+      "label": "TOTALCOST",
+      "type": "Decimal",
+      "options": {
+        "hint": "TICKETPRIORITY"
+      }
+    }
+</code></pre>
+<h4 id="selectfromtree">selectFromTree<a class="headerlink" href="#selectfromtree" title="Permanent link">&para;</a></h4>
+<ul>
+<li>"selectFromTree": Values can be node items of another Insight Config configuration</li>
+<li>Attributes with selectFromTree can&#39;t be edited manually. This is the default behavior since 2.13.1.<ul>
+<li>The default behavior can be overridden by<ul>
+<li>setting the global client-config-property "<a href="#topic_Client_ConfigurationselectFromTreeEnabled">selectFromTreeEnabled</a>"</li>
+<li>setting the property "enabled" on "selectFromTree" (from Version 2.14)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Presents node instances of src Insight Config configuration ("tree") in a selection view</p>
+<ul>
+<li>"tree": tree to select from</li>
+<li>"node": node to select from (currently only the root node is supported)</li>
+<li>"attribute": attribute of root node (in the referenced configuration specified in „tree")</li>
+<li>"search": search name to use when selecting. The search must be defined in the given "tree". See: <a href="#topic_Defined_searches">searches</a></li>
+<li>"autofill": Array of attributes to be copied if validation succeed<ul>
+<li>"src": name of attribute (in the referenced configuration specified in „tree")</li>
+<li>"dst": name of attribute in this node (in the enclosing configuration)</li>
+</ul>
+</li>
+<li>"filter": Key value mapping to filter the items to select.</li>
+<li>"enabled": true, false. Activate manual inputs</li>
+<li>
+<p>"deep": true, false. Activate deep tree selection. Only the records specified in "node" can be selected. The selection starts at the root list by default.</p>
+<ul>
+<li>"contextId": (optional) If the last position in the "selectFromTree-tree" is known at the current record, it can be displayed again. "contextId" must be set to the uniqueId of the record in the "selectFromTree-tree".(last part of the path) <a href="#topic_SelectFromTreedeepContext">Full example below.</a> The parent hierarchy can be resolved online and offline. Online: The search-index is used, offline the downloaded data.</li>
+<li>"contextNode": Alternative node to display.</li>
+</ul>
+<p>{
+  "name": "CRAFT",
+  "label": "Gewerk",
+  "type": "String",
+  "selectFromTree": {
+    "tree": "craft",
+    "node": "Craft",
+    "attribute": "CRAFT",
+    "autofill": [{
+      "src": "STANDARDRATE",
+      "dst": "PAYRATE"
+    }]
+  }
+}</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example with filter:</p>
+<pre><code>"selectFromTree": {
+  "tree": "failurelist-problem",
+  "node": "failurelist",
+  "attribute": "FAILURECODE",
+  "filter": {
+    "PARENT": "${FAILURELIST1}"
+  }]
+}
+</code></pre>
+</li>
+<li>
+<p>Full example with deep, contextId and autofill:</p>
+<pre><code>{
+  "name": "LOCATION",
+  "label": "Standort",
+  "type": "String",
+  "clientProperties": {
+    "labelHidden": true,
+    "clear": true
+  },
+  "selectFromTree": {
+    "tree": "test-locations",
+    "node": "Standort",
+    "attribute": "LOCATION",
+    "deep": true,
+    "contextNode": "Standort",
+    "contextId": "${LOCATIONSIDTEMP}",
+    "autofill": [{
+      "src": "LOCATIONSID",
+      "dst": "LOCATIONSIDTEMP"
+    }]
+  }
+},
+{
+  "name": "LOCATIONSIDTEMP",
+  "label": "StandortId",
+  "type": "String",
+  "formField": true,
+  "clientProperties": {
+    "
+": {
+      "js": "if(!value){setValue(getValueForName(&amp;#39;LOCATIONS/LOCATIONSID&amp;#39;))}"
+    }
+  }
+},
+{
+  "name": "LOCATIONS/LOCATIONSID",
+  "label": "StandortId",
+  "type": "String"
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="field-validation">Field validation<a class="headerlink" href="#field-validation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a href="#topic_Required">required</a></p>
+</li>
+<li>
+<p><a href="#topic_FieldValidation">existsValidator</a></p>
+</li>
+<li>
+<p><a href="#topic_Validation">validation</a></p>
+</li>
+</ul>
+<h4 id="required">required<a class="headerlink" href="#required" title="Permanent link">&para;</a></h4>
+<p>"required":true</p>
+<p>The flag enables the "required" field feature</p>
+<p>The client checks if there is data set in the corresponding input field, decorates the field according to the state (filled/not filled) and prevents a push data operation if such a required field is not filled (and presents the error state via decoration and message to the user).</p>
+<pre><code>    "attributes": [
+        {
+          "name": "LOCATION",
+          "label": "Standort",
+          "type": "String",
+          "required": true
+        }]
+</code></pre>
+<h4 id="existsvalidator">existsValidator<a class="headerlink" href="#existsvalidator" title="Permanent link">&para;</a></h4>
+<p>This feature is supported only by insight-mobile. The data to be checked must be downloaded first. <a href="#topic_Validation">Validation</a> overrides existsValidator but can be compensated by findInTree.</p>
+<p>"existsValidator" validates if user input matches a given attribute value of a root node instance in another Insight Config configuration ("tree")</p>
+<ul>
+<li>"tree" specifies source Insight Config configuration</li>
+<li>"attribute" attribute of root node (in the referenced configuration specified in „tree")</li>
+<li>"autofill": Array of attributes to be copied if validation succeeds<ul>
+<li>"src": name of attribute (in the referenced configuration specified in „tree")</li>
+<li>"dst": name of attribute in this node (in the enclosing configuration)</li>
+</ul>
+</li>
+<li>"filter": Key value mapping to filter the items to select.</li>
+</ul>
+<h4 id="validation">validation<a class="headerlink" href="#validation" title="Permanent link">&para;</a></h4>
+<p>ClientProperty &#39;validation&#39; provides a set of functions and params to build an interactive input flow (focus - input - validate - warn/error/shift focus -..).</p>
+<p>These params and functions can be used inside a js code snipped which is defined in the js section of the &#39;validation&#39; ClientProperty.</p>
+<p>Trigger:</p>
+<p>* each change to the corresponding form field will cause the execution of the defined code snipped</p>
+<p>* each time the form is saved will cause the execution of each defined &#39;validation&#39; of the enclosing node (see Parameter "save")</p>
+<p>Params:</p>
+<p>* <em>value</em> represents the actual value</p>
+<p>* <em>attribute</em> JS-Attribute object</p>
+<p>* <em>attributes</em> all JS-Attribute objects of current detail view</p>
+<p>* <em>save</em> Boolean: Indicates whether validation is performed due to saving or due to user input.</p>
+<p>* <em>object</em> server representation of the current object; current changes are not reflected;</p>
+<p>* <em>isNew</em> Boolean: Indicates whether the record is to create</p>
+<p>* <em>userData</em> Properties of the logged in user. (<a href="#topic_working_with_variables">Working with variables/values)</a></p>
+<p>* <em>nfcResult Read NFC result</em></p>
+<p>Functions:</p>
+<p>* <em>valid</em> marks the input field as valid: e.g. valid();</p>
+<p>* <em>warn</em> presents a given warning to the user but does not prevent the data set to be stored, e.g.: warn(&#39;Input exceeds max value. Proceed?&#39;);</p>
+<p>* <em>invalid</em> presents a given error message to the user and prevents data from being storde, e.g.: invalid(&#39;Not valid ...&#39;);</p>
+<p>* <em>attributeForName</em> retrieves attribute object by its name. e.g.: var attribute = attributeForName(&#39;DESCRIPTION&#39;);</p>
+<p>* <em>getValueForName</em> retrieves attribute value by its name (replaces <em>valueForAttributeName</em>). e.g.: var value = getValueForName(&#39;DESCRIPTION&#39;);</p>
+<p>* <em>next</em> shifts focus to the next editable field. To shift the focus to the attribute with a particular name call next with parameter_,_ e.g.: next(&#39;DESCRIPTION&#39;);</p>
+<p>* <em>validAndNext</em> marks the input field as valid and jumps to the <em>next field; e.g.</em> validAndNext(); or validAndNext(&#39;DESCRIPTION&#39;);</p>
+<p>* <em>findInTree</em> Searches in other tree by filter; e.g. findInTree(&#39;treename&#39;, filterMap).then(callback); The parameter of the callback function is: firstRecords (see code example below) !!! It is absolutely necessary to call valid, invalid or validAndNext in the callback function !!!</p>
+<p>* findInTree can also use a defined search of the destination tree. This only works offline; e.g. findInTree(&#39;treename&#39;, filterMap, &#39;searchString, &#39;nodename&#39;, &#39;searchname&#39;).then(callback); The callback function got a second parameter: searchResult (all found rows of the offline search model)</p>
+<p>* <em>setValue</em> Sets the value of the current field; e.g. setValue(&#39;Foo&#39;);</p>
+<p>* <em>setValueForName</em> Sets the value of given field; e.g. setValueForName(&#39;DESCRIPTION&#39;, &#39;Foo&#39;);</p>
+<p>* <em>sound</em> Plays a sound. There are two default sound files: positive and negative; e.g. sound(&#39;positive&#39;); Own sound files can be integrated via <a href="#topic_Static_Content">static-content</a>. e.g. sound(&#39;static-content/my-sound.mp3&#39;);</p>
+<p>* remote.validate(&#39;middleware/check&#39;, {value: value}); -- calls the remote script with the given data-object and executes valid()/invalid() depending on the success (HTTP-Status 200) or failure (HTTP-Status 500) of the script</p>
+<p>* remote.action(&#39;middleware/uuid&#39;).then((data) =\&gt; { setValue(data.uuid); }); -- calls the remote script with the given data-object, you need to handle the returned object/failure in the method through a promise</p>
+<p>* setReadonly Sets UI control readonly or not. e.g. setReadonly(true);</p>
+<p>* setReadonlyForName Sets UI control readonly or not for attribute name. e.g. setReadonlyForName(&#39;DESCRIPTION&#39;, true);</p>
+<pre><code>    "clientProperties": {
+      "validation": {
+        "js": "value == 10 ? valid() : invalid(&amp;#39;Not 10!&amp;#39;);"
+      }
+    }
+    "clientProperties": {
+      "validation": {
+        "js": "if(!save){attributeForName(&amp;#39;FR2CODE&amp;#39;).value = undefined;} if(value != undefined &amp;amp;&amp;amp; value != &amp;#39;&amp;#39;){ next() }"
+      },
+      "attributeControl": {
+        "js": "attribute.readonly = valueForAttributeName(&amp;#39;PROBLEMCODE&amp;#39;) == undefined || valueForAttributeName(&amp;#39;PROBLEMCODE&amp;#39;) == &amp;#39;&amp;#39;; attribute.styleClass = attribute.readonly ? &amp;#39;&amp;#39; : &amp;#39;bg-color-light-red&amp;#39;"
+      }
+    }
+    "clientProperties": {
+      "validation": {
+        "js": "findInTree(&amp;#39;person&amp;#39;, {PERSONID: value}).then(function(firstRecords){ firstRecords.length \&amp;gt; 0 ? validAndNext() : invalid(&amp;#39;Not found&amp;#39;) })"
+      }
+    }
+</code></pre>
+<h3 id="attributecontrol">attributeControl<a class="headerlink" href="#attributecontrol" title="Permanent link">&para;</a></h3>
+<p>ClientProperty "attributeControl" provides a set of functions and params to set the attribute properties dynamically (see <em>Field validation - validation</em>). The attributeControl-Function can also be used at node configurations.</p>
+<p>Trigger:</p>
+<p>* each change to one of the form fields, having validation or attributeControl, will cause the execution of each defined code snipped</p>
+<p>* on form creation</p>
+<p>Paramters and functions are much the same as in the &#39;validation&#39; section except the next()/validAndNext() functions. These are not accessible during execution of <em>attributeControl.</em></p>
+<p>Params:</p>
+<p>* <em>value</em> represents the actual value</p>
+<p>* <em>attribute</em> JS-Attribute object</p>
+<p>* <em>attributes</em> all JS-Attribute objects of current detail view</p>
+<p>* <em>save</em> Boolean: Indicates whether validation is performed due to saving or due to user input.</p>
+<p>* <em>object</em> server representation of the current object; current changes are not reflected;</p>
+<p>* <em>isNew</em> Boolean: Indicates whether the record is to create</p>
+<p>* <em>userData</em> Properties of the logged in user. (<a href="#topic_working_with_variables">Working with variables/values)</a></p>
+<p>* <em>onInit</em> Boolean: Indicates whether the form is in initialization</p>
+<p>Functions:</p>
+<p>* <em>valid</em> marks the input field as valid: e.g. valid();</p>
+<p>* <em>warn</em> presents a given warning to the user but does not prevent the data set to be stored, e.g.: warn(&#39;Input exceeds max value. Proceed?&#39;);</p>
+<p>* <em>invalid</em> presents a given error message to the user and prevents data from being storde, e.g.: invalid(&#39;Not valid ...&#39;);</p>
+<p>* <em>validForName</em> marks the input field as valid: e.g. valid(&#39;DESCRIPTION&#39;);</p>
+<p>* <em>warnForName</em> presents a given warning to the user but does not prevent the data set to be stored, e.g.: warn(&#39;Input exceeds max value. Proceed?&#39;, &#39;DESCRIPTION&#39;);</p>
+<p>* <em>invalidForName</em> presents a given error message to the user and prevents data from being storde, e.g.: invalid(&#39;Not valid ...&#39;, &#39;DESCRIPTION&#39;);</p>
+<p>* <em>attributeForName</em> retrieves attribute object by its name. e.g.: var attribute = attributeForName(&#39;DESCRIPTION&#39;);</p>
+<p>* <em>getValueForName</em> retrieves attribute value by its name (replaces <em>valueForAttributeName</em>). e.g.: var value = getValueForName(&#39;DESCRIPTION&#39;);</p>
+<p>* <em>setValue</em> Sets the value of the current field; e.g. setValue(&#39;Foo&#39;);</p>
+<p>* <em>setValueForName</em> Sets the value of given field; e.g. setValueForName(&#39;DESCRIPTION&#39;, &#39;Foo&#39;);</p>
+<p>* <em>sound</em> Plays a sound. There are two default sound files: positive and negative; e.g. sound(&#39;positive&#39;); Own sound files can be integrated via <a href="#topic_Static_Content">static-content</a>. e.g. sound(&#39;static-content/my-sound.mp3&#39;);</p>
+<p>* remote.validate(&#39;middleware/check&#39;, {value: value}); -- calls the remote script with the given data-object and executes valid()/invalid() depending on the success (HTTP-Status 200) or failure (HTTP-Status 500) of the script</p>
+<p>* remote.action(&#39;middleware/uuid&#39;).then((data) =\&gt; { setValue(data.uuid); }); -- calls the remote script with the given data-object, you need to handle the returned object/failure in the method through a promise</p>
+<p>* setReadonly Sets UI control readonly or not. e.g. setReadonly(true);</p>
+<p>* setReadonlyForName Sets UI control readonly or not for attribute name. e.g. setReadonlyForName(&#39;DESCRIPTION&#39;, true);</p>
+<p>* setReadonlyAll Sets UI control readonly for all attributes or not. e.g. setReadonlyAll(true);</p>
+<pre><code>    "attributeControl": {
+      "js": "attribute.readonly = valueForAttributeName('PROBLEMCODE') == undefined || valueForAttributeName('PROBLEMCODE') == ''; attribute.styleClass = attribute.readonly ? '' : 'bg-color-light-red'"
+    }
+</code></pre>
+<h3 id="assignment">Assignment<a class="headerlink" href="#assignment" title="Permanent link">&para;</a></h3>
+<p>The <em>assignment</em> function fills the given attribute dynamically with a value when the specified hook is triggered.</p>
+<ul>
+<li>"assignment"<ul>
+<li>"type": specifies the function to be called<ul>
+<li>"text": assigns a value (see chapter <em>Working with variables/values</em>)</li>
+</ul>
+</li>
+<li>"value": formatted String with variables (see chapter <em>Working with variables/values</em>)</li>
+<li>
+<p>"when": specifies the trigger</p>
+<ul>
+<li>"afterRead" after reading the data</li>
+<li>"beforeWrite": before sending back to the server</li>
+<li>"onSave": save button pressed</li>
+</ul>
+<p>"assignment": {
+  "type": "text",
+  "when": "onSave",
+  "value": "Hallo ${WONUM}, ${appParams.standort}, ${userData.personid} - ${func.now}"
+}</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="formfield">formField<a class="headerlink" href="#formfield" title="Permanent link">&para;</a></h3>
+<p>An attribute signed as formField creates a field on a detail page which does not refer to an attribute in the backend.</p>
+<ul>
+<li>
+<p>Insight Middleware ignores such fields.</p>
+</li>
+<li>
+<p>Insight Client uses these fields like other attributes.</p>
+<pre><code>{
+  "name": "WORKORDERID\_BLAA",
+  "formField": true,
+  "label": "IDtemp",
+  "type": "String"
+},
+{
+  "name": "WORKORDERID\_BLAA2",
+  "formField": true,
+  "label": "IDtemp2",
+  "type": "String",
+  "assignment": {
+    "value": "${DESCRIPTION}",
+    "when": "afterRead",
+    "type": "text"
+  }
+},
+{
+  "name": "DESCRIPTION",
+  "label": "Beschreibung",
+  "type": "String",
+  "assignment": {
+    "value": "${WORKORDERID\_BLAA}-${WORKORDERID\_BLAA2}",
+    "when": "onSave",
+    "type": "text"
+  }
+}.
+</code></pre>
+</li>
+</ul>
+<h3 id="excludeexpertsearch_1">excludeExpertSearch<a class="headerlink" href="#excludeexpertsearch_1" title="Permanent link">&para;</a></h3>
+<p>To exclude an attribute from expert search use the following clientProperty:</p>
+<pre><code>    "clientProperties": {
+      "excludeExpertSearch":true
+    }
+</code></pre>
+<h3 id="format">Format<a class="headerlink" href="#format" title="Permanent link">&para;</a></h3>
+<p>Attributes can be formatted with a pattern. The format only affects the display value and the node label.</p>
+<ul>
+<li>
+<p>Date:</p>
+<ul>
+<li>
+<p>Pattern documentation can be found at java SimpleDateFormat</p>
+<p>{ <br />
+    "name": "REPORTDATE", <br />
+    "label": "Date",  <br />
+    "type": "Date",   <br />
+    "readonly": true, <br />
+    "format": "pattern:&#39;dd.MM.yyyy HH:mm:ss&#39;" <br />
+}</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Decimal:</p>
+<ul>
+<li>
+<p>Pattern documentation can be found at java NumberFormat</p>
+<p>{ <br />
+    "name": "VALUE",  <br />
+    "label": "Decimal", 
+    "type": "Decimal",<br />
+    "readonly": true, <br />
+    "format": "pattern:&#39;#0.00&#39;,locale:&#39;de&#39;"   <br />
+}</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="date">Date<a class="headerlink" href="#date" title="Permanent link">&para;</a></h3>
+<p>Attributes of type date open a special date picker UI when clicked. That datepicker UI is available on web, mobile and electron. Along with the datepicker UI for attributes of type date, additional features are available:</p>
+<p>Min / Max</p>
+<p>You can specify a valid range in which a user can pick his date. There are several options.</p>
+<pre><code>    {
+        "name": "CREATEDATE",
+        "label": "My Date Example",
+        "type": "Date",
+        "clientProperties": {
+        "min": [2019, 6, 3],
+        "max": [2019, 6, 28]
+      }
+    }
+</code></pre>
+<p>Instead of fixed date boundaries, you may also specify min as an Integer, relative to today. The following example will start the valid pick range 15 days before today.</p>
+<pre><code>    {
+        "name": "CREATEDATE",
+        "label": "My Date Example",
+        "type": "Date",
+        "clientProperties": {
+        "min": -15,
+        "max": [2019, 6, 28]
+      }
+    }
+</code></pre>
+<p>Setting max to true will set the value to today, false removes any limits.</p>
+<p>Disabling dates</p>
+<p>You are also able to disable specific dates in the datepicker. To disable a list of specific dates, use the following notation:</p>
+<pre><code>    {
+        "name": "CREATEDATE",
+        "label": "My Date Example",
+        "type": "Date",
+        "clientProperties": {
+        "disable": [[2019, 6, 10], [2019, 6, 11]]
+      }
+    }
+</code></pre>
+<p>If you want to specific weekdays (Mondays, Thursdays,...) you can use the following notation:</p>
+<pre><code>    {
+        "name": "CREATEDATE",
+        "label": "My Date Example",
+        "type": "Date",
+        "clientProperties": {
+        "disable": [1, 4, 7]
+      }
+    }
+</code></pre>
+<p>Instead of listing all specific dates to disable, you are also able to list the complete range for disabled dates:</p>
+<pre><code>    {
+        "name": "CREATEDATE",
+        "label": "My Date Example",
+        "type": "Date",
+        "clientProperties": {
+          disable: [
+          { from: [2016,2,14], to: [2016,2,27] }
+        ]
+      }
+    }
+</code></pre>
+<h3 id="dirtycheck">dirtyCheck<a class="headerlink" href="#dirtycheck" title="Permanent link">&para;</a></h3>
+<p>Include or exclude from dirty check of detail pages. The dirty check shows a dialog if a user wants to leave a page and attributes are still changed.</p>
+<ul>
+<li>
+<p>Include: Is used to include attributes with settings like "formField".</p>
+</li>
+<li>
+<p>Exclude: Is used to exclude attributes with predifined values from settings like "attributeControl".</p>
+<pre><code>{
+  "name": "myfield",
+  "type": "String",
+  "formField": true,
+  "clientProperties": {
+    "dirtyCheck": "include"
+  }
+},
+{
+  "name": "myfield",
+  "type": "String",
+  "clientProperties": {
+  "dirtyCheck": "exclude",
+  "attributeControl": {
+    "js": "setValue(&amp;#39;Initial value&amp;#39;);"
+    }
+  }
+},
+</code></pre>
+</li>
+</ul>
+<h3 id="mustwrite">mustWrite<a class="headerlink" href="#mustwrite" title="Permanent link">&para;</a></h3>
+<p>"mustWrite" Is only working if the default save api is used, no "saveAction".</p>
+<ul>
+<li>
+<p>true: Attribute is written on save, even if the value is not changed.</p>
+</li>
+<li>
+<p>false: Attribute is never written on save.</p>
+<pre><code>{
+  "name": "myfield",
+  "type": "String",
+  "formField": true,
+  "clientProperties": {
+    "mustWrite": "false"
+  }
+},
+</code></pre>
+</li>
+</ul>
+<h2 id="derived-attributes">Derived Attributes<a class="headerlink" href="#derived-attributes" title="Permanent link">&para;</a></h2>
+<p>Derived Attributes do not exist within your EAM, but can be derived from them.</p>
+<p>Derived attributes are defined in a node&#39;s "attributes"-section together with their <em>normal</em> counterparts.</p>
+<p>Attribute&#39;s properties like "name", "label" or "section" apply as usual.</p>
+<p>Derived attributes must be of type "String" and are "readonly" by nature.</p>
+<p>A derived attribute is distinguished from an EAM-attribute by its nested "derived"-element.</p>
+<pre><code>    "attributes": [
+      ...
+      {
+        "label": "mylabel",
+        "name": "myname", "derived"  : {
+        ...
+</code></pre>
+<h3 id="derived-date-pattern-attributes">Derived Date Pattern Attributes<a class="headerlink" href="#derived-date-pattern-attributes" title="Permanent link">&para;</a></h3>
+<p>Derived Date Pattern Attributes can be used to format dates in a customized form.</p>
+<p>They are based on an <em>attribute</em> of type "Date". That date attribute must be declared as a sibling EAM attribute.</p>
+<p>The "pattern"property defines how the date value is formatted.</p>
+<p>A Date Pattern Attribute is defined as followed</p>
+<pre><code>    {
+      "name": "REPORT\_KW",
+      "label": "Erstellt KW",
+      "type": "String",
+      "derived": {
+        "pattern": "YYYY/ww",
+        "attribute": "REPORTDATE"
+    }
+    }
+</code></pre>
+<p>The pattern&#39;s rules are explained <a href="http://joda-time.sourceforge.net/apidocs/org/joda/time/format/DateTimeFormat.html">here</a>.</p>
+<h3 id="derived-regex-attributes">Derived Regex Attributes<a class="headerlink" href="#derived-regex-attributes" title="Permanent link">&para;</a></h3>
+<p>Derived Regex Attributes can be used to <em>extract parts</em> of other attributes.</p>
+<p>They are based on an <em>attribute</em> of type "String". That string attribute must be declared as a sibling EAM attribute.</p>
+<p>The <em>regex</em> defines how the resulting value is obtained from the actual attribute&#39;s value.</p>
+<p>With the optional <em>replacement</em> you can empower regular expressions even more.</p>
+<p>A Regex Attribute is defined as followed</p>
+<pre><code>    {
+      "name": "location\_part4",
+      "label": "Part4 of Location",
+      "type": "String",
+      "derived": {
+        "regex": "([^-]\*-){3}([^-]\*)-",
+        "attribute": "LOCATION"
+      }
+    }
+</code></pre>
+<p>The nested properties "regex" and "attribute" are mandatory for derived regex attributes.</p>
+<p>"regex" denotes a so called <em>extended regular expression</em> as defined e.g.<a href="https://en.wikibooks.org/wiki/Regular_Expressions/POSIX-Extended_Regular_Expressions">here</a>.</p>
+<p>"attribute" denotes the name of the actual EAM attribute.</p>
+<p>The nested property "replacement" is optional. Unless given the resulting value is that of the right most group in "regex".</p>
+<p>If the regex does not match, the resulting value will be empty.</p>
+<p>In the example above the regex attribute&#39;s value is derived from EAM&#39;s attribute LOCATION.</p>
+<p>The extracted part is the text between the third and fourth dash.</p>
+<p>Otherwise, if "replacement" is given, then the value is the "replacement" property, where $1, $2 etc are replaced by the <em>captured groups</em>.</p>
+<p>If the replacement shall contain the dollar-sign or the backslash literally, it must be escaped by Backslash ().</p>
+<p>Note that JSON-Syntax requires the backslash itself to be escaped by another backslash.</p>
+<p>Suppose the EAM attribute x has value "abc/pqr/xyz" and the regex attribute is defined like so</p>
+<pre><code>    "derived": {
+      "regex": "(.\*)/(.\*)/(.\*)",
+      "attribute": "x",
+      "replacement": "$3 \\$ $1"
+    }
+</code></pre>
+<p>The derived value would then be "xyz $ abc".</p>
+<h3 id="derived-replace-attributes">Derived Replace Attributes<a class="headerlink" href="#derived-replace-attributes" title="Permanent link">&para;</a></h3>
+<p>Derived Replace Attributes can be used to <em>compose</em> values from other values.</p>
+<p>The "replace" property defines how the value gets composed.</p>
+<p>The syntax is the same as for a node&#39;s "label".</p>
+<pre><code>    "derived": {
+      "replace": "${LASTNAME}, ${FIRSTNAME}"
+    }
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../dashboard-visu/" title="Dashboard Visualizations with Kibana" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Dashboard Visualizations with Kibana
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../default-tree/" title="Default tree configurations" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Default tree configurations
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 <a href="https://www.rodias.de">Rodias GmbH</a>
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d1f5a259.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f9edbbd5.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["tabs"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.fae956e7.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
