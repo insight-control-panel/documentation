@@ -1,0 +1,4568 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Insight Devevlopment Team">
+      
+      <link rel="shortcut icon" href="../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+    
+    
+      
+        <title>Menus and Actions - Insight Manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bc7e593a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab28b872.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#menus-and-actions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Insight Manual" class="md-header-nav__button md-logo" aria-label="Insight Manual">
+      
+  <img src="../../../images/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Insight Manual
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Menus and Actions
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Insight Manual" class="md-nav__button md-logo" aria-label="Insight Manual">
+      
+  <img src="../../../images/favicon.png" alt="logo">
+
+    </a>
+    Insight Manual
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../license/" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Release-Notes
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Release-Notes" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Release-Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0_release-notes/17.0/17.0/" class="md-nav__link">
+      v17.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0_release-notes/18.0/18.0/" class="md-nav__link">
+      v18.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0_release-notes/19.0/19.0/" class="md-nav__link">
+      v19.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0_release-notes/20.0/20.0/" class="md-nav__link">
+      v20.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0_release-notes/21.0/21.0/" class="md-nav__link">
+      v21.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0_release-notes/22.0/22.0/" class="md-nav__link">
+      v22.0*
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0_release-notes/23.0/23.0/" class="md-nav__link">
+      v23.0*
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Installation
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Installation" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/installation/general/" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Requirements
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Requirements" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon"></span>
+        Requirements
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/requirements/basic/" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/requirements/environment/" class="md-nav__link">
+      Environment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/requirements/servercomponents/" class="md-nav__link">
+      Servercomponents
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Docker
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Docker" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        <span class="md-nav__icon md-icon"></span>
+        Docker
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/docker/basic/" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/docker/images/" class="md-nav__link">
+      Images
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/docker/configuration/" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-4" type="checkbox" id="nav-4-3-4">
+    
+    <label class="md-nav__link" for="nav-4-3-4">
+      Installation
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Installation" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-4">
+        <span class="md-nav__icon md-icon"></span>
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/docker/installation/basic/" class="md-nav__link">
+      Basic Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/docker/installation/log_aggregation/" class="md-nav__link">
+      Log Aggregation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/docker/installation/log_access/" class="md-nav__link">
+      Log Access
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/docker/installation/monitoring/" class="md-nav__link">
+      Monitoring
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/docker/installation/ssl-proxy/" class="md-nav__link">
+      SSL-Proxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/docker/installation/kibana/" class="md-nav__link">
+      Kibana
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/docker/faq/" class="md-nav__link">
+      FAQ & Examples
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Connectors
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Connectors" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        <span class="md-nav__icon md-icon"></span>
+        Connectors
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4-1" type="checkbox" id="nav-4-4-1">
+    
+    <label class="md-nav__link" for="nav-4-4-1">
+      SAP
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="SAP" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-1">
+        <span class="md-nav__icon md-icon"></span>
+        SAP
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/SAP/basic/" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/SAP/connectionConfig/" class="md-nav__link">
+      Connection configuration in insight.properties (v2-Server)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/SAP/connectionConfig2/" class="md-nav__link">
+      Connection configuration in sap/eam.properties(v3-Server)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/SAP/connectionConfigJCo/" class="md-nav__link">
+      Connect with SAP Java Connector (JCo) Server (IDocs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/SAP/testConnectivity/" class="md-nav__link">
+      Test Connectivity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/SAP/userAuth/" class="md-nav__link">
+      User authentication
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4-2" type="checkbox" id="nav-4-4-2">
+    
+    <label class="md-nav__link" for="nav-4-4-2">
+      Maximo
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Maximo" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-2">
+        <span class="md-nav__icon md-icon"></span>
+        Maximo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/maximo/basic/" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/maximo/replication/" class="md-nav__link">
+      Replication of changed data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4-3" type="checkbox" id="nav-4-4-3">
+    
+    <label class="md-nav__link" for="nav-4-4-3">
+      Openjet
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Openjet" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-3">
+        <span class="md-nav__icon md-icon"></span>
+        Openjet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/openjet/basic/" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/openjet/architectureOverview/" class="md-nav__link">
+      Architecture and Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/openjet/requirements/" class="md-nav__link">
+      Requirements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/openjet/extension/" class="md-nav__link">
+      Extension overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/openjet/warFiles/" class="md-nav__link">
+      War-Files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4-3-6" type="checkbox" id="nav-4-4-3-6">
+    
+    <label class="md-nav__link" for="nav-4-4-3-6">
+      Configuration
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Configuration" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-4-3-6">
+        <span class="md-nav__icon md-icon"></span>
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/openjet/configuration/insightWeb/" class="md-nav__link">
+      Using Insight Web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/openjet/configuration/replication/" class="md-nav__link">
+      Replication of changed data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/openjet/configuration/treeConfig/" class="md-nav__link">
+      Tree Configurations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/http/httpServer/" class="md-nav__link">
+      HTTP-Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6">
+    
+    <label class="md-nav__link" for="nav-4-6">
+      Insight Middleware
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Insight Middleware" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-6">
+        <span class="md-nav__icon md-icon"></span>
+        Insight Middleware
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightMiddleware/environmentVariables/" class="md-nav__link">
+      Environment Variables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightMiddleware/prep/" class="md-nav__link">
+      Preparation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightMiddleware/config/" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightMiddleware/installServices/" class="md-nav__link">
+      Install Services for Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightMiddleware/startServicesLinux/" class="md-nav__link">
+      Start Services on Linux
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightMonitoringAdministration/InsightMonitoring/" class="md-nav__link">
+      Insight Monitoring Administration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-8" type="checkbox" id="nav-4-8">
+    
+    <label class="md-nav__link" for="nav-4-8">
+      Insight Document
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Insight Document" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-8">
+        <span class="md-nav__icon md-icon"></span>
+        Insight Document
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightDocument/installationInsightDoc/" class="md-nav__link">
+      Installation Insight Document
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightDocument/document-handler-file/" class="md-nav__link">
+      Document-Handler-File
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightDocument/document-handler-insight/" class="md-nav__link">
+      Document-Handler-Insight
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightDocument/document-handler-maximo/" class="md-nav__link">
+      Document-Handler-Maximo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/pushNotifications/pushNotification/" class="md-nav__link">
+      Insight Push Notifications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/datasource/general/" class="md-nav__link">
+      Datasource
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-11" type="checkbox" id="nav-4-11">
+    
+    <label class="md-nav__link" for="nav-4-11">
+      Default Tree Configuration
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Default Tree Configuration" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-11">
+        <span class="md-nav__icon md-icon"></span>
+        Default Tree Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/defaultTreeConfiguration/dtc_for_maximo/" class="md-nav__link">
+      Maximo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/defaultTreeConfiguration/dtc_for_open/" class="md-nav__link">
+      OpenJet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/defaultTreeConfiguration/dtc_for_sap/" class="md-nav__link">
+      SAP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/indexingTrees/indexingTrees/" class="md-nav__link">
+      Indexing Trees
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/activateUpdateMechanism/activateUpdateMechanism/" class="md-nav__link">
+      Update-Mechanism (Maximo, OpenJet)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Update
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Update" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Update
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      Update
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Update" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        <span class="md-nav__icon md-icon"></span>
+        Update
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/update/update/" class="md-nav__link">
+      Standard-Update
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/update/mobileClientUpdate/" class="md-nav__link">
+      Mobile Client Update
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/update_middleware/update_middleware/" class="md-nav__link">
+      Standard-Middleware-Update
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/v15/v15/" class="md-nav__link">
+      V15
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/v16/v16/" class="md-nav__link">
+      V16
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/v17/v17/" class="md-nav__link">
+      V17
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/v18/v18/" class="md-nav__link">
+      V18
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/v19/v19/" class="md-nav__link">
+      V19
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/v20/v20/" class="md-nav__link">
+      V20
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/v21/v21/" class="md-nav__link">
+      V21
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/v22/v22/" class="md-nav__link">
+      V22
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/v23/v23/" class="md-nav__link">
+      V23
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Monitoring
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Monitoring" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Monitoring
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../4_monitoring/overview/overview/" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../4_monitoring/processes/processes/" class="md-nav__link">
+      Processes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../4_monitoring/logfiles/logfiles/" class="md-nav__link">
+      Logfiles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../4_monitoring/gateway/gateway/" class="md-nav__link">
+      Gateway
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      Configuration
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Configuration" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../overview/" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../requirements/requirements/" class="md-nav__link">
+      Requirements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Client configuration
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Client configuration" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        <span class="md-nav__icon md-icon"></span>
+        Client configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../client-configuration/general/" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../client-configuration/static-content/" class="md-nav__link">
+      Static Content
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../client-configuration/cookie/" class="md-nav__link">
+      Cookie
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../client-configuration/loginparams/" class="md-nav__link">
+      LoginParams
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../client-configuration/language/" class="md-nav__link">
+      Language
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../client_url_parameters/client-url-params/" class="md-nav__link">
+      Client URL Parameters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../insight_config_tools/ict/" class="md-nav__link">
+      Insight Configuration Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../insightConfigurations/insight-config/" class="md-nav__link">
+      Insight Configurations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extendLanguages/extend-languages/" class="md-nav__link">
+      Extend Languages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basicRules/basic-rules/" class="md-nav__link">
+      Basic Rules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../permissions/permissions/" class="md-nav__link">
+      Permissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dataModel/data-model/" class="md-nav__link">
+      Data Model
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../layout/layout/" class="md-nav__link">
+      Layout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/icons/index.html" class="md-nav__link">
+      Icons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pushData/push-data/" class="md-nav__link">
+      Push data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Menus and Actions
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Menus and Actions
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common" class="md-nav__link">
+    Common
+  </a>
+  
+    <nav class="md-nav" aria-label="Common">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#confirm" class="md-nav__link">
+    confirm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goto" class="md-nav__link">
+    goto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timetrack" class="md-nav__link">
+    TimeTrack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browser" class="md-nav__link">
+    Browser
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searchthis" class="md-nav__link">
+    SearchThis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#barcodescan" class="md-nav__link">
+    barcodeScan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nfcread" class="md-nav__link">
+    NfcRead
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scriptfilter" class="md-nav__link">
+    scriptFilter
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../favAndMenuOnTabs/favorites-menu/" class="md-nav__link">
+      Favorites and Menu on Tabs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../drag_and_drop/drag-and-drop/" class="md-nav__link">
+      Drag and Drop (dnd)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../offline_dataSynch/offline/" class="md-nav__link">
+      Offline - Data synchronization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../workingWithVariables/variables-values/" class="md-nav__link">
+      Working with variables/values
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../defaultTreeConfig/default-tree/" class="md-nav__link">
+      Default tree configurations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../publicSearches/public-searches/" class="md-nav__link">
+      Public searches
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../definedSearches/defined-searches/" class="md-nav__link">
+      Defined searches
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../maps/maps/" class="md-nav__link">
+      Maps (Maximo, SAP)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../planning/planning/" class="md-nav__link">
+      Planning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../table/table/" class="md-nav__link">
+      Table
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../matrix/matrix/" class="md-nav__link">
+      Matrix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kibanaDashboards/kibana-dashboards/" class="md-nav__link">
+      Kibana Dashboards
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dashboardVisualizationsKibana/dashboard-visu/" class="md-nav__link">
+      Dashboard Visualizations with Kibana
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../push/push/" class="md-nav__link">
+      Push
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fingerprint/fingerprinting/" class="md-nav__link">
+      Fingerprint
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fileLink/filelink/" class="md-nav__link">
+      FileLink
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../nfc/nfc/" class="md-nav__link">
+      NFC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../json/json/" class="md-nav__link">
+      Insight-userprofile.json
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../charts/chart/" class="md-nav__link">
+      Charts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pert/pert/" class="md-nav__link">
+      PERT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../welcomePage/welcome-page/" class="md-nav__link">
+      Welcome page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../matrix/matrix/" class="md-nav__link">
+      Matrix
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Operating Manual
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Operating Manual" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        Operating Manual
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/gateway/gateway/" class="md-nav__link">
+      Gateway
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/use-o-o-d-i-o-h2/uoodioH2/" class="md-nav__link">
+      Use of other database instead of H2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/password_encryption/pw-encryption/" class="md-nav__link">
+      Password Encryption
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/scheduler/scheduler/" class="md-nav__link">
+      Scheduler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/insight_migration/insight-migration/" class="md-nav__link">
+      Insight Migration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/dataimport_update_elasticsearch/dataimport/" class="md-nav__link">
+      Dataimport and Update Elasticsearch (Maximo)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/wildflyService/wildfly-service/" class="md-nav__link">
+      Wildfly Service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/update-mechanism/update-mechanism/" class="md-nav__link">
+      Activate Update-Mechanism (Maximo)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/new_download/new-download/" class="md-nav__link">
+      New Download
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/libMethods/libMethods/" class="md-nav__link">
+      LibMethods (OpenJet)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/massdata/massdata/" class="md-nav__link">
+      Massdata
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/deploy_undeploy_war-files/war-files/" class="md-nav__link">
+      Deploy/Undeploy war-files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/wildflyActiveMQ/wildfly_activeMQ/" class="md-nav__link">
+      Wildfly ActiveMQ queue administration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/elasticSearchMapping/elasticSearchMapping/" class="md-nav__link">
+      Adaption of ElasticSearch-Mapping
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/blockingUserOrIP/blocking/" class="md-nav__link">
+      Blocking user or IP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/eam-properties/eam-properties/" class="md-nav__link">
+      Indexerspecific EAM-properties
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/deletionOldNotifications/old-notifications/" class="md-nav__link">
+      Scheduled deletion of old notifications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/default-port/default-port/" class="md-nav__link">
+      Changing Default-Port
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/troubleshooting/troubleshooting/" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/deepLinkMobile/deep-link-mobile/" class="md-nav__link">
+      Deep Link Mobile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/selfService/self-service/" class="md-nav__link">
+      Self Service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/downloadWSDL/downloadWSDL_file_SAP/" class="md-nav__link">
+      Download WSDL files for web services to SAP (SAP)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/insight_SAP_logging/insight_SAP_logging/" class="md-nav__link">
+      Insight SAP logging file (SAP)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/encrypt_db_password/encrypt/" class="md-nav__link">
+      Encrypt DB-Password
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/usingImages/image-quality/" class="md-nav__link">
+      Using images with appropriate quality
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/continiousLogin/continous-login/" class="md-nav__link">
+      Continous login
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/ssl/ssl/" class="md-nav__link">
+      SSL for JEE-Container
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/barcodeScannerDevices/barcode/" class="md-nav__link">
+      Barcode Scanner Devices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/addressInUse/address/" class="md-nav__link">
+      Address already in use
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/properties/properties/" class="md-nav__link">
+      Properties
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/loggingSQL/logging/" class="md-nav__link">
+      Logging SQLs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/heapdump/heapdump/" class="md-nav__link">
+      Heapdump
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/kibanaOnlyInsightLogin/kibana-insight/" class="md-nav__link">
+      Kibana only with Insight-Login
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/cookiepath/cookiepath/" class="md-nav__link">
+      Cookie path
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/storing/file-storage-type/" class="md-nav__link">
+      Storing uploaded files in database or filesystem
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      User Manual
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="User Manual" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon"></span>
+        User Manual
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../7_user-manual/search/search/" class="md-nav__link">
+      Search
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../7_user-manual/electronClient/electron-client/" class="md-nav__link">
+      Electron-Client
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      3rd party components
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="3rd party components" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon"></span>
+        3rd party components
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../8_third-party-components/server-common/" class="md-nav__link">
+      Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10-2" type="checkbox" id="nav-10-2">
+    
+    <label class="md-nav__link" for="nav-10-2">
+      Client
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Client" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-2">
+        <span class="md-nav__icon md-icon"></span>
+        Client
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../8_third-party-components/client/client-common/" class="md-nav__link">
+      Common Libraries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../8_third-party-components/client/client-mobile/" class="md-nav__link">
+      Mobile Libraries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../8_third-party-components/client/client-web/" class="md-nav__link">
+      Web Libraries
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common" class="md-nav__link">
+    Common
+  </a>
+  
+    <nav class="md-nav" aria-label="Common">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#confirm" class="md-nav__link">
+    confirm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goto" class="md-nav__link">
+    goto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timetrack" class="md-nav__link">
+    TimeTrack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browser" class="md-nav__link">
+    Browser
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searchthis" class="md-nav__link">
+    SearchThis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#barcodescan" class="md-nav__link">
+    barcodeScan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nfcread" class="md-nav__link">
+    NfcRead
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scriptfilter" class="md-nav__link">
+    scriptFilter
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="menus-and-actions">Menus and Actions<a class="headerlink" href="#menus-and-actions" title="Permanent link">&para;</a></h1>
+<p>"<em>Menus"</em> lists an array of menu items.</p>
+<p>Each item can be configured as follows with some parts of the configuration <a href="../../workingWithVariables/variables-values/">being dynamic</a>:</p>
+<ul>
+<li>
+<p><em>Label</em> helps user to identify the meaning of a menu item (web  Context Menu, mobile  Button in header of the detail section)</p>
+</li>
+<li>
+<p><em>Icon</em> specifies the icon of an action.(mobile  slide left/swipe on an entry in the list view)</p>
+</li>
+<li>
+<p><em>ShortLabel</em> (mobile  slide left/swipe on an entry in the list view)</p>
+</li>
+<li>
+<p><em>Action</em> specifies the type of action</p>
+</li>
+<li>
+<p><em>ActionValues</em> are specifying special parameters corresponding to the listed action (see chapter <em>Actions</em>)</p>
+</li>
+<li>
+<p><em>Roles</em> optional. Confines availability to the listed security roles</p>
+</li>
+<li>
+<p><em>VisibleIn</em> optional. The visibility of a menu can be set to mobile or web. If not set, the menu is displayed. Possible values are "mobile" and "web".</p>
+<pre><code>"visibleIn": [
+  "mobile"
+]
+</code></pre>
+</li>
+<li>
+<p><em>SwipeHidden</em> Hides the menu action in insight-mobile&#39;s list swipe. (can also be set on clientProperties)</p>
+<pre><code>"swipeHidden": true
+</code></pre>
+</li>
+<li>
+<p>ClientProperties</p>
+</li>
+<li>
+<p><em>Visible</em> checks the attribute values of the record. If all hits the condition, the menu is visible. "*" is a wildcard for any value.</p>
+</li>
+<li>
+<p>Tooltip: Displays a tooltip when hovering over the menu action&#39;s button. Insight Explorer only.</p>
+<pre><code>"clientProperties": {
+  "visible": {
+    "FOLDER": "true",
+    "USER": "${userData.personid}",
+    "GROUP": "\*"
+  }
+}
+</code></pre>
+</li>
+<li>
+<p><em>js</em> can be used to implement a JavaScript validation function.</p>
+</li>
+</ul>
+<p>Params:</p>
+<ul>
+<li>
+<p><em>Object</em> server representation of the current object</p>
+</li>
+<li>
+<p><em>UserData</em> Properties of the logged in user. (<a href="../../workingWithVariables/variables-values/">Working with variables/values)</a></p>
+</li>
+</ul>
+<p>Functions:</p>
+<ul>
+<li>
+<p><em>IsSet</em> checks if the given property is set. You can check if it is not set like this: !<strong>isSet(object, &#39;OWNER&#39;);</strong></p>
+<pre><code>    "clientProperties": {
+        "visible": {
+            "js": "return isSet(object, 'OWNER');"
+        }
+    }
+</code></pre>
+</li>
+<li>
+<p><em>when</em> specifies the moment an action can be triggered without user interaction, only valid for tree-level menu items</p>
+<ul>
+<li>
+<p>"onInit" -- the first time a tree is selected</p>
+</li>
+<li>
+<p>"onSelect" -- every time a tree is selected</p>
+</li>
+</ul>
+</li>
+<li>
+<p><em>on</em> specifies where the menu-entry should be placed:</p>
+<ul>
+<li>"top" -- on table header instead of context-menu</li>
+</ul>
+</li>
+<li>
+<p><em>then</em> Further action to be executed if the previous action was successful. Any number of actions can be linked, this can be archived by another "then" property.</p>
+<pre><code>{
+  "label": "Request and to list",
+  "icon": "icon-site-map",
+  "action": "request",
+  "actionValues":...,
+  "then": {
+    "action": "goto",
+    "actionValues": [{
+      "dstTree": "demo-menu-flow"
+    }]
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>js. Processing of the objects.
+ Execute a Javascript function, that will get the objects as an array and return the object for the action as an array or a single object. If your js transforms multiple objects to one object and you want to call an action that does not support multiple objects please set an actionValue with "allowMultipleObjects" to true.</p>
+</li>
+</ul>
+<h2 id="common">Common<a class="headerlink" href="#common" title="Permanent link">&para;</a></h2>
+<p>Menu actions available for Explorer and Mobile use</p>
+<h3 id="confirm">confirm<a class="headerlink" href="#confirm" title="Permanent link">&para;</a></h3>
+<p>"<em>confirm</em>" Shows a confirm dialog on which the user can decide to proceed.</p>
+<p>actionValues:</p>
+<p>"message" Message to show.</p>
+<pre><code>    {
+      "label": "Call API",
+      "icon": "icon-fire",
+      "action": "confirm",
+      "actionValues": [
+        {
+          "message": "Are you sure?",
+          "ok": "Yes",
+          "cancel": "Never"
+        }
+      ],
+      "then": {
+        "action": "request",
+        "request": {
+          "url": "https://your-api.com/request",
+          "method": "POST",
+          "headers": {
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "params": {
+            "desc": "${DESCRIPTION}",
+            "count": "${object.payload.count}"
+          }
+        }
+      }
+    }
+</code></pre>
+<h3 id="goto">goto<a class="headerlink" href="#goto" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"<em>goto</em>"</td>
+<td>Displays a dependent record in another tree. If multiple records are appended, the first is used.</td>
+</tr>
+</tbody>
+</table>
+<p>actionValues:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"srcNode"</td>
+<td>Node name of the record to link to</td>
+</tr>
+<tr>
+<td>"dstTree" <strong>**</strong></td>
+<td>Tree to show the link, Tree to show in Explorer</td>
+</tr>
+<tr>
+<td>"dstNode"</td>
+<td>Node to show the link</td>
+</tr>
+<tr>
+<td>"create"</td>
+<td>Show the node in create mode</td>
+</tr>
+<tr>
+<td>"listEdit"</td>
+<td>Show the node in listEdit mode</td>
+</tr>
+<tr>
+<td>"list"</td>
+<td>Show the node in list mode</td>
+</tr>
+<tr>
+<td>"path" <strong>**</strong></td>
+<td>Show the path</td>
+</tr>
+<tr>
+<td>"params"</td>
+<td>Only available at "path". Parameters can be passed to the details view. Special parameters are "headerLabel" and "headerLink". These two parameters can be used to control the header link of insight-mobile. Examples below.</td>
+</tr>
+</tbody>
+</table>
+<p>All actions available in Insight Mobile, <strong>**</strong> available in Insight Explorer.</p>
+<p>Examples:</p>
+<p>Go to the list view of tree " <strong>asset-flat</strong>"</p>
+<pre><code>    {
+      "label": "Asset Öffnen",
+      "action": "goto",
+      "icon": "icon-bathtub",
+      "actionValues": [
+        {
+          "dstTree": "asset-flat"
+        }
+      ]
+    }
+</code></pre>
+<p>Go to the node " <strong>asset</strong>" of the tree " <strong>asset-flat</strong>" with the ID of the first child of node " <strong>assetchild</strong>"</p>
+<pre><code>    {
+      "label": "Asset Öffnen",
+      "action": "goto",
+      "icon": "icon-bathtub",
+      "actionValues": [
+        {
+          "srcNode": "assetchild",
+          "dstTree": "asset-flat",
+          "dstNode": "asset"
+        }
+      ]
+    }
+</code></pre>
+<p>Go to the node " <strong>asset</strong>" of the tree " <strong>asset-flat</strong>" with the ID of the current record</p>
+<pre><code>    {
+      "label": "Asset Öffnen",
+      "action": "goto",
+      "icon": "icon-bathtub",
+      "actionValues": [
+        {
+          "dstTree": "asset-flat",
+          "dstNode": "asset"
+        }
+      ]
+    }
+</code></pre>
+<p>Go to the create view of node " <strong>asset</strong>" of the tree " <strong>asset-flat</strong>"</p>
+<pre><code>    {
+      "label": "Asset Öffnen",
+      "action": "goto",
+      "icon": "icon-bathtub",
+      "actionValues": [
+        {
+          "create": true,
+          "dstTree": "asset-flat",
+          "dstNode": "asset"
+        }
+      ]
+    }
+</code></pre>
+<p>Go to the <strong>list edit</strong> view: In the current tree. On the node "woactivity". With the records of the child node "woactivity" of the current record.</p>
+<pre><code>    {
+      "label": "Checklist",
+      "action": "goto",
+      "icon": "icon-bathtub",
+      "actionValues": [
+        {
+          "listEdit": true,
+          "dstNode": "woactivity"
+        }
+      ]
+    }
+</code></pre>
+<p>Go to the <strong>list edit</strong> view: In the given tree. On the given node. With the records of the child node "woactivity" of the current record.</p>
+<pre><code>    {
+      "label": "Checklist",
+      "action": "goto",
+      "icon": "icon-bathtub",
+      "actionValues": [
+        {
+          "listEdit": true,
+          "srcNode": "woactivity",
+          "dstTree": "othertree",
+          "dstNode": "workorder"
+        }
+      ]
+    }
+</code></pre>
+<p>Go to the list view: In the current tree. On the node "woactivity". With the records of the child node "woactivity" of the current record.</p>
+<pre><code>    {
+      "label": "Checklist",
+      "action": "goto",
+      "icon": "icon-bathtub",
+      "actionValues": [
+        {
+          "list": true,
+          "dstNode": "woactivity"
+        }
+      ]
+    }
+</code></pre>
+<p>Go to the list view: In the given tree. On the given node. With the records of the child node "woactivity" of the current record.</p>
+<pre><code>    {
+      "label": "Checklist",
+      "action": "goto",
+      "icon": "icon-bathtub",
+      "actionValues": [
+        {
+          "list": true,
+          "srcNode": "woactivity",
+          "dstTree": "othertree",
+          "dstNode": "workorder"
+        }
+      ]
+    }
+</code></pre>
+<p>Go <strong>back</strong> :</p>
+<pre><code>    {
+      "label": "Back",
+      "action": "goto",
+      "icon": "icon-bathtub",
+      "actionValues": [
+        {
+          "back": 1
+        }
+      ]
+    }
+</code></pre>
+<p>Go <strong>path</strong> :</p>
+<pre><code>    {
+      "label": "Back",
+      "action": "goto",
+      "icon": "icon-bathtub",
+      "actionValues": [
+        {
+          "path": "${object.path}"
+        }
+      ]
+    },
+    {
+      "label": "Back",
+      "action": "goto",
+      "icon": "icon-bathtub",
+      "actionValues": [
+        {
+          "path": "tree/node/id"
+        }
+      ]
+    }
+</code></pre>
+<p>Go with <strong>path</strong> keep the header link and label:</p>
+<pre><code>    {
+      "label": "Go to documents",
+      "action": "goto",
+      "icon": "icon-bathtub",
+      "actionValues": [
+        {
+          "path": "${object.path}",
+          "params": {
+            "headerLabel": true,
+            "headerLink": true
+          }
+        }
+      ]
+    }
+</code></pre>
+<p>Go with <strong>path</strong> change the header label:</p>
+<pre><code>    {
+      "label": "Go to documents",
+      "action": "goto",
+      "icon": "icon-bathtub",
+      "actionValues": [
+        {
+          "path": "${object.path}",
+          "params": {
+            "headerLabel": "Documents of ${WONUM}",
+            "headerLink": true
+          }
+        }
+      ]
+    }
+</code></pre>
+<p>Go with <strong>path</strong> pass attribute values to details view:</p>
+<pre><code>    {
+      "label": "Go to details",
+      "action": "goto",
+      "icon": "icon-bathtub",
+      "actionValues": [
+        {
+          "path": "${object.path}",
+          "params": {
+            "TEXT": "${WONUM} ${DESCRIPTION}"
+          }
+        }
+      ]
+    }
+</code></pre>
+<h3 id="timetrack">TimeTrack<a class="headerlink" href="#timetrack" title="Permanent link">&para;</a></h3>
+<p>"timeTrack": Starts a time tracker on the current object. The time tracker will continue running even if
+you open other objects or trees in Insight. A running time tracker is visualized in the top right corner.
+Clicking on the time tracker icon will automatically navigate the user back to the item the timer was started on.
+Clicking the timeTrack menu action a second time on the active object will stop the time tracker and
+the time tracking result can be used in further "then" actions. If a time tracker for object a is active
+and at the same time another time tracker is started on object b, the time tracker on object a will be
+stopped and a new one started for object b.</p>
+<p>The resulting object is available under <strong>$context.$timeTrack.duration.hours</strong> in the following "then" action. Available durations are "milliSeconds", "seconds", "minutes", "hours" and "days".</p>
+<p>When the timeTrackStart contains a "then" action for "create" the time tracker will be applied to the newly created object after its creation. The time tracker is started when the create page is loaded and already running when the user fills out the object. Canceling the creation will also stop the time tracker.</p>
+<p><strong>ATTENTION</strong>: No time tracker can have a <code>create</code> action in the <code>then</code> part of the <code>timeTrackStop</code> if <strong>any</strong> <code>timeTrackStart</code> has a <code>create</code> action in the <code>then</code> part. In these cases the <code>timeTrackStop</code> must use a <code>createForm</code> and <code>form</code> with <code>"mode" = "save"</code> in the <code>then</code> actions (<a href="./#form">example</a>).</p>
+<p>You can also define a maxTrackTime for the tracker which will set the resulting duration object to the configured maxTrackTime, if the tracked time would exceed the configured time.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Time&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;icon-play&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;timeTrackStart&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;actionValues&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;maxTrackTime&quot;</span><span class="p">:</span> <span class="mi">3600000</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span><span class="err">,</span>
+<span class="p">{</span>
+  <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Time&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;icon-stop-circle&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;timeTrackStop&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;then&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Zeitrückmeldung&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;icon-clock&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;actionValues&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;_node&quot;</span><span class="p">:</span> <span class="s2">&quot;LABTRANS&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;WONUM&quot;</span><span class="p">:</span> <span class="s2">&quot;${WONUM}&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;TRANSTYPE&quot;</span><span class="p">:</span> <span class="s2">&quot;WORK&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;LABORCODE&quot;</span><span class="p">:</span> <span class="s2">&quot;${userData.laborcode}&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;CRAFT&quot;</span><span class="p">:</span> <span class="s2">&quot;${userData.defaultcraft}&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;GLDEBITACCT&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PAYRATE&quot;</span><span class="p">:</span> <span class="s2">&quot;${userData.defaultcraftrate}&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;REGULARHRS&quot;</span><span class="p">:</span> <span class="s2">&quot;${$context.$timeTrack.duration.hours}&quot;</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="browser">Browser<a class="headerlink" href="#browser" title="Permanent link">&para;</a></h3>
+<p>"<em>browser</em>": opens a new web page in a new browser tab.</p>
+<p>actionValues:</p>
+<ul>
+<li>
+<p>"<em>url</em>": specifies the URL which can be opened. Context specific values can be added to the URL: &#39;${ASSETNUM}&#39;</p>
+</li>
+<li>
+<p>"<em>inTab</em>": (inside-explorer only), when true open the defined URL using an iframe inside of the Insight-Explorer</p>
+</li>
+<li>
+<p>"<em>deepLink</em>": (inside-mobile only), specifies the URL_Scheme of another installed app. The app will be opened with parameters. Context specific values can be added to the URL: &#39;${ASSETNUM}&#39;</p>
+<pre><code>{
+  "label": "Fehlerhistorie",
+  "shortLabel": "FH",
+  "action": "browser",
+  "icon": "icon-pie-chart",
+  "actionValues": [
+    {
+      "inTab": true,
+      "url":"insight/kibana/app/kibana#/dashboard/Stillstand?\_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-15m,mode:quick,to:now))&amp;amp;\_a=(filters:!((&amp;#39;$state&amp;#39;:(store:appState),meta:(alias:!n,disabled:!t,index:locations,key:properties.ASSETNUM,negate:!f,value:&amp;#39;${ASSETNUM}&amp;#39;)
+      ...
+    }
+  ]
+}
+
+...
+  "actionValues": [{
+  "deepLink": "schemeofapp://hello:world:${ASSETNUM}"
+}]
+</code></pre>
+</li>
+</ul>
+<h3 id="searchthis">SearchThis<a class="headerlink" href="#searchthis" title="Permanent link">&para;</a></h3>
+<p>"searchThis" searches the current object in other trees.</p>
+<p>From v2.11.1 you can configure in which trees the search is executed. Without any configuration the search is executed in all trees.</p>
+<pre><code>    {
+      "label": "Search this",
+      "action": "searchThis",
+      "actionValues": [
+        {
+          "trees": [
+            "locations-web",
+            "locations-others"
+          ]
+        }
+      ]
+    }
+</code></pre>
+<h3 id="request">Request<a class="headerlink" href="#request" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Maximo</label><div class="tabbed-content">
+<p>"<em>request</em>" calls a remote method</p>
+<pre><code>    {
+    "action": "request",
+    "request": {
+        "method": "POST",
+        "url": "rest/mbo/WORKORDER/${WORKORDERID}",
+        "params": {
+        "WOPRIORITY": "1",
+        "DESCRIPTION": "${DESCRIPTION} + ${userData.personid} + ${appParams.standort}"
+        },
+        "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+        }
+    }
+    }
+</code></pre>
+<p>If the request action is part of a then-chain, the result can be passed to the next action:</p>
+<pre><code>    {
+    "action": "request",
+    "actionValues": [
+        {
+        "payloadKey": "requestResult"
+        }
+    ],
+    "request": {...},
+    "then": {
+        "action": "request",
+        "request": {
+        "method": "POST",
+        "url": "https://your-api.com/request",
+        "params": {
+            "result": "${$payload.requestResult}"
+        }
+        }
+    }
+    }
+</code></pre>
+</div>
+</div>
+<ul>
+<li>"<em>timeout</em>": Timeout for the request action in seconds, default is 60.</li>
+</ul>
+<div class="tabbed-set" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">OpenJet</label><div class="tabbed-content">
+<p>request” calls a remote method</p>
+<pre><code>    {
+    "label": "Verheiraten",
+    "shortLabel": "Verheiraten",
+    "action": "request",
+    "icon": "icon-man-woman",
+    "request": {
+        "method": "POST",
+        "url": "insight/eam/rpc/insightTest/mitarbeiter",
+        "params": {
+            "vorgesetzter": "${dstObject.uniqueId}",
+            "mitarbeiter": "${srcObject.uniqueId}"
+        },
+        "headers": {
+            "Content-Type": "application/x-www-form-urlencoded"
+        }
+    }
+    }
+</code></pre>
+<p>Examples: </p>
+<p>RPCHandler Implementation</p>
+<pre><code>    import gis.openframe.bol.BusinessObject;
+
+    import java.util.Map;
+
+    import de.ibfs.insight.rpc.api.RpcContext;
+    import de.ibfs.insight.rpc.api.RpcHandler;
+
+    public class MitarbeiterVerknueppler implements RpcHandler {
+
+        @Override
+        public void call(RpcContext context) throws Exception {
+            Map&lt;String, String&gt; parameters = context.getParameters();
+            String vorgesetzterId = parameters.get("vorgesetzter");
+            String mitarbeiterId = parameters.get("mitarbeiter");
+            if (vorgesetzterId.equals(mitarbeiterId)) {
+                return;
+            }
+            Person target = PersonFactory.get(vorgesetzterId);
+            Person mitarbeiter = PersonFactory.get(mitarbeiterId);
+
+            BusinessObject[] parents = mitarbeiter.getLinkSourceObjects(Person.folgt);
+            for (BusinessObject businessObject : parents) {
+                ((Person) businessObject).removeFolgt(mitarbeiter);
+            }
+            target.addFolgt(mitarbeiter);
+        }
+
+    }
+</code></pre>
+<p>Registration in InitComponent</p>
+<pre><code>    public void globalInit() {
+            try {
+                RpcRegistry service = OpenJetServiceRegistry.getService(RpcRegistry.class);
+                service.register("insightTest/mitarbeiter", MitarbeiterVerknueppler.class);
+            }
+            catch (Throwable t) {
+                gis.util.Trace.error("RpcRegistry", "Fehler beim Versuch RpcRegistry zu laden", t);
+            }
+</code></pre>
+</div>
+</div>
+<p>Since Version 22.0.0 the request action has several defaults and improvements for easier configuration:
+- You may now emit the params object in the configuration, if you do not have any parameters to send. No dummy parameters are needed.
+- You may now emit the headers object in the configuration in Insight Standalone. The default (for Insight Standalone) is:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nx">Accept</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>You may now use a script tag in the request action configuration. Doing so will set the request method to POST as a default, but can still be overriden via the old configuration.</li>
+<li>You can now break up long request url configurations in the script tag. The request url will be generated from these settings:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;request&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;script&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;backend&quot;</span><span class="o">:</span> <span class="s2">&quot;business-suite&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;my-script&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>You can additionally configure the params object in the script object as well:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;request&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;script&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;backend&quot;</span><span class="o">:</span> <span class="s2">&quot;business-suite&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;my-script&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;params&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;${id}&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;user&quot;</span><span class="o">:</span> <span class="s2">&quot;${userData.login}&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="err">###</span> <span class="nx">Create</span>
+
+<span class="s2">&quot;_create_&quot;</span> <span class="nx">creates</span> <span class="nx">a</span> <span class="k">new</span> <span class="nx">node</span> <span class="nx">item</span> <span class="k">of</span> <span class="nx">referenced</span> <span class="nx">node</span> <span class="nx">type</span> <span class="p">(</span><span class="nx">Insight</span> <span class="nx">Mobile</span> <span class="nx">and</span> <span class="nx">Insight</span> <span class="nx">Explorer</span><span class="p">),</span> <span class="nx">TreeConfig</span><span class="o">:</span>
+
+<span class="o">-</span> <span class="nx">creates</span> <span class="nx">a</span> <span class="k">new</span> <span class="nx">node</span> <span class="nx">and</span> <span class="nx">copies</span> <span class="nx">data</span> <span class="p">(</span><span class="s2">&quot;dst&quot;</span><span class="o">:</span><span class="s2">&quot;source&quot;</span><span class="p">)</span>
+
+<span class="o">-</span> <span class="nx">Values</span> <span class="k">of</span> <span class="nx">source</span> <span class="nx">node</span> <span class="nx">can</span> <span class="nx">be</span> <span class="nx">accessed</span> <span class="nx">via</span> <span class="nx">$</span><span class="p">{</span><span class="nx">attributeid</span><span class="p">}</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Material&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-plus&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;\_tree&quot;</span><span class="o">:</span> <span class="s2">&quot;WORKORDER&quot;</span><span class="p">,</span> <span class="c1">// optional, defaults to current tree</span>
+              <span class="s2">&quot;\_node&quot;</span><span class="o">:</span> <span class="s2">&quot;MATUSETRANS&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;WONUM&quot;</span><span class="o">:</span> <span class="s2">&quot;${WONUM}&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;SENDERSYSID&quot;</span><span class="o">:</span> <span class="s2">&quot;EXT&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;STORELOC&quot;</span><span class="o">:</span> <span class="s2">&quot;MAIN SR&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;ISSUETYPE&quot;</span><span class="o">:</span> <span class="s2">&quot;ISSUE&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="err">###</span> <span class="nx">Refresh</span>
+
+<span class="s2">&quot;_refresh_&quot;</span> <span class="nx">refreshes</span> <span class="nx">the</span> <span class="nx">current</span> <span class="nx">node</span>
+
+<span class="nx">By</span> <span class="nx">configuring</span> <span class="p">(</span><span class="nx">multiple</span><span class="p">)</span> <span class="nx">paths</span> <span class="nx">you</span> <span class="nx">can</span> <span class="nx">refresh</span> <span class="nx">other</span> <span class="nx">nodes</span> <span class="nx">as</span> <span class="nx">well</span><span class="p">.</span>
+
+<span class="nx">By</span> <span class="nx">configuring</span> <span class="p">(</span><span class="nx">multiple</span><span class="p">)</span> <span class="nx">trees</span> <span class="nx">you</span> <span class="nx">can</span> <span class="nx">refresh</span><span class="o">/</span><span class="nx">reset</span> <span class="nx">trees</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">left</span> <span class="nx">sidebar</span><span class="p">.</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Aktualisieren&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;shortLabel&quot;</span><span class="o">:</span> <span class="s2">&quot;Aktualisieren&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;refresh&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-sync&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+
+<span class="nx">Example</span> <span class="kd">with</span> <span class="nx">paths</span> <span class="nx">and</span> <span class="nx">trees</span><span class="o">:</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;refresh&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;paths&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;cluster-ab-basis/clusterStatus/KWB001-C0004&quot;</span><span class="p">],</span>
+              <span class="s2">&quot;trees&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;cluster-ab-basis&quot;</span><span class="p">]</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="err">###</span> <span class="nx">Save</span>
+
+<span class="s2">&quot;_save_&quot;</span> <span class="nx">assigns</span> <span class="nx">values</span> <span class="nx">to</span> <span class="nx">specified</span> <span class="nx">attributes</span> <span class="nx">and</span> <span class="nx">saves</span> <span class="nx">the</span> <span class="nx">record</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;save&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;WOPRIORITY&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;OWNER&quot;</span><span class="o">:</span> <span class="s2">&quot;${userData.personid}&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;DESCRIPTION&quot;</span><span class="o">:</span> <span class="s2">&quot;${DESCRIPTION} + ${WOPRIORITY} + ${appParams.standort}&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="err">###</span> <span class="nx">StaticContent</span>
+
+<span class="s2">&quot;_staticContent_&quot;</span> <span class="nx">Shows</span> <span class="nx">a</span> <span class="nx">html</span> <span class="nx">page</span> <span class="nx">configured</span> <span class="k">in</span> <span class="nx">the</span> <span class="p">[</span><span class="nx">ClientConfiguration</span> <span class="o">-</span> <span class="nx">staticContent</span><span class="p">](..</span><span class="o">/</span><span class="nx">client</span><span class="o">-</span><span class="nx">configuration</span><span class="o">/</span><span class="kr">static</span><span class="o">-</span><span class="nx">content</span><span class="p">.</span><span class="nx">md</span><span class="p">)</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Legal&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-fire&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;staticContent&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;legal&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="err">###</span> <span class="nx">Remove</span>
+
+<span class="s2">&quot;remove&quot;</span><span class="o">:</span> <span class="nx">Deletes</span> <span class="nx">an</span> <span class="nx">object</span><span class="p">.</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Delete&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;shortLabel&quot;</span><span class="o">:</span> <span class="s2">&quot;Delete&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;remove&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-question-circle&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;request&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;method&quot;</span><span class="o">:</span> <span class="s2">&quot;DELETE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://localhost:9080/node-red/tree/node/${WORKORDERID}&quot;</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+
+<span class="err">###</span> <span class="nx">qr</span>
+
+<span class="nx">The</span> <span class="s2">&quot;qr&quot;</span> <span class="nx">action</span> <span class="nx">will</span> <span class="nx">render</span> <span class="nx">a</span> <span class="nx">QR</span> <span class="nx">code</span> <span class="nx">based</span> <span class="nx">on</span> <span class="nx">the</span> <span class="nx">given</span> <span class="nx">configuration</span><span class="p">.</span> <span class="nx">The</span> <span class="nx">generated</span> <span class="nx">QR</span> <span class="nx">Codes</span> <span class="nx">can</span> <span class="nx">contain</span> <span class="nx">any</span> <span class="nx">content</span><span class="p">,</span> <span class="k">for</span> <span class="nx">example</span> <span class="nx">deepLinks</span><span class="p">.</span> <span class="nx">Examples</span><span class="o">:</span>
+
+<span class="nx">Simple</span> <span class="nx">Text</span><span class="o">:</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;QR-Code&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-barcode&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;qr&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;qrData&quot;</span><span class="o">:</span> <span class="s2">&quot;https://google.de&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="nx">DeepLink</span> <span class="nx">to</span> <span class="nx">a</span> <span class="nx">path</span> <span class="k">in</span> <span class="nx">insight</span><span class="o">-</span><span class="nx">mobile</span><span class="o">:</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;QR-Code&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-barcode&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;qr&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;qrData&quot;</span><span class="o">:</span> <span class="s2">&quot;insightmobile://details:${object.path}&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="err">###</span> <span class="nx">Debug</span>
+
+<span class="nx">An</span> <span class="nx">action</span> <span class="nx">to</span> <span class="nx">output</span> <span class="nx">all</span> <span class="nx">currently</span> <span class="nx">available</span> <span class="nx">information</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">menu</span> <span class="nx">flow</span><span class="p">.</span>
+
+<span class="nx">Information</span> <span class="nx">like</span> <span class="nx">the</span> <span class="nx">current</span> <span class="nx">object</span><span class="p">,</span> <span class="nx">payloads</span> <span class="nx">or</span> <span class="nx">userData</span><span class="p">.</span> <span class="nx">Output</span> <span class="nx">is</span> <span class="nx">shown</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">browsers</span> <span class="nx">debug</span> <span class="nx">console</span><span class="p">.</span>
+
+<span class="nx">This</span> <span class="nx">action</span> <span class="nx">has</span> <span class="nx">no</span> <span class="nx">further</span> <span class="nx">configuration</span><span class="p">.</span>
+
+<span class="nx">Please</span> <span class="nx">be</span> <span class="nx">adviced</span> <span class="nx">that</span> <span class="k">this</span> <span class="nx">action</span> <span class="nx">should</span> <span class="o">**</span><span class="nx">only</span> <span class="nx">be</span> <span class="nx">used</span> <span class="nx">during</span> <span class="nx">development</span><span class="o">**</span> <span class="nx">and</span> <span class="o">**</span><span class="nx">should</span> <span class="nx">not</span> <span class="nx">be</span> <span class="nx">deployed</span><span class="o">**</span> <span class="nx">on</span> <span class="nx">live</span><span class="o">/</span><span class="nx">production</span> <span class="nx">systems</span><span class="o">!</span>
+
+<span class="err">###</span> <span class="nx">Form</span>
+
+<span class="s2">&quot;_form_&quot;</span> <span class="nx">Shows</span> <span class="nx">a</span> <span class="nx">dialog</span> <span class="nx">on</span> <span class="nx">which</span> <span class="nx">the</span> <span class="nx">user</span> <span class="nx">can</span> <span class="nx">make</span> <span class="nx">inputs</span><span class="p">.</span> <span class="nx">The</span> <span class="nx">values</span> <span class="nx">are</span> <span class="nx">written</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">record</span> <span class="nx">or</span> <span class="nx">a</span> <span class="nx">payload</span> <span class="nx">and</span> <span class="nx">can</span> <span class="nx">be</span> <span class="nx">used</span> <span class="k">in</span> <span class="nx">further</span> <span class="nx">actions</span><span class="p">.</span> <span class="nx">Attributes</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">node</span> <span class="nx">configuration</span> <span class="nx">are</span> <span class="nx">written</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">record</span><span class="p">,</span> <span class="s2">&quot;formField&quot;</span> <span class="nx">attributes</span> <span class="nx">are</span> <span class="nx">written</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">payload</span><span class="p">.</span>
+
+<span class="nx">ActionValues</span><span class="o">:</span>
+
+<span class="o">|</span>              <span class="o">|</span>                                                 <span class="o">|</span>
+<span class="o">|</span> <span class="o">------------</span> <span class="o">|</span> <span class="o">-----------------------------------------------</span> <span class="o">|</span>
+<span class="o">|</span> <span class="s2">&quot;attributes&quot;</span> <span class="o">|</span> <span class="nb">Array</span> <span class="k">of</span> <span class="nx">attributes</span> <span class="nx">that</span> <span class="nx">can</span> <span class="nx">be</span> <span class="nx">entered</span><span class="p">.</span>        <span class="o">|</span>
+<span class="o">|</span> <span class="s2">&quot;mode&quot;</span>       <span class="o">|</span> <span class="nx">Possible</span> <span class="nx">values</span> <span class="nx">are</span><span class="o">:</span> <span class="s2">&quot;temp&quot;</span> <span class="nx">or</span> <span class="s2">&quot;save&quot;</span> <span class="p">(</span><span class="k">default</span><span class="p">)</span> <span class="o">|</span>
+<span class="o">|</span> <span class="s2">&quot;temp&quot;</span>       <span class="o">|</span> <span class="nx">Write</span> <span class="nx">only</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">record</span><span class="o">/</span><span class="nx">payload</span>                <span class="o">|</span>
+<span class="o">|</span> <span class="s2">&quot;save&quot;</span>       <span class="o">|</span> <span class="nx">Saves</span> <span class="nx">the</span> <span class="nx">record</span>                                <span class="o">|</span>
+
+
+
+<span class="nx">Shows</span> <span class="nx">an</span> <span class="nx">input</span> <span class="nx">dialog</span> <span class="nx">and</span> <span class="nx">sends</span> <span class="nx">the</span> <span class="nx">values</span> <span class="nx">to</span> <span class="nx">a</span> <span class="nx">http</span> <span class="nx">service</span><span class="o">:</span>
+
+    <span class="p">{</span>
+    <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Call API&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-fire&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;form&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+        <span class="s2">&quot;_tree&quot;</span><span class="o">:</span> <span class="s2">&quot;my-tree&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;temp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;attributes&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;DESCRIPTION&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+            <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Count&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;count&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Decimal&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;then&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;request&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;request&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://your-api.com/request&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;method&quot;</span><span class="o">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;headers&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;Content-Type&quot;</span><span class="o">:</span> <span class="s2">&quot;application/x-www-form-urlencoded&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;params&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;desc&quot;</span><span class="o">:</span> <span class="s2">&quot;${DESCRIPTION}&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="s2">&quot;${$payload.count}&quot;</span>
+        <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="nx">Example</span><span class="o">:</span> <span class="nx">Create</span> <span class="nx">a</span> <span class="nx">child</span> <span class="kd">with</span> <span class="nx">two</span> <span class="nx">input</span> <span class="nx">dialogs</span> <span class="nx">and</span> <span class="nx">navigate</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">created</span> <span class="nx">record</span><span class="o">:</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Worklog&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-plus&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;createForm&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;\_node&quot;</span><span class="o">:</span> <span class="s2">&quot;worklog&quot;</span>
+            <span class="p">}</span>
+          <span class="p">],</span>
+          <span class="s2">&quot;then&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;form&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+              <span class="p">{</span>
+              <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;temp&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;attributes&quot;</span><span class="o">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                  <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;DESCRIPTION&quot;</span>
+                <span class="p">}</span>
+              <span class="p">]</span>
+            <span class="p">}</span>
+          <span class="p">],</span>
+          <span class="s2">&quot;then&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;form&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+              <span class="p">{</span>
+              <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;save&quot;</span><span class="p">,</span>
+              <span class="nx">attributes</span><span class="s2">&quot;: [</span>
+<span class="s2">                {</span>
+<span class="s2">                  &quot;</span><span class="nx">name</span><span class="s2">&quot;: &quot;</span><span class="nx">DESCRIPTION</span><span class="err">\</span><span class="nx">_LONGDESCRIPTION</span><span class="s2">&quot;</span>
+<span class="s2">                }</span>
+<span class="s2">              ]</span>
+<span class="s2">            }</span>
+<span class="s2">          ]</span>
+<span class="s2">        }</span>
+<span class="s2">        }</span>
+<span class="s2">        }</span>
+
+<span class="s2">## Explorer</span>
+
+<span class="s2">Menu actions available for Explorer.</span>
+
+<span class="s2">**Explorer Tab-Label**</span>
+
+<span class="s2">It is possible to configure the label of a tab, based on the common template syntax known from labels.</span>
+
+<span class="s2">This is possible for the following actions: details, insert, mapOpen, kibanaOpen, tableOpen</span>
+
+<span class="s2">To configure the tab-label the following part must be added to the first element of the actionValues. Possible variables are explained in the [Working with variables/values](../workingWithVariables/variables-values.md) chapter.</span>
+
+<span class="s2">        {</span>
+<span class="s2">          &quot;</span><span class="nx">label</span><span class="s2">&quot;: &quot;</span><span class="nx">Show</span> <span class="nx">Details</span><span class="s2">&quot;,</span>
+<span class="s2">          &quot;</span><span class="nx">icon</span><span class="s2">&quot;: &quot;</span><span class="nx">icon</span><span class="o">-</span><span class="nx">aim</span><span class="s2">&quot;,</span>
+<span class="s2">          &quot;</span><span class="nx">action</span><span class="s2">&quot;: &quot;</span><span class="nx">details</span><span class="s2">&quot;,</span>
+<span class="s2">          &quot;</span><span class="nx">actionValues</span><span class="s2">&quot;: [{</span>
+<span class="s2">            &quot;</span><span class="nx">tab</span><span class="s2">&quot;: {</span>
+<span class="s2">              &quot;</span><span class="nx">label</span><span class="s2">&quot;: &quot;</span><span class="nx">Details</span><span class="o">:</span> <span class="nx">$</span><span class="p">{</span><span class="nx">ASSETNUM</span><span class="p">}</span><span class="s2">&quot;</span>
+<span class="s2">            }</span>
+<span class="s2">          }]</span>
+<span class="s2">        }</span>
+
+<span class="s2">**Single Action**</span>
+
+<span class="s2">An action can be configured to only execute when no open tab with it is available, otherwise it will focus the tab it&amp;#39;s already running in.</span>
+
+<span class="s2">This only works for action configured on the tree-level which will be execute from the tree toolbar.</span>
+
+<span class="s2">Example:</span>
+
+<span class="s2">        {</span>
+<span class="s2">          &quot;</span><span class="nx">label</span><span class="s2">&quot;: &quot;</span><span class="nx">Show</span> <span class="nx">Details</span><span class="s2">&quot;,</span>
+<span class="s2">          &quot;</span><span class="nx">icon</span><span class="s2">&quot;: &quot;</span><span class="nx">icon</span><span class="o">-</span><span class="nx">aim</span><span class="s2">&quot;,</span>
+<span class="s2">          &quot;</span><span class="nx">action</span><span class="s2">&quot;: &quot;</span><span class="nx">details</span><span class="s2">&quot;,</span>
+<span class="s2">          &quot;</span><span class="nx">actionValues</span><span class="s2">&quot;: [{</span>
+<span class="s2">            &quot;</span><span class="nx">single</span><span class="s2">&quot;: true,</span>
+<span class="s2">            &quot;</span><span class="nx">tab</span><span class="s2">&quot;: {</span>
+<span class="s2">              &quot;</span><span class="nx">label</span><span class="s2">&quot;: &quot;</span><span class="nx">Details</span><span class="o">:</span> <span class="nx">$</span><span class="p">{</span><span class="nx">ASSETNUM</span><span class="p">}</span><span class="s2">&quot;</span>
+<span class="s2">            }</span>
+<span class="s2">          }]</span>
+<span class="s2">        }</span>
+
+<span class="s2">### Open (OpenJet)</span>
+
+<span class="s2">&quot;</span><span class="nx">open</span><span class="s2">&quot; opens specified application with current object.</span>
+
+<span class="s2">        {</span>
+<span class="s2">        &quot;</span><span class="nx">label</span><span class="s2">&quot;: &quot;</span><span class="nx">Öffnen</span><span class="s2">&quot;,</span>
+<span class="s2">        &quot;</span><span class="nx">action</span><span class="s2">&quot;: &quot;</span><span class="nx">open</span><span class="s2">&quot;,</span>
+<span class="s2">        &quot;</span><span class="nx">icon</span><span class="s2">&quot;: &quot;</span><span class="nx">icon</span><span class="o">-</span><span class="nx">factory</span><span class="s2">&quot;,</span>
+<span class="s2">        &quot;</span><span class="nx">actionValues</span><span class="s2">&quot;: [</span>
+<span class="s2">            {</span>
+<span class="s2">                &quot;</span><span class="nx">ga</span><span class="s2">&quot;: &quot;</span><span class="mf">508</span><span class="o">:</span><span class="mf">43425</span><span class="o">:</span><span class="nx">BA</span><span class="s2">&quot;,</span>
+<span class="s2">            }</span>
+<span class="s2">        ]</span>
+<span class="s2">        }</span>
+
+<span class="s2">### Open, open parent (Maximo)</span>
+
+<span class="s2">&quot;</span><span class="nx">_open_</span><span class="s2">&quot; loads object to defined application (Insight Explorer)</span>
+
+<span class="s2">- default: selected object is loaded</span>
+
+<span class="s2">- option: actionValue &quot;</span><span class="nx">uniqueid</span><span class="s2">&quot;: &quot;</span><span class="nx">$</span><span class="p">{</span><span class="nx">parent</span><span class="p">.</span><span class="nx">TICKETUID</span><span class="p">}</span><span class="s2">&quot; will load the parent object</span>
+
+<span class="s2">        {</span>
+<span class="s2">          &quot;</span><span class="nx">label</span><span class="s2">&quot;: &quot;</span><span class="nx">In</span> <span class="nx">neuem</span> <span class="nx">Tab</span> <span class="nx">öffnen</span><span class="s2">&quot;,</span>
+<span class="s2">          &quot;</span><span class="nx">action</span><span class="s2">&quot;: &quot;</span><span class="nx">open</span><span class="s2">&quot;,</span>
+<span class="s2">          &quot;</span><span class="nx">icon</span><span class="s2">&quot;: &quot;</span><span class="nx">icon</span><span class="o">-</span><span class="nx">arrow</span><span class="o">-</span><span class="nx">up</span><span class="o">-</span><span class="nx">right</span><span class="s2">&quot;,</span>
+<span class="s2">          &quot;</span><span class="nx">actionValues</span><span class="s2">&quot;: [</span>
+<span class="s2">            {</span>
+<span class="s2">              &quot;</span><span class="nx">event</span><span class="s2">&quot;: &quot;</span><span class="nx">loadapp</span><span class="s2">&quot;,</span>
+<span class="s2">              &quot;</span><span class="nx">value</span><span class="s2">&quot;: &quot;</span><span class="nx">LOCATION</span><span class="s2">&quot;,</span>
+<span class="s2">              &quot;</span><span class="nx">inTab</span><span class="s2">&quot;: &quot;</span><span class="kc">true</span><span class="s2">&quot;</span>
+<span class="s2">            }</span>
+<span class="s2">          ],</span>
+<span class="s2">          &quot;</span><span class="nx">roles</span><span class="s2">&quot;: [</span>
+<span class="s2">            &quot;</span><span class="nx">MAXEVERYONE</span><span class="s2">&quot;</span>
+<span class="s2">          ]</span>
+<span class="s2">        }</span>
+
+<span class="s2">### Details</span>
+
+<span class="s2">**Details - Basic**</span>
+
+<span class="s2">„details&quot;</span> <span class="nx">opens</span> <span class="nx">a</span> <span class="nx">detail</span> <span class="nx">dialog</span> <span class="nx">to</span> <span class="nx">present</span> <span class="nx">all</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">listed</span> <span class="nx">attributes</span> <span class="p">(</span><span class="k">if</span> <span class="nx">not</span> <span class="s2">&quot;hidden&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">)</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Details&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;shortLabel&quot;</span><span class="o">:</span> <span class="s2">&quot;Details&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;details&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-question-circle&quot;</span>
+        <span class="p">}</span>
+
+<span class="o">**</span><span class="nx">Details</span> <span class="o">-</span> <span class="nx">Different</span> <span class="nx">configuration</span> <span class="nx">as</span> <span class="nx">source</span><span class="o">**</span>
+
+<span class="nx">It</span> <span class="nx">is</span> <span class="nx">possible</span> <span class="nx">to</span> <span class="nx">configure</span> <span class="nx">a</span> <span class="nx">different</span> <span class="nx">tree</span> <span class="nx">as</span> <span class="nx">source</span> <span class="k">for</span> <span class="nx">the</span> <span class="nx">details</span> <span class="nx">view</span><span class="p">.</span> <span class="nx">The</span> <span class="nx">name</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">nodes</span> <span class="k">in</span> <span class="nx">both</span> <span class="nx">trees</span> <span class="nx">must</span> <span class="nx">be</span> <span class="nx">the</span> <span class="nx">same</span><span class="p">,</span> <span class="nx">otherwise</span> <span class="nx">the</span> <span class="nx">object</span> <span class="nx">cannot</span> <span class="nx">be</span> <span class="nx">fetched</span><span class="p">.</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Details from different tree&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-aim&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;details&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;tree&quot;</span><span class="o">:</span> <span class="s2">&quot;test-table-assets-more&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;tab&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Details: ${ASSETNUM}&quot;</span>
+              <span class="p">}</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="o">**</span><span class="nx">Details</span> <span class="o">-</span> <span class="nx">open</span> <span class="nx">path</span> <span class="nx">instead</span> <span class="k">of</span> <span class="nx">object</span><span class="o">**</span>
+
+<span class="nx">It</span> <span class="nx">is</span> <span class="nx">possible</span> <span class="nx">to</span> <span class="nx">execute</span> <span class="nx">the</span> <span class="nx">details</span> <span class="nx">action</span> <span class="nx">without</span> <span class="nx">a</span> <span class="nx">record</span> <span class="nx">but</span> <span class="nx">by</span> <span class="nx">configuring</span> <span class="nx">a</span> <span class="nx">path</span><span class="p">,</span> <span class="k">for</span> <span class="nx">example</span> <span class="nx">a</span> <span class="nx">path</span> <span class="nx">returned</span> <span class="nx">from</span> <span class="nx">a</span> <span class="nx">request</span> <span class="nx">action</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Details returned path&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-aim&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;details&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;path&quot;</span><span class="o">:</span> <span class="s2">&quot;${$payload.req.path}&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;tab&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Details: ${ASSETNUM}&quot;</span>
+              <span class="p">}</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="o">**</span><span class="nx">Details</span> <span class="o">-</span> <span class="nx">Table</span><span class="o">**</span>
+
+<span class="nx">The</span> <span class="nx">details</span> <span class="nx">view</span> <span class="nx">can</span> <span class="nx">show</span> <span class="nx">children</span> <span class="k">in</span> <span class="nx">a</span> <span class="nx">table</span> <span class="nx">below</span> <span class="nx">the</span> <span class="nx">attributes</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">object</span><span class="p">.</span> <span class="nx">To</span> <span class="nx">enable</span> <span class="k">this</span> <span class="nx">table</span> <span class="nx">configure</span> <span class="nx">the</span> <span class="nx">attributes</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">child</span><span class="o">/-</span><span class="nx">ren</span> <span class="k">in</span> <span class="nx">a</span> <span class="p">[</span><span class="nx">list</span> <span class="nx">configuration</span><span class="p">](..</span><span class="o">/</span><span class="nx">layout</span><span class="o">/</span><span class="nx">layout</span><span class="p">.</span><span class="nx">md</span><span class="err">#</span><span class="nx">list</span><span class="p">).</span> <span class="nx">It</span><span class="o">&amp;</span><span class="err">#</span><span class="mf">39</span><span class="p">;</span><span class="nx">s</span> <span class="nx">possible</span> <span class="nx">to</span> <span class="nx">enable</span> <span class="nx">multiple</span> <span class="nx">tables</span><span class="p">.</span>
+
+<span class="nx">Example</span> <span class="nx">showing</span> <span class="nx">an</span> <span class="nx">Asset</span> <span class="kd">with</span> <span class="nx">its</span> <span class="nx">Location</span> <span class="nx">child</span>
+
+<span class="o">!</span><span class="p">[](</span><span class="nx">details</span><span class="o">-</span><span class="nx">table</span><span class="p">.</span><span class="nx">png</span><span class="p">)</span>
+
+<span class="err">###</span> <span class="nx">Select</span>
+
+<span class="nx">An</span> <span class="nx">action</span> <span class="nx">to</span> <span class="nx">select</span> <span class="nx">one</span> <span class="nx">or</span> <span class="nx">multiple</span> <span class="nx">objects</span> <span class="nx">from</span> <span class="nx">a</span> <span class="nx">tree</span> <span class="kd">with</span> <span class="nx">root</span><span class="o">-</span><span class="nx">nodes</span> <span class="nx">displaying</span> <span class="nx">on</span> <span class="nx">the</span> <span class="nx">left</span><span class="p">.</span>
+
+<span class="o">!</span><span class="p">[](</span><span class="nx">select</span><span class="p">.</span><span class="nx">png</span><span class="p">)</span>
+
+<span class="nx">Multiple</span> <span class="nx">selections</span> <span class="nx">can</span> <span class="nx">be</span> <span class="nx">made</span> <span class="nx">by</span> <span class="nx">holding</span> <span class="nx">down</span> <span class="nx">ctrl</span><span class="o">-</span><span class="nx">key</span><span class="p">.</span>
+
+<span class="nx">A</span> <span class="nx">single</span> <span class="nx">selection</span> <span class="nx">can</span> <span class="nx">be</span> <span class="nx">done</span> <span class="kd">with</span> <span class="nx">a</span> <span class="kr">double</span> <span class="nx">click</span> <span class="nx">on</span> <span class="nx">an</span> <span class="nx">element</span><span class="p">.</span>
+
+<span class="nx">The</span> <span class="nx">selected</span> <span class="nx">elements</span> <span class="nx">can</span> <span class="nx">be</span> <span class="nx">forwarded</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">next</span> <span class="nx">action</span> <span class="nx">via</span> <span class="s2">&quot;then&quot;</span><span class="p">.</span> <span class="nx">They</span> <span class="nx">are</span> <span class="nx">accesible</span> <span class="k">in</span> <span class="nx">$payload</span> <span class="kd">with</span> <span class="nx">the</span> <span class="nx">fixed</span> <span class="nx">key</span> <span class="s2">&quot;selections&quot;</span><span class="p">.</span> <span class="nx">$payload</span><span class="p">.</span><span class="nx">selections</span> <span class="nx">is</span> <span class="nx">an</span> <span class="nx">array</span> <span class="k">of</span> <span class="nx">JSON</span><span class="o">-</span><span class="nx">objects</span><span class="p">.</span>
+
+<span class="nx">Example</span><span class="o">:</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Select: Usergroup&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;select&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-select&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;tree&quot;</span><span class="o">:</span> <span class="s2">&quot;usergroup&quot;</span>
+            <span class="p">}</span>
+          <span class="p">],</span>
+          <span class="s2">&quot;on&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">&quot;top&quot;</span>
+          <span class="p">],</span>
+          <span class="s2">&quot;then&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;request&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;request&quot;</span><span class="o">:</span> <span class="p">{</span>
+              <span class="s2">&quot;method&quot;</span><span class="o">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;insight/action/insight-suite/roles&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;params&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;roles&quot;</span><span class="o">:</span>  <span class="s2">&quot;${$payload.selections}&quot;</span> <span class="p">,</span>
+                <span class="s2">&quot;login&quot;</span><span class="o">:</span> <span class="s2">&quot;${userData.login}&quot;</span>
+              <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+              <span class="p">{</span>
+                <span class="s2">&quot;successMessage&quot;</span><span class="o">:</span> <span class="kc">false</span>
+              <span class="p">}</span>
+            <span class="p">]</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+
+<span class="err">###</span> <span class="nx">Insert</span>
+
+<span class="o">===</span> <span class="s2">&quot;Maximo&quot;</span>
+
+
+    <span class="s2">&quot;_insert_&quot;</span> <span class="k">new</span> <span class="nx">mbo</span> <span class="nx">as</span> <span class="nx">additional</span> <span class="nx">event</span> <span class="nx">after</span> <span class="nx">loading</span> <span class="nx">an</span> <span class="nx">application</span>
+
+    <span class="o">-</span> <span class="nx">event</span><span class="p">,</span> <span class="nx">additionalevent</span><span class="p">,</span> <span class="nx">value</span> <span class="err"></span> <span class="nx">loads</span> <span class="nx">application</span> <span class="kd">with</span> <span class="nx">created</span> <span class="nx">object</span> <span class="nx">and</span> <span class="nx">copies</span> <span class="nx">data</span> <span class="p">(</span><span class="nx">src</span><span class="err"></span><span class="nx">dst</span><span class="p">)</span> <span class="nx">Insight</span> <span class="nx">Explorer</span>
+
+                <span class="p">{</span>
+                <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Neuer IH-Bedarf&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;insert&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-warning&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                    <span class="s2">&quot;event&quot;</span><span class="o">:</span> <span class="s2">&quot;loadapp&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;additionalevent&quot;</span><span class="o">:</span> <span class="s2">&quot;insert&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;SR&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;inTab&quot;</span><span class="o">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;node&quot;</span><span class="o">:</span> <span class="s2">&quot;SRLOC&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                    <span class="s2">&quot;src&quot;</span><span class="o">:</span> <span class="s2">&quot;LOCATION&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;dst&quot;</span><span class="o">:</span> <span class="s2">&quot;LOCATION&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                    <span class="s2">&quot;static&quot;</span><span class="o">:</span> <span class="s2">&quot;IH Bedarf ${LOCATION}: &quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;dst&quot;</span><span class="o">:</span> <span class="s2">&quot;DESCRIPTION&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">]</span>
+                <span class="p">}</span>
+
+<span class="o">===</span> <span class="s2">&quot;OpenJet&quot;</span>
+
+    <span class="nx">_</span><span class="s2">&quot;Insert&quot;</span><span class="nx">_</span> <span class="nx">open</span> <span class="nx">specified</span> <span class="nx">application</span> <span class="kd">with</span> <span class="nx">a</span> <span class="k">new</span> <span class="nx">object</span><span class="p">.</span> <span class="nx">Context</span> <span class="nx">specific</span> <span class="nx">data</span> <span class="nx">can</span> <span class="nx">be</span> <span class="nx">passed</span> <span class="nx">via</span> <span class="nx">additional</span> <span class="nx">key</span> <span class="nx">value</span> <span class="nx">entries</span><span class="p">.</span> 
+
+    <span class="nx">Those</span> <span class="nx">can</span> <span class="nx">be</span> <span class="nx">accessed</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">EventHandler</span><span class="p">.</span><span class="nx">ON_ENTERED</span><span class="p">()</span> <span class="nx">method</span> <span class="nx">execution</span><span class="p">.</span>
+
+            <span class="nx">EventHandler</span><span class="p">.</span><span class="nx">getParam</span><span class="p">(</span><span class="s2">&quot;FOO&quot;</span><span class="p">)</span>
+
+    <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="err">/p&gt;</span>
+
+            <span class="p">{</span>
+            <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Insert&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;insert&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-snow2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;ga&quot;</span><span class="o">:</span> <span class="s2">&quot;508:40393:BA&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;FOO&quot;</span><span class="o">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;BAR&quot;</span><span class="o">:</span> <span class="s2">&quot;bar&quot;</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+            <span class="p">}</span>           
+
+
+
+
+
+<span class="err">###</span> <span class="nx">MapOpen</span>
+
+<span class="nx">Please</span> <span class="nx">refer</span> <span class="nx">to</span><span class="o">:</span> <span class="p">[</span><span class="nx">Maps</span><span class="p">](..</span><span class="o">/</span><span class="nx">maps</span><span class="o">/</span><span class="nx">maps</span><span class="p">.</span><span class="nx">md</span><span class="p">)</span>
+
+<span class="err">###</span> <span class="nx">KibanaOpen</span>
+
+<span class="nx">Please</span> <span class="nx">refer</span> <span class="nx">to</span><span class="o">:</span> <span class="p">[</span><span class="nx">Kibana</span> <span class="nx">Dashboards</span><span class="p">](..</span><span class="o">/</span><span class="nx">kibanaDashboards</span><span class="o">/</span><span class="nx">kibana</span><span class="o">-</span><span class="nx">dashboards</span><span class="p">.</span><span class="nx">md</span><span class="p">)</span>
+
+<span class="err">###</span> <span class="nx">MatrixOpen</span>
+
+<span class="s2">&quot;matrixOpen&quot;</span> <span class="nx">opens</span> <span class="nx">a</span> <span class="p">[</span><span class="nx">matrix</span><span class="p">](..</span><span class="o">/</span><span class="nx">matrix</span><span class="o">/</span><span class="nx">matrix</span><span class="p">.</span><span class="nx">md</span><span class="p">)</span> <span class="nx">view</span> <span class="nx">on</span> <span class="nx">the</span> <span class="nx">root</span> <span class="nx">nodes</span> <span class="k">of</span> <span class="nx">a</span> <span class="nx">configuration</span><span class="p">.</span>
+
+<span class="err">###</span> <span class="nx">TableOpen</span>
+
+<span class="s2">&quot;tableOpen&quot;</span> <span class="nx">opens</span> <span class="nx">a</span> <span class="nx">details</span><span class="o">-</span><span class="nx">like</span> <span class="nx">view</span> <span class="nx">on</span> <span class="nx">the</span> <span class="nx">root</span> <span class="nx">nodes</span> <span class="k">of</span> <span class="nx">a</span> <span class="nx">configuration</span><span class="p">.</span>
+
+<span class="o">**</span><span class="nx">Server</span><span class="o">-</span><span class="nx">Side</span> <span class="nx">Filtering</span><span class="o">**</span>
+
+<span class="nx">To</span> <span class="nx">filter</span> <span class="nx">to</span> <span class="nx">nodes</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">table</span> <span class="nx">the</span> <span class="nx">use</span> <span class="k">of</span> <span class="nx">queryParams</span> <span class="nx">is</span> <span class="nx">possible</span><span class="p">.</span>
+
+        <span class="nx">Example</span><span class="o">:</span> <span class="nx">Action</span> <span class="k">for</span> <span class="nx">an</span> <span class="s2">&quot;Asset&quot;</span><span class="o">-</span><span class="nx">node</span> <span class="nx">to</span> <span class="nx">show</span> <span class="nx">all</span> <span class="k">of</span> <span class="nx">it</span><span class="o">&amp;</span><span class="err">#</span><span class="mf">39</span><span class="p">;</span><span class="nx">s</span> <span class="nx">workorders</span>
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Table with workorders for an asset&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-question-circle&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;tableOpen&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;table&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;tree&quot;</span><span class="o">:</span> <span class="s2">&quot;workorder-table&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;queryParams&quot;</span><span class="o">:</span> <span class="p">{</span>
+                  <span class="s2">&quot;myAssetSelection&quot;</span> <span class="o">:</span> <span class="s2">&quot;${ASSETNUM}&quot;</span>
+                <span class="p">}</span>
+              <span class="p">}</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="err">/p&gt;</span>
+
+        <span class="nx">Corresponding</span> <span class="s2">&quot;workorder-table.json&quot;</span>
+        <span class="s2">&quot;root&quot;</span><span class="o">:</span> <span class="p">{</span>
+          <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;WORKORDER&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;query&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;constraint&quot;</span><span class="o">:</span> <span class="s2">&quot;HISTORYFLAG=0 AND ASSETNUM in ( &#39;${userData.myAssetSelection}&#39; )&quot;</span><span class="p">,</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+
+<span class="nx">The</span> <span class="nx">table</span> <span class="nx">view</span> <span class="nx">is</span> <span class="nx">linked</span> <span class="nx">by</span> <span class="k">default</span> <span class="nx">which</span> <span class="nx">will</span> <span class="nx">add</span> <span class="nx">more</span> <span class="nx">nodes</span> <span class="nx">into</span> <span class="nx">the</span> <span class="nx">queryParam</span><span class="o">-</span><span class="nx">selection</span> <span class="nx">list</span> <span class="nx">when</span> <span class="nx">you</span> <span class="nx">click</span> <span class="nx">them</span><span class="p">.</span> <span class="nx">The</span> <span class="nx">resulting</span> <span class="nx">sql</span> <span class="nx">can</span> <span class="nx">be</span> <span class="nx">configured</span> <span class="nx">as</span> <span class="nx">need</span><span class="p">,</span> <span class="nx">the</span> <span class="nx">query</span><span class="o">-</span><span class="nx">params</span> <span class="nx">will</span> <span class="nx">be</span> <span class="nx">available</span> <span class="nx">as</span> <span class="nx">comma</span> <span class="nx">separated</span> <span class="nx">list</span> <span class="k">of</span> <span class="nx">values</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">g</span><span class="p">.</span> <span class="s2">&quot;AS-001&quot;</span><span class="p">,</span> <span class="s2">&quot;AS-002&quot;</span><span class="p">,</span> <span class="p">...</span>
+
+<span class="nx">For</span> <span class="nx">every</span> <span class="nx">queryParam</span> <span class="nx">configured</span> <span class="nx">a</span> <span class="nx">count</span> <span class="nx">will</span> <span class="nx">be</span> <span class="nx">available</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">userData</span><span class="o">-</span><span class="nx">object</span> <span class="nx">to</span> <span class="nx">reflect</span> <span class="nx">the</span> <span class="nx">amount</span> <span class="k">of</span> <span class="nx">objects</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">selection</span><span class="p">.</span> <span class="nx">In</span> <span class="nx">the</span> <span class="nx">example</span> <span class="nx">above</span> <span class="nx">there</span> <span class="nx">would</span> <span class="nx">be</span> <span class="nx">$</span><span class="p">{</span><span class="nx">userData</span><span class="p">.</span><span class="nx">myAssetSelectionCount</span><span class="p">}</span> <span class="nx">to</span> <span class="nx">be</span> <span class="nx">used</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">constraint</span> <span class="nx">or</span> <span class="nx">anywhere</span> <span class="k">else</span><span class="p">.</span>
+
+<span class="o">&lt;</span><span class="nx">u</span><span class="o">&gt;**</span><span class="nx">Column</span> <span class="nx">widths</span> <span class="nx">and</span> <span class="nx">alignment</span> <span class="k">of</span> <span class="nx">table</span> <span class="nx">columns</span><span class="o">:**&lt;</span><span class="err">/u&gt;</span>
+
+<span class="nx">It</span> <span class="nx">is</span> <span class="nx">possible</span> <span class="nx">to</span> <span class="nx">configure</span> <span class="nx">the</span> <span class="nx">widths</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">table</span> <span class="nx">columns</span> <span class="nx">by</span> <span class="nx">setting</span> <span class="nx">the</span> <span class="nx">style</span> <span class="nx">on</span> <span class="nx">attributes</span> <span class="nx">shown</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">table</span><span class="p">.</span> <span class="nx">See</span> <span class="s2">&quot;[style](../layout/layout.md#listtable-style)&quot;</span> <span class="k">for</span> <span class="nx">further</span> <span class="nx">details</span>
+
+<span class="err">###</span> <span class="nx">Tab</span>
+
+<span class="nx">The</span> <span class="nx">tab</span><span class="o">-</span><span class="nx">action</span> <span class="nx">allows</span> <span class="nx">you</span> <span class="nx">to</span> <span class="nx">control</span> <span class="nx">the</span> <span class="nx">behaviour</span> <span class="k">of</span> <span class="nx">tabs</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">Explorer</span><span class="p">.</span>
+
+<span class="nx">Currently</span> <span class="nx">the</span> <span class="nx">action</span> <span class="nx">allows</span> <span class="nx">you</span> <span class="nx">to</span> <span class="nx">close</span> <span class="nx">a</span> <span class="nx">tab</span> <span class="k">in</span> <span class="nx">any</span> <span class="nx">menu</span><span class="o">-</span><span class="nx">flow</span><span class="p">.</span>
+
+<span class="nx">Example</span><span class="p">,</span> <span class="nx">closes</span> <span class="nx">the</span> <span class="nx">currently</span> <span class="nx">active</span> <span class="nx">tab</span><span class="o">:</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;tab&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;close&quot;</span><span class="o">:</span> <span class="kc">true</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="nx">Example</span><span class="p">,</span> <span class="nx">closes</span> <span class="nx">the</span> <span class="nx">tab</span> <span class="nx">by</span> <span class="nx">its</span> <span class="nx">singleId</span><span class="o">:</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;tab&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;close&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+              <span class="s2">&quot;singleId&quot;</span><span class="o">:</span> <span class="s2">&quot;someSingleIdFromAnotherMenu&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="err">##</span> <span class="nx">Mobile</span>
+
+<span class="nx">Menu</span> <span class="nx">actions</span> <span class="nx">available</span> <span class="k">for</span> <span class="nx">Mobile</span> <span class="nx">use</span><span class="p">.</span>
+
+<span class="err">###</span> <span class="nx">DownloadRecord</span>
+
+<span class="s2">&quot;_downloadRecord_&quot;</span> <span class="nx">downloads</span> <span class="nx">the</span> <span class="nx">current</span> <span class="nx">record</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">mobile</span> <span class="nx">device</span><span class="p">.</span> <span class="nx">This</span> <span class="nx">can</span> <span class="nx">only</span> <span class="nx">be</span> <span class="nx">used</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">root</span> <span class="nx">node</span><span class="p">.</span> <span class="nx">This</span> <span class="nx">action</span> <span class="nx">can</span> <span class="nx">only</span> <span class="nx">be</span> <span class="nx">used</span> <span class="k">in</span> <span class="nx">mobile</span><span class="p">.</span>
+
+        <span class="s2">&quot;action&quot;</span><span class="o">:</span><span class="s2">&quot;downloadRecord&quot;</span>
+
+<span class="err">###</span> <span class="nx">DeleteLocal</span>
+
+<span class="s2">&quot;_deleteLocal_&quot;</span> <span class="nx">reverts</span> <span class="nx">the</span> <span class="nx">changes</span> <span class="k">of</span> <span class="nx">offline</span> <span class="nx">changed</span> <span class="nx">records</span><span class="p">.</span> <span class="nx">Deletes</span> <span class="nx">offline</span> <span class="nx">created</span> <span class="nx">records</span><span class="p">.</span> <span class="nx">This</span> <span class="nx">action</span> <span class="nx">can</span> <span class="nx">only</span> <span class="nx">be</span> <span class="nx">used</span> <span class="k">in</span> <span class="nx">mobile</span><span class="p">.</span>
+
+        <span class="s2">&quot;action&quot;</span><span class="o">:</span><span class="s2">&quot;deleteLocal&quot;</span>
+
+<span class="err">###</span> <span class="nx">ListEdit</span>
+
+<span class="nx">This</span> <span class="nx">menu</span> <span class="nx">action</span> <span class="nx">is</span> <span class="nx">deprecated</span><span class="p">.</span> <span class="nx">Please</span> <span class="nx">use</span> <span class="p">[</span><span class="kr">goto</span><span class="p">](</span><span class="err">#</span><span class="kr">goto</span><span class="p">).</span>
+
+<span class="nx">This</span> <span class="nx">feature</span> <span class="nx">is</span> <span class="nx">currently</span> <span class="nx">only</span> <span class="nx">available</span> <span class="k">in</span> <span class="nx">insight</span><span class="o">-</span><span class="nx">mobile</span><span class="p">.</span>
+
+<span class="s2">&quot;_listEdit_&quot;</span> <span class="nx">opens</span> <span class="nx">the</span> <span class="nx">given</span> <span class="nx">node</span> <span class="k">in</span> <span class="nx">an</span> <span class="nx">list</span> <span class="nx">edit</span> <span class="nx">mode</span><span class="p">.</span> <span class="p">(</span><span class="nx">See</span> <span class="p">[</span><span class="nx">listEdit</span><span class="p">(</span><span class="nx">inputsupport</span><span class="p">)](..</span><span class="o">/</span><span class="nx">layout</span><span class="o">/</span><span class="nx">layout</span><span class="p">.</span><span class="nx">md</span><span class="err">#</span><span class="nx">listedit</span><span class="p">))</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Checklist&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;listEdit&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-bathtub&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;tree&quot;</span><span class="o">:</span> <span class="s2">&quot;workorder-test&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;node&quot;</span><span class="o">:</span> <span class="s2">&quot;activities&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="err">###</span> <span class="nx">Online</span>
+
+<span class="nx">This</span> <span class="nx">feature</span> <span class="nx">is</span> <span class="nx">currently</span> <span class="nx">only</span> <span class="nx">available</span> <span class="k">in</span> <span class="nx">insight</span><span class="o">-</span><span class="nx">mobile</span><span class="p">.</span>
+
+<span class="s2">&quot;_online_&quot;</span> <span class="nx">sets</span> <span class="nx">the</span> <span class="nx">app</span> <span class="nx">online</span> <span class="k">if</span> <span class="nx">the</span> <span class="nx">server</span> <span class="nx">is</span> <span class="nx">available</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Online&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;online&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-bathtub&quot;</span>
+        <span class="p">}</span>
+
+<span class="err">###</span> <span class="nx">Offline</span>
+
+<span class="nx">This</span> <span class="nx">feature</span> <span class="nx">is</span> <span class="nx">currently</span> <span class="nx">only</span> <span class="nx">available</span> <span class="k">in</span> <span class="nx">insight</span><span class="o">-</span><span class="nx">mobile</span><span class="p">.</span>
+
+<span class="s2">&quot;_offline_&quot;</span> <span class="nx">sets</span> <span class="nx">the</span> <span class="nx">app</span> <span class="nx">offline</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Offline&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;offline&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-bathtub&quot;</span>
+        <span class="p">}</span>
+
+<span class="err">###</span> <span class="nx">Filter</span>
+
+<span class="nx">This</span> <span class="nx">feature</span> <span class="nx">is</span> <span class="nx">currently</span> <span class="nx">only</span> <span class="nx">available</span> <span class="k">in</span> <span class="nx">insight</span><span class="o">-</span><span class="nx">mobile</span><span class="p">.</span>
+
+<span class="s2">&quot;_filter_&quot;</span> <span class="nx">sets</span> <span class="nx">a</span> <span class="nx">filter</span> <span class="nx">on</span> <span class="nx">the</span> <span class="nx">root</span> <span class="nx">node</span><span class="p">.</span> <span class="p">(</span><span class="nx">only</span> <span class="nx">root</span> <span class="nx">node</span><span class="p">)</span>
+
+<span class="nb">Date</span> <span class="nx">range</span> <span class="nx">filters</span> <span class="nx">react</span> <span class="nx">as</span> <span class="nx">follows</span><span class="o">:</span>
+
+<span class="nx">Filter</span> <span class="nx">example</span><span class="o">:</span> <span class="s2">&quot;DATE:WEEK:-2&quot;</span>
+
+<span class="nx">Today</span> <span class="nx">is</span><span class="o">:</span> <span class="mf">24.01.2019</span>
+
+<span class="nb">Date</span> <span class="nx">filter</span> <span class="nx">is</span><span class="o">:</span> <span class="nx">from</span> <span class="mo">07</span><span class="mf">.01.2019</span> <span class="nx">to</span> <span class="mf">27.01.2019</span>
+
+<span class="nx">Examples</span><span class="o">:</span>
+
+<span class="nx">Fix</span><span class="o">:</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;High prio&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-user&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;filter&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;attribute&quot;</span><span class="o">:</span> <span class="s2">&quot;WOPRIORITY&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="nx">User</span> <span class="nx">profile</span><span class="o">:</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Mine&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-user&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;filter&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;attribute&quot;</span><span class="o">:</span> <span class="s2">&quot;OWNER&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;${userData.personid}&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="nb">Date</span> <span class="nx">range</span><span class="o">:</span>
+
+<span class="o">-</span> <span class="nx">Pattern</span><span class="o">:</span> <span class="s2">&quot;\&amp;lt;UNIT\&amp;gt;:\&amp;lt;VALUE\&amp;gt;&quot;</span>
+
+<span class="o">-</span> <span class="nx">UNIT</span><span class="o">:</span> <span class="nx">TODAY</span> <span class="nx">or</span> <span class="nx">WEEK</span> <span class="nx">or</span> <span class="nx">MONTH</span>
+
+<span class="o">-</span> <span class="nx">VALUE</span><span class="o">:</span> <span class="nx">positiv</span> <span class="nx">or</span> <span class="nx">negative</span> <span class="nx">number</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Last week&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-user&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;filter&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;attribute&quot;</span><span class="o">:</span> <span class="s2">&quot;REPORTDATE&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;WEEK:-1&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Last week&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="nx">Not</span> <span class="nx">equals</span><span class="o">:</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Mine&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-user&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;filter&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;attribute&quot;</span><span class="o">:</span> <span class="s2">&quot;OWNER&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;${userData.personid}&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;operator&quot;</span><span class="o">:</span> <span class="s2">&quot;notEquals&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="nx">Is</span> <span class="kc">null</span><span class="o">:</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;No prio&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-user&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;filter&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;No priority&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;attribute&quot;</span><span class="o">:</span> <span class="s2">&quot;WOPRIORITY&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;operator&quot;</span><span class="o">:</span> <span class="s2">&quot;isNull&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="nx">Is</span> <span class="nx">not</span> <span class="kc">null</span><span class="o">:</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Has prio&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-user&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;filter&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Has priority&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;attribute&quot;</span><span class="o">:</span> <span class="s2">&quot;WOPRIORITY&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;operator&quot;</span><span class="o">:</span> <span class="s2">&quot;isNotNull&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="nx">Is</span> <span class="k">in</span> <span class="nx">list</span><span class="o">:</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Prio 1 + 2&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-user&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;filter&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;High and Middle&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;attribute&quot;</span><span class="o">:</span> <span class="s2">&quot;WOPRIORITY&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;2&quot;</span>
+              <span class="p">]</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="nx">like</span><span class="o">:</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;\*m\*&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-user&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;filter&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;\*m\*&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;attribute&quot;</span><span class="o">:</span> <span class="s2">&quot;OWNER&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;operator&quot;</span><span class="o">:</span> <span class="s2">&quot;like&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;\*m\*&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="nx">gt</span><span class="p">,</span> <span class="nx">gte</span><span class="p">,</span> <span class="nx">lt</span><span class="p">,</span> <span class="nx">lte</span><span class="o">:</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Greater than 5&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-user&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;filter&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Greater than 5&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;attribute&quot;</span><span class="o">:</span> <span class="s2">&quot;PRIO&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;operator&quot;</span><span class="o">:</span> <span class="s2">&quot;gt&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="mf">5</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="nx">Clear</span> <span class="nx">all</span> <span class="nx">filter</span><span class="o">:</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;\*m\*&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-user&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;filter&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;clear&quot;</span><span class="o">:</span> <span class="kc">true</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="nx">Combined</span> <span class="nx">filters</span><span class="o">:</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Mine, last week&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-user&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;filter&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;clear&quot;</span><span class="o">:</span> <span class="kc">true</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;attribute&quot;</span><span class="o">:</span> <span class="s2">&quot;OWNER&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;${userData.personid}&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;attribute&quot;</span><span class="o">:</span> <span class="s2">&quot;REPORTDATE&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;WEEK:-1&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Last week&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="nx">Specific</span> <span class="nx">tree</span><span class="o">:</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;High prio&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-user&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;filter&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;treeName&quot;</span><span class="o">:</span> <span class="s2">&quot;my-tree&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;attribute&quot;</span><span class="o">:</span> <span class="s2">&quot;WOPRIORITY&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="err">###</span> <span class="nx">CreateSilent</span>
+
+<span class="s2">&quot;_createSilen_t&quot;</span> <span class="nx">creates</span> <span class="nx">a</span> <span class="k">new</span> <span class="nx">node</span> <span class="nx">item</span> <span class="k">of</span> <span class="nx">referenced</span> <span class="nx">node</span> <span class="nx">type</span> <span class="nx">without</span> <span class="nx">a</span> <span class="nx">user</span> <span class="nx">input</span><span class="p">.</span> <span class="nx">All</span> <span class="nx">other</span> <span class="nx">settings</span> <span class="nx">are</span> <span class="nx">like</span> <span class="p">[</span><span class="nx">create</span><span class="p">](</span><span class="err">#</span><span class="nx">create</span><span class="p">).</span>
+
+<span class="err">###</span> <span class="nx">CreateForm</span>
+
+<span class="s2">&quot;_createForm_&quot;</span> <span class="nx">Creates</span> <span class="nx">a</span> <span class="k">new</span> <span class="nx">record</span> <span class="nx">without</span> <span class="nx">user</span> <span class="nx">input</span> <span class="nx">and</span> <span class="nx">does</span> <span class="nx">not</span> <span class="nx">save</span> <span class="nx">it</span><span class="p">.</span> <span class="nx">All</span> <span class="nx">other</span> <span class="nx">settings</span> <span class="nx">are</span> <span class="nx">like</span> <span class="p">[</span><span class="nx">create</span><span class="p">](</span><span class="err">#</span><span class="nx">create</span><span class="p">).</span> <span class="nx">This</span> <span class="nx">record</span> <span class="nx">can</span> <span class="nx">then</span> <span class="nx">be</span> <span class="nx">used</span> <span class="k">in</span> <span class="nx">further</span> <span class="nx">actions</span><span class="p">.</span>
+
+<span class="nx">Example</span><span class="o">:</span> <span class="nx">Create</span> <span class="nx">a</span> <span class="nx">child</span> <span class="kd">with</span> <span class="nx">two</span> <span class="nx">input</span> <span class="nx">dialogs</span> <span class="nx">and</span> <span class="nx">navigate</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">created</span> <span class="nx">record</span><span class="o">:</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Worklog&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-plus&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;createForm&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;\_node&quot;</span><span class="o">:</span> <span class="s2">&quot;worklog&quot;</span>
+            <span class="p">}</span>
+          <span class="p">],</span>
+          <span class="s2">&quot;then&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;form&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+              <span class="p">{</span>
+                <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;temp&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;attributes&quot;</span><span class="o">:</span> <span class="p">[</span>
+                  <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;DESCRIPTION&quot;</span>
+                  <span class="p">}</span>
+                <span class="p">]</span>
+              <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;then&quot;</span><span class="o">:</span> <span class="p">{</span>
+              <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;form&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                  <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;save&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;attributes&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                      <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;DESCRIPTION\_LONGDESCRIPTION&quot;</span>
+                    <span class="p">}</span>
+                  <span class="p">]</span>
+                <span class="p">}</span>
+              <span class="p">],</span>
+              <span class="s2">&quot;then&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;goto&quot;</span>
+              <span class="p">}</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+
+<span class="err">###</span> <span class="nx">Geo</span>
+
+<span class="s2">&quot;_geo_&quot;</span> <span class="nx">Gets</span> <span class="nx">the</span> <span class="nx">current</span> <span class="nx">position</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">device</span><span class="p">.</span> <span class="nx">The</span> <span class="nx">result</span> <span class="nx">can</span> <span class="nx">be</span> <span class="nx">used</span> <span class="k">in</span> <span class="nx">further</span> <span class="nx">actions</span><span class="p">.</span>
+
+<span class="nx">Result</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">Action</span> <span class="nx">contains</span> <span class="nx">the</span> <span class="nx">following</span> <span class="nx">properties</span><span class="o">:</span>
+
+<span class="o">-</span> <span class="nx">longitude</span>
+
+<span class="o">-</span> <span class="nx">latitude</span>
+
+<span class="o">-</span> <span class="nx">accuracy</span>
+
+<span class="o">-</span> <span class="nx">position</span> <span class="o">-&gt;</span> <span class="nx">The</span> <span class="nx">complete</span> <span class="nx">result</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">API</span> <span class="nx">call</span> <span class="nx">to</span> <span class="s2">&quot;navigator.geolocation.getCurrentPosition&quot;</span>
+
+        <span class="p">{</span>
+          <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Position&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-map-marker&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;geo&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;then&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;save&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+              <span class="p">{</span>
+                <span class="s2">&quot;LONG&quot;</span><span class="o">:</span> <span class="s2">&quot;${$payload.longitude}&quot;</span>
+              <span class="p">}</span>
+            <span class="p">]</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+
+<span class="err">###</span> <span class="nx">BarcodeFilter</span>
+
+<span class="s2">&quot;_barcodeFilter_&quot;</span> <span class="nx">Forces</span> <span class="nx">a</span> <span class="nx">barcode</span> <span class="nx">scan</span> <span class="nx">and</span> <span class="nx">passes</span> <span class="nx">the</span> <span class="nx">value</span> <span class="k">in</span> <span class="nx">a</span> <span class="nx">JavaScript</span><span class="o">-</span><span class="nb">Function</span><span class="p">.</span> <span class="nx">In</span> <span class="nx">the</span> <span class="nx">JavaScript</span><span class="o">-</span><span class="nb">Function</span> <span class="nx">filters</span> <span class="nx">can</span> <span class="nx">be</span> <span class="nx">activated</span><span class="p">.</span>
+
+<span class="nx">The</span> <span class="nx">action</span> <span class="nx">values</span> <span class="nx">are</span><span class="o">:</span>
+
+<span class="o">-</span> <span class="nx">Clear</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nx">optional</span><span class="p">)</span> <span class="nx">clears</span> <span class="nx">all</span> <span class="nx">filter</span>
+<span class="o">-</span> <span class="nx">js</span> <span class="o">-&gt;</span> <span class="nx">A</span> <span class="nx">Java</span><span class="o">-</span><span class="nx">Script</span><span class="o">-</span><span class="nb">Function</span> <span class="nx">to</span> <span class="nx">analyze</span> <span class="nx">the</span> <span class="nx">value</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">scan</span> <span class="nx">and</span> <span class="nx">set</span> <span class="nx">filter</span><span class="p">.</span> <span class="nx">The</span> <span class="kd">function</span> <span class="nx">got</span> <span class="nx">the</span> <span class="nx">following</span> <span class="nx">parameters</span><span class="o">:</span>
+    <span class="o">-</span> <span class="nx">Value</span><span class="o">:</span> <span class="nx">The</span> <span class="nx">scanned</span> <span class="nx">text</span>
+    <span class="o">-</span> <span class="nx">UserData</span><span class="o">:</span> <span class="nx">The</span> <span class="nx">user</span> <span class="nx">profile</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">logged</span> <span class="k">in</span> <span class="nx">user</span>
+    <span class="o">-</span> <span class="nx">Functions</span> <span class="nx">to</span> <span class="nx">add</span> <span class="nx">filters</span><span class="o">:</span>
+        <span class="o">-</span> <span class="nx">eqFilter</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span>
+        <span class="o">-</span> <span class="nx">notEqFilter</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span>
+        <span class="o">-</span> <span class="nx">likeFilter</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span>
+        <span class="o">-</span> <span class="nx">gtFilter</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span>
+        <span class="o">-</span> <span class="nx">gteFilter</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span>
+        <span class="o">-</span> <span class="nx">ltFilter</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span>
+        <span class="o">-</span> <span class="nx">lteFilter</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span>
+        <span class="o">-</span> <span class="nx">isNotNullFilter</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
+        <span class="o">-</span> <span class="nx">isNullFilter</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
+
+                <span class="p">{</span>
+                <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Scan&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;icon&quot;</span><span class="o">:</span> <span class="s2">&quot;icon-barcode&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="s2">&quot;barcodeFilter&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;actionValues&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;clear&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="s2">&quot;js&quot;</span><span class="o">:</span> <span class="s2">&quot;eqFilter(&#39;WONUM&#39;, value.split(&#39;|&#39;)[0]); eqFilter(&#39;WOPRIORITY&#39;, value.split(&#39;|&#39;)[1])&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">]</span>
+                <span class="p">}</span>
+
+<span class="err">###</span> <span class="nx">barcodeDeepLink</span>
+
+<span class="nx">The</span> <span class="nx">barcodeDeeplink</span> <span class="nx">action</span> <span class="nx">will</span> <span class="nx">open</span> <span class="nx">the</span> <span class="nx">users</span> <span class="nx">camera</span> <span class="nx">module</span> <span class="nx">and</span> <span class="nx">scan</span> <span class="nx">barcodes</span><span class="p">.</span> <span class="nx">The</span> <span class="nx">scanned</span> <span class="nx">result</span> <span class="nx">will</span> <span class="nx">automatically</span> <span class="nx">be</span> <span class="nx">handled</span> <span class="nx">as</span> <span class="nx">a</span> <span class="nx">deepLink</span><span class="p">.</span> <span class="nx">Example</span><span class="o">:</span>
+
+<span class="sb">```json</span>
+<span class="sb">{</span>
+<span class="sb">    &quot;label&quot;: &quot;Deeplink&quot;,</span>
+<span class="sb">    &quot;shortLabel&quot;: &quot;Deeplink&quot;,</span>
+<span class="sb">    &quot;action&quot;: &quot;barcodeDeeplink&quot;,</span>
+<span class="sb">    &quot;icon&quot;: &quot;icon-paper-plane&quot;</span>
+<span class="sb">}</span>
+</code></pre></div>
+<h3 id="barcodescan">barcodeScan<a class="headerlink" href="#barcodescan" title="Permanent link">&para;</a></h3>
+<p>The barcodeScan action will open the users camera module and scan a barcode. The scanned result will be available in the payload of the then action. They are accessible in $payload with the fixed key "barcode".</p>
+<p>If the barcode contains a JSON string which should be parsed, the "actionValues" can be set with the "parseJson" option set to true. As default the barcode is only read as a string.</p>
+<p>Example:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Scan Barcode&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;barcodeScan&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;actionValues&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;parseJson&quot;</span><span class="p">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;then&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;request&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;result&quot;</span><span class="p">:</span> <span class="s2">&quot;${$payload.barcode}&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="nfcread">NfcRead<a class="headerlink" href="#nfcread" title="Permanent link">&para;</a></h3>
+<p>"<em>nfcRead</em>" Forces a NFC scan and passes the result in the payload of the "<em>then</em>" chain.</p>
+<p>The action result contains the following properties:</p>
+<ul>
+<li>
+<p>text -&gt; String: The first entry of the NDEFMessages</p>
+</li>
+<li>
+<p>id -&gt; String: The id of the tag. (only supported in android)</p>
+</li>
+<li>
+<p>nfcEvent -&gt; Object: The complete result of the native NFC plugin.</p>
+</li>
+</ul>
+<p>Example:</p>
+<pre><code>    {
+      "label": "NFC",
+      "icon": "icon-broadcast",
+      "action": "nfcRead",
+      "then": {
+        "action": "filter",
+        "actionValues": [{
+          "attribute": "DESCRIPTION",
+          "value": "${object.$payload.text}"
+        }]
+      }
+    }
+</code></pre>
+<p></p>
+
+<pre><code>    {
+      "label": "NFC Filter",
+      "icon": "icon-broadcast",
+      "action": "nfcRead",
+      "then": {
+        "action": "scriptFilter",
+        "actionValues": [{
+          "clear": true,
+          "js": "var desc = value.payload.text.split(&amp;#39;|&amp;#39;)[1]; eqFilter(&amp;#39;DESCRIPTION&amp;#39;, desc)"
+        }]
+      }
+    }
+</code></pre>
+<h3 id="scriptfilter">scriptFilter<a class="headerlink" href="#scriptfilter" title="Permanent link">&para;</a></h3>
+<p>"<em>scriptFilter</em>" Can be used in "then" chains. The previous menu action passes the value object in a JavaScript-Function. In the JavaScript-Function filters can be activated.</p>
+<p>The action values are:</p>
+<ul>
+<li>Clear -&gt; (optional) clears all filter</li>
+<li>js -&gt; A Java-Script-Function to analyze the value of the previous action and set filter. The function got the following parameters:<ul>
+<li>Value: The passed object of the previous menu action.</li>
+<li>UserData: The user profile of the logged in user</li>
+<li>Functions to add filters:<ul>
+<li>eqFilter(name, value)</li>
+<li>notEqFilter(name, value)</li>
+<li>likeFilter(name, value)</li>
+<li>gtFilter(name, value)</li>
+<li>gteFilter(name, value)</li>
+<li>ltFilter(name, value)</li>
+<li>lteFilter(name, value)</li>
+<li>isNotNullFilter(name)</li>
+<li>isNullFilter(name)<pre><code>{
+"label": "NFC Filter",
+"icon": "icon-broadcast",
+"action": "nfcRead",
+"then": {
+    "action": "scriptFilter",
+    "actionValues": [{
+    "clear": true,
+    "js": "var desc = value.payload.text.split(&amp;#39;|&amp;#39;)[1]; eqFilter(&amp;#39;DESCRIPTION&amp;#39;, desc)"
+    }]
+}
+}
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../pushData/push-data/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Push data
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../favAndMenuOnTabs/favorites-menu/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Favorites and Menu on Tabs
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 <a href="https://www.rodias.de">Rodias GmbH</a>
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: ['tabs'],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
