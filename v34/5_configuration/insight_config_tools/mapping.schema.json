@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "Insight Configuration",
+  "invisible": false,
+  "description": "A configuration defines permissions, layout, data model and actions for one specific use case/scenario (e.g. stocktaking, work planning or work confirmation).",
+  "properties": {
+    "backend": {
+      "type": "string",
+      "title": "table name",
+      "description": "Must match the way the table is addressed at the database. Don't forget prefixes."
+    }
+  },
+  "additionalProperties": {
+    "type": "object",
+    "properties": {
+      "node": {
+        "type": "string",
+        "title": "Node defined in nodedefs/[backend]",
+        "description": "Must match the way the table is addressed at the database. Don't forget prefixes.",
+        "default": ""
+      },
+      "constraint": {
+        "type": "string",
+        "title": "Where clause",
+        "description": "Both foreign tables and tables with a defined id can be addressed.",
+        "default": ""
+      },
+      "orderBy": {
+        "type": "string",
+        "title": "table name",
+        "description": "Clause to order the table.",
+        "default": ""
+      },
+      "groupBy": {
+        "type": "string",
+        "title": "table name",
+        "description": "Clause to group the rows.",
+        "default": ""
+      },
+      "loop": {
+        "type": "object",
+        "title": "loop",
+        "description": "defines loop",
+        "properties": {
+          "constraint": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["constraint"]
+      }
+    },
+    "additionalProperties": false,
+    "required": ["node"],
+    "default": {
+      "node": "",
+      "constraint": ""
+    }
+  },
+  "required": ["backend"]
+}
