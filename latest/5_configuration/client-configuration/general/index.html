@@ -1,0 +1,4749 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Insight Devevlopment Team">
+      
+      <link rel="shortcut icon" href="../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+    
+    
+      
+        <title>General Client Configuration - Insight Manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bc7e593a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab28b872.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#general-client-configuration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Insight Manual" class="md-header-nav__button md-logo" aria-label="Insight Manual">
+      
+  <img src="../../../images/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Insight Manual
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              General Client Configuration
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Insight Manual" class="md-nav__button md-logo" aria-label="Insight Manual">
+      
+  <img src="../../../images/favicon.png" alt="logo">
+
+    </a>
+    Insight Manual
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../license/" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../privacy/" class="md-nav__link">
+      Privacy Policy
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../eula/" class="md-nav__link">
+      End User License Agreement
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Release-Notes
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Release-Notes" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Release-Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0_release-notes/28.0/28.0/" class="md-nav__link">
+      v28.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0_release-notes/29.0/29.0/" class="md-nav__link">
+      v29.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0_release-notes/30.0/30/" class="md-nav__link">
+      v30.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0_release-notes/31.0/31/" class="md-nav__link">
+      v31.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0_release-notes/32.0/32/" class="md-nav__link">
+      v32.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0_release-notes/33.0/33/" class="md-nav__link">
+      v33.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0_release-notes/34.0/34.0/" class="md-nav__link">
+      v34.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0_release-notes/34.1/34.1/" class="md-nav__link">
+      v34.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0_release-notes/Develop/develop/" class="md-nav__link">
+      Develop
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Installation
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Installation" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/general/general/" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
+    
+    <label class="md-nav__link" for="nav-6-2">
+      Requirements
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Requirements" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-2">
+        <span class="md-nav__icon md-icon"></span>
+        Requirements
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/requirements/basic/" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/requirements/environment/" class="md-nav__link">
+      Environment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/requirements/servercomponents/" class="md-nav__link">
+      Servercomponents
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+    
+    <label class="md-nav__link" for="nav-6-3">
+      Container
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Container" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-3">
+        <span class="md-nav__icon md-icon"></span>
+        Container
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/container/basic/" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/container/images/" class="md-nav__link">
+      Images
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/container/configuration/" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/container/simplified/" class="md-nav__link">
+      Simplified Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-3-5" type="checkbox" id="nav-6-3-5">
+    
+    <label class="md-nav__link" for="nav-6-3-5">
+      Scalable setup
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Scalable setup" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-3-5">
+        <span class="md-nav__icon md-icon"></span>
+        Scalable setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/container/scalable/scalable/" class="md-nav__link">
+      Setup overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/container/scalable/configuration/" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/container/faq/" class="md-nav__link">
+      FAQ & Examples
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+    
+    <label class="md-nav__link" for="nav-6-4">
+      Connectors
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Connectors" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-4">
+        <span class="md-nav__icon md-icon"></span>
+        Connectors
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-4-1" type="checkbox" id="nav-6-4-1">
+    
+    <label class="md-nav__link" for="nav-6-4-1">
+      HxGN
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="HxGN" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-4-1">
+        <span class="md-nav__icon md-icon"></span>
+        HxGN
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/HxGN/hxgn_connector/" class="md-nav__link">
+      Connector
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/HxGN/hxgn_properties/" class="md-nav__link">
+      Properties
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-4-2" type="checkbox" id="nav-6-4-2">
+    
+    <label class="md-nav__link" for="nav-6-4-2">
+      SAP
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="SAP" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-4-2">
+        <span class="md-nav__icon md-icon"></span>
+        SAP
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/SAP/basic/" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/SAP/connectionConfig/" class="md-nav__link">
+      Connection configuration in insight.properties (v2-Server)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/SAP/connectionConfig2/" class="md-nav__link">
+      Connection configuration in sap/eam.properties(v3-Server)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/SAP/connectionConfigJCo/" class="md-nav__link">
+      Connect with SAP Java Connector (JCo) Server (IDocs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/SAP/testConnectivity/" class="md-nav__link">
+      Test Connectivity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/SAP/userAuth/" class="md-nav__link">
+      User authentication
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-4-3" type="checkbox" id="nav-6-4-3">
+    
+    <label class="md-nav__link" for="nav-6-4-3">
+      Maximo
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Maximo" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-4-3">
+        <span class="md-nav__icon md-icon"></span>
+        Maximo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/maximo/basic/" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/maximo/mas/" class="md-nav__link">
+      MAS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/maximo/mas_apikeys/" class="md-nav__link">
+      API Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/maximo/mas_proxy/" class="md-nav__link">
+      MAS Proxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/maximo/oslc_route/" class="md-nav__link">
+      Insight OSLC Route
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/maximo/replication/" class="md-nav__link">
+      Replication of changed data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-4-4" type="checkbox" id="nav-6-4-4">
+    
+    <label class="md-nav__link" for="nav-6-4-4">
+      Openjet
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Openjet" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-4-4">
+        <span class="md-nav__icon md-icon"></span>
+        Openjet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/openjet/basic/" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/openjet/architectureOverview/" class="md-nav__link">
+      Architecture and Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/openjet/requirements/" class="md-nav__link">
+      Requirements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/openjet/warFiles/" class="md-nav__link">
+      War-Files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-4-4-5" type="checkbox" id="nav-6-4-4-5">
+    
+    <label class="md-nav__link" for="nav-6-4-4-5">
+      Configuration
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Configuration" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-4-4-5">
+        <span class="md-nav__icon md-icon"></span>
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/openjet/configuration/insightWeb/" class="md-nav__link">
+      Using Insight Web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/connectors/openjet/configuration/treeConfig/" class="md-nav__link">
+      Tree Configurations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+    
+    <label class="md-nav__link" for="nav-6-5">
+      Adapter
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Adapter" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-5">
+        <span class="md-nav__icon md-icon"></span>
+        Adapter
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/adapter/bim-adapter/bim-adapter/" class="md-nav__link">
+      BIM-Adapter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/adapter/datasource/general/" class="md-nav__link">
+      Datasource
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+    
+    <label class="md-nav__link" for="nav-6-6">
+      OpenID Connect
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="OpenID Connect" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-6">
+        <span class="md-nav__icon md-icon"></span>
+        OpenID Connect
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/OpenID-Connect/overview/" class="md-nav__link">
+      OIDC Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/OpenID-Connect/examples/" class="md-nav__link">
+      Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/OpenID-Connect/apache/" class="md-nav__link">
+      Apache configuration for Keycloak
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/http/httpServer/" class="md-nav__link">
+      HTTP-Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
+    
+    <label class="md-nav__link" for="nav-6-8">
+      Insight Middleware
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Insight Middleware" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-8">
+        <span class="md-nav__icon md-icon"></span>
+        Insight Middleware
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightMiddleware/environmentVariables/" class="md-nav__link">
+      Environment Variables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightMiddleware/prep/" class="md-nav__link">
+      Preparation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightMiddleware/config/" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-8-4" type="checkbox" id="nav-6-8-4">
+    
+    <label class="md-nav__link" for="nav-6-8-4">
+      Insight Services
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Insight Services" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-8-4">
+        <span class="md-nav__icon md-icon"></span>
+        Insight Services
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightMiddleware/services/windows/" class="md-nav__link">
+      Basic - Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightMiddleware/services/linux/" class="md-nav__link">
+      Basic - Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightMiddleware/services/keycloak/" class="md-nav__link">
+      Keycloak
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightMiddleware/services/minio/" class="md-nav__link">
+      MinIO
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightMiddleware/ssl/ssl/" class="md-nav__link">
+      SSL & Truststore
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightMonitoringAdministration/InsightMonitoring/" class="md-nav__link">
+      Insight Monitoring Administration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-10" type="checkbox" id="nav-6-10">
+    
+    <label class="md-nav__link" for="nav-6-10">
+      Insight Document
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Insight Document" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-10">
+        <span class="md-nav__icon md-icon"></span>
+        Insight Document
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightDocument/installationInsightDoc/" class="md-nav__link">
+      Installation Insight Document
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightDocument/document-handler-file/" class="md-nav__link">
+      Document-Handler-File
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightDocument/document-handler-insight/" class="md-nav__link">
+      Document-Handler-Insight
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightDocument/document-handler-maximo-imglib/" class="md-nav__link">
+      Document-Handler-Maximo-Imglib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/insightDocument/document-handler-maximo/" class="md-nav__link">
+      Document-Handler-Maximo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/pushNotifications/pushNotification/" class="md-nav__link">
+      Insight Push Notifications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-12" type="checkbox" id="nav-6-12">
+    
+    <label class="md-nav__link" for="nav-6-12">
+      Default Tree Configuration
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Default Tree Configuration" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-12">
+        <span class="md-nav__icon md-icon"></span>
+        Default Tree Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/defaultTreeConfiguration/dtc_for_maximo/" class="md-nav__link">
+      Maximo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/defaultTreeConfiguration/dtc_for_open/" class="md-nav__link">
+      OpenJet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/defaultTreeConfiguration/dtc_for_sap/" class="md-nav__link">
+      SAP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/indexingTrees/indexingTrees/" class="md-nav__link">
+      Indexing Trees
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../2_installation/updateMechanism/updateMechanism/" class="md-nav__link">
+      Update-Mechanism (Maximo, OpenJet)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Update
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Update" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        Update
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
+    
+    <label class="md-nav__link" for="nav-7-1">
+      Update
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Update" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        <span class="md-nav__icon md-icon"></span>
+        Update
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/update/update/" class="md-nav__link">
+      Standard-Update
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/update/mobileClientUpdate/" class="md-nav__link">
+      Mobile Client Update
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/update/matrix/" class="md-nav__link">
+      compatiblity matrix
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/update_middleware/update_middleware/" class="md-nav__link">
+      Standard-Middleware-Update
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/v28.0/v28/" class="md-nav__link">
+      v28.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/v29.0/v29/" class="md-nav__link">
+      v29.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/v30.0/30/" class="md-nav__link">
+      v30.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/v31.0/31/" class="md-nav__link">
+      v31.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/v32.0/32/" class="md-nav__link">
+      v32.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/v33.0/33/" class="md-nav__link">
+      v33.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/v34.0/34.0/" class="md-nav__link">
+      v34.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/v34.1/34.1/" class="md-nav__link">
+      v34.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../3_updates/vNext/next/" class="md-nav__link">
+      Next
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Monitoring
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Monitoring" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        Monitoring
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../4_monitoring/overview/overview/" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../4_monitoring/processes/processes/" class="md-nav__link">
+      Processes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../4_monitoring/logfiles/logfiles/" class="md-nav__link">
+      Logfiles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../4_monitoring/gateway/gateway/" class="md-nav__link">
+      Gateway
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../4_monitoring/jeeserver/jeeserver/" class="md-nav__link">
+      JEE-Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../4_monitoring/telemetry/telemetry/" class="md-nav__link">
+      Telemetry
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+    
+    <label class="md-nav__link" for="nav-9">
+      Configuration
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Configuration" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon"></span>
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../overview/" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../requirements/requirements/" class="md-nav__link">
+      Requirements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration_setup/configuration_setup/" class="md-nav__link">
+      Configuration Directory & Tasks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4" type="checkbox" id="nav-9-4">
+    
+    <label class="md-nav__link" for="nav-9-4">
+      Backend configuration
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Backend configuration" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-4">
+        <span class="md-nav__icon md-icon"></span>
+        Backend configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../backend-configuration/nodedef/" class="md-nav__link">
+      Nodedef
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../backend-configuration/mapping/" class="md-nav__link">
+      Mapping
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../backend-configuration/scripts/" class="md-nav__link">
+      Backend-Scripts
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5" type="checkbox" id="nav-9-5" checked>
+    
+    <label class="md-nav__link" for="nav-9-5">
+      Client configuration
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Client configuration" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-5">
+        <span class="md-nav__icon md-icon"></span>
+        Client configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        General Client Configuration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      General Client Configuration
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#default-installation-recommended" class="md-nav__link">
+    Default installation (recommended)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-installations-on-one-server" class="md-nav__link">
+    Multiple installations on one server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#different-installation-not-recommended" class="md-nav__link">
+    Different installation (not recommended)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-parameters" class="md-nav__link">
+    General parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-parameters" class="md-nav__link">
+    Mobile parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-parameters" class="md-nav__link">
+    Web parameters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../static-content/" class="md-nav__link">
+      Static Content
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cookie/" class="md-nav__link">
+      Cookie
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../loginparams/" class="md-nav__link">
+      LoginParams
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../client_url_parameters/client-url-params/" class="md-nav__link">
+      Client URL Parameters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../insight_config_tools/ict/" class="md-nav__link">
+      Insight Configuration Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../insightConfigurations/insight-config/" class="md-nav__link">
+      Insight Configurations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basicRules/basic-rules/" class="md-nav__link">
+      Basic Rules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../permissions/permissions/" class="md-nav__link">
+      Permissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dataModel/data-model/" class="md-nav__link">
+      Data Model
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../layout/layout/" class="md-nav__link">
+      Layout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../customize/customize/" class="md-nav__link">
+      Customize
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/icons/index.html" class="md-nav__link">
+      Icons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pushData/push-data/" class="md-nav__link">
+      Push data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-16" type="checkbox" id="nav-9-16">
+    
+    <label class="md-nav__link" for="nav-9-16">
+      Menus and Actions
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Menus and Actions" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-16">
+        <span class="md-nav__icon md-icon"></span>
+        Menus and Actions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu-and-action/" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/scenario/" class="md-nav__link">
+      Scenario
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-16-3" type="checkbox" id="nav-9-16-3">
+    
+    <label class="md-nav__link" for="nav-9-16-3">
+      Menu
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Menu" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-16-3">
+        <span class="md-nav__icon md-icon"></span>
+        Menu
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/barcode-deeplink/" class="md-nav__link">
+      barcodeDeeplink
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/barcode-filter/" class="md-nav__link">
+      barcodeFilter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/barcode-scan/" class="md-nav__link">
+      barcodeScan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/browser/" class="md-nav__link">
+      browser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/confirm/" class="md-nav__link">
+      confirm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/create-form/" class="md-nav__link">
+      createForm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/create-multi/" class="md-nav__link">
+      createMulti
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/create/" class="md-nav__link">
+      create
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/debug/" class="md-nav__link">
+      debug
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/delete-local/" class="md-nav__link">
+      deleteLocal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/details/" class="md-nav__link">
+      details
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/download-record/" class="md-nav__link">
+      downloadRecord
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/file-edit/" class="md-nav__link">
+      fileEdit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/file-upload/" class="md-nav__link">
+      fileUpload
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/filter/" class="md-nav__link">
+      filter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/flow/" class="md-nav__link">
+      flow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/focus/" class="md-nav__link">
+      focus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/form/" class="md-nav__link">
+      form
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/geo/" class="md-nav__link">
+      geo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/goto/" class="md-nav__link">
+      goto
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/ifc/" class="md-nav__link">
+      ifc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/insert/" class="md-nav__link">
+      insert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/js/" class="md-nav__link">
+      js
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/list-dialog/" class="md-nav__link">
+      listDialog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/list-edit/" class="md-nav__link">
+      listEdit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/nfc-read/" class="md-nav__link">
+      nfcRead
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/offline/" class="md-nav__link">
+      offline
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/online/" class="md-nav__link">
+      online
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/open/" class="md-nav__link">
+      open
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/pert/" class="md-nav__link">
+      pert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/qr/" class="md-nav__link">
+      qr
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/refresh-profile/" class="md-nav__link">
+      refreshProfile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/refresh/" class="md-nav__link">
+      refresh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/remove/" class="md-nav__link">
+      remove
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/request/" class="md-nav__link">
+      request
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/save-details/" class="md-nav__link">
+      saveDetails
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/save/" class="md-nav__link">
+      save
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/script-filter/" class="md-nav__link">
+      scriptFilter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/search-this/" class="md-nav__link">
+      searchThis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/searchInPlanning/" class="md-nav__link">
+      searchInPlanning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/select-web/" class="md-nav__link">
+      select (web)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/select/" class="md-nav__link">
+      select
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/signature/" class="md-nav__link">
+      signature
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/static-content/" class="md-nav__link">
+      staticContent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/tab/" class="md-nav__link">
+      tab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../menuAndAction/menu/time-track/" class="md-nav__link">
+      timeTrack
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../favAndMenuOnTabs/favorites-menu/" class="md-nav__link">
+      Favorites and Menu on Tabs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../drag_and_drop/drag-and-drop/" class="md-nav__link">
+      Drag and Drop (dnd)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../offline_dataSynch/offline/" class="md-nav__link">
+      Offline - Data synchronization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../workingWithVariables/variables-values/" class="md-nav__link">
+      Working with variables/values
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../defaultTreeConfig/default-tree/" class="md-nav__link">
+      Default tree configurations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../publicSearches/public-searches/" class="md-nav__link">
+      Public searches
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../definedSearches/defined-searches/" class="md-nav__link">
+      Defined searches
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../gantt/gantt/" class="md-nav__link">
+      Gantt
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../table/table/" class="md-nav__link">
+      Table
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../matrix/matrix/" class="md-nav__link">
+      Matrix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kibanaDashboards/kibana-dashboards/" class="md-nav__link">
+      Kibana Dashboards
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dashboardVisualizationsKibana/dashboard-visu/" class="md-nav__link">
+      Dashboard Visualizations with Kibana
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../push/push/" class="md-nav__link">
+      Push
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fingerprint/fingerprinting/" class="md-nav__link">
+      Fingerprint
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fileLink/filelink/" class="md-nav__link">
+      FileLink
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../nfc/nfc/" class="md-nav__link">
+      NFC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../json/json/" class="md-nav__link">
+      Insight-userprofile.json
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../charts/chart/" class="md-nav__link">
+      Charts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../hierarchySelection/hierarchySelection/" class="md-nav__link">
+      Hierarchical selection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pert/pert/" class="md-nav__link">
+      PERT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../welcomePage/welcome-page/" class="md-nav__link">
+      Welcome page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wizard/wizard/" class="md-nav__link">
+      Wizard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../language/language/" class="md-nav__link">
+      Language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../viewar/viewar/" class="md-nav__link">
+      VIEWAR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../multiselection/multiselection/" class="md-nav__link">
+      Multiselection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reports/reports/" class="md-nav__link">
+      Reports
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-43" type="checkbox" id="nav-9-43">
+    
+    <label class="md-nav__link" for="nav-9-43">
+      Ifc
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Ifc" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-43">
+        <span class="md-nav__icon md-icon"></span>
+        Ifc
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ifc/ifc/" class="md-nav__link">
+      IFC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ifc/mapping/" class="md-nav__link">
+      Mapping
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../softwarepflegevertrag/" class="md-nav__link">
+      Maintenance Provisions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Operating Manual
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Operating Manual" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        <span class="md-nav__icon md-icon"></span>
+        Operating Manual
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/login/login/" class="md-nav__link">
+      Login
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/database_update/database_update/" class="md-nav__link">
+      Configuration for changes in insight databases
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/gateway/gateway/" class="md-nav__link">
+      Gateway
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/use-o-o-d-i-o-h2/uoodioH2/" class="md-nav__link">
+      Configuration of database in wildfly / standalone.xml
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/password_encryption/pw-encryption/" class="md-nav__link">
+      Password Encryption
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/scheduler/scheduler/" class="md-nav__link">
+      Scheduler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/insight_migration/insight-migration/" class="md-nav__link">
+      Insight Migration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/dataimport_update_elasticsearch/dataimport/" class="md-nav__link">
+      Dataimport and Update Elasticsearch (Maximo)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/wildflyService/wildfly-service/" class="md-nav__link">
+      Wildfly Service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/update-mechanism/update-mechanism/" class="md-nav__link">
+      Activate Update-Mechanism (Maximo)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/new_download/new-download/" class="md-nav__link">
+      New Download
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/libMethods/libMethods/" class="md-nav__link">
+      LibMethods (OpenJet)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/massdata/massdata/" class="md-nav__link">
+      Massdata
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/deploy_undeploy_war-files/war-files/" class="md-nav__link">
+      Deploy/Undeploy war-files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/wildflyActiveMQ/wildfly_activeMQ/" class="md-nav__link">
+      Wildfly ActiveMQ queue administration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/elasticSearchMapping/elasticSearchMapping/" class="md-nav__link">
+      Adaption of ElasticSearch-Mapping
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/blockingUserOrIP/blocking/" class="md-nav__link">
+      Blocking user or IP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/eam-properties/eam-properties/" class="md-nav__link">
+      Indexerspecific EAM-properties
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/deletionOldNotifications/old-notifications/" class="md-nav__link">
+      Scheduled deletion of old notifications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/default-port/default-port/" class="md-nav__link">
+      Changing Default-Port
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/troubleshooting/troubleshooting/" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/deepLinkMobile/deep-link-mobile/" class="md-nav__link">
+      Deep Link Mobile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/selfService/self-service/" class="md-nav__link">
+      Self Service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/anonymousLogin/anonymous-login/" class="md-nav__link">
+      Anonymous Login
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/downloadWSDL/downloadWSDL_file_SAP/" class="md-nav__link">
+      Download WSDL files for web services to SAP (SAP)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/insight_SAP_logging/insight_SAP_logging/" class="md-nav__link">
+      Insight SAP logging file (SAP)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/avoidplainpw/avoidplainpw/" class="md-nav__link">
+      Avoid plain DB-Password
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/usingImages/image-quality/" class="md-nav__link">
+      Using images with appropriate quality
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/uploadDocs/uploadDocs/" class="md-nav__link">
+      Upload documents
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/continuousLogin/continuous-login/" class="md-nav__link">
+      Continuous login
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/certificates/certificates/" class="md-nav__link">
+      certificates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/barcodeScannerDevices/barcode/" class="md-nav__link">
+      Barcode Scanner Devices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/addressInUse/address/" class="md-nav__link">
+      Address already in use
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/properties/properties/" class="md-nav__link">
+      Properties
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/loggingSQL/logging/" class="md-nav__link">
+      Logging SQLs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/heapdump/heapdump/" class="md-nav__link">
+      Heapdump
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/kibanaOnlyInsightLogin/kibana-insight/" class="md-nav__link">
+      Kibana only with Insight-Login
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/checkingForExpiredPasswords/checkingForExpiredPasswords/" class="md-nav__link">
+      Checking For Expired Passwords
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11-39" type="checkbox" id="nav-11-39">
+    
+    <label class="md-nav__link" for="nav-11-39">
+      Performance
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Performance" data-md-level="2">
+      <label class="md-nav__title" for="nav-11-39">
+        <span class="md-nav__icon md-icon"></span>
+        Performance
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/performance/downloadvalidate/downloadvalidate/" class="md-nav__link">
+      reduce number of downloadvalidate requests
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/performance/heartbeat/heartbeat/" class="md-nav__link">
+      heartbeat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/performance/internalconnector/internalconnector/" class="md-nav__link">
+      internal connector
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/performance/maxconnections/maxconnections/" class="md-nav__link">
+      Max Connections
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/performance/profiledb/profiledb/" class="md-nav__link">
+      Profile DB
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/fineTuning/fineTuning/" class="md-nav__link">
+      Fine tuning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/manualFilter/manual-filter/" class="md-nav__link">
+      Manual filter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/config-migration/config-migration/" class="md-nav__link">
+      Config Migration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/api-key/api-key/" class="md-nav__link">
+      API Key Generation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/third-party-cookies/third-party-cookies/" class="md-nav__link">
+      Third party cookies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/maximo_views/maximo_views/" class="md-nav__link">
+      Using maximo views for treeConfigs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/clientLogging/clientLogging/" class="md-nav__link">
+      ClientLogging on mobile device
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/elastic-security/elastic-security/" class="md-nav__link">
+      Elasticsearch security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/hxgn-documents/hxgn-documents/" class="md-nav__link">
+      hxgn documents
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/insight-gateway-token/insight-gateway-token/" class="md-nav__link">
+      insight-gateway-token
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/insightCache/insight-cache/" class="md-nav__link">
+      Insight Cache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/outOfMemory/outOfMemory/" class="md-nav__link">
+      OutOfMemory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/portoffset/portoffset/" class="md-nav__link">
+      port-offset
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/precalculatedDownloads/precalculatedDownload/" class="md-nav__link">
+      precalculated downloads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/reldb-feature/reldb-feature/" class="md-nav__link">
+      reldb-feature
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/replicateRoles/replicateRoles/" class="md-nav__link">
+      replicate roles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/rolesInHybridInstallation/rolesInHybridInstallation/" class="md-nav__link">
+      Roles in Hybrid-Installations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/storing/file-storage-type/" class="md-nav__link">
+      Storing uploaded files in database or filesystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../6_operating-manual/treeconfigs_in_maximodb/treeconfigs_in_maximodb/" class="md-nav__link">
+      storing treeConfigs in maximo-db instead of filesystem
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      User Manual
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="User Manual" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        <span class="md-nav__icon md-icon"></span>
+        User Manual
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../7_user-manual/search/search/" class="md-nav__link">
+      Search
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../7_user-manual/electronClient/electron-client/" class="md-nav__link">
+      Electron-Client
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      3rd party components
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="3rd party components" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        <span class="md-nav__icon md-icon"></span>
+        3rd party components
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../8_third-party-components/server-common/" class="md-nav__link">
+      Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-2" type="checkbox" id="nav-13-2">
+    
+    <label class="md-nav__link" for="nav-13-2">
+      Client
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Client" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-2">
+        <span class="md-nav__icon md-icon"></span>
+        Client
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../8_third-party-components/client/client-app/" class="md-nav__link">
+      Client app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../8_third-party-components/client/client-mobile/" class="md-nav__link">
+      Client mobile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../8_third-party-components/client/client-web/" class="md-nav__link">
+      Client web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../8_third-party-components/client/cordova/" class="md-nav__link">
+      Cordova
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../8_third-party-components/client/electron/" class="md-nav__link">
+      Electron
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#default-installation-recommended" class="md-nav__link">
+    Default installation (recommended)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-installations-on-one-server" class="md-nav__link">
+    Multiple installations on one server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#different-installation-not-recommended" class="md-nav__link">
+    Different installation (not recommended)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-parameters" class="md-nav__link">
+    General parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-parameters" class="md-nav__link">
+    Mobile parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-parameters" class="md-nav__link">
+    Web parameters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="general-client-configuration">General Client Configuration<a class="headerlink" href="#general-client-configuration" title="Permanent link">&para;</a></h1>
+<p>The mobile and web applications can be configured with the Client Configuration in <code>config.json</code>.</p>
+<p>Place the config.json either parallel to the <ui | index>.html or in <code>client/config/</code> (is used with an S3 storage and <a href="../static-content/">staticContent</a>, among other things).</p>
+<h2 id="default-installation-recommended">Default installation (recommended)<a class="headerlink" href="#default-installation-recommended" title="Permanent link">&para;</a></h2>
+<p>If no further settings are needed, only the <code>eamType</code> needs to be set, not even the <code>server</code>.</p>
+<p>Insight API-URL : <em>https://your-insightserver.com/insight/...</em></p>
+<p><em>https://your-insightserver.com/insight/<mobile | web>/config.json</em></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;eamType&quot;</span><span class="p">:</span> <span class="s2">&quot;maximo&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Insight Mobile app server: <em>https://your-insightserver.com</em></p>
+<h2 id="multiple-installations-on-one-server">Multiple installations on one server<a class="headerlink" href="#multiple-installations-on-one-server" title="Permanent link">&para;</a></h2>
+<p>If there are multiple installations on one server, we recommend the following way.</p>
+<p>Insight API-URL : <em>https://your-insightserver.com/<strong>prod</strong>/insight/...</em></p>
+<p><em>https://your-insightserver.com/<strong>prod</strong>/insight/(mobile|web)/confg.json</em></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;eamType&quot;</span><span class="p">:</span> <span class="s2">&quot;maximo&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Insight Mobile app server: <em>https://your-insightserver.com/<strong>prod</strong></em></p>
+<h2 id="different-installation-not-recommended">Different installation (not recommended)<a class="headerlink" href="#different-installation-not-recommended" title="Permanent link">&para;</a></h2>
+<p>The <code>server</code> setting must be set on the path before <em>/insight/</em>.</p>
+<p>Insight API-URL: <em>https://your-insightserver.com/<strong><your-insight-path></strong>/insight/...</em></p>
+<p><em>https://your-insightserver.com/other-folder/prod.json</em></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;eamType&quot;</span><span class="p">:</span> <span class="s2">&quot;maximo&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;server&quot;</span><span class="p">:</span> <span class="s2">&quot;https://your-insightserver.com/your-insight-path&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Insight Mobile app server: <em>https://your-insightserver.com/other-folder/prod.json</em></p>
+<h2 id="general-parameters">General parameters<a class="headerlink" href="#general-parameters" title="Permanent link">&para;</a></h2>
+<!-- prettier-ignore-start -->
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="left">Values</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">appParams</td>
+<td align="left">{ key: value, key2: value2 }</td>
+<td align="left">no default</td>
+<td align="left">Can be used in replacements: Working with <a href="../../workingWithVariables/variables-values/">variables/values</a></td>
+</tr>
+<tr>
+<td align="left">configTimeout</td>
+<td align="left">any positive number</td>
+<td align="left">30000</td>
+<td align="left">Timout to load all tree configurations in milliseconds</td>
+</tr>
+<tr>
+<td align="left">downloadUrl</td>
+<td align="left"><code>&lt;server&gt;/other/download</code></td>
+<td align="left"><code>&lt;server&gt;/insight/download</code></td>
+<td align="left">Divergent-"/insight/download"-Endpoints. Only needed if insight is not behind HTTP-Server.</td>
+</tr>
+<tr>
+<td align="left">eamType</td>
+<td align="left"><code>maximo</code>, <code>open</code>, <code>standalone</code></td>
+<td align="left"><code>maximo</code></td>
+<td align="left">The EAM-Type to connect to. Use <code>standalone</code> for all other than <code>maximo</code> and <code>open</code>.</td>
+</tr>
+<tr>
+<td align="left">eamUrl</td>
+<td align="left"><code>&lt;server&gt;/other/eam</code></td>
+<td align="left"><code>&lt;server&gt;/insight/eam</code></td>
+<td align="left">Divergent-"/insight/eam"-Endpoints. Only needed if insight is not behind HTTP-Server.</td>
+</tr>
+<tr>
+<td align="left">eulaURL</td>
+<td align="left">URL or empty to hide</td>
+<td align="left">https://insight-control-panel.github.io/documentation/latest/license/</td>
+<td align="left">Full qualified URL to customers EULA</td>
+</tr>
+<tr>
+<td align="left">heartbeatTimeout</td>
+<td align="left">any positive number</td>
+<td align="left">5000</td>
+<td align="left">Heartbeat request timeout in milliseconds</td>
+</tr>
+<tr>
+<td align="left">heartbeatUrl</td>
+<td align="left"><code>&lt;server&gt;/heartbeat.txt</code></td>
+<td align="left"><code>&lt;server&gt;/insight/user/data</code></td>
+<td align="left">Divergent-Heartbeat-Endpoint. Only needed if insight is not behind HTTP-Server or you dont want a heartbeat to the EAM-Backend</td>
+</tr>
+<tr>
+<td align="left">informationURL</td>
+<td align="left">URL or empty to hide</td>
+<td align="left">https://www.rodias.de/en/insight-control-panel/maintenance-portal/</td>
+<td align="left">Full qualified URL to customers privacy policy</td>
+</tr>
+<tr>
+<td align="left">legalNoticeURL</td>
+<td align="left">URL or empty to hide</td>
+<td align="left">https://rodias.de/impressum/</td>
+<td align="left">Full qualified URL to customers legal notice</td>
+</tr>
+<tr>
+<td align="left">maximoRestApp</td>
+<td align="left"><code>/maximo</code></td>
+<td align="left"><code>/maxrest</code></td>
+<td align="left">MAXIMO ONLY: If the "/maxrest"-Endpoint of Maximo can't be used.</td>
+</tr>
+<tr>
+<td align="left">name</td>
+<td align="left">any string</td>
+<td align="left">no default</td>
+<td align="left">For Example: server-, system-, or projectname. Will be visible on: information popup; mobile server config header; mobile menu header; mobile login header</td>
+</tr>
+<tr>
+<td align="left">privacyPolicyURL</td>
+<td align="left">URL or empty to hide</td>
+<td align="left">https://insight-control-panel.github.io/documentation/v<MajorVersion>/privacy/</td>
+<td align="left">Full qualified URL to customers privacy policy</td>
+</tr>
+<tr>
+<td align="left">searchDelay</td>
+<td align="left">any positive number</td>
+<td align="left">100</td>
+<td align="left">Delay time in ms after which any search or filter action is triggered</td>
+</tr>
+<tr>
+<td align="left">searchServer</td>
+<td align="left"><server>:9222/</td>
+<td align="left"><code>&lt;server&gt;/insight/search</code></td>
+<td align="left">Divergent-Elasticsearch-Endpoint. Only needed if insight is not behind HTTP-Server</td>
+</tr>
+<tr>
+<td align="left">selectFromTreeEnabled</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">Activate manual inputs on all "selectFromTree"-attributes.</td>
+</tr>
+<tr>
+<td align="left">server</td>
+<td align="left"><server>/other-insight-api</td>
+<td align="left">the host without <code>insight/(mobile\|web)/config.json</code></td>
+<td align="left">It is not recommended to change the default URL. The server base URL to the Insight-Endpoints. Normally the host of the HTTP-Server. Only needs to be set if the standard URL is not used. <code>&lt;server&gt;/insight/(mobile\|web)/config.json</code></td>
+</tr>
+<tr>
+<td align="left">skipMaximoUiLogin</td>
+<td align="left">true or false</td>
+<td align="left">true</td>
+<td align="left">Reenable Maximo-Ui-Login, not needed with LDAP/appServerSecurity=1 authentication. If switched to <code>false</code> make sure to also set <code>mxe.webclient.allowUrlLogin as 1</code> in Maximo 7.6.1+. See details <a href="[https://](https://www.ibm.com/support/pages/how-allow-user-login-maximo-url)">here</a></td>
+</tr>
+<tr>
+<td align="left">staticContent</td>
+<td align="left">object</td>
+<td align="left">no default</td>
+<td align="left">For static files and customize styling. See <a href="../static-content/">staticContent</a></td>
+</tr>
+<tr>
+<td align="left">thirdPartyURL</td>
+<td align="left">URL or empty to hide</td>
+<td align="left"><code>https://insight-control-panel.github.io/documentation/&lt;version&gt;/8_third-party-components/client/client-mobile/</code></td>
+<td align="left">Full qualified URL to customers third party libs</td>
+</tr>
+<tr>
+<td align="left">maximoIsoAuth</td>
+<td align="left">true or false</td>
+<td align="left"><code>false</code></td>
+<td align="left">If true, the credentials will be ISO-8859-1 encoded. Default is the encoding with UTF-8</td>
+</tr>
+<tr>
+<td align="left">hideSectionBorder</td>
+<td align="left">true or false</td>
+<td align="left"><code>false</code></td>
+<td align="left">If true, all sections are packed into one card and the section borders disappear. Can also be set in a use case on tree level</td>
+</tr>
+<tr>
+<td align="left"><!-- prettier-ignore-end -->
+</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="mobile-parameters">Mobile parameters<a class="headerlink" href="#mobile-parameters" title="Permanent link">&para;</a></h2>
+<!-- prettier-ignore-start -->
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="left">Values</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">admin</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">Admins can login if someone else has unsynced, offline changes. The data of the previously logged in user will be deleted. There are also two buttons to reset the app on the login screen.</td>
+</tr>
+<tr>
+<td align="left">autoSync</td>
+<td align="left">true or false</td>
+<td align="left">true</td>
+<td align="left">Automatically upload and download of data records</td>
+</tr>
+<tr>
+<td align="left">barcode</td>
+<td align="left">{ key : value }</td>
+<td align="left">default depends on device</td>
+<td align="left">Configuration for the barcode scanner. Works on all platforms. All parameter can be define in general in config.json. See <a href="../../layout/layout/#configure-the-barcode-parameters-in-the-client-config">barcode config</a></td>
+</tr>
+<tr>
+<td align="left">barcodeCameraDisabled</td>
+<td align="left"><code>["TC8000", "MYDEVICE"]</code></td>
+<td align="left">no default</td>
+<td align="left">Use the barcode scanner hardware for specific device models.</td>
+</tr>
+<tr>
+<td align="left">barcodeIcon</td>
+<td align="left">Icon class string</td>
+<td align="left">no default</td>
+<td align="left">Overrides the default barcode icon.</td>
+</tr>
+<tr>
+<td align="left">barcodeOptions</td>
+<td align="left">{ key : value }</td>
+<td align="left">no default</td>
+<td align="left">Configuration for the native app barcode scanner plugin (Android, iOS). All parameters are given to the plugin. See: https://github.com/phonegap/phonegap-pluginbarcodescanner</td>
+</tr>
+<tr>
+<td align="left">changedOfflineAtEnd</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">Offline changed records are shown at the end of the root list.</td>
+</tr>
+<tr>
+<td align="left">clientLogging</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">Tracks logs in the client. There is a new menu item for the logs.</td>
+</tr>
+<tr>
+<td align="left">clientLogSize</td>
+<td align="left">any positive number</td>
+<td align="left">100</td>
+<td align="left">Amount of queued client logs</td>
+</tr>
+<tr>
+<td align="left">disableBarcode</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">Hides all barcode icons</td>
+</tr>
+<tr>
+<td align="left">disableOffline</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">Hides the insight-mobile menu item "Offline"</td>
+</tr>
+<tr>
+<td align="left">disableOfflineSupport</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">Offline-data-records can be disabled. For example: insight-mobile in browser but without offline support.</td>
+</tr>
+<tr>
+<td align="left">disableSettings</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">Hides the insight-mobile menu item "Settings"</td>
+</tr>
+<tr>
+<td align="left">disableXRay</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">Hides the insight-mobile menu item "XRay"</td>
+</tr>
+<tr>
+<td align="left">downloadInterval</td>
+<td align="left">any positive number</td>
+<td align="left">15</td>
+<td align="left">Download interval in minutes. How often the data records are downloaded.</td>
+</tr>
+<tr>
+<td align="left">downloadOnOnline</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">Downloads data records when online. Normally used for "mostly-offlinedevices" (Dockingstation)</td>
+</tr>
+<tr>
+<td align="left">downloadValidateInterval</td>
+<td align="left">any positive number</td>
+<td align="left">1</td>
+<td align="left">Download validate interval in minutes. How often the client asks the server for new downloads/deltas.</td>
+</tr>
+<tr>
+<td align="left">enableNfc</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">Shows the nfc icon on the search field.</td>
+</tr>
+<tr>
+<td align="left">fingerprint</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">Enables iOS TouchId/FaceId authentication</td>
+</tr>
+<tr>
+<td align="left">footerButtons</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">Displays the save and cancel button in an always visible footer</td>
+</tr>
+<tr>
+<td align="left">heartbeatInterval</td>
+<td align="left">Heartbeat off: 0 or -1 <p> Heartbeat on: any positive number</td>
+<td align="left">5</td>
+<td align="left">Heartbeat interval in seconds</td>
+</tr>
+<tr>
+<td align="left">heartbeatOnNetwork</td>
+<td align="left">true or false</td>
+<td align="left">5</td>
+<td align="left">Heartbeat is only executed when the client has network. The online and offline events are used by the browser, which do not work so reliably on all platforms and are therefore not used as a standard.</td>
+</tr>
+<tr>
+<td align="left">legacyToolbar</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">Switch to the multi line behavior of the toolbar in mobile</td>
+</tr>
+<tr>
+<td align="left">listTextOverflow</td>
+<td align="left">ellipsis</td>
+<td align="left">no default</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">maxDocuments</td>
+<td align="left">any positive number</td>
+<td align="left">100</td>
+<td align="left">Max file download count per tree config.</td>
+</tr>
+<tr>
+<td align="left">navbar</td>
+<td align="left"><code>{size: 'small \| big'}</code></td>
+<td align="left"><code>{size:'small'}</code></td>
+<td align="left">Changes the size of the navbar</td>
+</tr>
+<tr>
+<td align="left">newOfflineAtEnd</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">New offline created records are shown at the end of the root list.</td>
+</tr>
+<tr>
+<td align="left">offlineTimeout</td>
+<td align="left">any positive number</td>
+<td align="left">no timeout</td>
+<td align="left">Logout after interval of inactivity in minutes</td>
+</tr>
+<tr>
+<td align="left">pushnotification</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">Enables support of PushNotifications to the insight-mobile-app</td>
+</tr>
+<tr>
+<td align="left">showOfflineAnnotation</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">Shows the offline downloaded annotation on each record.</td>
+</tr>
+<tr>
+<td align="left">showUserInHeader</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">Shows the logged in user on the top of each page</td>
+</tr>
+<tr>
+<td align="left">startPage</td>
+<td align="left">any string</td>
+<td align="left">no default</td>
+<td align="left">Page to be shown after login. Examples: <code>upload</code>, <code>push</code>, <code>tree/workorderquickrep</code></td>
+</tr>
+<tr>
+<td align="left">recordBulkSize</td>
+<td align="left">any positive number</td>
+<td align="left">no default</td>
+<td align="left">Split the bulk record requests into chunks. This setting can avoid timeouts if the data fetches are too slow.</td>
+</tr>
+<tr>
+<td align="left"><!-- prettier-ignore-end -->
+</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="web-parameters">Web parameters<a class="headerlink" href="#web-parameters" title="Permanent link">&para;</a></h2>
+<!-- prettier-ignore-start -->
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="left">Values</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">disableDefault</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">Suppresses the creation of a Start-Center tab when working with Maximo</td>
+</tr>
+<tr>
+<td align="left">disableExpertSearch</td>
+<td align="left">true or false</td>
+<td align="left">true</td>
+<td align="left">Removes the Expert-Search option in webclient</td>
+</tr>
+<tr>
+<td align="left">disableMaximoUi</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">Completly disable the integration of the Maximo User-Interface, sets disableDefaultTab=true when enabled</td>
+</tr>
+<tr>
+<td align="left">notificationWebsocketUrl</td>
+<td align="left"><code>&lt;server&gt;:8080/insightindexer/notification</code></td>
+<td align="left"><span style="color:red"> Not Maximo: </span> <code>&lt;server&gt;:8080/**insightindexer**/notification</code> <p> <span style="color:red"> Maximo: </span> <code>&lt;server&gt;:8080/**insight-indexer**/notification</code></td>
+<td align="left">Normally used if the HTTP-Server don't support WebSocket-Proxy. (IBM-HTTP-Server don't support WebSocket-Proxy)</td>
+</tr>
+<tr>
+<td align="left">portalMode</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">No login screen, the host application must trigger the login.</td>
+</tr>
+<tr>
+<td align="left">searchPattern</td>
+<td align="left"><code>startsWith</code>, <code>endsWith</code>, <code>contains</code></td>
+<td align="left">no default</td>
+<td align="left">see <a href="../../layout/layout/#view-components">here</a></td>
+</tr>
+<tr>
+<td align="left">toolbar.maxActions</td>
+<td align="left">positive number</td>
+<td align="left">5</td>
+<td align="left">amount of actions in a tree toolbar, search and sort included</td>
+</tr>
+<tr>
+<td align="left">websocketNotification</td>
+<td align="left">true or false</td>
+<td align="left">false</td>
+<td align="left">insight-web can be notified for data changes by websocket.</td>
+</tr>
+<tr>
+<td align="left"><!-- prettier-ignore-end -->
+</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../backend-configuration/scripts/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Backend-Scripts
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../static-content/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Static Content
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2024 <a href="https://www.spie-rodias.de">SPIE RODIAS GmbH</a>
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: ['tabs'],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
