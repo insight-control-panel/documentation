@@ -1,0 +1,3802 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "Insight Configuration",
+    "invisible": false,
+    "description": "A configuration defines permissions, layout, data model and actions for one specific use case/scenario (e.g. stocktaking, work planning or work confirmation).",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string",
+            "title": "Name",
+            "disabled": true,
+            "description": "Name must match the filename and is used internally",
+            "pattern": "^[a-z0-9_-]*$"
+        },
+        "title": {
+            "type": "string",
+            "title": "Title",
+            "description": "Used in Insight perspectives to help the user to identify the specific use case/scenario which is addressed in the configuration."
+        },
+        "module": {
+            "type": "string",
+            "title": "Module",
+            "description": "Categorizes the use cases"
+        },
+        "icon": {
+            "type": "string",
+            "default": "icon-clipboard-text",
+            "description": "Used in Insight perspectives to help the user to identify the specific use case/scenario which is addressed in the configuration."
+        },
+        "order": {
+            "type": "number",
+            "description": "Order of the trees."
+        },
+        "externalPersistence": {
+            "type": "string",
+            "anyOf": [
+                {
+                    "type": "string",
+                    "enum": [
+                        "es"
+                    ],
+                    "description": "ElasticSearch Persistence"
+                }
+            ]
+        },
+        "roles": {
+            "type": "array",
+            "title": "Roles",
+            "description": "Attach user roles to configurations. Access is granted only to security roles listed in the roles Property.",
+            "items": {
+                "type": "string",
+                "anyOf": [
+                    {
+                        "enum": [
+                            "all"
+                        ],
+                        "description": "All Security Roles"
+                    },
+                    {}
+                ]
+            },
+            "default": []
+        },
+        "rolesReadonly": {
+            "type": "array",
+            "title": "Readonly Roles",
+            "description": "Trees can be set to non-editable via rolesReadonly. This is only a client feature and does not prevent writing.",
+            "items": {
+                "type": "string"
+            },
+            "default": []
+        },
+        "visibleIn": {
+            "type": "array",
+            "$ref": "#/definitions/visibleIn"
+        },
+        "visibleFunction": {
+            "type": "object",
+            "description": "Function to further limit the visibility. Parameters are the user-profile of the logged in person and the current client -> (userData, client)",
+            "properties": {
+                "js": {
+                    "type": "string"
+                }
+            },
+            "default": {
+                "js": ""
+            }
+        },
+        "download": {
+            "type": "object",
+            "properties": {
+                "cacheDuration": {
+                    "type": "string"
+                },
+                "schedule": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    ],
+                    "default": ""
+                },
+                "mode": {
+                    "type": "string",
+                    "enum": [
+                        "auto",
+                        "view",
+                        "auto_view",
+                        "onlineOnly"
+                    ]
+                },
+                "acrossUsers": {
+                    "description": "With the acrossUsers switch, downloads can be saved on the device for all users.",
+                    "type": "boolean",
+                    "default": true
+                }
+            }
+        },
+        "sections": {
+            "title:": "Sections",
+            "type": "array",
+            "description": "Sections can be used for grouping attributes of one node in the detail view.\n- Attributes of one node are listed in the configured order.\n- Each attribute can be assigned to a section\n- Sections are presented in the configured order\n- Section attributes are listed in the order configured in the attributes array\n- Sections are displayed in a responsive way (one column or two columns depending on display resolution)\n- Sections can be reused in every detail view of one Insight Config configuration",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "title": "Name",
+                        "type": "string"
+                    },
+                    "label": {
+                        "title": "Label",
+                        "type": "string"
+                    },
+                    "style": {
+                        "title": "Style",
+                        "type": "string",
+                        "anyOf": [
+                            {
+                                "default": "block",
+                                "title": "full span",
+                                "description": "full span"
+                            }
+                        ]
+                    },
+                    "grid": {
+                        "title": "Grid",
+                        "description": "only in new insight client",
+                        "type": "object",
+                        "default": {
+                            "s": "sixteen",
+                            "m": "eight",
+                            "l": "eight"
+                        },
+                        "properties": {
+                            "s": {
+                                "type": "string"
+                            },
+                            "m": {
+                                "type": "string"
+                            },
+                            "l": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "labelWidth": {
+                        "type": [
+                            "number",
+                            "string"
+                        ],
+                        "description": "This attribute label gets the width in px. Works only with labelBeside = true",
+                        "default": "100"
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "name"
+                ],
+                "default": {
+                    "name": "",
+                    "label": "",
+                    "style": ""
+                }
+            },
+            "default": [
+                {
+                    "name": "",
+                    "label": "",
+                    "style": ""
+                }
+            ]
+        },
+        "dnd": {
+            "description": "Insight Explorer offers drag and drop functionality in three different scenarios\n- Tree node item to text/input field: copies label of the node item to the field\n- Tree node item to foreign key/key field: copies the key into the field (e.g. type of node item is Location. The drop field is attribute location of type Workorder)\n- (Tree internal) from node item 1 to node item 2\n\nThe first two options are running out of the box. There is no configuration needed. The third option has to be configured in the top level section of a configuration",
+            "type": "array",
+            "title": "DnD",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "src": {
+                        "title": "Source",
+                        "description": "Name of drag node",
+                        "type": "string"
+                    },
+                    "dst": {
+                        "title": "Destination",
+                        "description": "Name of the drop node",
+                        "type": "string"
+                    },
+                    "dstCondition": {
+                        "type": "object"
+                    },
+                    "action": {
+                        "title": "Action",
+                        "description": "Defines a method call to handle the dnd action",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "description": "Url to be called",
+                                "type": "string"
+                            },
+                            "params": {
+                                "description": "URL-paramter URL, \"Key\": \"Value\"\n- Values can be retrieved via reference, e.g. '${src.LOCATION}' is automatically filled with the value of the attribute LOCATION from the src (=dragged) object\n- Values can be fixed values, e.g. 'fixed value'\n- Values can be retrieved via prefilled object, e.g. '${userData.userid}'.\n\n See also chapter working with values",
+                                "type": "object",
+                                "freeProperties": "true"
+                            },
+                            "headers": {
+                                "description": "URL-paramter URL, \"Key\": \"Value\"",
+                                "type": "object"
+                            }
+                        },
+                        "required": [
+                            "url"
+                        ]
+                    },
+                    "checkBefore": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "src",
+                    "action"
+                ]
+            },
+            "default": []
+        },
+        "rootMode": {
+            "description": "Behavior of the initial listing (root nodes), default: listing of all matching root nodes",
+            "type": "string",
+            "oneOf": [
+                {
+                    "enum": [
+                        "search"
+                    ],
+                    "description": "no initial listing (if there are too many results expected) listing refers to search entries"
+                },
+                {
+                    "enum": [
+                        "select"
+                    ],
+                    "description": "no initial listing, only nodes selected from search will be shown in tree"
+                },
+                {
+                    "enum": [
+                        "createOnly"
+                    ],
+                    "description": "create button in top level section; listing of created data sets (offline)"
+                },
+                {
+                    "enum": [
+                        "filter"
+                    ],
+                    "description": "no initial listing, a filter must be activated"
+                }
+            ]
+        },
+        "searchHidden": {
+            "title": "Search Hidden",
+            "description": "Hide search button",
+            "type": "boolean"
+        },
+        "searchOfflineOnly": {
+            "type": "boolean",
+            "description": "Offline-search, Insight X-Ray is not setup or not connected"
+        },
+        "openSingleSearchResult": {
+            "type": "boolean",
+            "description": "Open detail view automatically if there is a single hit in the search result"
+        },
+        "newAllowed": {
+            "title": "New Allowed",
+            "description": "Show button for creating new root objects",
+            "type": "boolean"
+        },
+        "hidden": {
+            "type": "boolean",
+            "description": "Hide tree in main menu (tree is only used as a value picker)"
+        },
+        "filter": {
+            "type": "array",
+            "description": "'Attributename' filters list of (root) nodes; filter-values correspond to distinct values of attribute 'Attributename'",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "attribute": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": [
+                            "string",
+                            "number",
+                            "boolean"
+                        ]
+                    },
+                    "label": {
+                        "type": "string"
+                    },
+                    "operator": {
+                        "type": "string"
+                    },
+                    "clear": {
+                        "type": "boolean"
+                    },
+                    "totalCount": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "default": [
+                {}
+            ]
+        },
+        "clearSearch": {
+            "type": "boolean",
+            "description": "Removes the search text when the page is entered."
+        },
+        "searchPattern": {
+            "type": "string",
+            "description": "Automatically add * wildcards while searching.",
+            "oneOf": [
+                {
+                    "enum": [
+                        "startsWith"
+                    ],
+                    "description": "Example: test*"
+                },
+                {
+                    "enum": [
+                        "contains"
+                    ],
+                    "description": "Example: *test*"
+                },
+                {
+                    "enum": [
+                        "endsWith"
+                    ],
+                    "description": "Example: *test"
+                }
+            ]
+        },
+        "searchReplaceFunction": {
+            "type": "object",
+            "description": "Executes a script before sending the search string to the search api. Useful to modify barcode scan results.",
+            "properties": {
+                "js": {
+                    "description": "Javascript function which must return a string value. 'searchString' and 'userData' are injected as parameters",
+                    "type": "string"
+                }
+            },
+            "default": {
+                "js": ""
+            }
+        },
+        "searchTrees": {
+            "type": "array",
+            "description": "Trees to search. Can be a list of exact trees or with wildcard match: 'workorder-hist-*'",
+            "items": {
+                "type": "string"
+            },
+            "default": [
+                ""
+            ]
+        },
+        "changedOfflineAtEnd": {
+            "type": "boolean",
+            "description": "Offline changed records are shown at the end of the root list.",
+            "default": true
+        },
+        "newOfflineAtEnd": {
+            "type": "boolean",
+            "description": "New offline created records are shown at the end of the root list.",
+            "default": true
+        },
+        "welcomePage": {
+            "type": "object",
+            "description": "Settings for the welcome page",
+            "properties": {
+                "count": {
+                    "description": "Show the count of entries in the use case",
+                    "type": "boolean"
+                },
+                "chart": {
+                    "description": "Show a chart according to properties. Currently: pie-chart",
+                    "$ref": "#/definitions/chart"
+                }
+            },
+            "default": {
+                "count": false,
+                "chart": {
+                    "type": "pie",
+                    "label": "${PRIORITY}",
+                    "value": "${PRIORITY}",
+                    "legend": {
+                        "position": "bottom"
+                    },
+                    "colors": {
+                        "HIGH": "#ff0000",
+                        "MID": "#ffff00",
+                        "LOW": "#008000"
+                    }
+                }
+            }
+        },
+        "tabs": {
+            "type": "object",
+            "description": "Shows a footer tab bar on the root list.",
+            "properties": {
+                "trees": {
+                    "description": "List of tree names to display in the tab bar.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [
+                        ""
+                    ]
+                },
+                "default": {
+                    "trees": [
+                        ""
+                    ]
+                }
+            }
+        },
+        "menus": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/menu"
+            },
+            "default": []
+        },
+        "root": {
+            "title": "Root",
+            "description": "Root of the data model",
+            "stop": "true",
+            "$ref": "#/definitions/treeObject"
+        },
+        "labelWidth": {
+            "type": [
+                "number",
+                "string"
+            ],
+            "description": "This attribute label gets the width in px. Works only with labelBeside = true",
+            "default": "100"
+        },
+        "labelBeside": {
+            "type": "boolean",
+            "description": "The attribute label will displayed next to the input",
+            "default": true
+        },
+        "labelNoWrap": {
+            "type": "boolean",
+            "description": "The attribute label will not wrapped and the text is replaced with ellipsis",
+            "default": true
+        },
+        "viewar": {
+            "required": [
+                "attributes",
+                "map",
+                "settings"
+            ],
+            "properties": {
+                "attributes": {
+                    "description": "Attributes that need to be specified for VIEWAR.",
+                    "required": [
+                        "description",
+                        "childDescription",
+                        "poiForeignKey"
+                    ],
+                    "type": "object",
+                    "properties": {
+                        "description": {
+                            "description": "The attribute of the record that should be used for the description",
+                            "type": "string"
+                        },
+                        "childDescription": {
+                            "description": "The attribute of the child record that should be used for the child description.",
+                            "type": "string"
+                        },
+                        "poiForeignKey": {
+                            "description": "The attribute of the record that should be used as poiForeignKey (respectively objectId in MapGeoData).",
+                            "type": "string"
+                        }
+                    },
+                    "default": {
+                        "attributes": {
+                            "description": "",
+                            "childDescription": "",
+                            "poiForeignKey": ""
+                        }
+                    }
+                },
+                "map": {
+                    "description": "",
+                    "required": [
+                        "tree"
+                    ],
+                    "type": "object",
+                    "properties": {
+                        "tree": {
+                            "description": "The name of the tree that contains the objectId - mapId information.",
+                            "type": "string"
+                        }
+                    },
+                    "default": {
+                        "tree": "map-objectId"
+                    }
+                },
+                "settings": {
+                    "type": "object",
+                    "required": [
+                        "version"
+                    ],
+                    "anyOf": [
+                        {
+                            "required": [
+                                "appId"
+                            ]
+                        },
+                        {
+                            "required": [
+                                "url"
+                            ]
+                        }
+                    ],
+                    "properties": {
+                        "url": {
+                            "description": "The URL for the VIEWAR-Application.",
+                            "type": "string"
+                        },
+                        "appId": {
+                            "description": "The account specific appId of VIEWAR.",
+                            "type": "string"
+                        },
+                        "version": {
+                            "description": "The version of VIEWAR.",
+                            "type": "string"
+                        }
+                    },
+                    "default": {
+                        "appId": "com.rodias.ar",
+                        "version": "3.0.0"
+                    }
+                }
+            },
+            "default": {
+                "attributes": {
+                    "description": "",
+                    "childDescription": "",
+                    "poiForeignKey": ""
+                },
+                "map": {
+                    "tree": ""
+                },
+                "settings": {
+                    "appId": "com.rodias.ar",
+                    "version": "3.0.0"
+                }
+            }
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "name",
+        "roles",
+        "title",
+        "icon",
+        "root",
+        "visibleIn"
+    ],
+    "definitions": {
+        "treeObject": {
+            "type": "object",
+            "description": "Node in the tree",
+            "properties": {
+                "loop": {
+                    "type": "boolean",
+                    "disabled": true,
+                    "default": false,
+                    "enum": [
+                        true,
+                        false
+                    ]
+                },
+                "query": {
+                    "type": "object",
+                    "$ref": "#/definitions/queryObject"
+                },
+                "queryParams": {
+                    "anyOf": [
+                        {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "attribute": {
+                                    "type": "string"
+                                }
+                            },
+                            "additionalProperties": false,
+                            "required": [
+                                "name",
+                                "attribute"
+                            ]
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "and": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "attribute": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "additionalProperties": false,
+                                        "required": [
+                                            "name",
+                                            "attribute"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                "grouping": {
+                    "description": "Allows to put objects into chunks and/or group them together by certain attribute values",
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/grouping"
+                        },
+                        {
+                            "description": "Groups in groups",
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/grouping"
+                            }
+                        }
+                    ]
+                },
+                "sortBy": {
+                    "type": "object",
+                    "description": "Defines the order",
+                    "properties": {
+                        "attribute": {
+                            "type": "string",
+                            "description": "The Attribute the sorting refers to"
+                        },
+                        "descending": {
+                            "type": "boolean",
+                            "description": "Sort from hight values down to low values"
+                        },
+                        "thenBy": {
+                            "$ref": "#/definitions/subordinatedSorting"
+                        }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                        "attribute"
+                    ]
+                },
+                "children": {
+                    "type": "array",
+                    "title": "Children",
+                    "description": "Sub elements of treeitem",
+                    "action": "openSelectDialog",
+                    "actionParam": "type",
+                    "items": {
+                        "type": "object",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/treeObject"
+                            },
+                            {
+                                "$ref": "#/definitions/loopTreeObject"
+                            }
+                        ]
+                    },
+                    "default": []
+                },
+                "flow": {
+                    "title": "a guided create menu",
+                    "description": "a guided create menu",
+                    "type": "object",
+                    "default": {
+                        "create": {
+                            "title": "Flow",
+                            "pages": []
+                        }
+                    },
+                    "properties": {
+                        "create": {
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "type": "string",
+                                    "title": "Title"
+                                },
+                                "pages": {
+                                    "type": "array",
+                                    "title": "Pages",
+                                    "items": {
+                                        "properties": {
+                                            "title": {
+                                                "type": "string",
+                                                "title": "Title of page"
+                                            },
+                                            "icon": {
+                                                "type": "string",
+                                                "title": "(Optional) Shows an icon before the title"
+                                            },
+                                            "description": {
+                                                "type": "string",
+                                                "title": "Description of page"
+                                            },
+                                            "attributes": {
+                                                "type": "array",
+                                                "items": {
+                                                    "properties": {
+                                                        "name": {
+                                                            "type": "string",
+                                                            "title": "Name of attribute"
+                                                        },
+                                                        "section": {
+                                                            "type": "string",
+                                                            "title": "Name of Section"
+                                                        }
+                                                    },
+                                                    "default": {
+                                                        "name": ""
+                                                    }
+                                                }
+                                            },
+                                            "documents": {
+                                                "type": "boolean",
+                                                "default": true
+                                            }
+                                        },
+                                        "default": {
+                                            "title": "",
+                                            "description": "",
+                                            "attributes": []
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "section": {
+                    "description": "section",
+                    "type": "string",
+                    "default": ""
+                },
+                "grid": {
+                    "title": "Grid",
+                    "description": "only in new insight client",
+                    "type": "object",
+                    "default": {
+                        "s": "sixteen",
+                        "m": "eight",
+                        "l": "eight"
+                    },
+                    "properties": {
+                        "s": {
+                            "type": "string",
+                            "enum": [
+                                "one",
+                                "two",
+                                "three",
+                                "four",
+                                "five",
+                                "six",
+                                "seven",
+                                "eight",
+                                "nine",
+                                "ten",
+                                "eleven",
+                                "twelve",
+                                "thirteen",
+                                "fourteen",
+                                "fifteen",
+                                "sixteen"
+                            ]
+                        },
+                        "m": {
+                            "type": "string",
+                            "enum": [
+                                "one",
+                                "two",
+                                "three",
+                                "four",
+                                "five",
+                                "six",
+                                "seven",
+                                "eight",
+                                "nine",
+                                "ten",
+                                "eleven",
+                                "twelve",
+                                "thirteen",
+                                "fourteen",
+                                "fifteen",
+                                "sixteen"
+                            ]
+                        },
+                        "l": {
+                            "type": "string",
+                            "enum": [
+                                "one",
+                                "two",
+                                "three",
+                                "four",
+                                "five",
+                                "six",
+                                "seven",
+                                "eight",
+                                "nine",
+                                "ten",
+                                "eleven",
+                                "twelve",
+                                "thirteen",
+                                "fourteen",
+                                "fifteen",
+                                "sixteen"
+                            ]
+                        }
+                    }
+                },
+                "name": {
+                    "description": "Defines name of the node\n- unique\n- is used for standard aggregation of search results (Insight Explorer)",
+                    "type": "string",
+                    "default": "Neu"
+                },
+                "type": {
+                    "type": "string",
+                    "meta": "metaType",
+                    "description": "Defines the backend specific object type"
+                },
+                "inlineOnly": {
+                    "type": "boolean"
+                },
+                "title": {
+                    "description": "Label for UI presentation (bucket (Insight Explorer), header (Insight Mobile))",
+                    "type": "string"
+                },
+                "label": {
+                    "decription:": "used in perspectives to help users identifying the data record\n- ${ATTRIBUTENAME} is dynamically replaced with the value of the attribute with the name ATTRIBUTENAME",
+                    "type": "string"
+                },
+                "temporal": {
+                    "type": "object",
+                    "properties": {
+                        "start": {
+                            "description": "attribute for the start of a range to show this node. (Used by gantt)",
+                            "type": "string"
+                        },
+                        "finish": {
+                            "description": "attribute for the finish of a range to show this node. (Used by gantt)",
+                            "type": "string"
+                        }
+                    },
+                    "default": {
+                        "start": "startDate",
+                        "finish": "finishDate"
+                    }
+                },
+                "chart": {
+                    "$ref": "#/definitions/chart"
+                },
+                "planning": {
+                    "description": "configuration of gantt tasks and rows",
+                    "type": "object",
+                    "properties": {
+                        "task": {
+                            "type": "boolean",
+                            "description": "Show node as task. Only allowed if the parent-node or the node itself is defined as a row.\nThe start and finish of the task is calculated by the overlapping ranges of the nodes to the root.\nThe label is the label of the node including the time range."
+                        },
+                        "row": {
+                            "type": "boolean",
+                            "description": "show node as row in gantt.\nUnassigned ranges in childrows are shown as unavailable tasks."
+                        },
+                        "css": {
+                            "description": "CSS class to apply to the gantt-task or gantt-row",
+                            "type": "string"
+                        }
+                    },
+                    "default": {
+                        "task": true,
+                        "row": true
+                    }
+                },
+                "color": {
+                    "type": "string",
+                    "description": "color to use to display this node in hexadecimal format (#RRGGBB). (Used by gantt).\n${ATTRIBUTENAME} is dynamically replaced with the value of the attribute with the name ATTRIBUTENAME",
+                    "default": "#FF0000"
+                },
+                "icon": {
+                    "description": "used in perspectives to help users identifying the data record",
+                    "type": "string",
+                    "default": "icon-wrench"
+                },
+                "bucket": {
+                    "type": "string"
+                },
+                "bucketIcon": {
+                    "type": "string"
+                },
+                "bucketExpanded": {
+                    "type": "boolean",
+                    "description": "Shows the bucket initially expanded. (insight-mobile only, in insight-explorer the user can configure the expanded nodes)"
+                },
+                "bucketMode": {
+                    "type": "string",
+                    "description": "Instead of displaying the entries directly, the bucket links to the separate view. 'headerOnly': No children are displayed inline. 'hidden': Bucket is not visible.",
+                    "enum": [
+                        "headerOnly",
+                        "hidden"
+                    ]
+                },
+                "bucketCompact": {
+                    "type": "boolean",
+                    "description": "visualize buckets side by side"
+                },
+                "gridCompact": {
+                    "type": "object",
+                    "default": {
+                        "s": "eight",
+                        "m": "four",
+                        "l": "four"
+                    },
+                    "properties": {
+                        "s": {
+                            "type": "string",
+                            "enum": [
+                                "one",
+                                "two",
+                                "three",
+                                "four",
+                                "five",
+                                "six",
+                                "seven",
+                                "eight",
+                                "nine",
+                                "ten",
+                                "eleven",
+                                "twelve",
+                                "thirteen",
+                                "fourteen",
+                                "fifteen",
+                                "sixteen"
+                            ]
+                        },
+                        "m": {
+                            "type": "string",
+                            "enum": [
+                                "one",
+                                "two",
+                                "three",
+                                "four",
+                                "five",
+                                "six",
+                                "seven",
+                                "eight",
+                                "nine",
+                                "ten",
+                                "eleven",
+                                "twelve",
+                                "thirteen",
+                                "fourteen",
+                                "fifteen",
+                                "sixteen"
+                            ]
+                        },
+                        "l": {
+                            "type": "string",
+                            "enum": [
+                                "one",
+                                "two",
+                                "three",
+                                "four",
+                                "five",
+                                "six",
+                                "seven",
+                                "eight",
+                                "nine",
+                                "ten",
+                                "eleven",
+                                "twelve",
+                                "thirteen",
+                                "fourteen",
+                                "fifteen",
+                                "sixteen"
+                            ]
+                        }
+                    }
+                },
+                "menus": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/menu"
+                    },
+                    "default": []
+                },
+                "style": {
+                    "description": "The style property can be used to decorate list entries. It is possible to reflect the specific values of important attributes in the choice of signal color or icon.",
+                    "type": "object",
+                    "properties": {
+                        "js": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "ifc": {
+                    "description": "Configuration to show a ifc, color areas and execute a menu on the IFC",
+                    "type": "object",
+                    "properties": {
+                        "ident": {
+                            "type": "string"
+                        },
+                        "color": {
+                            "type": "object",
+                            "properties": {
+                                "property": {
+                                    "type": "string",
+                                    "default": ""
+                                },
+                                "mapping": {
+                                    "type": "object",
+                                    "default": {
+                                        "": ""
+                                    }
+                                }
+                            }
+                        },
+                        "menu": {
+                            "type": "object",
+                            "properties": {
+                                "identProperty": {
+                                    "type": "string",
+                                    "default": ""
+                                },
+                                "fetchTree": {
+                                    "type": "string",
+                                    "default": ""
+                                },
+                                "filterAttribute": {
+                                    "type": "string",
+                                    "default": ""
+                                },
+                                "targetNode": {
+                                    "type": "string",
+                                    "default": ""
+                                }
+                            }
+                        }
+                    }
+                },
+                "isReady": {
+                    "description": "With this feature you can show if a record is ready processed.",
+                    "type": "object",
+                    "properties": {
+                        "label": {
+                            "type": "string"
+                        },
+                        "js": {
+                            "description": "Javascript function which must return a boolean value.",
+                            "type": "string"
+                        }
+                    }
+                },
+                "attributes": {
+                    "type": "array",
+                    "action": "openSelectDialog",
+                    "actionParam": "name",
+                    "items": {
+                        "$ref": "#/definitions/attribute"
+                    },
+                    "default": []
+                },
+                "documents": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "label": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            },
+                            "backendParams": {
+                                "type": "object",
+                                "properties": {
+                                    "relation": {
+                                        "type": "string"
+                                    },
+                                    "orientation": {
+                                        "type": "string"
+                                    },
+                                    "pictureType": {
+                                        "type": "string"
+                                    },
+                                    "nameAttribute": {
+                                        "type": "string"
+                                    },
+                                    "pathAttribute": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "attributes": {
+                                "type": "array",
+                                "action": "openSelectDialog",
+                                "actionParam": "name",
+                                "items": {
+                                    "$ref": "#/definitions/attribute"
+                                },
+                                "default": []
+                            },
+                            "headerHidden": {
+                                "type": "boolean",
+                                "description": "Boolean value to hide the document section header."
+                            },
+                            "inlineDelete": {
+                                "type": "boolean",
+                                "description": " Boolean value to show a delete button on the image. The image can also be deleted within the state popup dialog."
+                            },
+                            "imageEdit": {
+                                "type": "object",
+                                "properties": {
+                                    "disabled": {
+                                        "type": "boolean",
+                                        "description": " Boolean value to hide the imageEdit action icon."
+                                    },
+                                    "copy": {
+                                        "type": "boolean",
+                                        "description": "Boolean value to copy the image after editing."
+                                    }
+                                }
+                            }
+                        },
+                        "required": [
+                            "label",
+                            "name",
+                            "type"
+                        ]
+                    },
+                    "default": []
+                },
+                "OS": {
+                    "type": "string"
+                },
+                "excludeExpertSearch": {
+                    "type": "boolean",
+                    "description": "To exclude from expert search",
+                    "default": true
+                },
+                "saveAndNew": {
+                    "type": "boolean",
+                    "description": "enables sequence of creating new records in a detail view of current node",
+                    "default": true
+                },
+                "saveAndNewStayAttributes": {
+                    "type": "array",
+                    "description": "Attribute value of saved record is preset for attribute value of next created record (precaution: 'saveAndNew':true)",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": []
+                },
+                "saveAndNewFocusAttribute": {
+                    "type": "string",
+                    "description": "'Attributename'. Sets focus on attribute 'Attributename' in detail view of created node record (precaution: 'saveAndNew':true)"
+                },
+                "saveAndNext": {
+                    "type": [
+                        "boolean",
+                        "object"
+                    ],
+                    "description": "Displays the next list entry after saving",
+                    "properties": {
+                        "true": {
+                            "type": "boolean"
+                        },
+                        "false": {
+                            "type": "boolean"
+                        },
+                        "filter": {
+                            "$ref": "#/properties/filter"
+                        }
+                    }
+                },
+                "saveAndList": {
+                    "type": "boolean",
+                    "description": "Pressing save on detail view navigates automatically to search view",
+                    "default": true
+                },
+                "saveAndGoto": {
+                    "type": "object",
+                    "description": "Go to another view after saving",
+                    "properties": {
+                        "srcNode": {
+                            "type": "string",
+                            "description": "Node name of the record to link to."
+                        },
+                        "dstTree": {
+                            "type": "string",
+                            "description": "Tree to show the link."
+                        },
+                        "dstNode": {
+                            "type": "string",
+                            "description": "Node to show the link."
+                        },
+                        "create": {
+                            "type": "string",
+                            "description": "Show the node in create mode"
+                        }
+                    }
+                },
+                "saveButtonText": {
+                    "type": "string",
+                    "description": "Label of search button"
+                },
+                "saveButtonCreateText": {
+                    "type": "string",
+                    "description": "Label of save button on record creation views"
+                },
+                "searchThis": {
+                    "type": "boolean",
+                    "description": "branch to other Insight Config configurations (was before searchThisHidden)",
+                    "default": true
+                },
+                "saveAndBack": {
+                    "type": "integer",
+                    "description": "Displays a previous view after saving",
+                    "default": 1
+                },
+                "footerButtons": {
+                    "type": "boolean",
+                    "description": "Displays the save and cancel button in an always visible footer",
+                    "default": true
+                },
+                "swipeAll": {
+                    "type": "object",
+                    "description": "Displays all swipe actions of the node. Currently only available on root list view.",
+                    "properties": {
+                        "label": {
+                            "type": "string",
+                            "description": "Label of the action"
+                        },
+                        "icon": {
+                            "type": "string",
+                            "description": "Icon of the action"
+                        },
+                        "open": {
+                            "type": "boolean",
+                            "description": "Initial active?"
+                        }
+                    }
+                },
+                "labelClass": {
+                    "type": "string",
+                    "description": "CSS-Class for the label in lists.",
+                    "default": "bold color-red"
+                },
+                "labelWidth": {
+                    "type": [
+                        "number",
+                        "string"
+                    ],
+                    "description": "This attribute label gets the width in px. Works only with labelBeside = true",
+                    "default": "100"
+                },
+                "labelBeside": {
+                    "type": "boolean",
+                    "description": "The attribute label will displayed next to the input",
+                    "default": true
+                },
+                "labelNoWrap": {
+                    "type": "boolean",
+                    "description": "The attribute label will not wrapped and the text is replaced with ellipsis",
+                    "default": true
+                },
+                "showLabelOnList": {
+                    "type": "boolean",
+                    "description": "The attribute label will displayed in front of the the value on list views.",
+                    "default": true
+                },
+                "detailsLink": {
+                    "type": "object",
+                    "description": "Shows the details of an object on another tree or node",
+                    "properties": {
+                        "dstTree": {
+                            "type": "string",
+                            "description": "Tree to show the details."
+                        },
+                        "dstNode": {
+                            "type": "string",
+                            "description": "Node to show the details."
+                        }
+                    }
+                },
+                "headerHidden": {
+                    "type": "boolean",
+                    "description": "Boolean value to hide the details header."
+                },
+                "listLabelHidden": {
+                    "type": "boolean",
+                    "description": "Boolean value to hide the label on list views."
+                },
+                "focusAttribute": {
+                    "type": "string",
+                    "description": "Attribute name which is focused when opening the form.",
+                    "default": ""
+                },
+                "sort": {
+                    "type": "object",
+                    "$ref": "#/definitions/sort"
+                },
+                "saveAction": {
+                    "description": "http request which is called at save",
+                    "type": "object",
+                    "properties": {
+                        "url": {
+                            "type": "string"
+                        },
+                        "method": {
+                            "type": "string",
+                            "description": "http method",
+                            "enum": [
+                                "GET",
+                                "POST"
+                            ]
+                        },
+                        "params": {
+                            "description": "http POST or GET parameters",
+                            "type": "object"
+                        },
+                        "header": {
+                            "description": "http headers",
+                            "type": "object"
+                        },
+                        "afterSave": {
+                            "description": "After saving, actions can be performed. The same actions are available as with Menu.",
+                            "type": "object",
+                            "$ref": "#/definitions/menu"
+                        }
+                    }
+                },
+                "classification": {
+                    "description": "Classification can be used in every node that is configured with a class using classifications.",
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean"
+                        },
+                        "insertBefore": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "matrix": {
+                    "description": "Web only: Shows a matrix table.",
+                    "type": "object",
+                    "required": [
+                        "row",
+                        "column"
+                    ],
+                    "properties": {
+                        "row": {
+                            "description": "The attribute name or multiple which is used as the rows (y-axis).",
+                            "type": [
+                                "string",
+                                "array"
+                            ],
+                            "items": {
+                                "type": "string"
+                            },
+                            "minItems": 1
+                        },
+                        "column": {
+                            "description": "The attribute name or multiple which is used as the columns (x-axis).",
+                            "type": [
+                                "string",
+                                "array"
+                            ],
+                            "items": {
+                                "type": "string"
+                            },
+                            "minItems": 1
+                        },
+                        "value": {
+                            "description": "Configuration of the matrix values. If not set the count is used as value.",
+                            "type": "object",
+                            "required": [
+                                "attributes",
+                                "types"
+                            ],
+                            "properties": {
+                                "attributes": {
+                                    "description": "The attributes which can be used as values.",
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                },
+                                "types": {
+                                    "description": "The aggregation types with which the values are calculated. The first one is the default. If multiple are supplied the user can change the aggregation type at run time.",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "enum": [
+                                            "single",
+                                            "sum",
+                                            "count",
+                                            "min",
+                                            "max",
+                                            "avg"
+                                        ]
+                                    }
+                                }
+                            }
+                        },
+                        "info": {
+                            "description": "Additional attributes which are shown in an popup when on cell clicked.",
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "settings": {
+                            "description": "Basic configuration for the matrix.",
+                            "type": "object",
+                            "properties": {
+                                "summaryRow": {
+                                    "description": "Shows a sum row at the bottom of the matrix.",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "enum": [
+                                            "sum",
+                                            "count",
+                                            "min",
+                                            "max",
+                                            "avg"
+                                        ]
+                                    },
+                                    "default": [
+                                        "sum"
+                                    ]
+                                },
+                                "summaryCol": {
+                                    "description": "Shows a sum column at the right of the matrix.",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "enum": [
+                                            "sum",
+                                            "count",
+                                            "min",
+                                            "max",
+                                            "avg"
+                                        ]
+                                    },
+                                    "default": [
+                                        "sum"
+                                    ]
+                                },
+                                "edit": {
+                                    "description": "Sets the matrix into edit mode and allows the modification of values if type is single.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "hideCsvDownload": {
+                                    "description": "Hides the csv download button.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "csv": {
+                                    "$ref": "#/definitions/csvObject"
+                                },
+                                "color": {
+                                    "description": "Defines coloring of matrix values. The values are colored by a linear gradient defined by the start and end value.",
+                                    "type": "object",
+                                    "properties": {
+                                        "start": {
+                                            "description": "The color in HEX (e.g. #FFD6D6) of the min value.",
+                                            "type": "string",
+                                            "default": "#FFD6D6",
+                                            "pattern": "^#[0-9A-F]{6}$"
+                                        },
+                                        "end": {
+                                            "description": "The color in HEX (e.g. #CCFFCC) of the max value.",
+                                            "type": "string",
+                                            "default": "#CCFFCC",
+                                            "pattern": "^#[0-9A-F]{6}$"
+                                        }
+                                    },
+                                    "required": [
+                                        "start",
+                                        "end"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "list": {
+                    "description": "Mobile only: Multi line list entries.",
+                    "type": "object",
+                    "properties": {
+                        "settings": {
+                            "description": "Basic configuration for the table / list.",
+                            "type": "object",
+                            "properties": {
+                                "pageSize": {
+                                    "description": "Number of entries per page in a table / list.",
+                                    "type": "integer"
+                                },
+                                "pageSizeOptions": {
+                                    "description": "Array of options for page sizes.",
+                                    "type": "array"
+                                },
+                                "edit": {
+                                    "description": "Defines if values in the table can be edited.",
+                                    "type": "boolean"
+                                },
+                                "hideCsvDownload": {
+                                    "description": "Hides the Csv Download button.",
+                                    "type": "boolean"
+                                },
+                                "hideSorter": {
+                                    "description": "Hides the sort buttons of the table.",
+                                    "type": "boolean"
+                                },
+                                "useSelectedItems": {
+                                    "description": "Activates the ability to collect selected tree nodes by user clicks. These selectedItems are then forwarded to the js filter function, if configured.",
+                                    "type": "boolean"
+                                },
+                                "csv": {
+                                    "$ref": "#/definitions/csvObject"
+                                },
+                                "filterDelay": {
+                                    "description": "Delay time in ms after which the filter action is triggered.",
+                                    "type": "number"
+                                },
+                                "loadAll": {
+                                    "description": "Loads all table items.",
+                                    "type": "boolean"
+                                },
+                                "collapse": {
+                                    "description": "Defines if the table is collapsed on startup.",
+                                    "type": "boolean"
+                                },
+                                "sticky": {
+                                    "description": "Makes table headers and pagination sticky when scrolling.",
+                                    "type": "object",
+                                    "properties": {
+                                        "maxHeight": {
+                                            "description": "The max height for table components. (Does not apply for standalone table components)",
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "sumRow": {
+                                    "description": "Appends a row to the bottom of the table which sums all values of the column",
+                                    "type": "object",
+                                    "properties": {
+                                        "attributes": {
+                                            "description": "The attributes which should be summed",
+                                            "type": "array",
+                                            "items": {
+                                                "required": [
+                                                    "name"
+                                                ],
+                                                "type": "object",
+                                                "properties": {
+                                                    "name": {
+                                                        "description": "The name of the attribute",
+                                                        "type": "string"
+                                                    },
+                                                    "js": {
+                                                        "description": "Javascript function which is called when the sum value updates",
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "columnConfiguration": {
+                                    "description": "Lets the user show/hide/reorder columns of the table.",
+                                    "type": "boolean"
+                                },
+                                "filterPopup": {
+                                    "description": "Shows filter popups for all or the specified columns",
+                                    "type": [
+                                        "array",
+                                        "boolean"
+                                    ],
+                                    "default": true
+                                },
+                                "datagrid": {
+                                    "description": "Defines the datagrid settings. Datagrid is disabled by default.",
+                                    "type": "object",
+                                    "properties": {
+                                        "enabled": {
+                                            "description": "Defines if the table starts as datagrid.",
+                                            "type": "boolean",
+                                            "default": true
+                                        },
+                                        "toggleVisible": {
+                                            "description": "Lets the user toggle datagrid mode on and off.",
+                                            "type": "boolean",
+                                            "default": true
+                                        }
+                                    }
+                                },
+                                "distinctValues": {
+                                    "description": "Prevents the table from loading all data to calculate a list of options for the filter popup, loads the options directly from backend instead.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "filterTriggerOnEnter": {
+                                    "description": "Manual filter input from the user will only be triggered by pressing ENTER.",
+                                    "type": "boolean",
+                                    "default": false
+                                }
+                            }
+                        },
+                        "attributes": {
+                            "description": "Attributes to be shown in multi lines. Properties of the attributes can be overridden.",
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/attribute",
+                                "required": [
+                                    "name"
+                                ],
+                                "suppressFilter": {
+                                    "description": "Suppress the filter on roots",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "showLabelOnList": {
+                                    "description": "If true, it shows the label before the value",
+                                    "type": "boolean",
+                                    "default": true
+                                }
+                            }
+                        },
+                        "separateView": {
+                            "type": "boolean",
+                            "description": "Instead of displaying the entries directly, the bucket links to the separate view.",
+                            "default": true
+                        },
+                        "textOverflow": {
+                            "description": "Truncate at the end of a line and attach ...",
+                            "type": "string",
+                            "enum": [
+                                "ellipsis"
+                            ],
+                            "default": "ellipsis"
+                        },
+                        "sort": {
+                            "description": "Defines the sort properties of the list",
+                            "type": "object",
+                            "$ref": "#/definitions/sort"
+                        },
+                        "filter": {
+                            "description": "Defines the filter properties of the list",
+                            "type": "object",
+                            "default": {
+                                "attributes": true
+                            },
+                            "properties": {
+                                "attributes": {
+                                    "description": "The attributes that will support filter functionality. Either list all attributes that will support client side filtering, or set attributes to true for all attributes to support filtering.",
+                                    "type": [
+                                        "array",
+                                        "boolean"
+                                    ],
+                                    "default": true
+                                }
+                            }
+                        }
+                    }
+                },
+                "listEdit": {
+                    "description": "Mobile only: Multiple records can be edited on one page.",
+                    "type": "object",
+                    "properties": {
+                        "title": {
+                            "description": "Overrides the title of the node",
+                            "type": "string"
+                        },
+                        "icon": {
+                            "description": "Overrides the icon of the node",
+                            "type": "string"
+                        },
+                        "headerHidden": {
+                            "description": "Hides the header of each list entry",
+                            "type": "boolean"
+                        },
+                        "inline": {
+                            "description": "The records can be edited directly on the parent's detail page",
+                            "type": "boolean"
+                        },
+                        "attributes": {
+                            "description": "Attributes to be shown in multi lines. Properties of the attributes can be overridden.",
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/attribute",
+                                "required": [
+                                    "name"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "fileLink": {
+                    "description": "A file can be linked to the record. The file must be retrieved via a URL or a nodeReference. The deposited files can also be downloaded.",
+                    "type": "object",
+                    "anyOf": [
+                        {
+                            "required": [
+                                "url"
+                            ]
+                        },
+                        {
+                            "required": [
+                                "data"
+                            ]
+                        }
+                    ],
+                    "properties": {
+                        "url": {
+                            "description": "To retrieve the file",
+                            "type": "string"
+                        },
+                        "data": {
+                            "default": {
+                                "nodeReference": ""
+                            },
+                            "type": "object",
+                            "properties": {
+                                "nodeReference": {
+                                    "description": "Provide a reference to the node name containing file information.",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "fileName": {
+                            "description": "To store the file with a correct filename. This property is optional and only must be set if the url does not contain a file name with extension",
+                            "type": "string"
+                        },
+                        "download": {
+                            "description": "Download the files when the common download is performed",
+                            "type": "boolean"
+                        },
+                        "showInList": {
+                            "description": "Optional value which if set to true will show the file in the list and search results",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "existsAttribute": {
+                            "description": "Optional attribute which defines if the image exists and is therefore shown on the list",
+                            "type": "string"
+                        }
+                    },
+                    "default": {
+                        "url": "",
+                        "filename": ""
+                    }
+                },
+                "viewar": {
+                    "$ref": "#/properties/viewar"
+                }
+            },
+            "additionalProperties": false,
+            "default": {
+                "name": "",
+                "type": "",
+                "title": "",
+                "icon": "",
+                "label": "",
+                "query": {},
+                "attributes": []
+            },
+            "required": [
+                "name",
+                "attributes"
+            ]
+        },
+        "visibleIn": {
+            "description": "Perspectives",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "anyOf": [
+                    {
+                        "enum": [
+                            "web"
+                        ],
+                        "title": "Insight Explorer",
+                        "description": "Enables Insight Explorer and Insight X-Ray"
+                    },
+                    {
+                        "enum": [
+                            "tab"
+                        ],
+                        "title": "Insight Tab",
+                        "description": "Enables configuration to be shown in Insight Tab Menu"
+                    },
+                    {
+                        "enum": [
+                            "mobile"
+                        ],
+                        "title": "Insight Mobile",
+                        "description": "Enables Insight Mobile"
+                    },
+                    {
+                        "enum": [
+                            "no-web"
+                        ],
+                        "title": "Insight Mobile",
+                        "description": "Required for Database Adapters"
+                    }
+                ]
+            },
+            "uniqueItems": true,
+            "default": [
+                "web",
+                "mobile"
+            ]
+        },
+        "barcode": {
+            "description": "True renders a barcode icon beside the input field. After pressing this button the barcode can be fetched via camera plugin.",
+            "type": [
+                "boolean",
+                "object"
+            ],
+            "properties": {
+                "boxSize": {
+                    "type": "object",
+                    "properties": {
+                        "width": {
+                            "type": "number"
+                        },
+                        "height": {
+                            "type": "number"
+                        }
+                    },
+                    "default": {
+                        "width": 250,
+                        "height": 250
+                    }
+                },
+                "fps": {
+                    "type": "number",
+                    "default": 10
+                },
+                "delay": {
+                    "type": "number",
+                    "default": 2000
+                },
+                "formats": {
+                    "type": "array",
+                    "default": [],
+                    "items": {
+                        "type": "string",
+                        "uniqueItems": true,
+                        "enum": [
+                            "qr_code",
+                            "codabar",
+                            "aztec",
+                            "code_39",
+                            "code_93",
+                            "code_128",
+                            "itf",
+                            "ean_13",
+                            "ean_8",
+                            "pdf_417",
+                            "upc_a",
+                            "upc_e",
+                            "upc_ean_extension",
+                            "data_matrix",
+                            "maxicode",
+                            "rss_14",
+                            "rss_expanded"
+                        ]
+                    }
+                }
+            }
+        },
+        "subordinatedSorting": {
+            "type": "object",
+            "description": "Subordinated Sorting",
+            "properties": {
+                "attribute": {
+                    "type": "string",
+                    "description": "The Attribute the sorting refers to"
+                },
+                "descending": {
+                    "type": "boolean",
+                    "description": "Sort from hight values down to low values"
+                },
+                "thenBy": {
+                    "$ref": "#/definitions/subordinatedSorting"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "attribute"
+            ]
+        },
+        "grouping": {
+            "description": "Allows to put objects into chunks and/or group them together by certain attribute values",
+            "type": "object",
+            "properties": {
+                "size": {
+                    "description": "How many objects are put into one chunk",
+                    "type": "number"
+                },
+                "label": {
+                    "description": "Label for chunks",
+                    "type": "string"
+                },
+                "attribute": {
+                    "description": "Attribute to build groups",
+                    "type": "string"
+                },
+                "groups": {
+                    "description": "Define groups and their order that should always exist",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "label": {
+                                "type": "string",
+                                "description": "Fix label of the group"
+                            },
+                            "values": {
+                                "type": "string",
+                                "description": "Object with this attribute value will be sort in that group"
+                            },
+                            "expanded": {
+                                "type": "boolean",
+                                "description": "Expand the group node by default"
+                            },
+                            "others": {
+                                "type": "string",
+                                "description": "Expand the group node by default",
+                                "default": "catch"
+                            }
+                        },
+                        "default": []
+                    }
+                }
+            }
+        },
+        "attribute": {
+            "title": "Attribute",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "meta": "metaAttribute"
+                },
+                "label": {
+                    "title": "Label",
+                    "description": "Label of an Attribute",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "Value of 'type' must match the type in the backend.",
+                    "type": "string",
+                    "default": "String"
+                },
+                "columnWidth": {
+                    "description": "Required with Formfields",
+                    "type": "string",
+                    "default": "50"
+                },
+                "labelWidth": {
+                    "type": [
+                        "number",
+                        "string"
+                    ],
+                    "description": "This attribute label gets the width in px. Works only with labelBeside = true",
+                    "default": "100"
+                },
+                "labelBeside": {
+                    "type": "boolean",
+                    "description": "The attribute label will displayed next to the input",
+                    "default": true
+                },
+                "labelNoWrap": {
+                    "type": "boolean",
+                    "description": "The attribute label will not wrapped and the text is replaced with ellipsis",
+                    "default": true
+                },
+                "format": {
+                    "type": "string",
+                    "description": "Formats the output of the attribute"
+                },
+                "formField": {
+                    "type": "boolean",
+                    "description": "Form-Fields are not read/written on server side",
+                    "default": true
+                },
+                "plusMinus": {
+                    "type": "boolean",
+                    "description": "Shows a plus and minus button on number attributes.",
+                    "default": true
+                },
+                "clear": {
+                    "type": "boolean",
+                    "description": "Show or hide the clear button.",
+                    "default": false
+                },
+                "options": {
+                    "description": "Value lists\n- Can be node items of another Insight Config configuration (see chapter Working with attributes)\n- Or can be listed directly",
+                    "type": "object",
+                    "properties": {
+                        "hint": {
+                            "type": "string",
+                            "default": null
+                        },
+                        "dictionary": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "label": {
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "type": "string"
+                                    }
+                                },
+                                "default": {
+                                    "label": "",
+                                    "value": ""
+                                }
+                            },
+                            "default": [
+                                {
+                                    "label": "",
+                                    "value": ""
+                                }
+                            ]
+                        }
+                    }
+                },
+                "widget": {
+                    "type": "string",
+                    "disabled": "true",
+                    "description": "Defines optimized input support for fitting to the selected attribute type",
+                    "enum": [
+                        "Datetime",
+                        "Born",
+                        "IntegerInput",
+                        "Textarea",
+                        "TextPopup",
+                        "Combo",
+                        "String",
+                        "Duration",
+                        "TextDuration",
+                        "InlineSelect",
+                        "InlineSelect:vert",
+                        "NativeDecimal",
+                        "Checklist",
+                        "HTMLViewer",
+                        "htmlInput:time",
+                        "htmlInput:month",
+                        "htmlInput:password",
+                        "htmlInput:email",
+                        "htmlInput:url",
+                        "htmlInput:tel"
+                    ]
+                },
+                "maxHeight": {
+                    "type": "string"
+                },
+                "section": {
+                    "type": "string"
+                },
+                "grid": {
+                    "title": "Grid",
+                    "description": "only in new insight client",
+                    "type": "object",
+                    "default": {
+                        "s": "sixteen",
+                        "m": "eight",
+                        "l": "eight"
+                    },
+                    "properties": {
+                        "s": {
+                            "type": "string"
+                        },
+                        "m": {
+                            "type": "string"
+                        },
+                        "l": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": {
+                    "description": "Required Fields",
+                    "type": "boolean",
+                    "default": true
+                },
+                "readonly": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "barcode": {
+                    "default": true,
+                    "$ref": "#/definitions/barcode"
+                },
+                "labelHidden": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "showLabelOnList": {
+                    "type": "boolean",
+                    "description": "Shows label in front of the value on the list liews.",
+                    "default": true
+                },
+                "floating": {
+                    "description": "The Attribute is next to the previous one.",
+                    "type": "string",
+                    "enum": [
+                        "fix",
+                        "responsive"
+                    ],
+                    "default": "fix"
+                },
+                "control": {
+                    "description": "hidden, disabled, enabled or createOnly",
+                    "type": "string",
+                    "enum": [
+                        "enabled",
+                        "disabled",
+                        "hidden",
+                        "createOnly"
+                    ],
+                    "default": ""
+                },
+                "excludeExpertSearch": {
+                    "type": "boolean",
+                    "description": "To exclude from expert search"
+                },
+                "colorClass": {
+                    "type": "string",
+                    "description": "Background color of the field",
+                    "enum": [
+                        "bg-color-red",
+                        "bg-color-yellow",
+                        "bg-color-green",
+                        "bg-color-blue",
+                        "bg-color-white",
+                        "bg-color-black",
+                        "bg-color-orange",
+                        "bg-color-purple",
+                        "bg-color-light-red",
+                        "bg-color-light-yellow",
+                        "bg-color-light-green",
+                        "bg-color-light-blue",
+                        "bg-color-light-orange",
+                        "bg-color-light-purple",
+                        "bold"
+                    ]
+                },
+                "readonlyClass": {
+                    "type": "string",
+                    "description": "Color and font of the field. (Example: bold color-red)",
+                    "enum": [
+                        "bold",
+                        "italic",
+                        "color-red",
+                        "color-yellow",
+                        "color-green",
+                        "color-blue",
+                        "color-white",
+                        "color-black",
+                        "color-orange",
+                        "color-light-red",
+                        "color-light-yellow",
+                        "color-light-green",
+                        "color-light-blue",
+                        "color-light-orange"
+                    ],
+                    "default": ""
+                },
+                "validation": {
+                    "type": "object",
+                    "properties": {
+                        "js": {
+                            "type": "string",
+                            "description": "Javascript validation function"
+                        }
+                    }
+                },
+                "attributeControl": {
+                    "type": "object",
+                    "properties": {
+                        "js": {
+                            "type": "string",
+                            "description": "Javascript validation function"
+                        }
+                    }
+                },
+                "search": {
+                    "type": "object",
+                    "properties": {
+                        "inResult": {
+                            "type": "string",
+                            "enum": [
+                                "show",
+                                "hide"
+                            ],
+                            "description": "Hide/Show an attribute in search result list"
+                        },
+                        "or": {
+                            "description": "List of attribute names to search with OR.",
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "default": [
+                                ""
+                            ]
+                        }
+                    },
+                    "default": {
+                        "or": [
+                            ""
+                        ]
+                    }
+                },
+                "decimalPointHidden": {
+                    "type": "boolean",
+                    "description": "Decimal values: Hide the decimal point on the input dialog",
+                    "default": true
+                },
+                "plusMinusHidden": {
+                    "type": "boolean",
+                    "description": "Decimal values: Hide the plus and minus buttons on the input dialog",
+                    "default": true
+                },
+                "phone": {
+                    "type": "boolean",
+                    "description": "Show a call button",
+                    "default": true
+                },
+                "dirtyCheck": {
+                    "type": "string",
+                    "description": "Include or exclude from dirty check of detail pages.",
+                    "enum": [
+                        "include",
+                        "exclude"
+                    ]
+                },
+                "mustWrite": {
+                    "type": "boolean",
+                    "description": "true: Attribute is written on save, even if the value is not changed. false: Attribute is never written on save."
+                },
+                "assignment": {
+                    "description": "Fills the given attribute dynamically with a value when the specified hook is triggered.",
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "description": "Specifies the function to be called",
+                            "type": "string",
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "text"
+                                    ],
+                                    "description": "assigns a value"
+                                },
+                                {}
+                            ]
+                        },
+                        "value": {
+                            "description": "Formatted String with variables (see chapter Working with variables/values)",
+                            "type": "string"
+                        },
+                        "when": {
+                            "description": "Specifies the trigger",
+                            "type": "string",
+                            "oneOf": [
+                                {
+                                    "enum": [
+                                        "afterRead"
+                                    ],
+                                    "description": "after reading the data"
+                                },
+                                {
+                                    "enum": [
+                                        "beforeWrite"
+                                    ],
+                                    "description": "before sending back to the server"
+                                },
+                                {
+                                    "enum": [
+                                        "onSave"
+                                    ],
+                                    "description": "save button pressed"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "selectFromTree": {
+                    "description": "Presents node instances of src Insight Config configuration (\"tree\") in a selection view ",
+                    "type": "object",
+                    "properties": {
+                        "tree": {
+                            "description": "specifies source Insight Config configuration",
+                            "type": "string"
+                        },
+                        "node": {
+                            "type": "string"
+                        },
+                        "attribute": {
+                            "description": "attribute of root node (in the referenced configuration specified in \"tree\")",
+                            "type": "string"
+                        },
+                        "search": {
+                            "description": "search name to use when selecting. The search must be defined in the given \"tree\". See: searches",
+                            "type": "string"
+                        },
+                        "autofill": {
+                            "description": "Array of attributes to be copied if selected",
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "src": {
+                                        "description": "name of attribute (in the referenced configuration specified in \"tree\")",
+                                        "type": "string"
+                                    },
+                                    "dst": {
+                                        "description": "name of attribute in this node (in the enclosing configuration)",
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "default": []
+                        },
+                        "filter": {
+                            "description": "Map of filter attributes. Example: 'PARENT' : '${FAILURELIST}'",
+                            "type": "object",
+                            "default": {
+                                "": ""
+                            }
+                        },
+                        "deep": {
+                            "description": "Activate deep tree selection",
+                            "type": "boolean"
+                        },
+                        "contextId": {
+                            "description": "Used to display a position in tree. Id of reccord to show. Example: ${ID}",
+                            "type": "string"
+                        },
+                        "contextNode": {
+                            "description": "Alternative node to display",
+                            "type": "string"
+                        }
+                    },
+                    "default": {
+                        "tree": "",
+                        "node": "",
+                        "attribute": ""
+                    }
+                },
+                "existsValidator": {
+                    "description": "Validates if user input matches a given attribute value of a root node instance in another Insight Config configuration (\"tree\")",
+                    "type": "object",
+                    "properties": {
+                        "tree": {
+                            "description": "specifies source Insight Config configuration",
+                            "type": "string"
+                        },
+                        "attribute": {
+                            "description": "attribute of root node (in the referenced configuration specified in \"tree\")",
+                            "type": "boolean"
+                        },
+                        "node": {
+                            "type": "string"
+                        },
+                        "autofill": {
+                            "description": "Array of attributes to be copied if validation succeeds",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "src": {
+                                        "title": "Source",
+                                        "description": "name of attribute (in the referenced configuration specified in „tree“)",
+                                        "type": "string"
+                                    },
+                                    "dst": {
+                                        "title": "Destination",
+                                        "description": "name of attribute in this node (in the enclosing configuration)",
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "default": []
+                        },
+                        "filter": {
+                            "description": "Map of filter attributes. Example: 'PARENT' : '${FAILURELIST}'",
+                            "type": "object",
+                            "default": {
+                                "": ""
+                            }
+                        }
+                    }
+                },
+                "derived": {
+                    "description": "Attribute that is not persistent itself, but can be derived from persistent attributes",
+                    "oneOf": [
+                        {
+                            "title": "Date-Pattern",
+                            "description": "Allows to customize the format of date values",
+                            "properties": {
+                                "pattern": {
+                                    "description": "Pattern, the date value will be printed in",
+                                    "type": "string"
+                                },
+                                "attribute": {
+                                    "description": "name of the date attribute",
+                                    "type": "string"
+                                }
+                            },
+                            "additionalProperties": false
+                        },
+                        {
+                            "title": "Regex",
+                            "description": "Applies regular expressions to string attributes",
+                            "properties": {
+                                "regex": {
+                                    "description": "the regular expression",
+                                    "type": "string"
+                                },
+                                "attribute": {
+                                    "description": "name of the attribute",
+                                    "type": "string"
+                                },
+                                "replacement": {
+                                    "description": "replacement of the expression (optional)",
+                                    "type": "string"
+                                }
+                            },
+                            "additionalProperties": false
+                        },
+                        {
+                            "title": "Replace",
+                            "description": "Replaces placeholders with actual values",
+                            "properties": {
+                                "replace": {
+                                    "description": "Same Syntax as in node's label",
+                                    "type": "string"
+                                }
+                            },
+                            "additionalProperties": false
+                        },
+                        {
+                            "title": "Coalesce",
+                            "description": "Coalesces several attributes into one",
+                            "properties": {
+                                "coalesce": {
+                                    "description": "List of attributes you want to coalesce",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "description": "attribute(s) you want to coalesce"
+                                    }
+                                }
+                            },
+                            "additionalProperties": false
+                        }
+                    ]
+                },
+                "style": {
+                    "description": "Grid column width",
+                    "type": "string",
+                    "enum": [
+                        "one",
+                        "two",
+                        "three",
+                        "four",
+                        "five",
+                        "six",
+                        "seven",
+                        "eight",
+                        "nine",
+                        "ten",
+                        "eleven",
+                        "twelve",
+                        "thirteen",
+                        "fourteen",
+                        "fifteen",
+                        "sixteen"
+                    ]
+                },
+                "suppressFilter": {
+                    "description": "Suppress filter in lists",
+                    "type": "boolean"
+                },
+                "icon": {
+                    "description": "Shows an icon in front of the value on the list liews.",
+                    "type": "string",
+                    "default": ""
+                },
+                "badge": {
+                    "description": "To highlight the attribute. Add a predefined background-color and text-color or set a custom one in customize.css.",
+                    "type": "string",
+                    "default": "bg-color-red color-white"
+                },
+                "suffix": {
+                    "type": "string",
+                    "description": "To show a control suffix, like units. i.e. ${MEASUREUNITID}"
+                },
+                "actionIcon": {
+                    "description": "Displays an action icon on the attribute. This icon can be used to execute JavaScript and menu actions. The JavaScript can be used to change the value of the attribute. It is also possible to execute one of the menus using JavaScript.",
+                    "properties": {
+                        "icon": {
+                            "type": "string"
+                        },
+                        "js": {
+                            "description": "JavaScript function which is executed on icon click.",
+                            "type": "string"
+                        },
+                        "menus": {
+                            "description": "Menu or menus to execute",
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/menu"
+                            },
+                            "default": []
+                        },
+                        "visible": {
+                            "properties": {
+                                "js": {
+                                    "description": "JavaScript function which to handle the visibility.",
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "icon": "icon-launch",
+                        "js": "",
+                        "menus": [],
+                        "visible": {
+                            "js": ""
+                        }
+                    }
+                },
+                "nowAction": {
+                    "type": "boolean",
+                    "description": "Displays a button that inserts the current date/time."
+                },
+                "tooltip": {
+                    "type": "string",
+                    "description": "Displays a tooltip icon that shows a dialog with the text. i.e. ${DESCRIPTION_LONGDESCRIPTION}"
+                },
+                "indexer": {
+                    "type": "object",
+                    "description": "Indexing configuration for this attribute",
+                    "properties": {
+                        "htmlCleaning": {
+                            "type": "boolean",
+                            "description": "If true, the HTML tags will be removed before indexing. This is useful for attributes that contain HTML content.",
+                            "default": true
+                        }
+                    }
+                }
+            },
+            "dependencies": {
+                "formField": [
+                    "type"
+                ]
+            },
+            "additionalProperties": false,
+            "default": {
+                "name": "",
+                "label": "",
+                "type": ""
+            },
+            "required": [
+                "name"
+            ]
+        },
+        "menu": {
+            "type": "object",
+            "properties": {
+                "label": {
+                    "description": "Helps user to identify the meaning of a menu item (web: Context Menu, mobile: Button in header of the detail section)",
+                    "type": "string"
+                },
+                "shortLabel": {
+                    "description": "mobile: slide left/swipe on an entry in the list view)",
+                    "type": "string"
+                },
+                "icon": {
+                    "type": "string"
+                },
+                "roles": {
+                    "type": "array",
+                    "title": "Roles",
+                    "description": "Attach user roles to menu entry. Only available if role is available for user",
+                    "items": {
+                        "type": "string",
+                        "anyOf": [
+                            {
+                                "enum": [
+                                    "all"
+                                ],
+                                "description": "All Security Roles"
+                            },
+                            {}
+                        ]
+                    },
+                    "default": [
+                        "SKIP-AUTHORIZATION"
+                    ]
+                },
+                "action": {
+                    "description": "specifies the type of action",
+                    "type": "string",
+                    "enum": [
+                        "open",
+                        "insert",
+                        "refresh",
+                        "details",
+                        "request",
+                        "save",
+                        "searchThis",
+                        "download",
+                        "create",
+                        "remove",
+                        "downloadRecord",
+                        "goto",
+                        "deleteLocal",
+                        "browser",
+                        "mapOpen",
+                        "mapCreate",
+                        "mapAttachNode",
+                        "kibanaOpen",
+                        "listEdit",
+                        "tableOpen",
+                        "matrixOpen",
+                        "filter",
+                        "online",
+                        "offline",
+                        "createSilent",
+                        "createForm",
+                        "form",
+                        "confirm",
+                        "geo",
+                        "planning",
+                        "pert",
+                        "fileView",
+                        "barcodeFilter",
+                        "nfcRead",
+                        "scriptFilter",
+                        "chart",
+                        "js",
+                        "refreshProfile",
+                        "barcodeScan",
+                        "timeTrackStart",
+                        "timeTrackStop",
+                        "select",
+                        "removeDocument",
+                        "qr",
+                        "fileUpload",
+                        "fileDownload",
+                        "signature",
+                        "fileEdit",
+                        "viewar",
+                        "onlineToggle",
+                        "listDialog",
+                        "createMulti",
+                        "ifc",
+                        "searchInPlanning"
+                    ]
+                },
+                "visible": {
+                    "type": "object",
+                    "default": {
+                        "js": ""
+                    }
+                },
+                "welcomePage": {
+                    "description": "Show this menu action on the welcome page. Is only supported for tree-/top-level menus.",
+                    "type": "boolean",
+                    "default": true
+                },
+                "actionValues": {
+                    "description": "Special parameters corresponding to the listed action (see Actions)",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/ganttObject"
+                            },
+                            {
+                                "stop": "true",
+                                "freeProperties": "true",
+                                "properties": {
+                                    "static": {
+                                        "type": "string"
+                                    },
+                                    "dst": {
+                                        "type": "string"
+                                    },
+                                    "src": {
+                                        "type": "string"
+                                    },
+                                    "node": {
+                                        "type": "string"
+                                    },
+                                    "inTab": {
+                                        "type": "boolean"
+                                    },
+                                    "value": {
+                                        "type": "string"
+                                    },
+                                    "event": {
+                                        "type": "string"
+                                    },
+                                    "url": {
+                                        "type": "string"
+                                    },
+                                    "deepLink": {
+                                        "type": "string"
+                                    },
+                                    "additionalevent": {
+                                        "type": "string"
+                                    },
+                                    "ga": {
+                                        "type": "string",
+                                        "title": "Businessactivity",
+                                        "description": "oid of Businessactivity to open"
+                                    },
+                                    "oid": {
+                                        "type": "string",
+                                        "title": "Businessobject",
+                                        "description": "oid of Businessobject to open"
+                                    },
+                                    "tree": {
+                                        "type": "string",
+                                        "title": "Tree-Configuration Name",
+                                        "description": "used to execute the action on a different tree configuration"
+                                    },
+                                    "tab": {
+                                        "type": "object",
+                                        "title": "object to configuration tab specific things"
+                                    },
+                                    "mode": {
+                                        "type": "string",
+                                        "title": "Only for the form action. Possible values are: 'temp' or 'save' (default). temp: Write only in the record/payload. save: Saves the record.",
+                                        "enum": [
+                                            "temp",
+                                            "save"
+                                        ]
+                                    },
+                                    "attributes": {
+                                        "type": "array",
+                                        "title": "Only for the form action. Array of attributes that can be entered. Properties of the attributes can be overridden or completly new.",
+                                        "items": {
+                                            "$ref": "#/definitions/attribute",
+                                            "required": [
+                                                "name"
+                                            ]
+                                        },
+                                        "default": []
+                                    },
+                                    "payloadKey": {
+                                        "type": "string",
+                                        "title": "Only for the request action. If the request action is part of a then-chain, the result can be passed to the next action."
+                                    },
+                                    "maxTrackTime": {
+                                        "type": "number",
+                                        "title": "Only for the TimeTrackStart action. Maximum time a time tracker should report back."
+                                    },
+                                    "totalCount": {
+                                        "type": "boolean",
+                                        "default": true,
+                                        "title": "works only with filter action. Shows the total number of hits, regardless of other filters and restrictions. Use this carefully as it can affect performance."
+                                    },
+                                    "barcode": {
+                                        "$ref": "#/definitions/barcode",
+                                        "type": "object",
+                                        "default": {}
+                                    },
+                                    "multiselection": {
+                                        "type": "boolean",
+                                        "default": true,
+                                        "title": "starts a multiselection if tree and root level menus are configured"
+                                    },
+                                    "isPlanView": {
+                                        "type": "boolean",
+                                        "default": true,
+                                        "title": "opens the IFC in 2D plan view"
+                                    },
+                                    "operator": {
+                                        "type": "string",
+                                        "default": "",
+                                        "enum": [
+                                            "eq",
+                                            "ne",
+                                            "lt",
+                                            "le",
+                                            "gt",
+                                            "ge",
+                                            "in",
+                                            "notIn",
+                                            "isNull",
+                                            "notNull"
+                                        ]
+                                    },
+                                    "pert": {
+                                        "type": "object",
+                                        "default": {},
+                                        "properties": {
+                                            "pertTree": {
+                                                "type": "string",
+                                                "default": "",
+                                                "title": "Defines which Insight tree should be visualized as a PERT-chart. If not defined actual tree is used."
+                                            },
+                                            "label": {
+                                                "type": "string"
+                                            },
+                                            "filters": {
+                                                "properties": {
+                                                    "attribute": {
+                                                        "type": "string"
+                                                    },
+                                                    "value": {
+                                                        "type": [
+                                                            "string",
+                                                            "number",
+                                                            "boolean"
+                                                        ]
+                                                    },
+                                                    "label": {
+                                                        "type": "string"
+                                                    },
+                                                    "clear": {
+                                                        "type": "boolean"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "default": [
+                        {}
+                    ]
+                },
+                "request": {
+                    "type": "object",
+                    "properties": {
+                        "method": {
+                            "type": "string"
+                        },
+                        "url": {
+                            "type": "string"
+                        },
+                        "params": {
+                            "type": "object",
+                            "freeProperties": "true",
+                            "properties": {}
+                        },
+                        "headers": {
+                            "type": "object",
+                            "properties": {
+                                "Content-Type": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "required": [
+                        "url"
+                    ]
+                },
+                "separatorExpanded": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "visibleIn": {
+                    "type": "array",
+                    "$ref": "#/definitions/visibleIn"
+                },
+                "menus": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/menu"
+                    },
+                    "default": []
+                },
+                "then": {
+                    "type": "object",
+                    "$ref": "#/definitions/menu"
+                },
+                "swipeHidden": {
+                    "type": "boolean",
+                    "description": "Hides the menu action in insight-mobile's list swipe."
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Executes menu on first or every selection of a tree",
+                    "enum": [
+                        "onInit",
+                        "onSelect"
+                    ]
+                },
+                "on": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "top",
+                            "wizard",
+                            "ifc"
+                        ]
+                    },
+                    "default": [
+                        ""
+                    ]
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "action"
+            ],
+            "default": {
+                "label": "",
+                "icon": "",
+                "action": ""
+            }
+        },
+        "loopTreeObject": {
+            "title": "Sub tree node",
+            "type": "object",
+            "description": "Node/sub nodes relations may be recursive. If loop attribute is enabled sub nodes will have the same configuration as their parents.",
+            "properties": {
+                "loop": {
+                    "default": true,
+                    "disabled": true,
+                    "type": "boolean",
+                    "enum": [
+                        true
+                    ]
+                },
+                "query": {
+                    "type": "object",
+                    "$ref": "#/definitions/queryObject"
+                },
+                "title": {
+                    "description": "defines label for UI presentation (bucket (Insight Explorer), header (Insight Mobile))",
+                    "type": "string",
+                    "default": "LOOP"
+                },
+                "bucket": {
+                    "type": "string"
+                },
+                "bucketIcon": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "loop",
+                "query"
+            ]
+        },
+        "ganttObject": {
+            "type": "object",
+            "properties": {
+                "tab": {
+                    "type": "object",
+                    "properties": {
+                        "label": {
+                            "description": "Title of the Gantt Tab",
+                            "type": "string"
+                        }
+                    }
+                },
+                "gantt": {
+                    "type": "object",
+                    "properties": {
+                        "tree": {
+                            "type": "string",
+                            "description": "Name of the tree to use for gantt"
+                        },
+                        "expandRows": {
+                            "type": "boolean",
+                            "description": "initially expand all gantt-rows"
+                        },
+                        "views": {
+                            "type": "array",
+                            "description": "Array of the views for gantt",
+                            "properties": {
+                                "range": {
+                                    "description": "the initial viewrange when opening gantt",
+                                    "type": "object",
+                                    "properties": {
+                                        "from": {
+                                            "description": "Date calculated by duration relative to reference date ( https://en.wikipedia.org/wiki/ISO_8601#Durations ).\nPrepend '-' for dates in the past (-P1M).\nDefault: \"-P1M\"",
+                                            "type": "string",
+                                            "default": "-P1M"
+                                        },
+                                        "to": {
+                                            "description": "Date calculated by duration relative to reference date ( https://en.wikipedia.org/wiki/ISO_8601#Durations ).\nDefault: \"P6M\"",
+                                            "type": "string",
+                                            "default": "P6M"
+                                        },
+                                        "step": {
+                                            "type": "string",
+                                            "description": "The amount of time to move the reference date forwards or backwards with the move-buttons",
+                                            "default": "P1M"
+                                        }
+                                    }
+                                },
+                                "default": {
+                                    "type": "boolean",
+                                    "description": "use view as initial default"
+                                },
+                                "label": {
+                                    "type": "string",
+                                    "description": "The label of the view"
+                                },
+                                "icon": {
+                                    "description": "The icon of the view",
+                                    "type": "string",
+                                    "default": "icon-calendar-31"
+                                },
+                                "headers": {
+                                    "type": "object",
+                                    "description": "Header Settings for this specific view.",
+                                    "properties": {
+                                        "format": {
+                                            "type": "string",
+                                            "description": "The js format function for each header cell."
+                                        },
+                                        "tree": {
+                                            "type": "string",
+                                            "description": "The tree to load for this header."
+                                        },
+                                        "scale": {
+                                            "type": "string",
+                                            "description": "The scale to load for this header. If you dont specify this setting, the header name will be taken as a scale."
+                                        },
+                                        "active": {
+                                            "type": "boolean",
+                                            "description": "True, if the header should be visible on startup. If one or more headers are flagged as active, a dropdown appears for the user to select which headers to show from."
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "filters": {
+                            "type": "array",
+                            "description": "List of filter configurations for Insight Planning",
+                            "items": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "description": "Name of the filter"
+                                    },
+                                    "label": {
+                                        "type": "string",
+                                        "description": "Label of the filter"
+                                    }
+                                }
+                            }
+                        },
+                        "initial": {
+                            "type": "object",
+                            "description": "Initial configurations to apply to Insight Planning after loadup",
+                            "properties": {
+                                "date": {
+                                    "type": "string",
+                                    "description": "The initial date to center Insight Planning on, after loadup. Is replaceable."
+                                },
+                                "search": {
+                                    "type": "string",
+                                    "description": "The initial search to run in Insight Planning, after loadup."
+                                },
+                                "filter": {
+                                    "type": "string",
+                                    "description": "The initial filter to run in Insight Planning, after loadup."
+                                }
+                            }
+                        },
+                        "rows": {
+                            "type": "object",
+                            "description": "Settings to control the load behaviour of Insight Planning.",
+                            "properties": {
+                                "default": {
+                                    "type": "integer",
+                                    "description": "Number of rows Insight Planning loads for the non-fullscreen mode. Default: 15."
+                                },
+                                "fullscreen": {
+                                    "type": "integer",
+                                    "description": "Number of rows Insight Planning loads for the fullscreen mode. Default: 40."
+                                }
+                            }
+                        },
+                        "focusOnSelection": {
+                            "type": "boolean",
+                            "description": "If loading Insight Planning with contextObjects, only load that context. Default: false."
+                        },
+                        "plugins": {
+                            "type": "object",
+                            "description": "Settings to disable or enable Insight Planning plugins. Please note that enabling plugins will result in worse client-side performance.",
+                            "properties": {
+                                "overlap": {
+                                    "type": "boolean",
+                                    "description": "Activates the overlap plugin which is checking if tasks are overlapping on the time axis. Default: false."
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "viewRange": {
+                            "from": "-P1M",
+                            "to": "P6M"
+                        },
+                        "table": {
+                            "tree": ""
+                        }
+                    }
+                },
+                "table": {
+                    "description": "configuration for tree to use below gantt",
+                    "type": "object",
+                    "properties": {
+                        "tree": {
+                            "type": "string",
+                            "description": "name of tree to use for table below gantt"
+                        }
+                    }
+                }
+            }
+        },
+        "queryObject": {
+            "title": "Query object",
+            "type": "object",
+            "description": "",
+            "properties": {
+                "db": {
+                    "type": "boolean"
+                },
+                "relation": {
+                    "type": "string"
+                },
+                "direction": {
+                    "type": "string",
+                    "enum": [
+                        "TOP_DOWN",
+                        "BOTTOM_UP"
+                    ]
+                },
+                "jetSearch": {
+                    "type": "string"
+                },
+                "constraint": {
+                    "type": [
+                        "object",
+                        "string"
+                    ],
+                    "properties": {
+                        "and": {
+                            "$ref": "#/definitions/constraintObject"
+                        },
+                        "or": {
+                            "$ref": "#/definitions/constraintObject"
+                        },
+                        "not": {
+                            "$ref": "#/definitions/constraintObject"
+                        }
+                    },
+                    "additionalProperties": false,
+                    "default": ""
+                },
+                "dynamicConstraint": {
+                    "type": "object",
+                    "properties": {
+                        "ui": {
+                            "properties": {
+                                "selectFromTree": {
+                                    "description": "selectFromTree is used to select the where statement.",
+                                    "type": "object",
+                                    "properties": {
+                                        "tree": {
+                                            "description": "specifies source Insight Config configuration",
+                                            "type": "string"
+                                        },
+                                        "node": {
+                                            "type": "string"
+                                        },
+                                        "attribute": {
+                                            "description": "attribute of root node (in the referenced configuration specified in \"tree\")",
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "backend": {
+                            "properties": {
+                                "table": {
+                                    "type": "string"
+                                },
+                                "primary": {
+                                    "type": "string"
+                                },
+                                "where": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "additionalProperties": false,
+                    "default": {
+                        "ui": {
+                            "selectFromTree": {
+                                "tree": "",
+                                "node": "",
+                                "attribute": ""
+                            }
+                        },
+                        "backend": {
+                            "table": "",
+                            "primary": "",
+                            "where": ""
+                        }
+                    }
+                },
+                "orderBy": {
+                    "type": "string"
+                },
+                "indexer": {
+                    "type": "object",
+                    "$ref": "#/definitions/indexerObject"
+                },
+                "searches": {
+                    "type": "array",
+                    "description": "Defined searches can be configured to each node. These searches can be used to restrict the search space. By default, all attributes of all searches can be searched. At e.g. selectFromTree can also use an explicit search. This definition also reduces the size of the offline search model in mobile.",
+                    "items": {
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "description": "Name of the search"
+                            },
+                            "label": {
+                                "type": "string",
+                                "description": "Label of the search"
+                            },
+                            "attributes": {
+                                "type": "array",
+                                "description": "Attribute to be in search space",
+                                "items": {
+                                    "oneOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "$ref": "#/definitions/attribute"
+                                        }
+                                    ]
+                                }
+                            },
+                            "backend": {
+                                "type": "boolean",
+                                "description": "Searches will be executed on the eam database tables. This currently only works with one attribute.",
+                                "default": true
+                            },
+                            "showFields": {
+                                "type": "boolean",
+                                "description": "Searches will be executed on search index using search fields for each attribute. ",
+                                "default": true
+                            },
+                            "sticky": {
+                                "type": "boolean",
+                                "default": true,
+                                "description": "Searches will be stick on top if the users scrolls"
+                            }
+                        },
+                        "default": {
+                            "name": "",
+                            "label": "",
+                            "attributes": []
+                        }
+                    }
+                },
+                "parentMapping": {
+                    "type": "object",
+                    "description": "Can be used to define foreign keys to parent nodes. This is necessary to create offline objects with subobjects."
+                }
+            },
+            "additionalProperties": false
+        },
+        "constraintObject": {
+            "title": "",
+            "description": "",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "attribute": {
+                        "type": "string"
+                    },
+                    "operator": {
+                        "type": "string",
+                        "enum": [
+                            "eq",
+                            "ne",
+                            "lt",
+                            "le",
+                            "gt",
+                            "ge",
+                            "in",
+                            "notIn",
+                            "isNull",
+                            "notNull"
+                        ]
+                    },
+                    "value": {},
+                    "and": {
+                        "$ref": "#/definitions/constraintObject"
+                    },
+                    "or": {
+                        "$ref": "#/definitions/constraintObject"
+                    },
+                    "not": {
+                        "$ref": "#/definitions/constraintObject"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "default": []
+        },
+        "indexerObject": {
+            "type": "object",
+            "properties": {
+                "parentRelation": {
+                    "type": "string"
+                },
+                "mode": {
+                    "type": "string",
+                    "description": "cut off nodes and whole branches for optimizing redundant data",
+                    "enum": [
+                        "stop",
+                        "noChildren"
+                    ]
+                }
+            }
+        },
+        "httpRequestObject": {
+            "type": "object",
+            "properties": {
+                "url": {
+                    "type": "string"
+                },
+                "method": {
+                    "type": "string",
+                    "description": "http method",
+                    "enum": [
+                        "GET",
+                        "POST"
+                    ]
+                },
+                "params": {
+                    "description": "http POST or GET parameters",
+                    "type": "object"
+                },
+                "header": {
+                    "description": "http headers",
+                    "type": "object"
+                }
+            },
+            "required": [
+                "url"
+            ],
+            "default": {
+                "url": ""
+            }
+        },
+        "sort": {
+            "description": "Defines the sort properties of the list",
+            "type": "object",
+            "default": {
+                "attributes": true
+            },
+            "properties": {
+                "attributes": {
+                    "description": "The attributes that will support sorting functionality. Either list all attributes that will support sorting, or set attributes to true for all attributes to support sorting.",
+                    "type": [
+                        "array",
+                        "boolean"
+                    ],
+                    "default": true
+                }
+            }
+        },
+        "chart": {
+            "description": "A basic chart to graphically visualize your data",
+            "type": "object",
+            "properties": {
+                "value": {
+                    "description": "Attribute that feeds the data point's value, mandatory for all chart types other than bar-stacked-values",
+                    "type": "string"
+                },
+                "values": {
+                    "description": "Attribute that feeds the data point's values, mandatory for chart type bar-stacked-values",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "value": {
+                                "description": "The attribute that feeds the data point's value, mandatory",
+                                "type": "string"
+                            },
+                            "color": {
+                                "description": "The color for that data point, mandatory",
+                                "type": "string"
+                            },
+                            "label": {
+                                "description": "The label for that data point, mandatory",
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "label": {
+                    "description": "Attribute that feeds the data point's label, mandatory",
+                    "type": "string"
+                },
+                "group": {
+                    "description": "Attribute that decides to which set of data this entry belongs, optional, no default",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "Type of the chart, optional, default bar",
+                    "type": "string",
+                    "oneOf": [
+                        {
+                            "enum": [
+                                "bar"
+                            ]
+                        },
+                        {
+                            "enum": [
+                                "line"
+                            ]
+                        },
+                        {
+                            "enum": [
+                                "radar"
+                            ]
+                        },
+                        {
+                            "enum": [
+                                "pie"
+                            ]
+                        },
+                        {
+                            "enum": [
+                                "doughnut"
+                            ]
+                        },
+                        {
+                            "enum": [
+                                "bubble"
+                            ]
+                        },
+                        {
+                            "enum": [
+                                "bar-stacked-values"
+                            ]
+                        },
+                        {
+                            "enum": [
+                                "bar-stacked-groups"
+                            ]
+                        }
+                    ]
+                },
+                "legend": {
+                    "description": "Defines whether the chart's legend should be visible, optional, default true",
+                    "anyOf": [
+                        {
+                            "type": "boolean"
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "position": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "colors": {
+                    "description": "Map of value to color, optional",
+                    "type": "object"
+                },
+                "scale": {
+                    "description": "Defines the chart's scale, optional",
+                    "type": "object",
+                    "properties": {
+                        "value": {
+                            "description": "Defines the difference between each step on the x-Axis, mandatory",
+                            "type": "integer"
+                        },
+                        "start": {
+                            "description": "Defines at which point the x-Axis should start, optional",
+                            "type": "integer"
+                        }
+                    }
+                },
+                "highlights": {
+                    "description": "Defines highlight lines for visualization of critical values, optional",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "value": {
+                                "description": "The value at which the highlight line should appear, mandatory",
+                                "type": "integer"
+                            },
+                            "color": {
+                                "description": "The color for the highlight line, optional, default black",
+                                "type": "string"
+                            },
+                            "label": {
+                                "description": "The label of the highlight line, optional",
+                                "type": "string"
+                            },
+                            "type": {
+                                "description": "The type of layout used for the highlight line, optional, default line",
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "sticky": {
+                    "description": "Whether the y-Axis should be sticky while scrolling, optional, default true",
+                    "type": "boolean"
+                },
+                "textSize": {
+                    "description": "Text size for labels in the chart, optional, default 10",
+                    "type": "integer"
+                },
+                "pointSize": {
+                    "description": "Width for bars / lines in the chart, optional, default 20",
+                    "type": "integer"
+                },
+                "padding": {
+                    "description": "Size between bars / lines in the chart, optional, default 10",
+                    "type": "integer"
+                },
+                "rowHeight": {
+                    "description": "Vertical height of a row in the chart, optional, default 40",
+                    "type": "integer"
+                },
+                "scaleSize": {
+                    "description": "Width of the y-Axis scale and x-Axis scale in the chart, optional, default 40",
+                    "type": "integer"
+                },
+                "radius": {
+                    "description": "Radius of the pie charts, optional, default 80",
+                    "type": "integer"
+                },
+                "gridColor": {
+                    "description": "Color of the background grid lines, optional, default #b4b4b4",
+                    "type": "string"
+                }
+            }
+        },
+        "pert": {
+            "description": "A network chart to graphically visualize connections between data",
+            "type": "object",
+            "properties": {
+                "value": {
+                    "description": "Attribute that feeds the data point's value, mandatory for all chart types other than bar-stacked-values",
+                    "type": "string"
+                },
+                "values": {
+                    "description": "Attribute that feeds the data point's values, mandatory for chart type bar-stacked-values",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "value": {
+                                "description": "The attribute that feeds the data point's value, mandatory",
+                                "type": "string"
+                            },
+                            "color": {
+                                "description": "The color for that data point, mandatory",
+                                "type": "string"
+                            },
+                            "label": {
+                                "description": "The label for that data point, mandatory",
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "label": {
+                    "description": "Attribute that feeds the data point's label, mandatory",
+                    "type": "string"
+                },
+                "group": {
+                    "description": "Attribute that decides to which set of data this entry belongs, optional, no default",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "Type of the chart, optional, default bar",
+                    "type": "string"
+                },
+                "legend": {
+                    "description": "Defines whether the chart's legend should be visible, optional, default true",
+                    "type": "boolean"
+                },
+                "scale": {
+                    "description": "Defines the chart's scale, optional",
+                    "type": "object",
+                    "properties": {
+                        "value": {
+                            "description": "Defines the difference between each step on the x-Axis, mandatory",
+                            "type": "integer"
+                        },
+                        "start": {
+                            "description": "Defines at which point the x-Axis should start, optional",
+                            "type": "integer"
+                        }
+                    }
+                },
+                "highlights": {
+                    "description": "Defines highlight lines for visualization of critical values, optional",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "value": {
+                                "description": "The value at which the highlight line should appear, mandatory",
+                                "type": "integer"
+                            },
+                            "color": {
+                                "description": "The color for the highlight line, optional, default black",
+                                "type": "string"
+                            },
+                            "label": {
+                                "description": "The label of the highlight line, optional",
+                                "type": "string"
+                            },
+                            "type": {
+                                "description": "The type of layout used for the highlight line, optional, default line",
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "sticky": {
+                    "description": "Whether the y-Axis should be sticky while scrolling, optional, default true",
+                    "type": "boolean"
+                },
+                "textSize": {
+                    "description": "Text size for labels in the chart, optional, default 10",
+                    "type": "integer"
+                },
+                "pointSize": {
+                    "description": "Width for bars / lines in the chart, optional, default 20",
+                    "type": "integer"
+                },
+                "padding": {
+                    "description": "Size between bars / lines in the chart, optional, default 10",
+                    "type": "integer"
+                },
+                "rowHeight": {
+                    "description": "Vertical height of a row in the chart, optional, default 40",
+                    "type": "integer"
+                },
+                "scaleSize": {
+                    "description": "Width of the y-Axis scale and x-Axis scale in the chart, optional, default 40",
+                    "type": "integer"
+                },
+                "radius": {
+                    "description": "Radius of the pie charts, optional, default 80",
+                    "type": "integer"
+                },
+                "gridColor": {
+                    "description": "Color of the background grid lines, optional, default #b4b4b4",
+                    "type": "string"
+                }
+            }
+        },
+        "csvObject": {
+            "description": "Defines how the attributes are exported by the csv export.",
+            "type": "object",
+            "properties": {
+                "attributes": {
+                    "description": "When exporting to CSV, the standard attribute settings are used. If you need to adapt the way each attribute is exported to CSV, you can override the settings of an attribute.",
+                    "type": [
+                        "array"
+                    ]
+                },
+                "charset": {
+                    "description": "Sets the charset the csv is encoded in.",
+                    "type": "string",
+                    "default": "utf-8"
+                },
+                "delimiter": {
+                    "description": "Sets the delimiter used for dividing cells in the csv. To change the delimiter the useBOM setting has to be set to false.",
+                    "type": "string",
+                    "default": ";"
+                },
+                "title": {
+                    "description": "Sets the title used in the exported csv.",
+                    "type": "string"
+                },
+                "useBOM": {
+                    "description": "Defined if a universalBOM will be added to the beginning of the csv.",
+                    "type": "boolean",
+                    "default": true
+                }
+            }
+        },
+        "viewar": {
+            "attributes": {
+                "description": "The attribute of the record that should be used for the description",
+                "childDescription": "The attribute of the child record that should be used for the child description.",
+                "poiForeignKey": "The attribute of the record that should be used as poiForeignKey."
+            },
+            "map": {
+                "tree": "The tree-name of the config that contains the objectId - mapId data."
+            },
+            "settings": {
+                "url": "The URL for the VIEWAR-Application.",
+                "appId": "The account specific appId of VIEWAR.",
+                "version": "The version of VIEWAR."
+            }
+        }
+    }
+}
