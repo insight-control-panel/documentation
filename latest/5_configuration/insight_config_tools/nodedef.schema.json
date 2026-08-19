@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "Insight Configuration",
+  "invisible": false,
+  "description": "A configuration defines permissions, layout, data model and actions for one specific use case/scenario (e.g. stocktaking, work planning or work confirmation).",
+  "properties": {
+    "table": {
+      "type": "string",
+      "title": "table name",
+      "description": "Must match the way the table is addressed at the database. Don't forget prefixes."
+    },
+    "join": {
+      "type": "array",
+      "title": "Array of all joins",
+      "description": "It is possible to join other tables. Only joins that return one object are allowed. The joined attributes will be read-only",
+      "items": {
+        "type": "object",
+        "properties": {
+          "table": {
+            "description": "Name of the table to be joined",
+            "type": "string"
+          },
+          "alias": {
+            "description": "Id of the joined object to be addressed. Must not contain Whitespaces.",
+            "type": "string",
+            "pattern": "^([^\\s])*$"
+          },
+          "on": {
+            "description": "Clause that defines the criteria for the join.",
+            "type": "string"
+          }
+        },
+        "default": {
+          "table": "",
+          "alias": "",
+          "on": ""
+        }
+      },
+      "default": [
+        {
+          "table": "",
+          "alias": "",
+          "on": ""
+        }
+      ]
+    },
+    "attributes": {
+      "type": "array",
+      "title": "Array of Attributes",
+      "description": "Every attribute must either match the column name or must be objects with mappings.",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "description": "Name of id that will be addressed in the UI-tree. Must not contain Whitespaces",
+                "type": "string",
+                "pattern": "^([^\\s])*$"
+              },
+              "column": {
+                "description": "Name of the table column",
+                "type": "string"
+              },
+              "from": {
+                "description": "Addresses the id of the joined table, if used",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "default": {
+              "name": "",
+              "column": "",
+              "from": ""
+            }
+          },
+          {
+            "type": "string",
+            "description": "Name of the table column. Must not contain Whitespaces",
+            "pattern": "([^\\s])([^\\s])*"
+          }
+        ]
+      },
+      "additionalProperties": false,
+      "default": {
+        "name": "",
+        "column": "",
+        "from": ""
+      }
+    },
+    "primaryKey": {
+      "type": "array",
+      "title": "Array of primary peys",
+      "description": "In case the table doesn't define a primary key, it needs to be set in here.",
+      "items": {
+        "type": "string",
+        "description": "Column name. In case that mapping was used, still use the original column name"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": ["table", "attributes"],
+  "definitions": {}
+}
