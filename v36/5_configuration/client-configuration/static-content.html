@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Static Content</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="static-content">Static Content</h1>
+<p>The <code>staticContent</code> feature supports various functions:</p>
+<ul>
+<li>Design customizations: Corporate design</li>
+<li>Custom logo</li>
+<li>Static pages: Help, documentation, and information pages</li>
+<li>Additional sound files</li>
+</ul>
+<p>The <code>staticContent</code> must be configured in config.json <a href="general.html">ClientConfiguration</a>, and the referenced files must be stored on the server as a <code>static-content-&lt;version&gt;.zip</code>. The mobile client downloads the new version on the next logout/login or refresh of the app.</p>
+<p>There are two ways to build and upload the <code>static-content</code> zip and the <code>staticContent</code> part of config.json:</p>
+<ul>
+<li><strong>With <a href="../configuration_setup/configuration_setup.html#insight-cli">insight-cli</a> (recommended):</strong> the zip file and the <code>version</code>/<code>css</code>/<code>logo</code>/<code>logoDarkMode</code> settings are generated automatically from your files. You only maintain the plain files, insight-cli takes care of the rest.</li>
+<li><strong>Without insight-cli (manual):</strong> you build the zip yourself and increase <code>staticContent.version</code> in config.json by hand on every change.</li>
+</ul>
+<p>Both ways are described below.</p>
+<p>???+ tip &quot;Recommendation&quot;</p>
+<pre><code>We recommend using [insight-cli](../configuration_setup/configuration_setup.md#insight-cli) with `insight upload client-config` (or `insight upload all`). This automatically generates the zip file and the version. All you need to do is save the plain files and config.json, insight-cli will take care of the rest.
+</code></pre>
+<h2 id="configjson">config.json</h2>
+<p>The settings for staticContent are defined in config.json.</p>
+<p>=== &quot;With insight-cli&quot;</p>
+<pre><code>`version`, `css`, `logo` and `logoDarkMode` are generated automatically by insight-cli and **do not need to be maintained manually**:
+
+- `version` is set to a checksum of the generated zip. It changes automatically whenever a file in `static-content` changes.
+- `css` is set to `true` if `static-content/customize.css` exists.
+- `logo` is set to `true` if `static-content/logo.png` exists.
+- `logoDarkMode` is set to `true` if `static-content/logo-dark-mode.png` exists.
+
+You only need to maintain `pages` (see [Pages](#pages)) and any other, non-staticContent, part of config.json yourself.
+</code></pre>
+<p>=== &quot;Without insight-cli&quot;</p>
+<pre><code>All fields, including `version`, `css`, `logo` and `logoDarkMode`, must be maintained by hand. Every time a file in `static-content`
+changes, increase `version` and rebuild `static-content-&lt;version&gt;.zip` yourself.
+
+Example config.json:
+
+```json
+{
+    &quot;staticContent&quot;: {
+        &quot;version&quot;: &quot;1.0&quot;,
+        &quot;logo&quot;: true,
+        &quot;logoDarkMode&quot;: true,
+        &quot;css&quot;: true,
+        &quot;pages&quot;: []
+    }
+}
+```
+</code></pre>
+<h2 id="folder-structure">Folder structure</h2>
+<p>Where to place the files?</p>
+<ul>
+<li>Absolute URLs can be provided on every server.</li>
+<li>Relative URLs must follow the following conventions:
+<ul>
+<li>They must be stored
+<ul>
+<li>next to the config.json in static-content</li>
+<li>in <code>client/config</code> next to the config.json in static-content</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>=== &quot;With insight-cli&quot;</p>
+<pre><code>insight-cli works with a flat project structure. You only maintain the plain files, `insight upload client-config` (or `insight upload all`) builds `build/config.json` and `build/static-content-&lt;checksum&gt;.zip` and uploads them:
+
+```{ .sh .no-copy }
+.
+├─ client-config/
+│  └─ config.json
+├─ static-content/
+│  ├─ customize.css
+│  ├─ logo.png
+│  ├─ logo-dark-mode.png
+│  ├─ my-sound.mp3
+│  ├─ legal.html
+│  └─ help.html
+└─ build/                              # generated, do not edit by hand
+   ├─ config.json
+   └─ static-content-&lt;checksum&gt;.zip
+      └─ static-content/
+         ├─ customize.css
+         ├─ logo.png
+         ├─ logo-dark-mode.png
+         ├─ my-sound.mp3
+         ├─ legal.html
+         └─ help.html
+```
+
+See [Insight CLI](../configuration_setup/configuration_setup.md#insight-cli) for setup and upload details.
+</code></pre>
+<p>=== &quot;Without insight-cli&quot;</p>
+<pre><code>The plain files and the zip must be built and placed manually, either next to the `&lt;ui | index&gt;.html`:
+
+```{ .sh .no-copy }
+.
+├─ insight
+|	└─ &lt;mobile | web&gt;
+|		├─ config.json
+|   	└─ static-content/
+│  			├─ customize.css
+│  			├─ logo.png
+│  			├─ logo-dark-mode.png
+│  			├─ my-sound.mp3
+│  			├─ legal.html
+│  			└─ help.html
+│       └─ static-content-1.zip
+|	        └─ static-content/
+│  		        ├─ customize.css
+│  			    ├─ logo.png
+│  			    ├─ logo-dark-mode.png
+│  				├─ legal.html
+│  				├─ help.html
+│  				└─ my-sound.mp3
+```
+
+or in `client/config` next to the config.json:
+
+```{ .sh .no-copy }
+.
+├─ insight
+|	└─ client
+|		└─ config
+|			├─ config.json
+| 			└─ static-content/
+│  			    ├─ customize.css
+│  			    ├─ logo.png
+│  			    ├─ logo-dark-mode.png
+│  				├─ legal.html
+│  				└─ help.html
+│           └─ static-content-1.zip
+|	            └─ static-content/
+│  			        ├─ customize.css
+│  			        ├─ logo.png
+│  			        ├─ logo-dark-mode.png
+│  				    ├─ legal.html
+│  				    ├─ help.html
+│  				    └─ my-sound.mp3
+```
+</code></pre>
+<h2 id="design-customizations-corporate-design-customizecss-and-custom-logo">Design customizations: Corporate design (customize.css and custom logo)</h2>
+<p>The Insight Client can be set to the customer's CI. It is possible to change colors and
+display a customer logo. Two files are required for this: <code>logo.png</code> and <code>customize.css</code>.
+For dark mode, it is possible to add a different logo with the name <code>logo-dark-mode.png</code>.
+The files are stored in the static-content directory. In addition, settings must be made in
+<code>config.json</code> (with insight-cli, this is generated automatically, see <a href="#configjson">config.json</a>
+above).</p>
+<p>The customize.css is described here: <a href="../customize/customize.html">customize</a></p>
+<p>Examples follows below.</p>
+<table>
+<thead>
+<tr>
+<th>staticContent</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>version</code></td>
+<td>the client checks the version and only downloads the static content if the number increases</td>
+</tr>
+<tr>
+<td><code>css</code></td>
+<td>if true, the customize.css in static-content will be used</td>
+</tr>
+<tr>
+<td><code>logo</code></td>
+<td>if true, the logo in static-content will be used</td>
+</tr>
+<tr>
+<td><code>logoDarkMode</code></td>
+<td>if true, an <u>other</u> logo for dark mode in static-content will be used</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pages">Pages</h2>
+<p>The HTML pages can be integrated into a navigation module or displayed via a <a href="../menuAndAction/menu-and-action.html#staticcontent">menu</a>.
+In addition, pages can be shown on the login screen.
+The URL to the page can be relative or absolute. Absolute URL's can only be used online. Relative URL's can be used online and offline if a download package is available.</p>
+<h3 id="page-in-navigation-module-with-order">Page in navigation module with order:</h3>
+<pre><code class="language-json"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;staticContent&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">&quot;pages&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+            <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;legal&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Legal&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;icon-fire&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">&quot;url&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;static-content/legal.html&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">&quot;module&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Infos&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">&quot;order&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">5</span>
+            <span class="hljs-punctuation">}</span>
+        <span class="hljs-punctuation">]</span>
+    <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<h3 id="hidden-page-with-menu">Hidden page with menu:</h3>
+<pre><code class="language-json"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;staticContent&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">&quot;pages&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+            <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;legal&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Legal&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;icon-fire&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">&quot;url&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;static-content/legal.html&quot;</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">&quot;hidden&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+            <span class="hljs-punctuation">}</span>
+        <span class="hljs-punctuation">]</span>
+    <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<pre><code class="language-json"><span class="hljs-attr">&quot;menus&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+	<span class="hljs-punctuation">{</span>
+		<span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Legal&quot;</span><span class="hljs-punctuation">,</span>
+		<span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;icon-fire&quot;</span><span class="hljs-punctuation">,</span>
+		<span class="hljs-attr">&quot;action&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;staticContent&quot;</span><span class="hljs-punctuation">,</span>
+		<span class="hljs-attr">&quot;actionValues&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+			<span class="hljs-punctuation">{</span>
+				<span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;legal&quot;</span>
+			<span class="hljs-punctuation">}</span>
+		<span class="hljs-punctuation">]</span>
+	<span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">]</span>
+</code></pre>
+<h3 id="show-page-on-the-login-screen">Show page on the login screen</h3>
+<pre><code class="language-json"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;staticContent&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+        <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;legal&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Legal&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;icon-fire&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;url&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;static-content/legal.html&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;loginPage&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+        <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">]</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<h2 id="sounds">Sounds</h2>
+<p>Sound files can be played in <a href="../dataModel/data-model.html#validation">validation functions</a>.</p>
+
+            
+            
+        </body>
+        </html>
