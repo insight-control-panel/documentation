@@ -9919,6 +9919,14 @@
   another attribute's <code>validation.js</code> (cross-attribute validation), now also blocks saving. Previously such an attribute could be saved despite still being shown as invalid.</p>
 </li>
 <li>
+<p>Loading the side-menu tree now fetches its records without their children
+  (<code>bulk-nochild</code>) instead of with children (<code>bulk</code>). This restores the
+  behavior of the previous client and significantly speeds up the initial tree
+  loading and group expansion for large data sets, especially with small group
+  sizes. The children of a node are still loaded on demand when the node is
+  expanded, so no additional requests are introduced.</p>
+</li>
+<li>
 <p>The new <code>insight-maximo-connector</code> image publishes the versioned Maximo
   connector and mobile connector archives. See the <a href="../../../2_installation/container/images/">container image
   catalog</a>.</p>
