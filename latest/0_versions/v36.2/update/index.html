@@ -717,30 +717,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#breaking-changes" class="md-nav__link">
+  <a href="#upload-v2-configurations" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Breaking Changes
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Breaking Changes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#wildfly-41-and-jdk-25" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Wildfly 41 and JDK 25
+        Upload v2 Configurations
       </span>
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#enable-role-replication" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Enable Role Replication
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-the-insight-cli-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Update the Insight CLI Endpoint
+      </span>
+    </span>
+  </a>
   
 </li>
       
@@ -9459,7 +9464,7 @@
   <span class="md-ellipsis">
     
   
-  replicate roles
+  Role Replication
 
     
   </span>
@@ -10300,30 +10305,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#breaking-changes" class="md-nav__link">
+  <a href="#upload-v2-configurations" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Breaking Changes
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Breaking Changes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#wildfly-41-and-jdk-25" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Wildfly 41 and JDK 25
+        Upload v2 Configurations
       </span>
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#enable-role-replication" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Enable Role Replication
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-the-insight-cli-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Update the Insight CLI Endpoint
+      </span>
+    </span>
+  </a>
   
 </li>
       
@@ -10343,42 +10353,39 @@
                   
 
 <h1 id="update-v362">Update v36.2<a class="headerlink" href="#update-v362" title="Permanent link">&para;</a></h1>
+<p>Complete the following steps before deploying Insight v36.2.</p>
 <h2 id="update-java-and-wildfly">Update Java and WildFly<a class="headerlink" href="#update-java-and-wildfly" title="Permanent link">&para;</a></h2>
-<p>Insight Middleware and the WildFly-based container images now use JDK 25. The
-shared WildFly base image has been updated from
-<code>quay.io/wildfly/wildfly:40.0.1.Final-jdk17</code> to
-<code>quay.io/wildfly/wildfly:41.0.0.Final-jdk25</code>.</p>
-<p>Before updating:</p>
+<p>Update the runtime used by Insight Middleware and all custom WildFly-based
+images:</p>
 <ul>
 <li>Install JDK 25 for non-containerized Insight Middleware deployments and update <code>JAVA_HOME</code>.</li>
 <li>Update custom WildFly-based images to use WildFly <code>41.0.0.Final-jdk25</code>.</li>
 <li>Rebuild and test custom extensions and deployment overlays with JDK 25 and WildFly 41.</li>
 </ul>
 <h2 id="update-groovy-dependencies">Update Groovy Dependencies<a class="headerlink" href="#update-groovy-dependencies" title="Permanent link">&para;</a></h2>
-<p>The bundled Groovy dependencies have been updated from 3.0.23 to 5.0.7.</p>
-<p>Custom extensions, scripts, and dependency constraints that reference the
-old coordinates must be updated. Rebuild and test Groovy-based integrations
-against Groovy 5 after changing the dependencies.</p>
-<h2 id="breaking-changes">Breaking Changes<a class="headerlink" href="#breaking-changes" title="Permanent link">&para;</a></h2>
+<p>For custom extensions, scripts, and dependency constraints:</p>
 <ul>
-<li>v2 configuration requests are served with configurations stored in the <em>schemadb</em> database<ul>
-<li>Upload configurations via <a href="../../../5_configuration/configuration_setup/configuration_setup/">insight-cli</a></li>
-<li>Enable <a href="../../../6_operating-manual/replicateRoles/replicateRoles/">role replication</a> for OpenJet and Maximo</li>
+<li>Update dependencies from Groovy 3 to Groovy 5.</li>
+<li>Replace the former Maven group ID with <code>org.apache.groovy</code> where applicable.</li>
+<li>Rebuild and test Groovy-based integrations before deployment.</li>
 </ul>
-</li>
-<li>For configuration upload, the Insight server no longer needs to be reachable on port 8080. Upload is now performed via the application URL at <em>/insight</em>. Please change <em>INSIGHT_URL</em> environment variable and ?<code>--url</code> param for Insight CLI. See <a href="../../../5_configuration/configuration_setup/configuration_setup/#parameters">configuration_setup</a>.</li>
-</ul>
-<h3 id="wildfly-41-and-jdk-25">Wildfly 41 and JDK 25<a class="headerlink" href="#wildfly-41-and-jdk-25" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Insight Middleware and the WildFly-based container images now require JDK 25.
-  Existing JDK 17 installations and custom images must be upgraded before
-  deploying this version.</li>
-<li>The shared WildFly base image has changed from WildFly 40 on JDK 17 to WildFly
-  41 on JDK 25. Custom images, configuration, and deployment overlays must be
-  verified against the new runtime.</li>
-<li>Groovy has been updated from 3.0.23 to 5.0.7. Custom code that depends on the
-  bundled Groovy libraries must be checked for Groovy 5 compatibility</li>
-</ul>
+<h2 id="upload-v2-configurations">Upload v2 Configurations<a class="headerlink" href="#upload-v2-configurations" title="Permanent link">&para;</a></h2>
+<p>After updating to v36.2, upload all required v2 configurations once with the
+<a href="../../../5_configuration/configuration_setup/configuration_setup/">Insight CLI</a>.
+This is required because v2 configurations are loaded from the SchemaDB of the
+Insight Middleware and must be available there.</p>
+<h2 id="enable-role-replication">Enable Role Replication<a class="headerlink" href="#enable-role-replication" title="Permanent link">&para;</a></h2>
+<p>This is a breaking change: role replication is mandatory with Insight v36.2.</p>
+<p>Before deploying v36.2, configure <a href="../../../6_operating-manual/replicateRoles/replicateRoles/">role replication</a>
+for the relevant backend. For openTALOS projects, implement the
+<code>AuthorizationProcessor</code> interface and its <code>getRoles(userId)</code> method according
+to the project-specific backend requirements.</p>
+<p>After the update, verify that user roles are replicated successfully.</p>
+<h2 id="update-the-insight-cli-endpoint">Update the Insight CLI Endpoint<a class="headerlink" href="#update-the-insight-cli-endpoint" title="Permanent link">&para;</a></h2>
+<p>Configuration uploads now use the application URL, including the <code>/insight</code>
+path, rather than a direct server connection on port 8080. Update the
+<code>INSIGHT_URL</code> environment variable and the Insight CLI <code>--url</code> argument.
+See <a href="../../../5_configuration/configuration_setup/configuration_setup/#parameters">configuration parameters</a>.</p>
 
 
 

@@ -25,7 +25,7 @@
     
     
       
-        <title>replicate roles - Insight Manual</title>
+        <title>Role Replication - Insight Manual</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#replicate-roles" class="md-skip">
+        <a href="#role-replication" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              replicate roles
+              Role Replication
             
           </span>
         </div>
@@ -9367,7 +9367,7 @@
   <span class="md-ellipsis">
     
   
-  replicate roles
+  Role Replication
 
     
   </span>
@@ -9384,7 +9384,7 @@
   <span class="md-ellipsis">
     
   
-  replicate roles
+  Role Replication
 
     
   </span>
@@ -9413,7 +9413,7 @@
   <a href="#maximo" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        maximo
+        Maximo
       </span>
     </span>
   </a>
@@ -9424,7 +9424,7 @@
   <a href="#keycloak" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        keycloak
+        Keycloak
       </span>
     </span>
   </a>
@@ -10271,7 +10271,7 @@
   <a href="#maximo" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        maximo
+        Maximo
       </span>
     </span>
   </a>
@@ -10282,7 +10282,7 @@
   <a href="#keycloak" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        keycloak
+        Keycloak
       </span>
     </span>
   </a>
@@ -10326,23 +10326,29 @@
                 
                   
 
-<h1 id="replicate-roles">replicate roles<a class="headerlink" href="#replicate-roles" title="Permanent link">&para;</a></h1>
-<p>During login of a user the roles in maximo will be replicated to table insightdb.role.
-All entries for this user in insightdb.role will be replaced with the current roles.</p>
-<h2 id="maximo">maximo<a class="headerlink" href="#maximo" title="Permanent link">&para;</a></h2>
-<p>To support maximo/hybrid installations roles from maximo can be replicated to insightdb.role.
-This can be helpfull for using insight-planner with maximo.</p>
-<p><strong>roles.replication.type=maximo</strong> must be set in insight.properties to activate this feature.</p>
-<h2 id="keycloak">keycloak<a class="headerlink" href="#keycloak" title="Permanent link">&para;</a></h2>
-<p>Replication of roles for keycloak is supported. Roles will be extracted from oidcToken.</p>
-<p><strong>roles.replication.type=keycloak</strong></p>
+<h1 id="role-replication">Role Replication<a class="headerlink" href="#role-replication" title="Permanent link">&para;</a></h1>
+<p>During user login, Insight replicates the current backend roles to the
+<code>insightdb.role</code> table. Existing role entries for that user are replaced.</p>
+<p>Set <code>roles.replication.type</code> in <code>insight.properties</code> according to the backend.
+The property values are lowercase.</p>
+<h2 id="maximo">Maximo<a class="headerlink" href="#maximo" title="Permanent link">&para;</a></h2>
+<p>For Maximo and hybrid installations, replicate roles from Maximo. This is
+required when Insight Planner uses Maximo roles.</p>
+<div class="highlight"><pre><span></span><code><span class="na">roles.replication.type</span><span class="o">=</span><span class="s">maximo</span>
+</code></pre></div>
+<h2 id="keycloak">Keycloak<a class="headerlink" href="#keycloak" title="Permanent link">&para;</a></h2>
+<p>Roles are read from the OIDC token.</p>
+<div class="highlight"><pre><span></span><code><span class="na">roles.replication.type</span><span class="o">=</span><span class="s">keycloak</span>
+</code></pre></div>
 <h2 id="octave-attune">Octave Attune<a class="headerlink" href="#octave-attune" title="Permanent link">&para;</a></h2>
-<p>Replication of roles for Octave Attune is supported. Roles will be read from Octave Attune</p>
-<p><strong>roles.replication.type=hxgn</strong></p>
+<p>Roles are read from Octave Attune.</p>
+<div class="highlight"><pre><span></span><code><span class="na">roles.replication.type</span><span class="o">=</span><span class="s">hxgn</span>
+</code></pre></div>
 <h2 id="opentalos">openTALOS<a class="headerlink" href="#opentalos" title="Permanent link">&para;</a></h2>
-<p>Replication of roles for openTALOS is supported.</p>
-<p><strong>roles.replication.type=open</strong></p>
-<p>The <code>AuthorizationProcessor</code> interface and its <code>getRoles(userId)</code> method must be implemented in the backend according to customer-specific requirements.</p>
+<p>Implement the <code>AuthorizationProcessor</code> interface and its <code>getRoles(userId)</code>
+method in the backend according to project-specific requirements.</p>
+<div class="highlight"><pre><span></span><code><span class="na">roles.replication.type</span><span class="o">=</span><span class="s">open</span>
+</code></pre></div>
 
 
 
@@ -10351,6 +10357,9 @@ This can be helpfull for using insight-planner with maximo.</p>
 
 
 
+
+  
+  
 
 
 
