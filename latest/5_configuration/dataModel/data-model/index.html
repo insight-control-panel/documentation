@@ -13699,7 +13699,8 @@ This is ensured either by an explicit configuration of <em>leftJoinOn</em> or by
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>List of classification attributes is dynamically inserted before/after the attribute <code>attribute</code> in the <code>"attributes": []</code> Array. (Option <code>insertBefore</code>/<code>insertAfter</code>)</p>
+<p>List of classification attributes is dynamically inserted before the attribute identified by the attribute parameter within the <code>"attributes": []</code> Array.
+If <code>insertBefore</code> is not defined, the classification attributes are inserted at the end of the attribute list.</p>
 <p><code>showClassifier</code>: The classifier attribute is hidden by default. With this boolean property, the classifier can be shown.</p>
 <h3 id="documents">Documents<a class="headerlink" href="#documents" title="Permanent link">&para;</a></h3>
 <p>A node of type Documents represents a special kind of child-node. It enables Insight Mobile clients to</p>
