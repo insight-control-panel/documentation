@@ -10,6 +10,27 @@
     --md-accent-fg-color: #b1b2b3;
 }
 
+.md-header {
+    color: var(--md-primary-bg-color);
+    background-color: var(--md-primary-fg-color);
+}
+
+.md-header .md-search__button,
+.md-header .md-search__button:focus,
+.md-header .md-search__button:hover {
+    color: var(--md-primary-bg-color);
+    background-color: var(--md-primary-fg-color);
+}
+
+.md-header .md-search__button:before {
+    background-color: var(--md-primary-bg-color);
+}
+
+.md-nav--primary .md-nav__item .md-nav__link--active,
+.md-nav--primary .md-nav__item .md-nav__link--active code {
+    color: var(--md-typeset-a-color);
+}
+
 .md-grid {
     max-width: 95%;
 }

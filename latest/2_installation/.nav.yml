@@ -1,0 +1,14 @@
+title: Installation
+nav:
+    - general
+    - requirements
+    - container
+    - insightMiddleware
+    - adapter
+    - connectors
+    - OpenID-Connect
+    - http
+    - client
+    - insightDocument
+    - pushNotifications
+    - updateMechanism

@@ -1,0 +1,9 @@
+flatten_single_child_sections: true
+nav:
+  - index.md
+  - Legal:
+      - privacy.md
+      - copyright.md
+      - eula.md
+      - softwarepflegevertrag.md
+  - Icons: /icons/index.html

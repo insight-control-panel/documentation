@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="zensical-0.0.62">
     
     
       
@@ -29,7 +29,15 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.ce62732f.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/modern/palette.812a03bb.min.css">
       
       
 
@@ -43,14 +51,14 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -59,12 +67,19 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
         
@@ -80,18 +95,16 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="Insight Manual" class="md-header__button md-logo" aria-label="Insight Manual" data-md-component="logo">
       
-  <img src="../../../images/favicon.png" alt="logo">
+  <img src="../../../images/favicon.png" alt="Insight Manual">
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -110,6 +123,18 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
@@ -117,45 +142,20 @@
     
       
       
-        <label class="md-header__button md-icon" for="__search">
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
         </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
       
     
-    
+    <div class="md-header__source">
+      
+    </div>
   </nav>
   
 </header>
@@ -164,6 +164,200 @@
       
       
         
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../0_versions/develop/release-notes/" class="md-tabs__link">
+          
+  
+  Version
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../general/general/" class="md-tabs__link">
+          
+  
+  Installation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../3_updates/update/update/" class="md-tabs__link">
+          
+  
+  Update
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../4_monitoring/overview/overview/" class="md-tabs__link">
+          
+  
+  Monitoring
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../5_configuration/overview/" class="md-tabs__link">
+          
+  
+  Configuration
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../6_operating-manual/addressInUse/address/" class="md-tabs__link">
+          
+  
+  Operating Manual
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../licenses/notice/" class="md-tabs__link">
+        
+  
+  Licenses
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="/privacy/" class="md-tabs__link">
+          
+  
+  Legal
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
           
         
       
@@ -178,12 +372,14 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Insight Manual" class="md-nav__button md-logo" aria-label="Insight Manual" data-md-component="logo">
       
-  <img src="../../../images/favicon.png" alt="logo">
+  <img src="../../../images/favicon.png" alt="Insight Manual">
 
     </a>
     Insight Manual
@@ -197,162 +393,29 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
     
-  
-    Overview
-  
-
     
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
+    
     
       
       
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../privacy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Privacy Policy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../copyright/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Copyright
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../eula/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    End User License Agreement
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../softwarepflegevertrag/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Maintenance Provisions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Licenses
-  
+  Version
 
     
   </span>
@@ -362,13 +425,60 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Licenses
+  Version
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Develop
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Develop
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -380,15 +490,1452 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../licenses/open_source/notice/" class="md-nav__link">
+      <a href="../../../0_versions/develop/release-notes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Open Source - OSS
+  Release Notes
+
+    
+  </span>
   
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/develop/update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Update
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  V36.2
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  V36.2
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v36.2/release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Release Notes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v36.2/update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Update
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  V36.1
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  V36.1
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v36.1/release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Release Notes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v36.1/update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Update
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  V36.0
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  V36.0
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v36.0/release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Release Notes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v36.0/update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Update
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  V34.2
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  V34.2
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v34.2/release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Release Notes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v34.2/update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Update
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archiv
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Archiv
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_1" id="__nav_1_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  V34.1
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  V34.1
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v34.1/release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Release Notes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v34.1/update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Update
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_2" id="__nav_1_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  V34.0
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  V34.0
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v34.0/release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Release Notes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v34.0/update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Update
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_3" id="__nav_1_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  V33.0
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  V33.0
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v33.0/release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Release Notes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v33.0/update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Update
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_4" id="__nav_1_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  V32.0
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  V32.0
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v32.0/release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Release Notes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v32.0/update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Update
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_5" id="__nav_1_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  V31.0
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  V31.0
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v31.0/release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Release Notes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v31.0/update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Update
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_6" id="__nav_1_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  V30.0
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  V30.0
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v30.0/release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Release Notes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v30.0/update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Update
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_7" id="__nav_1_6_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  V29.0
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  V29.0
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v29.0/release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Release Notes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v29.0/update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Update
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_8" id="__nav_1_6_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  V28.0
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  V28.0
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v28.0/release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Release Notes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/v28.0/update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Update
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../0_versions/compatibility-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Compatibility Matrix
 
     
   </span>
@@ -412,29 +1959,36 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
     
   
-    Release-Notes
-  
+  Installation
 
     
   </span>
@@ -444,433 +1998,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Release-Notes
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../0_release-notes/28.0/28.0/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v28.0
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../0_release-notes/29.0/29.0/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v29.0
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../0_release-notes/30.0/30/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v30.0
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../0_release-notes/31.0/31/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v31.0
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../0_release-notes/32.0/32/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v32.0
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../0_release-notes/33.0/33/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v33.0
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../0_release-notes/34.0/34.0/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v34.0
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../0_release-notes/34.1/34.1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v34.1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../0_release-notes/34.2/34.2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v34.2
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../0_release-notes/36.0/36.0/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v36.0
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../0_release-notes/36.1/36.1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v36.1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../0_release-notes/36.2/36.2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v36.2
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../0_release-notes/develop/develop/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Develop
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Installation
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Installation
-  
+  Installation
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -889,8 +2022,7 @@
   <span class="md-ellipsis">
     
   
-    General
-  
+  General
 
     
   </span>
@@ -913,23 +2045,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Requirements
-  
+  Requirements
 
     
   </span>
@@ -939,13 +2073,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Requirements
-  
+  Requirements
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -964,8 +2097,7 @@
   <span class="md-ellipsis">
     
   
-    General
-  
+  General
 
     
   </span>
@@ -992,8 +2124,7 @@
   <span class="md-ellipsis">
     
   
-    Environment
-  
+  Environment
 
     
   </span>
@@ -1020,8 +2151,7 @@
   <span class="md-ellipsis">
     
   
-    Servercomponents
-  
+  Servercomponents
 
     
   </span>
@@ -1052,23 +2182,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Container
-  
+  Container
 
     
   </span>
@@ -1078,13 +2210,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Container
-  
+  Container
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1103,8 +2234,7 @@
   <span class="md-ellipsis">
     
   
-    General
-  
+  General
 
     
   </span>
@@ -1131,8 +2261,7 @@
   <span class="md-ellipsis">
     
   
-    Images
-  
+  Images
 
     
   </span>
@@ -1159,8 +2288,7 @@
   <span class="md-ellipsis">
     
   
-    Configuration
-  
+  Configuration
 
     
   </span>
@@ -1187,8 +2315,7 @@
   <span class="md-ellipsis">
     
   
-    Simplified Setup
-  
+  Simplified Setup
 
     
   </span>
@@ -1211,23 +2338,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_5" >
         
           
-          <label class="md-nav__link" for="__nav_8_3_5" id="__nav_8_3_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_3_5" id="__nav_2_3_5_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Scalable setup
-  
+  Scalable setup
 
     
   </span>
@@ -1237,13 +2366,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_3_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Scalable setup
-  
+  Scalable setup
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1262,8 +2390,7 @@
   <span class="md-ellipsis">
     
   
-    Setup overview
-  
+  Setup overview
 
     
   </span>
@@ -1290,8 +2417,7 @@
   <span class="md-ellipsis">
     
   
-    Configuration
-  
+  Configuration
 
     
   </span>
@@ -1326,8 +2452,7 @@
   <span class="md-ellipsis">
     
   
-    FAQ &amp; Examples
-  
+  FAQ &amp; Examples
 
     
   </span>
@@ -1358,23 +2483,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
-          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Middleware
-  
+  Middleware
 
     
   </span>
@@ -1384,13 +2511,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Middleware
-  
+  Middleware
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1409,8 +2535,7 @@
   <span class="md-ellipsis">
     
   
-    Environment Variables
-  
+  Environment Variables
 
     
   </span>
@@ -1437,8 +2562,7 @@
   <span class="md-ellipsis">
     
   
-    Preparation
-  
+  Preparation
 
     
   </span>
@@ -1465,8 +2589,7 @@
   <span class="md-ellipsis">
     
   
-    Configuration
-  
+  Configuration
 
     
   </span>
@@ -1489,23 +2612,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_4" >
         
           
-          <label class="md-nav__link" for="__nav_8_4_4" id="__nav_8_4_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_4_4" id="__nav_2_4_4_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Insight Services
-  
+  Insight Services
 
     
   </span>
@@ -1515,13 +2640,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_4_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_4_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Insight Services
-  
+  Insight Services
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1540,8 +2664,7 @@
   <span class="md-ellipsis">
     
   
-    Keycloak
-  
+  Keycloak
 
     
   </span>
@@ -1568,8 +2691,7 @@
   <span class="md-ellipsis">
     
   
-    Basic - Linux
-  
+  Basic - Linux
 
     
   </span>
@@ -1596,8 +2718,7 @@
   <span class="md-ellipsis">
     
   
-    Basic - Windows
-  
+  Basic - Windows
 
     
   </span>
@@ -1632,8 +2753,7 @@
   <span class="md-ellipsis">
     
   
-    SSL &amp; Truststore
-  
+  SSL &amp; Truststore
 
     
   </span>
@@ -1664,23 +2784,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
         
           
-          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Adapter
-  
+  Adapter
 
     
   </span>
@@ -1690,44 +2812,15 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Adapter
-  
+  Adapter
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../adapter/general/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Environment Variables
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -1743,8 +2836,7 @@
   <span class="md-ellipsis">
     
   
-    BIM-Adapter
-  
+  BIM-Adapter
 
     
   </span>
@@ -1771,8 +2863,34 @@
   <span class="md-ellipsis">
     
   
-    Datasource
+  Datasource
+
+    
+  </span>
   
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adapter/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Environment Variables
 
     
   </span>
@@ -1803,23 +2921,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
         
           
-          <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Connectors
-  
+  Connectors
 
     
   </span>
@@ -1829,13 +2949,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Connectors
-  
+  Connectors
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1850,134 +2969,25 @@
     
     
     
-    
-    <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_8_6_1" id="__nav_8_6_1_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Octave
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_6_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_6_1">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Octave
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../connectors/Octave/hxgn_connector/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Connector
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../connectors/Octave/hxgn_properties/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Properties
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_1" >
         
           
-          <label class="md-nav__link" for="__nav_8_6_2" id="__nav_8_6_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    SAP JCo
-  
+  Maximo
 
     
   </span>
@@ -1987,236 +2997,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_6_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_6_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_1">
             <span class="md-nav__icon md-icon"></span>
             
   
-    SAP JCo
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../connectors/SAP-JCo/basic/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    General
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../connectors/SAP-JCo/connectionConfig/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Connection configuration in insight.properties (v2-Server)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../connectors/SAP-JCo/connectionConfig2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Connection configuration in sap/eam.properties(v3-Server)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../connectors/SAP-JCo/connectionConfigJCo/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Connect with SAP Java Connector (JCo) Server (IDocs)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../connectors/SAP-JCo/testConnectivity/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Test Connectivity
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../connectors/SAP-JCo/userAuth/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    User authentication
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_8_6_3" id="__nav_8_6_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Maximo
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_6_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_6_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Maximo
-  
+  Maximo
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -2235,8 +3021,7 @@
   <span class="md-ellipsis">
     
   
-    General
-  
+  General
 
     
   </span>
@@ -2263,8 +3048,7 @@
   <span class="md-ellipsis">
     
   
-    CookieMapping for MAS
-  
+  Cookie Mapping
 
     
   </span>
@@ -2291,8 +3075,7 @@
   <span class="md-ellipsis">
     
   
-    MAS
-  
+  MAS
 
     
   </span>
@@ -2319,8 +3102,7 @@
   <span class="md-ellipsis">
     
   
-    API Keys
-  
+  API Keys
 
     
   </span>
@@ -2347,8 +3129,7 @@
   <span class="md-ellipsis">
     
   
-    MAS OpenID Connect
-  
+  MAS OpenID Connect
 
     
   </span>
@@ -2375,8 +3156,7 @@
   <span class="md-ellipsis">
     
   
-    MAS Proxy
-  
+  MAS Proxy
 
     
   </span>
@@ -2403,8 +3183,7 @@
   <span class="md-ellipsis">
     
   
-    Insight OSLC Route
-  
+  Insight OSLC Route
 
     
   </span>
@@ -2431,8 +3210,7 @@
   <span class="md-ellipsis">
     
   
-    Replication of changed data
-  
+  Replication of changed data
 
     
   </span>
@@ -2463,23 +3241,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_2" >
         
           
-          <label class="md-nav__link" for="__nav_8_6_4" id="__nav_8_6_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6_2" id="__nav_2_6_2_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Openjet
-  
+  Octave
 
     
   </span>
@@ -2489,13 +3269,122 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_6_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_6_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_2">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Openjet
+  Octave
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connectors/Octave/hxgn_connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Connector
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connectors/Octave/hxgn_properties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Properties
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_3" id="__nav_2_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Openjet
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Openjet
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -2514,8 +3403,7 @@
   <span class="md-ellipsis">
     
   
-    General
-  
+  General
 
     
   </span>
@@ -2542,8 +3430,7 @@
   <span class="md-ellipsis">
     
   
-    Architecture and Overview
-  
+  Architecture and Overview
 
     
   </span>
@@ -2570,8 +3457,7 @@
   <span class="md-ellipsis">
     
   
-    Requirements
-  
+  Requirements
 
     
   </span>
@@ -2598,8 +3484,7 @@
   <span class="md-ellipsis">
     
   
-    War-Files
-  
+  War-Files
 
     
   </span>
@@ -2622,23 +3507,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_3_5" >
         
           
-          <label class="md-nav__link" for="__nav_8_6_4_5" id="__nav_8_6_4_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6_3_5" id="__nav_2_6_3_5_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Configuration
-  
+  Configuration
 
     
   </span>
@@ -2648,13 +3535,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_8_6_4_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_6_4_5">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_6_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_3_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Configuration
-  
+  Configuration
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -2673,8 +3559,7 @@
   <span class="md-ellipsis">
     
   
-    Using Insight Web
-  
+  Using Insight Web
 
     
   </span>
@@ -2701,8 +3586,7 @@
   <span class="md-ellipsis">
     
   
-    Tree Configurations
-  
+  Tree Configurations
 
     
   </span>
@@ -2731,6 +3615,224 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_4" id="__nav_2_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  SAP JCo
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  SAP JCo
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connectors/SAP-JCo/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  General
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connectors/SAP-JCo/connectionConfig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Connection configuration in insight.properties (v2-Server)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connectors/SAP-JCo/connectionConfig2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Connection configuration in sap/eam.properties(v3-Server)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connectors/SAP-JCo/connectionConfigJCo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Connect with SAP Java Connector (JCo) Server (IDocs)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connectors/SAP-JCo/testConnectivity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Test Connectivity
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connectors/SAP-JCo/userAuth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  User authentication
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2749,23 +3851,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
         
           
-          <label class="md-nav__link" for="__nav_8_7" id="__nav_8_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    OpenID Connect
-  
+  OpenID Connect
 
     
   </span>
@@ -2775,13 +3879,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             
   
-    OpenID Connect
-  
+  OpenID Connect
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -2800,8 +3903,7 @@
   <span class="md-ellipsis">
     
   
-    OIDC Overview
-  
+  OIDC Overview
 
     
   </span>
@@ -2828,8 +3930,7 @@
   <span class="md-ellipsis">
     
   
-    Examples
-  
+  Examples
 
     
   </span>
@@ -2856,8 +3957,7 @@
   <span class="md-ellipsis">
     
   
-    Apache configuration for Keycloak
-  
+  Apache configuration for Keycloak
 
     
   </span>
@@ -2892,8 +3992,7 @@
   <span class="md-ellipsis">
     
   
-    HTTP-Server
-  
+  HTTP-Server
 
     
   </span>
@@ -2918,23 +4017,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" checked>
         
           
-          <label class="md-nav__link" for="__nav_8_9" id="__nav_8_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Clients
-  
+  Clients
 
     
   </span>
@@ -2944,13 +4045,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_9_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_8_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_9">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Clients
-  
+  Clients
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -2969,8 +4069,7 @@
   <span class="md-ellipsis">
     
   
-    Client Setup
-  
+  Client Setup
 
     
   </span>
@@ -2997,8 +4096,7 @@
   <span class="md-ellipsis">
     
   
-    Browser (Web Client)
-  
+  Browser (Web Client)
 
     
   </span>
@@ -3025,8 +4123,7 @@
   <span class="md-ellipsis">
     
   
-    Native Apps for iOS and Android
-  
+  Native Apps for iOS and Android
 
     
   </span>
@@ -3049,7 +4146,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
       
       
         
@@ -3062,8 +4159,7 @@
   <span class="md-ellipsis">
     
   
-    Progressive Web App (PWA)
-  
+  Progressive Web App (PWA)
 
     
   </span>
@@ -3073,15 +4169,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Progressive Web App (PWA)
-  
+  Progressive Web App (PWA)
 
     
   </span>
@@ -3092,7 +4187,8 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -3101,16 +4197,16 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#what-is-a-pwa" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         What is a PWA?
-      
+      </span>
     </span>
   </a>
   
@@ -3119,9 +4215,9 @@
         <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Installation
-      
+      </span>
     </span>
   </a>
   
@@ -3131,9 +4227,9 @@
           <li class="md-nav__item">
   <a href="#windows-chromeedge" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Windows (Chrome/Edge)
-      
+      </span>
     </span>
   </a>
   
@@ -3142,9 +4238,9 @@
           <li class="md-nav__item">
   <a href="#android" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Android
-      
+      </span>
     </span>
   </a>
   
@@ -3153,9 +4249,9 @@
           <li class="md-nav__item">
   <a href="#ios-safari" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         iOS (Safari)
-      
+      </span>
     </span>
   </a>
   
@@ -3169,9 +4265,9 @@
         <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Usage
-      
+      </span>
     </span>
   </a>
   
@@ -3181,9 +4277,9 @@
           <li class="md-nav__item">
   <a href="#starting-the-pwa" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Starting the PWA
-      
+      </span>
     </span>
   </a>
   
@@ -3192,9 +4288,9 @@
           <li class="md-nav__item">
   <a href="#app-experience" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         App Experience
-      
+      </span>
     </span>
   </a>
   
@@ -3208,9 +4304,9 @@
         <li class="md-nav__item">
   <a href="#advantages-over-electron" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Advantages over Electron
-      
+      </span>
     </span>
   </a>
   
@@ -3220,9 +4316,9 @@
           <li class="md-nav__item">
   <a href="#pwa-benefits" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         PWA Benefits
-      
+      </span>
     </span>
   </a>
   
@@ -3231,9 +4327,9 @@
           <li class="md-nav__item">
   <a href="#update-mechanism" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Update Mechanism
-      
+      </span>
     </span>
   </a>
   
@@ -3247,9 +4343,9 @@
         <li class="md-nav__item">
   <a href="#offline-capability" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Offline Capability
-      
+      </span>
     </span>
   </a>
   
@@ -3258,9 +4354,9 @@
         <li class="md-nav__item">
   <a href="#feature-support" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Feature Support
-      
+      </span>
     </span>
   </a>
   
@@ -3270,9 +4366,9 @@
           <li class="md-nav__item">
   <a href="#supported-features" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Supported Features
-      
+      </span>
     </span>
   </a>
   
@@ -3281,9 +4377,9 @@
           <li class="md-nav__item">
   <a href="#limitations" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Limitations
-      
+      </span>
     </span>
   </a>
   
@@ -3293,9 +4389,9 @@
           <li class="md-nav__item">
   <a href="#nfc-on-ios" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         NFC on iOS
-      
+      </span>
     </span>
   </a>
   
@@ -3304,9 +4400,9 @@
           <li class="md-nav__item">
   <a href="#push-notifications" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Push Notifications
-      
+      </span>
     </span>
   </a>
   
@@ -3345,8 +4441,7 @@
   <span class="md-ellipsis">
     
   
-    Electron Client
-  
+  Electron Client
 
     
   </span>
@@ -3373,55 +4468,29 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../insightMonitoringAdministration/InsightMonitoring/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Insight Monitoring Administration
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
     
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
         
           
-          <label class="md-nav__link" for="__nav_8_11" id="__nav_8_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Insight Document
-  
+  Insight Document
 
     
   </span>
@@ -3431,13 +4500,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_11">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Insight Document
-  
+  Insight Document
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -3456,8 +4524,7 @@
   <span class="md-ellipsis">
     
   
-    Installation Insight Document
-  
+  Installation Insight Document
 
     
   </span>
@@ -3484,8 +4551,7 @@
   <span class="md-ellipsis">
     
   
-    Document-Handler-File
-  
+  Document-Handler-File
 
     
   </span>
@@ -3512,36 +4578,7 @@
   <span class="md-ellipsis">
     
   
-    Document-Handler-Insight
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../insightDocument/document-handler-maximo-imglib/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Document-Handler-Maximo-Imglib
-  
+  Document-Handler-Insight
 
     
   </span>
@@ -3568,8 +4605,34 @@
   <span class="md-ellipsis">
     
   
-    Document-Handler-Maximo
+  Document-Handler-Maximo
+
+    
+  </span>
   
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insightDocument/document-handler-maximo-imglib/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Document-Handler-Maximo-Imglib
 
     
   </span>
@@ -3604,175 +4667,7 @@
   <span class="md-ellipsis">
     
   
-    Insight Push Notifications
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_13" >
-        
-          
-          <label class="md-nav__link" for="__nav_8_13" id="__nav_8_13_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Default Tree Configuration
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_13">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Default Tree Configuration
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../defaultTreeConfiguration/dtc_for_maximo/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Maximo
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../defaultTreeConfiguration/dtc_for_open/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    OpenJet
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../defaultTreeConfiguration/dtc_for_sap/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SAP
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../indexingTrees/indexingTrees/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Indexing Trees
-  
+  Push Notifications
 
     
   </span>
@@ -3799,8 +4694,7 @@
   <span class="md-ellipsis">
     
   
-    Update-Mechanism (Maximo, OpenJet)
-  
+  Update-Mechanism (Maximo, OpenJet)
 
     
   </span>
@@ -3830,23 +4724,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Update
-  
+  Update
 
     
   </span>
@@ -3856,60 +4752,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Update
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Update
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_1">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Update
-  
+  Update
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -3928,8 +4776,7 @@
   <span class="md-ellipsis">
     
   
-    Standard-Update
-  
+  Standard-Update
 
     
   </span>
@@ -3937,70 +4784,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3_updates/update/mobileClientUpdate/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Mobile Client Update
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3_updates/update/matrix/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    compatiblity matrix
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -4020,372 +4803,7 @@
   <span class="md-ellipsis">
     
   
-    Standard-Middleware-Update
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3_updates/v28.0/v28/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v28.0
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3_updates/v29.0/v29/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v29.0
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3_updates/v30.0/30/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v30.0
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3_updates/v31.0/31/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v31.0
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3_updates/v32.0/32/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v32.0
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3_updates/v33.0/33/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v33.0
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3_updates/v34.0/34.0/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v34.0
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3_updates/v34.1/34.1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v34.1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3_updates/v34.2/v34.2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v34.2
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3_updates/v36.0/v36.0/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v36.0
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3_updates/v36.1/v36.1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v36.1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3_updates/v36.2/v36.2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    v36.2
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3_updates/vDevelop/vdevelop/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Develop
-  
+  Standard-Middleware-Update
 
     
   </span>
@@ -4415,23 +4833,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Monitoring
-  
+  Monitoring
 
     
   </span>
@@ -4441,13 +4861,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Monitoring
-  
+  Monitoring
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -4466,8 +4885,7 @@
   <span class="md-ellipsis">
     
   
-    Overview
-  
+  Overview
 
     
   </span>
@@ -4494,8 +4912,7 @@
   <span class="md-ellipsis">
     
   
-    Health Check
-  
+  Health Check
 
     
   </span>
@@ -4522,8 +4939,7 @@
   <span class="md-ellipsis">
     
   
-    JEE-Server
-  
+  JEE-Server
 
     
   </span>
@@ -4550,8 +4966,7 @@
   <span class="md-ellipsis">
     
   
-    Telemetry
-  
+  Telemetry
 
     
   </span>
@@ -4581,23 +4996,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Configuration
-  
+  Configuration
 
     
   </span>
@@ -4607,13 +5024,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Configuration
-  
+  Configuration
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -4632,8 +5048,7 @@
   <span class="md-ellipsis">
     
   
-    Overview
-  
+  Overview
 
     
   </span>
@@ -4660,8 +5075,7 @@
   <span class="md-ellipsis">
     
   
-    Requirements
-  
+  Requirements
 
     
   </span>
@@ -4688,8 +5102,7 @@
   <span class="md-ellipsis">
     
   
-    Configuration Directory &amp; Tasks
-  
+  Configuration Directory &amp; Tasks
 
     
   </span>
@@ -4712,23 +5125,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
         
           
-          <label class="md-nav__link" for="__nav_11_4" id="__nav_11_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Backend configuration
-  
+  Backend configuration
 
     
   </span>
@@ -4738,13 +5153,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Backend configuration
-  
+  Backend configuration
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -4763,8 +5177,7 @@
   <span class="md-ellipsis">
     
   
-    Nodedef
-  
+  Nodedef
 
     
   </span>
@@ -4791,8 +5204,7 @@
   <span class="md-ellipsis">
     
   
-    Mapping
-  
+  Mapping
 
     
   </span>
@@ -4819,8 +5231,7 @@
   <span class="md-ellipsis">
     
   
-    Backend-Scripts
-  
+  Backend-Scripts
 
     
   </span>
@@ -4851,23 +5262,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
         
           
-          <label class="md-nav__link" for="__nav_11_5" id="__nav_11_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Client configuration
-  
+  Client configuration
 
     
   </span>
@@ -4877,13 +5290,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Client configuration
-  
+  Client configuration
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -4902,8 +5314,7 @@
   <span class="md-ellipsis">
     
   
-    General Client Configuration
-  
+  General Client Configuration
 
     
   </span>
@@ -4930,8 +5341,7 @@
   <span class="md-ellipsis">
     
   
-    Static Content
-  
+  Static Content
 
     
   </span>
@@ -4958,8 +5368,7 @@
   <span class="md-ellipsis">
     
   
-    Insight App preconfiguration
-  
+  Insight App preconfiguration
 
     
   </span>
@@ -4986,8 +5395,7 @@
   <span class="md-ellipsis">
     
   
-    Cookie
-  
+  Cookie
 
     
   </span>
@@ -5014,8 +5422,7 @@
   <span class="md-ellipsis">
     
   
-    LoginParams
-  
+  LoginParams
 
     
   </span>
@@ -5042,8 +5449,7 @@
   <span class="md-ellipsis">
     
   
-    Platform Specific Configurations
-  
+  Platform Specific Configurations
 
     
   </span>
@@ -5078,8 +5484,7 @@
   <span class="md-ellipsis">
     
   
-    Client URL Parameters
-  
+  Client URL Parameters
 
     
   </span>
@@ -5106,8 +5511,7 @@
   <span class="md-ellipsis">
     
   
-    Insight Configuration Tools
-  
+  Insight Configuration Tools
 
     
   </span>
@@ -5134,8 +5538,7 @@
   <span class="md-ellipsis">
     
   
-    Insight Configurations
-  
+  Insight Configurations
 
     
   </span>
@@ -5162,8 +5565,7 @@
   <span class="md-ellipsis">
     
   
-    Basic Rules
-  
+  Basic Rules
 
     
   </span>
@@ -5190,8 +5592,7 @@
   <span class="md-ellipsis">
     
   
-    Permissions
-  
+  Permissions
 
     
   </span>
@@ -5214,23 +5615,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_11" >
         
           
-          <label class="md-nav__link" for="__nav_11_11" id="__nav_11_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_11" id="__nav_5_11_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    dataModel
-  
+  dataModel
 
     
   </span>
@@ -5240,13 +5643,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_11">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_11">
             <span class="md-nav__icon md-icon"></span>
             
   
-    dataModel
-  
+  dataModel
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -5265,8 +5667,7 @@
   <span class="md-ellipsis">
     
   
-    Data Model
-  
+  Data Model
 
     
   </span>
@@ -5293,8 +5694,7 @@
   <span class="md-ellipsis">
     
   
-    fetchParam
-  
+  fetchParam
 
     
   </span>
@@ -5329,8 +5729,7 @@
   <span class="md-ellipsis">
     
   
-    Layout
-  
+  Layout
 
     
   </span>
@@ -5357,8 +5756,7 @@
   <span class="md-ellipsis">
     
   
-    Tab View
-  
+  Tab View
 
     
   </span>
@@ -5385,8 +5783,7 @@
   <span class="md-ellipsis">
     
   
-    Customize
-  
+  Customize
 
     
   </span>
@@ -5413,36 +5810,7 @@
   <span class="md-ellipsis">
     
   
-    Maximo Automationscript
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/icons/index.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Icons
-  
+  Maximo Automationscript
 
     
   </span>
@@ -5469,8 +5837,7 @@
   <span class="md-ellipsis">
     
   
-    Push data
-  
+  Push data
 
     
   </span>
@@ -5493,23 +5860,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_18" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_17" >
         
           
-          <label class="md-nav__link" for="__nav_11_18" id="__nav_11_18_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_17" id="__nav_5_17_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Menus and Actions
-  
+  Menus and Actions
 
     
   </span>
@@ -5519,13 +5888,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_18_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_18">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_17">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Menus and Actions
-  
+  Menus and Actions
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -5544,8 +5912,7 @@
   <span class="md-ellipsis">
     
   
-    Overview
-  
+  Overview
 
     
   </span>
@@ -5572,8 +5939,7 @@
   <span class="md-ellipsis">
     
   
-    Scenario
-  
+  Scenario
 
     
   </span>
@@ -5596,23 +5962,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_18_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_17_3" >
         
           
-          <label class="md-nav__link" for="__nav_11_18_3" id="__nav_11_18_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_17_3" id="__nav_5_17_3_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Menu
-  
+  Menu
 
     
   </span>
@@ -5622,13 +5990,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_18_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_18_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_17_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_17_3">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Menu
-  
+  Menu
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -5647,8 +6014,7 @@
   <span class="md-ellipsis">
     
   
-    barcodeDeeplink
-  
+  barcodeDeeplink
 
     
   </span>
@@ -5675,8 +6041,7 @@
   <span class="md-ellipsis">
     
   
-    barcodeFilter
-  
+  barcodeFilter
 
     
   </span>
@@ -5703,8 +6068,7 @@
   <span class="md-ellipsis">
     
   
-    barcodeScan
-  
+  barcodeScan
 
     
   </span>
@@ -5731,8 +6095,7 @@
   <span class="md-ellipsis">
     
   
-    browser
-  
+  browser
 
     
   </span>
@@ -5759,64 +6122,7 @@
   <span class="md-ellipsis">
     
   
-    confirm
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../5_configuration/menuAndAction/menu/create-form/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    createForm
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../5_configuration/menuAndAction/menu/create-multi/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    createMulti
-  
+  confirm
 
     
   </span>
@@ -5843,8 +6149,61 @@
   <span class="md-ellipsis">
     
   
-    create
+  create
+
+    
+  </span>
   
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../5_configuration/menuAndAction/menu/create-form/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  createForm
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../5_configuration/menuAndAction/menu/create-multi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  createMulti
 
     
   </span>
@@ -5871,8 +6230,7 @@
   <span class="md-ellipsis">
     
   
-    debug
-  
+  debug
 
     
   </span>
@@ -5899,8 +6257,7 @@
   <span class="md-ellipsis">
     
   
-    deleteLocal
-  
+  deleteLocal
 
     
   </span>
@@ -5927,8 +6284,7 @@
   <span class="md-ellipsis">
     
   
-    details
-  
+  details
 
     
   </span>
@@ -5955,8 +6311,7 @@
   <span class="md-ellipsis">
     
   
-    downloadRecord
-  
+  downloadRecord
 
     
   </span>
@@ -5983,8 +6338,7 @@
   <span class="md-ellipsis">
     
   
-    fileEdit
-  
+  fileEdit
 
     
   </span>
@@ -6011,8 +6365,7 @@
   <span class="md-ellipsis">
     
   
-    fileUpload
-  
+  fileUpload
 
     
   </span>
@@ -6039,8 +6392,7 @@
   <span class="md-ellipsis">
     
   
-    filter
-  
+  filter
 
     
   </span>
@@ -6067,8 +6419,7 @@
   <span class="md-ellipsis">
     
   
-    flow
-  
+  flow
 
     
   </span>
@@ -6095,8 +6446,7 @@
   <span class="md-ellipsis">
     
   
-    focus
-  
+  focus
 
     
   </span>
@@ -6123,8 +6473,7 @@
   <span class="md-ellipsis">
     
   
-    form
-  
+  form
 
     
   </span>
@@ -6151,8 +6500,7 @@
   <span class="md-ellipsis">
     
   
-    geo
-  
+  geo
 
     
   </span>
@@ -6179,8 +6527,7 @@
   <span class="md-ellipsis">
     
   
-    goto
-  
+  goto
 
     
   </span>
@@ -6207,8 +6554,7 @@
   <span class="md-ellipsis">
     
   
-    ifc
-  
+  ifc
 
     
   </span>
@@ -6235,8 +6581,7 @@
   <span class="md-ellipsis">
     
   
-    insert
-  
+  insert
 
     
   </span>
@@ -6263,8 +6608,7 @@
   <span class="md-ellipsis">
     
   
-    js
-  
+  js
 
     
   </span>
@@ -6291,8 +6635,7 @@
   <span class="md-ellipsis">
     
   
-    listDialog
-  
+  listDialog
 
     
   </span>
@@ -6319,8 +6662,7 @@
   <span class="md-ellipsis">
     
   
-    listEdit
-  
+  listEdit
 
     
   </span>
@@ -6347,8 +6689,7 @@
   <span class="md-ellipsis">
     
   
-    nfcRead
-  
+  nfcRead
 
     
   </span>
@@ -6375,8 +6716,7 @@
   <span class="md-ellipsis">
     
   
-    ocr
-  
+  ocr
 
     
   </span>
@@ -6403,8 +6743,7 @@
   <span class="md-ellipsis">
     
   
-    offline
-  
+  offline
 
     
   </span>
@@ -6431,8 +6770,7 @@
   <span class="md-ellipsis">
     
   
-    online
-  
+  online
 
     
   </span>
@@ -6459,8 +6797,7 @@
   <span class="md-ellipsis">
     
   
-    open
-  
+  open
 
     
   </span>
@@ -6487,8 +6824,7 @@
   <span class="md-ellipsis">
     
   
-    openMaximo
-  
+  openMaximo
 
     
   </span>
@@ -6515,8 +6851,7 @@
   <span class="md-ellipsis">
     
   
-    pert
-  
+  pert
 
     
   </span>
@@ -6543,36 +6878,7 @@
   <span class="md-ellipsis">
     
   
-    qr
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../5_configuration/menuAndAction/menu/refresh-profile/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    refreshProfile
-  
+  qr
 
     
   </span>
@@ -6599,8 +6905,34 @@
   <span class="md-ellipsis">
     
   
-    refresh
+  refresh
+
+    
+  </span>
   
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../5_configuration/menuAndAction/menu/refresh-profile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  refreshProfile
 
     
   </span>
@@ -6627,8 +6959,7 @@
   <span class="md-ellipsis">
     
   
-    remove
-  
+  remove
 
     
   </span>
@@ -6655,36 +6986,7 @@
   <span class="md-ellipsis">
     
   
-    request
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../5_configuration/menuAndAction/menu/save-details/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    saveDetails
-  
+  request
 
     
   </span>
@@ -6711,8 +7013,34 @@
   <span class="md-ellipsis">
     
   
-    save
+  save
+
+    
+  </span>
   
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../5_configuration/menuAndAction/menu/save-details/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  saveDetails
 
     
   </span>
@@ -6739,8 +7067,7 @@
   <span class="md-ellipsis">
     
   
-    scriptFilter
-  
+  scriptFilter
 
     
   </span>
@@ -6767,8 +7094,7 @@
   <span class="md-ellipsis">
     
   
-    searchThis
-  
+  searchThis
 
     
   </span>
@@ -6795,36 +7121,7 @@
   <span class="md-ellipsis">
     
   
-    searchInPlanning
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../5_configuration/menuAndAction/menu/select-web/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    select (web)
-  
+  searchInPlanning
 
     
   </span>
@@ -6851,8 +7148,34 @@
   <span class="md-ellipsis">
     
   
-    select
+  select
+
+    
+  </span>
   
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../5_configuration/menuAndAction/menu/select-web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  select (web)
 
     
   </span>
@@ -6879,8 +7202,7 @@
   <span class="md-ellipsis">
     
   
-    signature
-  
+  signature
 
     
   </span>
@@ -6907,8 +7229,7 @@
   <span class="md-ellipsis">
     
   
-    staticContent
-  
+  staticContent
 
     
   </span>
@@ -6935,8 +7256,7 @@
   <span class="md-ellipsis">
     
   
-    tab
-  
+  tab
 
     
   </span>
@@ -6963,8 +7283,7 @@
   <span class="md-ellipsis">
     
   
-    timeTracker
-  
+  timeTracker
 
     
   </span>
@@ -7007,8 +7326,7 @@
   <span class="md-ellipsis">
     
   
-    Favorites and Menu on Tabs
-  
+  Favorites and Menu on Tabs
 
     
   </span>
@@ -7035,8 +7353,7 @@
   <span class="md-ellipsis">
     
   
-    Drag and Drop (dnd)
-  
+  Drag and Drop (dnd)
 
     
   </span>
@@ -7063,8 +7380,7 @@
   <span class="md-ellipsis">
     
   
-    Offline - Data synchronization
-  
+  Offline - Data synchronization
 
     
   </span>
@@ -7091,8 +7407,7 @@
   <span class="md-ellipsis">
     
   
-    Working with variables/values
-  
+  Working with variables/values
 
     
   </span>
@@ -7119,8 +7434,7 @@
   <span class="md-ellipsis">
     
   
-    Default tree configurations
-  
+  Default tree configurations
 
     
   </span>
@@ -7147,8 +7461,7 @@
   <span class="md-ellipsis">
     
   
-    Public searches
-  
+  Public searches
 
     
   </span>
@@ -7175,8 +7488,7 @@
   <span class="md-ellipsis">
     
   
-    Defined searches
-  
+  Defined searches
 
     
   </span>
@@ -7203,8 +7515,7 @@
   <span class="md-ellipsis">
     
   
-    Gantt
-  
+  Gantt
 
     
   </span>
@@ -7231,8 +7542,7 @@
   <span class="md-ellipsis">
     
   
-    Table
-  
+  Table
 
     
   </span>
@@ -7259,8 +7569,7 @@
   <span class="md-ellipsis">
     
   
-    Matrix
-  
+  Matrix
 
     
   </span>
@@ -7287,8 +7596,7 @@
   <span class="md-ellipsis">
     
   
-    Kibana Dashboards
-  
+  Kibana Dashboards
 
     
   </span>
@@ -7315,8 +7623,7 @@
   <span class="md-ellipsis">
     
   
-    Dashboard Visualizations with Kibana
-  
+  Dashboard Visualizations with Kibana
 
     
   </span>
@@ -7343,8 +7650,7 @@
   <span class="md-ellipsis">
     
   
-    Push
-  
+  Push
 
     
   </span>
@@ -7371,8 +7677,7 @@
   <span class="md-ellipsis">
     
   
-    Fingerprint
-  
+  Fingerprint
 
     
   </span>
@@ -7399,8 +7704,7 @@
   <span class="md-ellipsis">
     
   
-    FileLink
-  
+  FileLink
 
     
   </span>
@@ -7427,8 +7731,7 @@
   <span class="md-ellipsis">
     
   
-    NFC
-  
+  NFC
 
     
   </span>
@@ -7455,8 +7758,7 @@
   <span class="md-ellipsis">
     
   
-    OCR
-  
+  OCR
 
     
   </span>
@@ -7483,8 +7785,7 @@
   <span class="md-ellipsis">
     
   
-    Insight-userprofile.json
-  
+  Insight-userprofile.json
 
     
   </span>
@@ -7511,8 +7812,7 @@
   <span class="md-ellipsis">
     
   
-    Charts
-  
+  Charts
 
     
   </span>
@@ -7539,8 +7839,7 @@
   <span class="md-ellipsis">
     
   
-    Hierarchical selection
-  
+  Hierarchical selection
 
     
   </span>
@@ -7567,8 +7866,7 @@
   <span class="md-ellipsis">
     
   
-    PERT
-  
+  PERT
 
     
   </span>
@@ -7595,8 +7893,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome page
-  
+  Welcome page
 
     
   </span>
@@ -7623,8 +7920,7 @@
   <span class="md-ellipsis">
     
   
-    Wizard
-  
+  Wizard
 
     
   </span>
@@ -7651,8 +7947,7 @@
   <span class="md-ellipsis">
     
   
-    Language
-  
+  Language
 
     
   </span>
@@ -7679,8 +7974,7 @@
   <span class="md-ellipsis">
     
   
-    VIEWAR
-  
+  VIEWAR
 
     
   </span>
@@ -7707,8 +8001,7 @@
   <span class="md-ellipsis">
     
   
-    Multiselection
-  
+  Multiselection
 
     
   </span>
@@ -7735,8 +8028,7 @@
   <span class="md-ellipsis">
     
   
-    Reports
-  
+  Reports
 
     
   </span>
@@ -7759,23 +8051,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_46" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_45" >
         
           
-          <label class="md-nav__link" for="__nav_11_46" id="__nav_11_46_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_45" id="__nav_5_45_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Ifc
-  
+  Ifc
 
     
   </span>
@@ -7785,13 +8079,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_46_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_46">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_45_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_45">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Ifc
-  
+  Ifc
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -7810,8 +8103,7 @@
   <span class="md-ellipsis">
     
   
-    IFC
-  
+  IFC
 
     
   </span>
@@ -7838,8 +8130,7 @@
   <span class="md-ellipsis">
     
   
-    Mapping
-  
+  Mapping
 
     
   </span>
@@ -7874,8 +8165,7 @@
   <span class="md-ellipsis">
     
   
-    Column Configuration
-  
+  Column Configuration
 
     
   </span>
@@ -7902,8 +8192,7 @@
   <span class="md-ellipsis">
     
   
-    Comments can be used in configurations
-  
+  Comments can be used in configurations
 
     
   </span>
@@ -7930,8 +8219,7 @@
   <span class="md-ellipsis">
     
   
-    CSV export configuration
-  
+  CSV export configuration
 
     
   </span>
@@ -7958,8 +8246,7 @@
   <span class="md-ellipsis">
     
   
-    Documents: Files and photos
-  
+  Documents: Files and photos
 
     
   </span>
@@ -7986,8 +8273,7 @@
   <span class="md-ellipsis">
     
   
-    Map
-  
+  Map
 
     
   </span>
@@ -8014,8 +8300,7 @@
   <span class="md-ellipsis">
     
   
-    Sorting
-  
+  Sorting
 
     
   </span>
@@ -8042,8 +8327,7 @@
   <span class="md-ellipsis">
     
   
-    Datasource Contributions
-  
+  Datasource Contributions
 
     
   </span>
@@ -8073,23 +8357,25 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Operating Manual
-  
+  Operating Manual
 
     
   </span>
@@ -8099,44 +8385,15 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Operating Manual
-  
+  Operating Manual
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_operating-manual/Indexer%20checklis/indexer-checklist/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Indexer Checklist
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -8152,8 +8409,7 @@
   <span class="md-ellipsis">
     
   
-    Address already in use
-  
+  Address already in use
 
     
   </span>
@@ -8180,8 +8436,7 @@
   <span class="md-ellipsis">
     
   
-    Anonymous Login
-  
+  Anonymous Login
 
     
   </span>
@@ -8208,8 +8463,7 @@
   <span class="md-ellipsis">
     
   
-    Apache Logging
-  
+  Apache Logging
 
     
   </span>
@@ -8236,8 +8490,7 @@
   <span class="md-ellipsis">
     
   
-    API Key Generation
-  
+  API Key Generation
 
     
   </span>
@@ -8264,8 +8517,7 @@
   <span class="md-ellipsis">
     
   
-    Avoid plain DB-Password
-  
+  Avoid plain DB-Password
 
     
   </span>
@@ -8292,8 +8544,7 @@
   <span class="md-ellipsis">
     
   
-    Barcode Scanner Devices
-  
+  Barcode Scanner Devices
 
     
   </span>
@@ -8320,8 +8571,7 @@
   <span class="md-ellipsis">
     
   
-    Blocking user or IP
-  
+  Blocking user or IP
 
     
   </span>
@@ -8348,8 +8598,7 @@
   <span class="md-ellipsis">
     
   
-    certificates
-  
+  certificates
 
     
   </span>
@@ -8376,8 +8625,7 @@
   <span class="md-ellipsis">
     
   
-    Checking For Expired Passwords
-  
+  Checking For Expired Passwords
 
     
   </span>
@@ -8404,8 +8652,7 @@
   <span class="md-ellipsis">
     
   
-    ClientLogging on mobile device
-  
+  ClientLogging on mobile device
 
     
   </span>
@@ -8432,8 +8679,7 @@
   <span class="md-ellipsis">
     
   
-    Config Migration
-  
+  Config Migration
 
     
   </span>
@@ -8460,8 +8706,7 @@
   <span class="md-ellipsis">
     
   
-    Continuous login
-  
+  Continuous login
 
     
   </span>
@@ -8488,8 +8733,7 @@
   <span class="md-ellipsis">
     
   
-    Configuration for changes in insight databases
-  
+  Configuration for changes in insight databases
 
     
   </span>
@@ -8516,8 +8760,7 @@
   <span class="md-ellipsis">
     
   
-    Dataimport and Update Elasticsearch (Maximo)
-  
+  Dataimport and Update Elasticsearch (Maximo)
 
     
   </span>
@@ -8544,8 +8787,7 @@
   <span class="md-ellipsis">
     
   
-    Deep Link Mobile
-  
+  Deep Link Mobile
 
     
   </span>
@@ -8572,8 +8814,7 @@
   <span class="md-ellipsis">
     
   
-    Changing Default-Port
-  
+  Changing Default-Port
 
     
   </span>
@@ -8600,8 +8841,7 @@
   <span class="md-ellipsis">
     
   
-    Scheduled deletion of old notifications
-  
+  Scheduled deletion of old notifications
 
     
   </span>
@@ -8628,8 +8868,7 @@
   <span class="md-ellipsis">
     
   
-    Deploy/Undeploy war-files
-  
+  Deploy/Undeploy war-files
 
     
   </span>
@@ -8656,8 +8895,7 @@
   <span class="md-ellipsis">
     
   
-    Download WSDL files for web services to SAP (SAP)
-  
+  Download WSDL files for web services to SAP (SAP)
 
     
   </span>
@@ -8684,8 +8922,7 @@
   <span class="md-ellipsis">
     
   
-    Indexerspecific EAM-properties
-  
+  Indexerspecific EAM-properties
 
     
   </span>
@@ -8712,8 +8949,7 @@
   <span class="md-ellipsis">
     
   
-    Elasticsearch security
-  
+  Elasticsearch security
 
     
   </span>
@@ -8740,8 +8976,7 @@
   <span class="md-ellipsis">
     
   
-    Adaption of ElasticSearch-Mapping
-  
+  Adaption of ElasticSearch-Mapping
 
     
   </span>
@@ -8768,8 +9003,7 @@
   <span class="md-ellipsis">
     
   
-    Fine tuning
-  
+  Fine tuning
 
     
   </span>
@@ -8796,8 +9030,7 @@
   <span class="md-ellipsis">
     
   
-    Gateway
-  
+  Gateway
 
     
   </span>
@@ -8824,8 +9057,7 @@
   <span class="md-ellipsis">
     
   
-    Heapdump
-  
+  Heapdump
 
     
   </span>
@@ -8852,8 +9084,34 @@
   <span class="md-ellipsis">
     
   
-    documents for Octave Attune
+  documents for Octave Attune
+
+    
+  </span>
   
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_operating-manual/Indexer%20checklis/indexer-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Indexer Checklist
 
     
   </span>
@@ -8880,64 +9138,7 @@
   <span class="md-ellipsis">
     
   
-    insight-gateway-token
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_operating-manual/insightCache/insight-cache/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Insight Cache
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_operating-manual/insight_SAP_logging/insight_SAP_logging/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Insight SAP logging file (SAP)
-  
+  insight-gateway-token
 
     
   </span>
@@ -8964,8 +9165,61 @@
   <span class="md-ellipsis">
     
   
-    Insight Migration
+  Insight Migration
+
+    
+  </span>
   
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_operating-manual/insight_SAP_logging/insight_SAP_logging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Insight SAP logging file (SAP)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_operating-manual/insightCache/insight-cache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Insight Cache
 
     
   </span>
@@ -8992,8 +9246,7 @@
   <span class="md-ellipsis">
     
   
-    Kibana only with Insight-Login
-  
+  Kibana only with Insight-Login
 
     
   </span>
@@ -9020,8 +9273,7 @@
   <span class="md-ellipsis">
     
   
-    LibMethods (OpenJet)
-  
+  LibMethods (OpenJet)
 
     
   </span>
@@ -9048,8 +9300,7 @@
   <span class="md-ellipsis">
     
   
-    Logging SQLs
-  
+  Logging SQLs
 
     
   </span>
@@ -9076,8 +9327,7 @@
   <span class="md-ellipsis">
     
   
-    Login
-  
+  Login
 
     
   </span>
@@ -9104,8 +9354,7 @@
   <span class="md-ellipsis">
     
   
-    Manual filter
-  
+  Manual filter
 
     
   </span>
@@ -9132,8 +9381,7 @@
   <span class="md-ellipsis">
     
   
-    Massdata
-  
+  Massdata
 
     
   </span>
@@ -9160,8 +9408,7 @@
   <span class="md-ellipsis">
     
   
-    Using maximo views for treeConfigs
-  
+  Using maximo views for treeConfigs
 
     
   </span>
@@ -9188,8 +9435,7 @@
   <span class="md-ellipsis">
     
   
-    New Download
-  
+  New Download
 
     
   </span>
@@ -9216,8 +9462,7 @@
   <span class="md-ellipsis">
     
   
-    OutOfMemory
-  
+  OutOfMemory
 
     
   </span>
@@ -9244,8 +9489,7 @@
   <span class="md-ellipsis">
     
   
-    Password Encryption
-  
+  Password Encryption
 
     
   </span>
@@ -9253,201 +9497,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_42" >
-        
-          
-          <label class="md-nav__link" for="__nav_12_42" id="__nav_12_42_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Performance
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_42_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12_42">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Performance
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_operating-manual/performance/downloadvalidate/downloadvalidate/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    reduce number of downloadvalidate requests
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_operating-manual/performance/heartbeat/heartbeat/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    heartbeat
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_operating-manual/performance/internalconnector/internalconnector/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    internal connector
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_operating-manual/performance/maxconnections/maxconnections/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Max Connections
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_operating-manual/performance/profiledb/profiledb/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Profile DB
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -9467,8 +9516,7 @@
   <span class="md-ellipsis">
     
   
-    port-offset
-  
+  port-offset
 
     
   </span>
@@ -9495,8 +9543,7 @@
   <span class="md-ellipsis">
     
   
-    precalculated downloads
-  
+  precalculated downloads
 
     
   </span>
@@ -9523,8 +9570,7 @@
   <span class="md-ellipsis">
     
   
-    Properties
-  
+  Properties
 
     
   </span>
@@ -9551,8 +9597,7 @@
   <span class="md-ellipsis">
     
   
-    reldb-feature
-  
+  reldb-feature
 
     
   </span>
@@ -9579,8 +9624,7 @@
   <span class="md-ellipsis">
     
   
-    replicate roles
-  
+  replicate roles
 
     
   </span>
@@ -9607,8 +9651,7 @@
   <span class="md-ellipsis">
     
   
-    Roles in Hybrid-Installations
-  
+  Roles in Hybrid-Installations
 
     
   </span>
@@ -9635,8 +9678,34 @@
   <span class="md-ellipsis">
     
   
-    Scheduler
+  Scheduler
+
+    
+  </span>
   
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_operating-manual/search/search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Search
 
     
   </span>
@@ -9663,8 +9732,7 @@
   <span class="md-ellipsis">
     
   
-    Self Service
-  
+  Self Service
 
     
   </span>
@@ -9691,8 +9759,7 @@
   <span class="md-ellipsis">
     
   
-    Storing uploaded files in database or filesystem
-  
+  Storing uploaded files in database or filesystem
 
     
   </span>
@@ -9719,8 +9786,7 @@
   <span class="md-ellipsis">
     
   
-    Third party cookies
-  
+  Third party cookies
 
     
   </span>
@@ -9747,8 +9813,7 @@
   <span class="md-ellipsis">
     
   
-    storing treeConfigs in maximo-db instead of filesystem
-  
+  storing treeConfigs in maximo-db instead of filesystem
 
     
   </span>
@@ -9775,8 +9840,7 @@
   <span class="md-ellipsis">
     
   
-    Troubleshooting
-  
+  Troubleshooting
 
     
   </span>
@@ -9803,8 +9867,7 @@
   <span class="md-ellipsis">
     
   
-    Activate Update-Mechanism (Maximo)
-  
+  Activate Update-Mechanism (Maximo)
 
     
   </span>
@@ -9831,8 +9894,7 @@
   <span class="md-ellipsis">
     
   
-    Upload documents
-  
+  Upload documents
 
     
   </span>
@@ -9859,8 +9921,7 @@
   <span class="md-ellipsis">
     
   
-    Configuration of database in wildfly / standalone.xml
-  
+  Configuration of database in wildfly / standalone.xml
 
     
   </span>
@@ -9887,8 +9948,7 @@
   <span class="md-ellipsis">
     
   
-    Using images with appropriate quality
-  
+  Using images with appropriate quality
 
     
   </span>
@@ -9915,8 +9975,7 @@
   <span class="md-ellipsis">
     
   
-    Wildfly ActiveMQ queue administration
-  
+  Wildfly ActiveMQ queue administration
 
     
   </span>
@@ -9943,8 +10002,7 @@
   <span class="md-ellipsis">
     
   
-    Wildfly Service
-  
+  Wildfly Service
 
     
   </span>
@@ -9952,6 +10010,197 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_61" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_61" id="__nav_6_61_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Performance
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_61_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_61">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Performance
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_operating-manual/performance/downloadvalidate/downloadvalidate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  reduce number of downloadvalidate requests
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_operating-manual/performance/heartbeat/heartbeat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  heartbeat
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_operating-manual/performance/internalconnector/internalconnector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  internal connector
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_operating-manual/performance/maxconnections/maxconnections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Max Connections
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_operating-manual/performance/profiledb/profiledb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Profile DB
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -9971,15 +10220,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../7_user-manual/search/search/" class="md-nav__link">
+      <a href="../../../licenses/notice/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Search
-  
+  Licenses
 
     
   </span>
@@ -9987,6 +10235,169 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Legal
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Legal
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/privacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Privacy Policy
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/copyright/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Copyright
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/eula/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  End User License Agreement
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/softwarepflegevertrag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Maintenance Provisions
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -10001,10 +10412,24 @@
               
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -10013,16 +10438,16 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#what-is-a-pwa" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         What is a PWA?
-      
+      </span>
     </span>
   </a>
   
@@ -10031,9 +10456,9 @@
         <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Installation
-      
+      </span>
     </span>
   </a>
   
@@ -10043,9 +10468,9 @@
           <li class="md-nav__item">
   <a href="#windows-chromeedge" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Windows (Chrome/Edge)
-      
+      </span>
     </span>
   </a>
   
@@ -10054,9 +10479,9 @@
           <li class="md-nav__item">
   <a href="#android" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Android
-      
+      </span>
     </span>
   </a>
   
@@ -10065,9 +10490,9 @@
           <li class="md-nav__item">
   <a href="#ios-safari" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         iOS (Safari)
-      
+      </span>
     </span>
   </a>
   
@@ -10081,9 +10506,9 @@
         <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Usage
-      
+      </span>
     </span>
   </a>
   
@@ -10093,9 +10518,9 @@
           <li class="md-nav__item">
   <a href="#starting-the-pwa" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Starting the PWA
-      
+      </span>
     </span>
   </a>
   
@@ -10104,9 +10529,9 @@
           <li class="md-nav__item">
   <a href="#app-experience" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         App Experience
-      
+      </span>
     </span>
   </a>
   
@@ -10120,9 +10545,9 @@
         <li class="md-nav__item">
   <a href="#advantages-over-electron" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Advantages over Electron
-      
+      </span>
     </span>
   </a>
   
@@ -10132,9 +10557,9 @@
           <li class="md-nav__item">
   <a href="#pwa-benefits" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         PWA Benefits
-      
+      </span>
     </span>
   </a>
   
@@ -10143,9 +10568,9 @@
           <li class="md-nav__item">
   <a href="#update-mechanism" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Update Mechanism
-      
+      </span>
     </span>
   </a>
   
@@ -10159,9 +10584,9 @@
         <li class="md-nav__item">
   <a href="#offline-capability" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Offline Capability
-      
+      </span>
     </span>
   </a>
   
@@ -10170,9 +10595,9 @@
         <li class="md-nav__item">
   <a href="#feature-support" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Feature Support
-      
+      </span>
     </span>
   </a>
   
@@ -10182,9 +10607,9 @@
           <li class="md-nav__item">
   <a href="#supported-features" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Supported Features
-      
+      </span>
     </span>
   </a>
   
@@ -10193,9 +10618,9 @@
           <li class="md-nav__item">
   <a href="#limitations" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Limitations
-      
+      </span>
     </span>
   </a>
   
@@ -10205,9 +10630,9 @@
           <li class="md-nav__item">
   <a href="#nfc-on-ios" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         NFC on iOS
-      
+      </span>
     </span>
   </a>
   
@@ -10216,9 +10641,9 @@
           <li class="md-nav__item">
   <a href="#push-notifications" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Push Notifications
-      
+      </span>
     </span>
   </a>
   
@@ -10248,8 +10673,6 @@
               <article class="md-content__inner md-typeset">
                 
                   
-
-
 
 <h1 id="progressive-web-app-pwa">Progressive Web App (PWA)<a class="headerlink" href="#progressive-web-app-pwa" title="Permanent link">&para;</a></h1>
 <h2 id="what-is-a-pwa">What is a PWA?<a class="headerlink" href="#what-is-a-pwa" title="Permanent link">&para;</a></h2>
@@ -10387,6 +10810,8 @@
 
 
 
+
+
                 
               </article>
             </div>
@@ -10411,8 +10836,8 @@
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
     </a>
   
 </div>
@@ -10430,10 +10855,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["tabs", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","content.tabs.link"],"redirect":null,"search":"../../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8dcc8e9c.min.js"></script>
       
     
   </body>
