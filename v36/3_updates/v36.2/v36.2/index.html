@@ -9878,12 +9878,17 @@ old coordinates must be updated. Rebuild and test Groovy-based integrations
 against Groovy 5 after changing the dependencies.</p>
 <h2 id="breaking-changes">Breaking Changes<a class="headerlink" href="#breaking-changes" title="Permanent link">&para;</a></h2>
 <ul>
+<li>Enable <a href="../../../6_operating-manual/replicateRoles/replicateRoles/">role replication</a> for OpenJet and Maximo</li>
 <li>v2 configuration requests are served with configurations stored in the <em>schemadb</em> database<ul>
 <li>Upload configurations via <a href="../../../5_configuration/configuration_setup/configuration_setup/">insight-cli</a></li>
-<li>Enable <a href="../../../6_operating-manual/replicateRoles/replicateRoles/">role replication</a> for OpenJet and Maximo</li>
 </ul>
 </li>
-<li>For configuration upload, the Insight server no longer needs to be reachable on port 8080. Upload is now performed via the application URL at <em>/insight</em>. Please change <em>INSIGHT_URL</em> environment variable and ?<code>--url</code> param for Insight CLI. See <a href="../../../5_configuration/configuration_setup/configuration_setup/#parameters">configuration_setup</a>.</li>
+<li>
+<p>For configuration upload, the Insight server no longer needs to be reachable on port 8080. Upload is now performed via the application URL at <em>/insight</em>. Please change <em>INSIGHT_URL</em> environment variable and ?<code>--url</code> param for Insight CLI. See <a href="../../../5_configuration/configuration_setup/configuration_setup/#parameters">configuration_setup</a>.</p>
+</li>
+<li>
+<p>Insight-Connector must be updated, see <a href="../../update/matrix/">compatibility matrix</a></p>
+</li>
 </ul>
 <h3 id="wildfly-41-and-jdk-25">Wildfly 41 and JDK 25<a class="headerlink" href="#wildfly-41-and-jdk-25" title="Permanent link">&para;</a></h3>
 <ul>
