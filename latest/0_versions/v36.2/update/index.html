@@ -739,6 +739,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#update-the-insight-connector" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Update the Insight Connector
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#update-the-insight-cli-endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -10327,6 +10338,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#update-the-insight-connector" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Update the Insight Connector
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#update-the-insight-cli-endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -10381,6 +10403,11 @@ for the relevant backend. For openTALOS projects, implement the
 <code>AuthorizationProcessor</code> interface and its <code>getRoles(userId)</code> method according
 to the project-specific backend requirements.</p>
 <p>After the update, verify that user roles are replicated successfully.</p>
+<h2 id="update-the-insight-connector">Update the Insight Connector<a class="headerlink" href="#update-the-insight-connector" title="Permanent link">&para;</a></h2>
+<p>Update the Insight Connector for v36.2 before deploying Insight v36.2. The
+Maximo-Connector 36.2.1 includes a breaking change to <code>attribute.options.hint</code>.
+See the <a href="../../compatibility-matrix/">compatibility matrix</a> for the required
+connector version and change details.</p>
 <h2 id="update-the-insight-cli-endpoint">Update the Insight CLI Endpoint<a class="headerlink" href="#update-the-insight-cli-endpoint" title="Permanent link">&para;</a></h2>
 <p>Configuration uploads now use the application URL, including the <code>/insight</code>
 path, rather than a direct server connection on port 8080. Update the
