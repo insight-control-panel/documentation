@@ -10424,16 +10424,21 @@
 <p>The following chapters describe the installation process.</p>
 <h2 id="step-1-preparation">Step 1: Preparation<a class="headerlink" href="#step-1-preparation" title="Permanent link">&para;</a></h2>
 <h3 id="bim-adapter-configuration">BIM-Adapter configuration<a class="headerlink" href="#bim-adapter-configuration" title="Permanent link">&para;</a></h3>
-<p>The BIM-Adapter requires an S3-compatible object storage.
-Additionally to the standard environment variables for S3, it is required to configure the following variable. Please make sure the bucket exists in S3:</p>
+<p>The BIM-Adapter requires an S3-compatible object storage. The recommended S3 storage is <a href="https://github.com/seaweedfs/seaweedfs/wiki/Quick-Start-with-weed-mini">SeaweedFS</a>.</p>
+<p>Additionally to the standard environment variables for S3, it is required to configure the following variable. Please make sure the bucket exists in S3:</p>
 <ul>
 <li><code>INSIGHT_IFC_BUCKET_NAME</code> - name of the S3 bucket where IFC files are stored.</li>
+</ul>
+<p>Optionally, you can configure the signing region for S3 requests by setting the following environment variable:</p>
+<ul>
+<li><code>INSIGHT_S3_REGION</code> - the signing region for S3 requests. If not set, the default region <code>eu-central-1</code> will be used.</li>
 </ul>
 <p>Example:</p>
 <div class="highlight"><pre><span></span><code><span class="na">INSIGHT_S3_URL</span><span class="o">=</span><span class="s">https://s3.api.domain.example</span>
 <span class="na">INSIGHT_S3_KEY</span><span class="o">=</span><span class="s">...</span>
 <span class="na">INSIGHT_S3_SECRET</span><span class="o">=</span><span class="s">...</span>
 <span class="na">INSIGHT_IFC_BUCKET_NAME</span><span class="o">=</span><span class="s">insight-ifc</span>
+<span class="na">INSIGHT_S3_REGION</span><span class="o">=</span><span class="s">us-east-1</span>
 </code></pre></div>
 <p>The following properties must be set in the following file:</p>
 <p><strong>wildfly\standalone\configuration\insight-bim-adapter.properties</strong></p>
