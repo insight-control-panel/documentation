@@ -25,7 +25,7 @@
     
     
       
-        <title>v36.2 - Insight Manual</title>
+        <title>Release Notes - Insight Manual</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#v362" class="md-skip">
+        <a href="#release-notes-v362" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              v36.2
+              Release Notes
             
           </span>
         </div>
@@ -788,7 +788,7 @@
   <span class="md-ellipsis">
     
   
-    v36.2
+    Release Notes
   
 
     
@@ -806,7 +806,7 @@
   <span class="md-ellipsis">
     
   
-    v36.2
+    Release Notes
   
 
     
@@ -9354,7 +9354,7 @@
   <span class="md-ellipsis">
     
   
-    replicate roles
+    Role Replication
   
 
     
@@ -9859,7 +9859,7 @@
 
 
 
-<h1 id="v362">v36.2<a class="headerlink" href="#v362" title="Permanent link">&para;</a></h1>
+<h1 id="release-notes-v362">Release Notes v36.2<a class="headerlink" href="#release-notes-v362" title="Permanent link">&para;</a></h1>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <ul>
 <li>v2 configurations are persisted in the <em>schemadb</em> database. Incoming configuration requests are resolved based on the data stored in this database.</li>
@@ -9880,9 +9880,15 @@
 </ul>
 <h2 id="breaking-changes">Breaking Changes<a class="headerlink" href="#breaking-changes" title="Permanent link">&para;</a></h2>
 <ul>
+<li>Role replication is mandatory with Insight v36.2. Starting with v36.2.9,
+  <code>roles.replication.type</code> defaults from <code>eam.type</code>; earlier v36.2 patch
+  versions require the property to be set explicitly. See the <a href="update.md#configure-role-replication">v36.2 update
+  guide</a>.</li>
+<li>The Insight Connector must be updated for v36.2. See the <a href="update.md#update-the-insight-connector">v36.2 update
+  guide</a> and <a href="../compatibility-matrix.md">compatibility
+  matrix</a>.</li>
 <li>It is no longer necessary to explicitly define type information for attributes with <strong>Maximo</strong> backend. Attribute types are now determined automatically based on the types defined in Maximo. If required, the automatically determined type can be overridden by explicitly configuring the <em>type</em> property.</li>
 <li>The Insight CLI upload is now performed via the application URL at <em>/insight</em>. See <a href="../../../5_configuration/configuration_setup/configuration_setup/#parameters">configuration_setup</a>.</li>
-<li>Enable <a href="../../../6_operating-manual/replicateRoles/replicateRoles/">role replication</a> for OpenJet and Maximo</li>
 </ul>
 <h3 id="wildfly-41-and-jdk-25">Wildfly 41 and JDK 25<a class="headerlink" href="#wildfly-41-and-jdk-25" title="Permanent link">&para;</a></h3>
 <ul>
@@ -9895,7 +9901,7 @@
 <li>Custom extensions and builds that depend on the bundled Groovy libraries must
   be migrated to Groovy 5 and the <code>org.apache.groovy</code> Maven group ID.</li>
 </ul>
-<p>See the <a href="../../../3_updates/v36.2/v36.2/">v36.2 update guide</a> for the required
+<p>See the <a href="update.md">v36.2 update guide</a> for the required
 migration steps.</p>
 
 
@@ -9903,6 +9909,9 @@ migration steps.</p>
 
 
 
+
+  
+  
 
 
 
