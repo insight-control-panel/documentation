@@ -10363,8 +10363,10 @@
 </ul>
 <h2 id="breaking-changes">Breaking Changes<a class="headerlink" href="#breaking-changes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Role replication is mandatory with Insight v36.2. See the <a href="../update/#enable-role-replication">v36.2 update
-  guide</a> for the required steps.</li>
+<li>Role replication is mandatory with Insight v36.2. Starting with v36.2.9,
+  <code>roles.replication.type</code> defaults from <code>eam.type</code>; earlier v36.2 patch
+  versions require the property to be set explicitly. See the <a href="../update/#configure-role-replication">v36.2 update
+  guide</a>.</li>
 <li>The Insight Connector must be updated for v36.2. See the <a href="../update/#update-the-insight-connector">v36.2 update
   guide</a> and <a href="../../compatibility-matrix/">compatibility
   matrix</a>.</li>

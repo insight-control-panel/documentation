@@ -728,10 +728,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#enable-role-replication" class="md-nav__link">
+  <a href="#configure-role-replication" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Enable Role Replication
+        Configure Role Replication
       </span>
     </span>
   </a>
@@ -10327,10 +10327,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#enable-role-replication" class="md-nav__link">
+  <a href="#configure-role-replication" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Enable Role Replication
+        Configure Role Replication
       </span>
     </span>
   </a>
@@ -10396,13 +10396,11 @@ images:</p>
 <a href="../../../5_configuration/configuration_setup/configuration_setup/">Insight CLI</a>.
 This is required because v2 configurations are loaded from the SchemaDB of the
 Insight Middleware and must be available there.</p>
-<h2 id="enable-role-replication">Enable Role Replication<a class="headerlink" href="#enable-role-replication" title="Permanent link">&para;</a></h2>
-<p>This is a breaking change: role replication is mandatory with Insight v36.2.</p>
-<p>Before deploying v36.2, configure <a href="../../../6_operating-manual/replicateRoles/replicateRoles/">role replication</a>
-for the relevant backend. For openTALOS projects, implement the
-<code>AuthorizationProcessor</code> interface and its <code>getRoles(userId)</code> method according
-to the project-specific backend requirements.</p>
-<p>After the update, verify that user roles are replicated successfully.</p>
+<h2 id="configure-role-replication">Configure Role Replication<a class="headerlink" href="#configure-role-replication" title="Permanent link">&para;</a></h2>
+<p>Role replication is mandatory with v36.2.0. Configure
+<code>roles.replication.type</code> explicitly through v36.2.8; from v36.2.9, the default
+is derived from <code>eam.type</code>. See the <a href="../../../6_operating-manual/replicateRoles/replicateRoles/">role replication guide</a>
+for the default mapping and configuration details.</p>
 <h2 id="update-the-insight-connector">Update the Insight Connector<a class="headerlink" href="#update-the-insight-connector" title="Permanent link">&para;</a></h2>
 <p>Update the Insight Connector for v36.2 before deploying Insight v36.2. The
 Maximo-Connector 36.2.1 includes a breaking change to <code>attribute.options.hint</code>.

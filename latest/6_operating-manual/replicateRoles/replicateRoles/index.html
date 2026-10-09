@@ -10329,8 +10329,42 @@
 <h1 id="role-replication">Role Replication<a class="headerlink" href="#role-replication" title="Permanent link">&para;</a></h1>
 <p>During user login, Insight replicates the current backend roles to the
 <code>insightdb.role</code> table. Existing role entries for that user are replaced.</p>
-<p>Set <code>roles.replication.type</code> in <code>insight.properties</code> according to the backend.
-The property values are lowercase.</p>
+<p>The default for <code>roles.replication.type</code> is derived from <code>eam.type</code>:</p>
+<table>
+<thead>
+<tr>
+<th><code>eam.type</code></th>
+<th>Default for <code>roles.replication.type</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>maximo</code></td>
+<td><code>maximo</code></td>
+</tr>
+<tr>
+<td><code>openjet</code></td>
+<td><code>open</code></td>
+</tr>
+<tr>
+<td><code>standalone</code></td>
+<td><code>keycloak</code></td>
+</tr>
+<tr>
+<td><code>hxgn</code></td>
+<td><code>hxgn</code></td>
+</tr>
+<tr>
+<td>not set or another value</td>
+<td><code>none</code></td>
+</tr>
+</tbody>
+</table>
+<p>An explicit <code>roles.replication.type</code> value overrides this default. If the
+calculated default is appropriate for your backend, the explicit property is
+not needed and an existing entry can be removed. Set the property to <code>none</code> to
+disable role replication.</p>
+<p>Property values are lowercase.</p>
 <h2 id="maximo">Maximo<a class="headerlink" href="#maximo" title="Permanent link">&para;</a></h2>
 <p>For Maximo and hybrid installations, replicate roles from Maximo. This is
 required when Insight Planner uses Maximo roles.</p>
