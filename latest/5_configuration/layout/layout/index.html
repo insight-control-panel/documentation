@@ -12309,13 +12309,17 @@
 <ul>
 <li><code>bucket</code>: title of the additional parent node</li>
 <li><code>bucketIcon</code>: icon used to decorate the bucket</li>
+<li><code>bucketClass</code>: CSS class(es) applied to the bucket label, e.g. one of the <code>color-*</code> classes also usable with <code>bucketIcon</code>, or <code>bold</code>/<code>italic</code></li>
 <li><code>bucketExpanded</code>: Shows the bucket initially expanded. (insight-mobile only, in insight-explorer the user can configure the expanded nodes)</li>
 <li><code>bucketMode</code>: Instead of displaying the entries directly, the bucket links to the separate view. (Please set only when needed)</li>
 <li><code>headerOnly</code>: No children are displayed inline.</li>
-<li><code>hidden</code>: Bucket is not visible</li>
+<li><code>hidden</code>: Bucket and its children are not visible anywhere.</li>
+<li><code>treeOnly</code>: The bucket grouping is only used in the Insight Explorer tree; on the details page the children are shown directly, without a bucket.</li>
+<li><code>detailsOnly</code>: The bucket grouping is only used on the details page; in the Insight Explorer tree the children are shown directly, without a bucket.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nt">"bucket"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arbeitsaufträge (abgeschlossen)"</span><span class="p">,</span>
 <span class="nt">"bucketIcon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"icon-wrench color-blue"</span><span class="p">,</span>
+<span class="nt">"bucketClass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color-blue"</span><span class="p">,</span>
 <span class="nt">"bucketMode"</span><span class="p">:</span><span class="w"> </span><span class="nt">"headerOnly"</span>
 <span class="nt">"bucketExpanded"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 </code></pre></div>

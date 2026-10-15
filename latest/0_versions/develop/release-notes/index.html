@@ -10329,6 +10329,11 @@
   remove them. All other filter entries keep the previous, silent
   background-filter behavior.</li>
 <li>During schema upload, tree-based role configurations are transformed into permissions (for authz.origin=roles).</li>
+<li>Backend searches using the <code>childNode/ATTRIBUTE</code> format can now also
+  reference a child node in a 1:N relation, not just an inline (1:1)
+  relation. The search runs over the child records, but only the parent
+  record is returned. See <a href="../../../5_configuration/definedSearches/defined-searches/#backend-search-attribute-search-fields">Backend search, attribute search
+  fields</a>.</li>
 </ul>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
 <ul>

@@ -39,9 +39,7 @@
             "anyOf": [
                 {
                     "type": "string",
-                    "enum": [
-                        "es"
-                    ],
+                    "enum": ["es"],
                     "description": "ElasticSearch Persistence"
                 }
             ]
@@ -54,9 +52,7 @@
                 "type": "string",
                 "anyOf": [
                     {
-                        "enum": [
-                            "all"
-                        ],
+                        "enum": ["all"],
                         "description": "All Security Roles"
                     },
                     {}
@@ -111,12 +107,7 @@
                 },
                 "mode": {
                     "type": "string",
-                    "enum": [
-                        "auto",
-                        "view",
-                        "auto_view",
-                        "onlineOnly"
-                    ]
+                    "enum": ["auto", "view", "auto_view", "onlineOnly"]
                 },
                 "acrossUsers": {
                     "description": "With the acrossUsers switch, downloads can be saved on the device for all users.",
@@ -173,18 +164,13 @@
                         }
                     },
                     "labelWidth": {
-                        "type": [
-                            "number",
-                            "string"
-                        ],
+                        "type": ["number", "string"],
                         "description": "This attribute label gets the width in px. Works only with labelBeside = true",
                         "default": "100"
                     }
                 },
                 "additionalProperties": false,
-                "required": [
-                    "name"
-                ],
+                "required": ["name"],
                 "default": {
                     "name": "",
                     "label": "",
@@ -239,16 +225,12 @@
                                 "type": "object"
                             }
                         },
-                        "required": [
-                            "url"
-                        ]
+                        "required": ["url"]
                     },
                     "checkBefore": {
                         "type": "string",
                         "description": "Checks something before executing the action.",
-                        "enum": [
-                            "favorite-exists"
-                        ]
+                        "enum": ["favorite-exists"]
                     },
                     "resize": {
                         "type": "boolean",
@@ -264,10 +246,7 @@
                     }
                 },
                 "additionalProperties": false,
-                "required": [
-                    "src",
-                    "action"
-                ]
+                "required": ["src", "action"]
             },
             "default": []
         },
@@ -276,27 +255,19 @@
             "type": "string",
             "oneOf": [
                 {
-                    "enum": [
-                        "search"
-                    ],
+                    "enum": ["search"],
                     "description": "no initial listing (if there are too many results expected) listing refers to search entries"
                 },
                 {
-                    "enum": [
-                        "select"
-                    ],
+                    "enum": ["select"],
                     "description": "no initial listing, only nodes selected from search will be shown in tree"
                 },
                 {
-                    "enum": [
-                        "createOnly"
-                    ],
+                    "enum": ["createOnly"],
                     "description": "create button in top level section; listing of created data sets (offline)"
                 },
                 {
-                    "enum": [
-                        "filter"
-                    ],
+                    "enum": ["filter"],
                     "description": "no initial listing, a filter must be activated"
                 }
             ]
@@ -333,11 +304,7 @@
                         "type": "string"
                     },
                     "value": {
-                        "type": [
-                            "string",
-                            "number",
-                            "boolean"
-                        ]
+                        "type": ["string", "number", "boolean"]
                     },
                     "label": {
                         "type": "string"
@@ -353,9 +320,7 @@
                     }
                 }
             },
-            "default": [
-                {}
-            ]
+            "default": [{}]
         },
         "clearSearch": {
             "type": "boolean",
@@ -366,21 +331,15 @@
             "description": "Automatically add * wildcards while searching.",
             "oneOf": [
                 {
-                    "enum": [
-                        "startsWith"
-                    ],
+                    "enum": ["startsWith"],
                     "description": "Example: test*"
                 },
                 {
-                    "enum": [
-                        "contains"
-                    ],
+                    "enum": ["contains"],
                     "description": "Example: *test*"
                 },
                 {
-                    "enum": [
-                        "endsWith"
-                    ],
+                    "enum": ["endsWith"],
                     "description": "Example: *test"
                 }
             ]
@@ -404,9 +363,7 @@
             "items": {
                 "type": "string"
             },
-            "default": [
-                ""
-            ]
+            "default": [""]
         },
         "changedOfflineAtEnd": {
             "type": "boolean",
@@ -458,14 +415,10 @@
                     "items": {
                         "type": "string"
                     },
-                    "default": [
-                        ""
-                    ]
+                    "default": [""]
                 },
                 "default": {
-                    "trees": [
-                        ""
-                    ]
+                    "trees": [""]
                 }
             }
         },
@@ -483,10 +436,7 @@
             "$ref": "#/definitions/treeObject"
         },
         "labelWidth": {
-            "type": [
-                "number",
-                "string"
-            ],
+            "type": ["number", "string"],
             "description": "This attribute label gets the width in px. Works only with labelBeside = true",
             "default": "100"
         },
@@ -501,11 +451,7 @@
             "default": true
         },
         "viewar": {
-            "required": [
-                "attributes",
-                "map",
-                "settings"
-            ],
+            "required": ["attributes", "map", "settings"],
             "properties": {
                 "attributes": {
                     "description": "Attributes that need to be specified for VIEWAR.",
@@ -539,9 +485,7 @@
                 },
                 "map": {
                     "description": "",
-                    "required": [
-                        "tree"
-                    ],
+                    "required": ["tree"],
                     "type": "object",
                     "properties": {
                         "tree": {
@@ -555,19 +499,13 @@
                 },
                 "settings": {
                     "type": "object",
-                    "required": [
-                        "version"
-                    ],
+                    "required": ["version"],
                     "anyOf": [
                         {
-                            "required": [
-                                "appId"
-                            ]
+                            "required": ["appId"]
                         },
                         {
-                            "required": [
-                                "url"
-                            ]
+                            "required": ["url"]
                         }
                     ],
                     "properties": {
@@ -607,14 +545,7 @@
         }
     },
     "additionalProperties": false,
-    "required": [
-        "name",
-        "roles",
-        "title",
-        "icon",
-        "root",
-        "visibleIn"
-    ],
+    "required": ["name", "roles", "title", "icon", "root", "visibleIn"],
     "definitions": {
         "selectFromTreeConfig": {
             "type": "object",
@@ -716,10 +647,7 @@
                     "type": "boolean",
                     "disabled": true,
                     "default": false,
-                    "enum": [
-                        true,
-                        false
-                    ]
+                    "enum": [true, false]
                 },
                 "query": {
                     "type": "object",
@@ -738,10 +666,7 @@
                                 }
                             },
                             "additionalProperties": false,
-                            "required": [
-                                "name",
-                                "attribute"
-                            ]
+                            "required": ["name", "attribute"]
                         },
                         {
                             "type": "object",
@@ -759,10 +684,7 @@
                                             }
                                         },
                                         "additionalProperties": false,
-                                        "required": [
-                                            "name",
-                                            "attribute"
-                                        ]
+                                        "required": ["name", "attribute"]
                                     }
                                 }
                             }
@@ -801,9 +723,7 @@
                         }
                     },
                     "additionalProperties": false,
-                    "required": [
-                        "attribute"
-                    ]
+                    "required": ["attribute"]
                 },
                 "children": {
                     "type": "array",
@@ -1073,11 +993,7 @@
                         "align": {
                             "description": "Alignment of text within a task",
                             "type": "string",
-                            "enum": [
-                                "left",
-                                "center",
-                                "right"
-                            ]
+                            "enum": ["left", "center", "right"]
                         },
                         "pattern": {
                             "description": "Alignment of text within a task",
@@ -1127,17 +1043,34 @@
                 "bucketIcon": {
                     "type": "string"
                 },
+                "bucketClass": {
+                    "type": "string",
+                    "description": "CSS class(es) applied to the bucket label",
+                    "enum": [
+                        "bold",
+                        "italic",
+                        "color-red",
+                        "color-yellow",
+                        "color-green",
+                        "color-blue",
+                        "color-white",
+                        "color-black",
+                        "color-orange",
+                        "color-light-red",
+                        "color-light-yellow",
+                        "color-light-green",
+                        "color-light-blue",
+                        "color-light-orange"
+                    ]
+                },
                 "bucketExpanded": {
                     "type": "boolean",
                     "description": "Shows the bucket initially expanded. (insight-mobile only, in insight-explorer the user can configure the expanded nodes)"
                 },
                 "bucketMode": {
                     "type": "string",
-                    "description": "Instead of displaying the entries directly, the bucket links to the separate view. 'headerOnly': No children are displayed inline. 'hidden': Bucket is not visible.",
-                    "enum": [
-                        "headerOnly",
-                        "hidden"
-                    ]
+                    "description": "Instead of displaying the entries directly, the bucket links to the separate view. 'headerOnly': No children are displayed inline. 'hidden': Bucket and its children are not visible anywhere. 'treeOnly': The bucket grouping is only used in the Insight Explorer tree; on the details page the children are shown directly, without a bucket. 'detailsOnly': The bucket grouping is only used on the details page; in the Insight Explorer tree the children are shown directly, without a bucket.",
+                    "enum": ["headerOnly", "hidden", "treeOnly", "detailsOnly"]
                 },
                 "bucketCompact": {
                     "type": "boolean",
@@ -1364,11 +1297,7 @@
                                 }
                             }
                         },
-                        "required": [
-                            "label",
-                            "name",
-                            "type"
-                        ]
+                        "required": ["label", "name", "type"]
                     },
                     "default": []
                 },
@@ -1398,10 +1327,7 @@
                     "description": "'Attributename'. Sets focus on attribute 'Attributename' in detail view of created node record (precaution: 'saveAndNew':true)"
                 },
                 "saveAndNext": {
-                    "type": [
-                        "boolean",
-                        "object"
-                    ],
+                    "type": ["boolean", "object"],
                     "description": "Displays the next list entry after saving",
                     "properties": {
                         "true": {
@@ -1499,10 +1425,7 @@
                     "default": "bold color-red"
                 },
                 "labelWidth": {
-                    "type": [
-                        "number",
-                        "string"
-                    ],
+                    "type": ["number", "string"],
                     "description": "This attribute label gets the width in px. Works only with labelBeside = true",
                     "default": "100"
                 },
@@ -1557,10 +1480,7 @@
                         },
                         "type": {
                             "type": "string",
-                            "enum": [
-                                "input",
-                                "action"
-                            ]
+                            "enum": ["input", "action"]
                         }
                     }
                 },
@@ -1571,10 +1491,7 @@
                         "position": {
                             "type": "string",
                             "description": "Position of the tab bar.",
-                            "enum": [
-                                "top",
-                                "bottom"
-                            ],
+                            "enum": ["top", "bottom"],
                             "default": "top"
                         },
                         "entries": {
@@ -1629,9 +1546,7 @@
                                         }
                                     }
                                 },
-                                "required": [
-                                    "type"
-                                ]
+                                "required": ["type"]
                             }
                         }
                     }
@@ -1650,10 +1565,7 @@
                         "method": {
                             "type": "string",
                             "description": "http method",
-                            "enum": [
-                                "GET",
-                                "POST"
-                            ]
+                            "enum": ["GET", "POST"]
                         },
                         "params": {
                             "description": "http POST or GET parameters",
@@ -1685,17 +1597,11 @@
                 "matrix": {
                     "description": "Web only: Shows a matrix table.",
                     "type": "object",
-                    "required": [
-                        "row",
-                        "column"
-                    ],
+                    "required": ["row", "column"],
                     "properties": {
                         "row": {
                             "description": "The attribute name or multiple which is used as the rows (y-axis).",
-                            "type": [
-                                "string",
-                                "array"
-                            ],
+                            "type": ["string", "array"],
                             "items": {
                                 "type": "string"
                             },
@@ -1703,10 +1609,7 @@
                         },
                         "column": {
                             "description": "The attribute name or multiple which is used as the columns (x-axis).",
-                            "type": [
-                                "string",
-                                "array"
-                            ],
+                            "type": ["string", "array"],
                             "items": {
                                 "type": "string"
                             },
@@ -1715,10 +1618,7 @@
                         "value": {
                             "description": "Configuration of the matrix values. If not set the count is used as value.",
                             "type": "object",
-                            "required": [
-                                "attributes",
-                                "types"
-                            ],
+                            "required": ["attributes", "types"],
                             "properties": {
                                 "attributes": {
                                     "description": "The attributes which can be used as values.",
@@ -1768,9 +1668,7 @@
                                             "avg"
                                         ]
                                     },
-                                    "default": [
-                                        "sum"
-                                    ]
+                                    "default": ["sum"]
                                 },
                                 "summaryCol": {
                                     "description": "Shows a sum column at the right of the matrix.",
@@ -1785,9 +1683,7 @@
                                             "avg"
                                         ]
                                     },
-                                    "default": [
-                                        "sum"
-                                    ]
+                                    "default": ["sum"]
                                 },
                                 "edit": {
                                     "description": "Sets the matrix into edit mode and allows the modification of values if type is single.",
@@ -1819,10 +1715,7 @@
                                             "pattern": "^#[0-9A-F]{6}$"
                                         }
                                     },
-                                    "required": [
-                                        "start",
-                                        "end"
-                                    ]
+                                    "required": ["start", "end"]
                                 }
                             }
                         }
@@ -1844,11 +1737,7 @@
                                 "pageSizeOptions": {
                                     "description": "Array of options for page sizes.",
                                     "type": "array",
-                                    "default": [
-                                        5,
-                                        10,
-                                        20
-                                    ]
+                                    "default": [5, 10, 20]
                                 },
                                 "edit": {
                                     "description": "Defines if values in the table can be edited.",
@@ -1906,9 +1795,7 @@
                                             "description": "The attributes which should be summed",
                                             "type": "array",
                                             "items": {
-                                                "required": [
-                                                    "name"
-                                                ],
+                                                "required": ["name"],
                                                 "type": "object",
                                                 "properties": {
                                                     "name": {
@@ -1926,10 +1813,7 @@
                                 },
                                 "columnConfiguration": {
                                     "description": "Lets the user show/hide/reorder columns of the table.",
-                                    "type": [
-                                        "object",
-                                        "boolean"
-                                    ],
+                                    "type": ["object", "boolean"],
                                     "additionalProperties": {
                                         "type": "boolean"
                                     },
@@ -1937,10 +1821,7 @@
                                 },
                                 "filterPopup": {
                                     "description": "Shows filter popups for all or the specified columns",
-                                    "type": [
-                                        "array",
-                                        "boolean"
-                                    ],
+                                    "type": ["array", "boolean"],
                                     "default": true
                                 },
                                 "datagrid": {
@@ -2031,15 +1912,11 @@
                                                                 "description": "Optional style override for this specific group."
                                                             }
                                                         },
-                                                        "required": [
-                                                            "name"
-                                                        ]
+                                                        "required": ["name"]
                                                     }
                                                 }
                                             },
-                                            "required": [
-                                                "entries"
-                                            ]
+                                            "required": ["entries"]
                                         }
                                     },
                                     "additionalProperties": false
@@ -2062,10 +1939,7 @@
                             "properties": {
                                 "attributes": {
                                     "description": "The attributes that will support filter functionality. Either list all attributes that will support client side filtering, or set attributes to true for all attributes to support filtering.",
-                                    "type": [
-                                        "array",
-                                        "boolean"
-                                    ],
+                                    "type": ["array", "boolean"],
                                     "default": true
                                 }
                             }
@@ -2081,9 +1955,7 @@
                             "type": "array",
                             "items": {
                                 "$ref": "#/definitions/attribute",
-                                "required": [
-                                    "name"
-                                ],
+                                "required": ["name"],
                                 "suppressFilter": {
                                     "description": "Suppress the filter on roots",
                                     "type": "boolean",
@@ -2104,9 +1976,7 @@
                         "textOverflow": {
                             "description": "Truncate at the end of a line and attach ...",
                             "type": "string",
-                            "enum": [
-                                "ellipsis"
-                            ],
+                            "enum": ["ellipsis"],
                             "default": "ellipsis"
                         },
                         "sort": {
@@ -2123,10 +1993,7 @@
                             "properties": {
                                 "attributes": {
                                     "description": "The attributes that will support filter functionality. Either list all attributes that will support client side filtering, or set attributes to true for all attributes to support filtering.",
-                                    "type": [
-                                        "array",
-                                        "boolean"
-                                    ],
+                                    "type": ["array", "boolean"],
                                     "default": true
                                 }
                             }
@@ -2158,9 +2025,7 @@
                             "type": "array",
                             "items": {
                                 "$ref": "#/definitions/attribute",
-                                "required": [
-                                    "name"
-                                ]
+                                "required": ["name"]
                             }
                         }
                     }
@@ -2170,14 +2035,10 @@
                     "type": "object",
                     "anyOf": [
                         {
-                            "required": [
-                                "url"
-                            ]
+                            "required": ["url"]
                         },
                         {
-                            "required": [
-                                "data"
-                            ]
+                            "required": ["data"]
                         }
                     ],
                     "properties": {
@@ -2239,10 +2100,7 @@
                 "query": {},
                 "attributes": []
             },
-            "required": [
-                "name",
-                "attributes"
-            ]
+            "required": ["name", "attributes"]
         },
         "visibleIn": {
             "description": "Perspectives",
@@ -2251,47 +2109,33 @@
                 "type": "string",
                 "anyOf": [
                     {
-                        "enum": [
-                            "web"
-                        ],
+                        "enum": ["web"],
                         "title": "Insight Explorer",
                         "description": "Enables Insight Explorer and Insight X-Ray"
                     },
                     {
-                        "enum": [
-                            "tab"
-                        ],
+                        "enum": ["tab"],
                         "title": "Insight Tab",
                         "description": "Enables configuration to be shown in Insight Tab Menu"
                     },
                     {
-                        "enum": [
-                            "mobile"
-                        ],
+                        "enum": ["mobile"],
                         "title": "Insight Mobile",
                         "description": "Enables Insight Mobile"
                     },
                     {
-                        "enum": [
-                            "no-web"
-                        ],
+                        "enum": ["no-web"],
                         "title": "Insight Mobile",
                         "description": "Required for Database Adapters"
                     }
                 ]
             },
             "uniqueItems": true,
-            "default": [
-                "web",
-                "mobile"
-            ]
+            "default": ["web", "mobile"]
         },
         "barcode": {
             "description": "True renders a barcode icon beside the input field. After pressing this button the barcode can be fetched via camera plugin.",
-            "type": [
-                "boolean",
-                "object"
-            ],
+            "type": ["boolean", "object"],
             "properties": {
                 "boxSize": {
                     "type": "object",
@@ -2362,9 +2206,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [
-                "attribute"
-            ]
+            "required": ["attribute"]
         },
         "grouping": {
             "description": "Allows to put objects into chunks and/or group them together by certain attribute values",
@@ -2435,10 +2277,7 @@
                     "default": "50"
                 },
                 "labelWidth": {
-                    "type": [
-                        "number",
-                        "string"
-                    ],
+                    "type": ["number", "string"],
                     "description": "This attribute label gets the width in px. Works only with labelBeside = true",
                     "default": "100"
                 },
@@ -2604,21 +2443,13 @@
                 "floating": {
                     "description": "The Attribute is next to the previous one.",
                     "type": "string",
-                    "enum": [
-                        "fix",
-                        "responsive"
-                    ],
+                    "enum": ["fix", "responsive"],
                     "default": "fix"
                 },
                 "control": {
                     "description": "hidden, disabled, enabled or createOnly",
                     "type": "string",
-                    "enum": [
-                        "enabled",
-                        "disabled",
-                        "hidden",
-                        "createOnly"
-                    ],
+                    "enum": ["enabled", "disabled", "hidden", "createOnly"],
                     "default": ""
                 },
                 "excludeExpertSearch": {
@@ -2690,10 +2521,7 @@
                     "properties": {
                         "inResult": {
                             "type": "string",
-                            "enum": [
-                                "show",
-                                "hide"
-                            ],
+                            "enum": ["show", "hide"],
                             "description": "Hide/Show an attribute in search result list"
                         },
                         "or": {
@@ -2702,9 +2530,7 @@
                             "items": {
                                 "type": "string"
                             },
-                            "default": [
-                                ""
-                            ]
+                            "default": [""]
                         },
                         "boost": {
                             "type": "number",
@@ -2713,9 +2539,7 @@
                         }
                     },
                     "default": {
-                        "or": [
-                            ""
-                        ]
+                        "or": [""]
                     }
                 },
                 "decimalPointHidden": {
@@ -2736,10 +2560,7 @@
                 "dirtyCheck": {
                     "type": "string",
                     "description": "Include or exclude from dirty check of detail pages.",
-                    "enum": [
-                        "include",
-                        "exclude"
-                    ]
+                    "enum": ["include", "exclude"]
                 },
                 "mustWrite": {
                     "type": "boolean",
@@ -2754,9 +2575,7 @@
                             "type": "string",
                             "anyOf": [
                                 {
-                                    "enum": [
-                                        "text"
-                                    ],
+                                    "enum": ["text"],
                                     "description": "assigns a value"
                                 },
                                 {}
@@ -2771,21 +2590,15 @@
                             "type": "string",
                             "oneOf": [
                                 {
-                                    "enum": [
-                                        "afterRead"
-                                    ],
+                                    "enum": ["afterRead"],
                                     "description": "after reading the data"
                                 },
                                 {
-                                    "enum": [
-                                        "beforeWrite"
-                                    ],
+                                    "enum": ["beforeWrite"],
                                     "description": "before sending back to the server"
                                 },
                                 {
-                                    "enum": [
-                                        "onSave"
-                                    ],
+                                    "enum": ["onSave"],
                                     "description": "save button pressed"
                                 }
                             ]
@@ -3053,9 +2866,7 @@
                 }
             },
             "dependencies": {
-                "formField": [
-                    "type"
-                ]
+                "formField": ["type"]
             },
             "additionalProperties": false,
             "default": {
@@ -3063,9 +2874,7 @@
                 "label": "",
                 "type": ""
             },
-            "required": [
-                "name"
-            ]
+            "required": ["name"]
         },
         "menu": {
             "type": "object",
@@ -3089,17 +2898,13 @@
                         "type": "string",
                         "anyOf": [
                             {
-                                "enum": [
-                                    "all"
-                                ],
+                                "enum": ["all"],
                                 "description": "All Security Roles"
                             },
                             {}
                         ]
                     },
-                    "default": [
-                        "SKIP-AUTHORIZATION"
-                    ]
+                    "default": ["SKIP-AUTHORIZATION"]
                 },
                 "action": {
                     "description": "specifies the type of action",
@@ -3237,19 +3042,14 @@
                                     "mode": {
                                         "type": "string",
                                         "title": "Only for the form action. Possible values are: 'temp' or 'save' (default). temp: Write only in the record/payload. save: Saves the record.",
-                                        "enum": [
-                                            "temp",
-                                            "save"
-                                        ]
+                                        "enum": ["temp", "save"]
                                     },
                                     "attributes": {
                                         "type": "array",
                                         "title": "Only for the form action. Array of attributes that can be entered. Properties of the attributes can be overridden or completly new.",
                                         "items": {
                                             "$ref": "#/definitions/attribute",
-                                            "required": [
-                                                "name"
-                                            ]
+                                            "required": ["name"]
                                         },
                                         "default": []
                                     },
@@ -3339,9 +3139,7 @@
                             }
                         ]
                     },
-                    "default": [
-                        {}
-                    ]
+                    "default": [{}]
                 },
                 "request": {
                     "type": "object",
@@ -3366,9 +3164,7 @@
                             }
                         }
                     },
-                    "required": [
-                        "url"
-                    ]
+                    "required": ["url"]
                 },
                 "separatorExpanded": {
                     "type": "boolean",
@@ -3396,31 +3192,19 @@
                 "when": {
                     "type": "string",
                     "description": "Executes menu on first or every selection of a tree",
-                    "enum": [
-                        "onInit",
-                        "onSelect"
-                    ]
+                    "enum": ["onInit", "onSelect"]
                 },
                 "on": {
                     "type": "array",
                     "items": {
                         "type": "string",
-                        "enum": [
-                            "top",
-                            "wizard",
-                            "ifc",
-                            "gantt"
-                        ]
+                        "enum": ["top", "wizard", "ifc", "gantt"]
                     },
-                    "default": [
-                        ""
-                    ]
+                    "default": [""]
                 }
             },
             "additionalProperties": false,
-            "required": [
-                "action"
-            ],
+            "required": ["action"],
             "default": {
                 "label": "",
                 "icon": "",
@@ -3436,9 +3220,7 @@
                     "default": true,
                     "disabled": true,
                     "type": "boolean",
-                    "enum": [
-                        true
-                    ]
+                    "enum": [true]
                 },
                 "query": {
                     "type": "object",
@@ -3454,13 +3236,16 @@
                 },
                 "bucketIcon": {
                     "type": "string"
+                },
+                "bucketClass": {
+                    "type": "string"
+                },
+                "bucketMode": {
+                    "type": "string"
                 }
             },
             "additionalProperties": false,
-            "required": [
-                "loop",
-                "query"
-            ]
+            "required": ["loop", "query"]
         },
         "ganttObject": {
             "type": "object",
@@ -3520,11 +3305,7 @@
                         "nowDisplayType": {
                             "type": "string",
                             "description": "Configures how the current date will be displayed in the gantt",
-                            "enum": [
-                                "line",
-                                "box",
-                                "none"
-                            ]
+                            "enum": ["line", "box", "none"]
                         },
                         "autoScrollEnabled": {
                             "type": "boolean",
@@ -3562,10 +3343,7 @@
                         "timeRangeButtons": {
                             "type": "string",
                             "description": "Hide or show the auto generated time range buttons",
-                            "enum": [
-                                "scroll",
-                                "none"
-                            ]
+                            "enum": ["scroll", "none"]
                         },
                         "dynamicTasks": {
                             "type": "boolean",
@@ -3699,11 +3477,7 @@
                                     },
                                     "type": {
                                         "type": "string",
-                                        "enum": [
-                                            "string",
-                                            "number",
-                                            "date"
-                                        ],
+                                        "enum": ["string", "number", "date"],
                                         "description": "type of values this column is going to handle"
                                     },
                                     "label": {
@@ -3728,11 +3502,7 @@
                                     },
                                     "align": {
                                         "type": "string",
-                                        "enum": [
-                                            "left",
-                                            "center",
-                                            "right"
-                                        ],
+                                        "enum": ["left", "center", "right"],
                                         "description": "font alignment of this column"
                                     },
                                     "tooltip": {
@@ -3883,19 +3653,13 @@
                 },
                 "direction": {
                     "type": "string",
-                    "enum": [
-                        "TOP_DOWN",
-                        "BOTTOM_UP"
-                    ]
+                    "enum": ["TOP_DOWN", "BOTTOM_UP"]
                 },
                 "jetSearch": {
                     "type": "string"
                 },
                 "constraint": {
-                    "type": [
-                        "object",
-                        "string"
-                    ],
+                    "type": ["object", "string"],
                     "properties": {
                         "and": {
                             "$ref": "#/definitions/constraintObject"
@@ -4129,10 +3893,7 @@
                 "mode": {
                     "type": "string",
                     "description": "cut off nodes and whole branches for optimizing redundant data",
-                    "enum": [
-                        "stop",
-                        "noChildren"
-                    ]
+                    "enum": ["stop", "noChildren"]
                 }
             }
         },
@@ -4145,10 +3906,7 @@
                 "method": {
                     "type": "string",
                     "description": "http method",
-                    "enum": [
-                        "GET",
-                        "POST"
-                    ]
+                    "enum": ["GET", "POST"]
                 },
                 "params": {
                     "description": "http POST or GET parameters",
@@ -4159,9 +3917,7 @@
                     "type": "object"
                 }
             },
-            "required": [
-                "url"
-            ],
+            "required": ["url"],
             "default": {
                 "url": ""
             }
@@ -4175,10 +3931,7 @@
             "properties": {
                 "attributes": {
                     "description": "The attributes that will support sorting functionality. Either list all attributes that will support sorting, or set attributes to true for all attributes to support sorting.",
-                    "type": [
-                        "array",
-                        "boolean"
-                    ],
+                    "type": ["array", "boolean"],
                     "default": true
                 }
             }
@@ -4225,44 +3978,28 @@
                     "type": "string",
                     "oneOf": [
                         {
-                            "enum": [
-                                "bar"
-                            ]
+                            "enum": ["bar"]
                         },
                         {
-                            "enum": [
-                                "line"
-                            ]
+                            "enum": ["line"]
                         },
                         {
-                            "enum": [
-                                "radar"
-                            ]
+                            "enum": ["radar"]
                         },
                         {
-                            "enum": [
-                                "pie"
-                            ]
+                            "enum": ["pie"]
                         },
                         {
-                            "enum": [
-                                "doughnut"
-                            ]
+                            "enum": ["doughnut"]
                         },
                         {
-                            "enum": [
-                                "bubble"
-                            ]
+                            "enum": ["bubble"]
                         },
                         {
-                            "enum": [
-                                "bar-stacked-values"
-                            ]
+                            "enum": ["bar-stacked-values"]
                         },
                         {
-                            "enum": [
-                                "bar-stacked-groups"
-                            ]
+                            "enum": ["bar-stacked-groups"]
                         }
                     ]
                 },
@@ -4483,9 +4220,7 @@
             "properties": {
                 "attributes": {
                     "description": "When exporting to CSV, the standard attribute settings are used. If you need to adapt the way each attribute is exported to CSV, you can override the settings of an attribute.",
-                    "type": [
-                        "array"
-                    ],
+                    "type": ["array"],
                     "$ref": "#/definitions/attribute"
                 },
                 "charset": {
@@ -4573,9 +4308,7 @@
                     "default": false
                 }
             },
-            "required": [
-                "attribute"
-            ]
+            "required": ["attribute"]
         }
     }
 }

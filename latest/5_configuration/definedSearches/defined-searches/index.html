@@ -10554,6 +10554,7 @@ can also use an explicit search.This definition also reduces the size of the off
 </code></pre></div>
 <p>Typically problems are that attributenames in the constraint could be ambigous. That means they occure in root and child-node.
 Errors like <code>"sqlexception caught#Ambiguous column name 'STATUS'</code> for MSSQL-Database can be solved by using the qualified names in query-constraint as in example above.</p>
+<p>The <code>childNode/ATTRIBUTE</code> format does not require an inline (1:1) relation. It can also reference a child node in a 1:N relation. The search is then executed over the child records, but only the parent record is returned as a result. Example: find work orders that have an assignment for a given user.</p>
 <h3 id="index-search-attribute-search-fields">Index search, attribute search fields<a class="headerlink" href="#index-search-attribute-search-fields" title="Permanent link">&para;</a></h3>
 <p>Searches will be executed on search index using search fields for each
 attribute.</p>

@@ -10345,9 +10345,13 @@
 <h1 id="release-notes-v362">Release Notes v36.2<a class="headerlink" href="#release-notes-v362" title="Permanent link">&para;</a></h1>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <ul>
-<li>v2 configurations are persisted in the <em>schemadb</em> database. Incoming configuration requests are resolved based on the data stored in this database.</li>
-<li><a href="../../../5_configuration/layout/layout/#detail-view"><code>saveOnLeave</code></a> to automatic save, if leave the page.</li>
-<li><a href="../../../4_monitoring/telemetry/telemetry/#user-sessions">User session telemetry</a> is now available at <code>&lt;server&gt;/insight-gateway/rest/metrics/user-sessions</code>, exposing metrics for active sessions, session count, and configured session timeout.</li>
+<li>v2 configurations are persisted in the <em>schemadb</em> database. Incoming configuration requests are
+  resolved based on the data stored in this database.</li>
+<li><a href="../../../5_configuration/layout/layout/#detail-view"><code>saveOnLeave</code></a> to automatic save, if leave
+  the page.</li>
+<li><a href="../../../4_monitoring/telemetry/telemetry/#user-sessions">User session telemetry</a> is now available
+  at <code>&lt;server&gt;/insight-gateway/rest/metrics/user-sessions</code>, exposing metrics for active sessions,
+  session count, and configured session timeout.</li>
 </ul>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
 <ul>
@@ -10358,11 +10362,15 @@
 <p>The bundled Groovy dependencies have been updated from 3.0.23 to 5.0.7.</p>
 </li>
 <li>
-<p>OCR (Optical Character Recognition) is now available as a <a href="../../../5_configuration/menuAndAction/menu/ocr/">menu action</a> and as an <a href="../../../5_configuration/ocr/ocr/">attribute feature</a> in Insight Mobile (iOS and Android).</p>
+<p>OCR (Optical Character Recognition) is now available as
+  a <a href="../../../5_configuration/menuAndAction/menu/ocr/">menu action</a> and as
+  an <a href="../../../5_configuration/ocr/ocr/">attribute feature</a> in Insight Mobile (iOS and Android).</p>
 </li>
 </ul>
 <h2 id="breaking-changes">Breaking Changes<a class="headerlink" href="#breaking-changes" title="Permanent link">&para;</a></h2>
 <ul>
+<li>Use <code>insight-cli</code> version <strong>36.2.10 or newer</strong> for configuration uploads.
+  This version includes a bugfix to ensure consistent template resolution.</li>
 <li>Role replication is mandatory with Insight v36.2. Starting with v36.2.9,
   <code>roles.replication.type</code> defaults from <code>eam.type</code>; earlier v36.2 patch
   versions require the property to be set explicitly. See the <a href="../update/#configure-role-replication">v36.2 update
@@ -10370,8 +10378,12 @@
 <li>The Insight Connector must be updated for v36.2. See the <a href="../update/#update-the-insight-connector">v36.2 update
   guide</a> and <a href="../../compatibility-matrix/">compatibility
   matrix</a>.</li>
-<li>It is no longer necessary to explicitly define type information for attributes with <strong>Maximo</strong> backend. Attribute types are now determined automatically based on the types defined in Maximo. If required, the automatically determined type can be overridden by explicitly configuring the <em>type</em> property.</li>
-<li>The Insight CLI upload is now performed via the application URL at <em>/insight</em>. See <a href="../../../5_configuration/configuration_setup/configuration_setup/#parameters">configuration_setup</a>.</li>
+<li>It is no longer necessary to explicitly define type information for attributes with <strong>Maximo</strong>
+  backend. Attribute types are now determined automatically based on the types defined in Maximo. If
+  required, the automatically determined type can be overridden by explicitly configuring the <em>type</em>
+  property.</li>
+<li>The Insight CLI upload is now performed via the application URL at <em>/insight</em>.
+  See <a href="../../../5_configuration/configuration_setup/configuration_setup/#parameters">configuration_setup</a>.</li>
 </ul>
 <h3 id="wildfly-41-and-jdk-25">Wildfly 41 and JDK 25<a class="headerlink" href="#wildfly-41-and-jdk-25" title="Permanent link">&para;</a></h3>
 <ul>
