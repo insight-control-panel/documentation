@@ -10529,6 +10529,14 @@ configure <code>bucket</code> just to get these features on a tab.</p>
 tab: the bucket is always shown as a regular, expanded card there, never as
 a compact tile (unless it is the only content of the tab, see above).</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Child tabs for loop nodes</p>
+<p>A <a href="../../dataModel/data-model/#loop">loop node</a> has no <code>name</code> of its own, so it
+cannot be referenced by name directly. Its entries are always resolved under
+its parent node's own name, so a <code>child</code> tab entry for it must list that
+parent node's <code>name</code> instead, e.g. <code>"names": ["asset"]</code> if the loop node is a
+child of the <code>asset</code> node.</p>
+</div>
 <p>Every entry additionally supports:</p>
 <table>
 <thead>
