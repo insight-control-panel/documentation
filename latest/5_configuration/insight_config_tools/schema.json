@@ -691,6 +691,31 @@
                         }
                     ]
                 },
+                "queryParamFilter": {
+                    "type": "object",
+                    "description": "Offers a filter value selection to reduce the amount of offline data to download. Precondition: the corresponding queryParam must be defined in the node specific \"queryParams\" array.",
+                    "properties": {
+                        "queryParam": {
+                            "description": "name of the queryParam (defined in \"queryParams\") this filter applies to",
+                            "type": "string"
+                        },
+                        "tree": {
+                            "description": "source Insight Config configuration providing the selectable filter values",
+                            "type": "string"
+                        },
+                        "node": {
+                            "type": "string"
+                        },
+                        "attribute": {
+                            "description": "attribute of root node (in the referenced configuration specified in \"tree\") used as filter value",
+                            "type": "string"
+                        },
+                        "label": {
+                            "type": "string"
+                        }
+                    },
+                    "additionalProperties": false
+                },
                 "grouping": {
                     "description": "Allows to put objects into chunks and/or group them together by certain attribute values",
                     "anyOf": [

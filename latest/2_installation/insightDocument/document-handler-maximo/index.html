@@ -10295,9 +10295,17 @@
 <p>In the insight.properties of Wildfly you have to set the following properties</p>
 <ul>
 <li>document.handler=maximo</li>
+<li>document.doclink.osname<ul>
+<li>has a default <code>doclink</code></li>
+<li>It's only necessary to set this property if the name of the DOCLINK object structure is not <code>doclink</code></li>
+</ul>
+</li>
+<li>document.doclink.baseurl<ul>
+<li>has a default <code>http://localhost:8080/insight-gateway/rest/maximo/os</code></li>
+</ul>
+</li>
 <li>document.doclink.url <ul>
-<li>has a default  http://localhost:8080/insight-gateway/rest/maximo/os/doclink</li>
-<li>It's only necessary to set this property if name of DOCLINK-Objectstructure is not doclink</li>
+<li>This property is only for backward compatibility with previous installations. It is better to use the properties <code>document.doclink.osname</code> (if you want to use an object structure name other than <code>doclink</code>) and <code>document.doclink.url</code> (if you need to set a base URL other than <code>http://localhost:8080/insight-gateway/rest/maximo/os</code>).</li>
 </ul>
 </li>
 </ul>
@@ -10345,7 +10353,8 @@ If backendParams do not contain "APP" then insight sets "APP=COMMTMPLT" per defa
 <p>Please make sure that properties are set </p>
 <pre><code>- document.handler=maximo
 - document.mode=rest
-- document.doclink.url=http://localhost:8080/insight-gateway/rest/maximo/os/doclink
+- document.doclink.osname=doclink
+- document.doclink.baseurl=http://localhost:8080/insight-gateway/rest/maximo/os
 </code></pre>
 <p>And node for doclinks in treeConfig contains the following snippets:</p>
 <pre><code>            "fileLink": {

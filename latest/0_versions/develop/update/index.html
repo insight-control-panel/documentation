@@ -535,6 +535,23 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Update
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="././" class="md-nav__link md-nav__link--active">
         
   
@@ -550,6 +567,37 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#update-wildfly" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Update WildFly
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -10167,6 +10215,11 @@
                       
                     
                     
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
                   
                   <div class="md-sidebar__inner">
                     
@@ -10178,6 +10231,25 @@
   
     
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#update-wildfly" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Update WildFly
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -10193,8 +10265,12 @@
                   
 
 <h1 id="update-develop">Update Develop<a class="headerlink" href="#update-develop" title="Permanent link">&para;</a></h1>
-<p>No version-specific update steps are currently documented for the develop
-version.</p>
+<h2 id="update-wildfly">Update WildFly<a class="headerlink" href="#update-wildfly" title="Permanent link">&para;</a></h2>
+<p>Update the runtime used by Insight Middleware and all custom WildFly-based
+images:</p>
+<ul>
+<li>Update custom WildFly-based images to use WildFly <code>42.0.0.Final-jdk25</code>.</li>
+</ul>
 
 
 
