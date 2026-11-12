@@ -1,0 +1,6 @@
+title: Monitoring
+nav:
+    - overview
+    - health-check
+    - jeeserver
+    - telemetry

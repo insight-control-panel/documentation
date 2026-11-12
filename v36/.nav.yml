@@ -1,0 +1,14 @@
+flatten_single_child_sections: true
+nav:
+  - 0_versions
+  - 2_installation
+  - 3_updates
+  - 4_monitoring
+  - 5_configuration
+  - 6_operating-manual
+  - licenses
+  - Legal:
+      - Privacy Policy: /privacy/
+      - Copyright: /copyright/
+      - End User License Agreement: /eula/
+      - Maintenance Provisions: /softwarepflegevertrag/
