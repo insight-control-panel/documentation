@@ -585,6 +585,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ensure-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ensure Permissions
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#update-wildfly" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -9123,7 +9134,7 @@
   <span class="md-ellipsis">
     
   
-  Login
+  Login and LtpaToken
 
     
   </span>
@@ -10239,6 +10250,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ensure-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ensure Permissions
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#update-wildfly" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -10265,6 +10287,16 @@
                   
 
 <h1 id="update-develop">Update Develop<a class="headerlink" href="#update-develop" title="Permanent link">&para;</a></h1>
+<h2 id="ensure-permissions">Ensure Permissions<a class="headerlink" href="#ensure-permissions" title="Permanent link">&para;</a></h2>
+<p>Ensure every required V2 and V3 tree has a permission record
+in the schema database. If permissions were defined through <code>roles</code> in tree
+configurations (<code>authz.origin=roles</code>) upload those configurations again.
+The upload transfers the configured roles into permission records; the central
+permission management now reads those records instead of the tree's <code>roles</code>
+fields at runtime.</p>
+<p>Ensure the technical and self-service users have replicated roles
+and matching tree permissions where they access data. See
+<a href="../../../6_operating-manual/replicateRoles/replicateRoles/">Role Replication</a>.</p>
 <h2 id="update-wildfly">Update WildFly<a class="headerlink" href="#update-wildfly" title="Permanent link">&para;</a></h2>
 <p>Update the runtime used by Insight Middleware and all custom WildFly-based
 images:</p>

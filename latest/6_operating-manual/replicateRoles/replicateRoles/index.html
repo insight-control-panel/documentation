@@ -9061,7 +9061,7 @@
   <span class="md-ellipsis">
     
   
-  Login
+  Login and LtpaToken
 
     
   </span>
@@ -10327,8 +10327,25 @@
                   
 
 <h1 id="role-replication">Role Replication<a class="headerlink" href="#role-replication" title="Permanent link">&para;</a></h1>
-<p>During user login, Insight replicates the current backend roles to the
-<code>insightdb.role</code> table. Existing role entries for that user are replaced.</p>
+<p>During login, Insight replicates the current EAM roles to the
+<code>insightdb.role</code> table. Existing role entries for that user are replaced.
+This also applies to self-service users and the technical user. The gateway
+and the technical-user service use the same replication logic.</p>
+<p>For automatic replication, create the corresponding user in the EAM and
+configure its credentials in Insight. Set <code>eam.username</code> in <code>insight.properties</code>
+to the technical user's username.
+Self-service logins use the separate <code>selfservice.username</code> property for their backend user.</p>
+<p>The technical user's roles are updated when it signs in again in the
+background and receives a new token. With API-key authentication, restart the
+middleware to trigger role replication again.
+Check the roles in the database if the technical user has no
+access to a tree.
+Its roles need a matching permission record just like those
+of an interactive user.</p>
+<p>If a backend user cannot be configured for the technical or self-service
+account, add that account's required roles manually to the Roles table
+(<code>insightdb.role</code>). Otherwise its <code>/userdata</code> and <code>/data2</code> requests fail when
+the tree permissions require those roles.</p>
 <p>The default for <code>roles.replication.type</code> is derived from <code>eam.type</code>:</p>
 <table>
 <thead>

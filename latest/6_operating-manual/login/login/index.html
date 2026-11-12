@@ -25,7 +25,7 @@
     
     
       
-        <title>Login - Insight Manual</title>
+        <title>Login and LtpaToken - Insight Manual</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#login" class="md-skip">
+        <a href="#login-and-ltpatoken" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Login
+              Login and LtpaToken
             
           </span>
         </div>
@@ -9070,7 +9070,7 @@
   <span class="md-ellipsis">
     
   
-  Login
+  Login and LtpaToken
 
     
   </span>
@@ -9087,7 +9087,7 @@
   <span class="md-ellipsis">
     
   
-  Login
+  Login and LtpaToken
 
     
   </span>
@@ -10260,20 +10260,24 @@
                 
                   
 
-<h1 id="login">Login<a class="headerlink" href="#login" title="Permanent link">&para;</a></h1>
-<p>When question arises why login does not work it is helpfull to execute the following requests</p>
+<h1 id="login-and-ltpatoken">Login and LtpaToken<a class="headerlink" href="#login-and-ltpatoken" title="Permanent link">&para;</a></h1>
+<p>When question arises why login does not work it is helpfull to do the checks. Also if login works but following requests fail because of missing LtpaToken.</p>
 <h2 id="maximo">maximo<a class="headerlink" href="#maximo" title="Permanent link">&para;</a></h2>
-<p>Depending on maximo configuration Option 1 or Option 2  must result in http-200</p>
 <p>Please check maximouiweb\webmodule\WEB-INF\web.xml and maxrestweb\webmodule\WEB-INF\web.xml for
 <div class="highlight"><pre><span></span><code>    &lt;login-config&gt;
         &lt;auth-method&gt;(BASIC|FORM)&lt;/auth-method&gt;
     &lt;/login-config&gt;
-</code></pre></div></p>
+</code></pre></div>
+If appSecurity is used and maximouiweb\webmodule\WEB-INF\web.xml uses FORM as auth-method and maxrestweb\webmodule\WEB-INF\web.xml uses BASIC as auth-method the login request must be routed to maxrest/oslc because only this endpoint returns a LtpaToken2 cookie.</p>
+<p>In insight.properties the following property must be set explicitly to route login requests to maxrest/oslc:</p>
+<pre><code>gateway.forward.insight.auth=&lt;maximo-server&gt;/maxrest/oslc
+</code></pre>
 <ul>
 <li><a href="https://maximodeploy.blogspot.com/2021/02/rest-oslc-api-authentications-native-or.html"><strong>https://maximodeploy.blogspot.com/2021/02/rest-oslc-api-authentications-native-or.html</strong></a></li>
 <li><a href="https://moremaximo.com/blogs/prashant-sharma1/2020/05/05/oslc-nextgenrest-api-authentication-in-ibm-maximo"><strong>https://moremaximo.com/blogs/prashant-sharma1/2020/05/05/oslc-nextgenrest-api-authentication-in-ibm-maximo</strong></a></li>
 <li><a href="https://community.ibm.com/community/user/discussion/difference-between-oslc-properties-mxeoslcrestwebappurl-and-mxeoslcwebappurl"><strong>https://community.ibm.com/community/user/discussion/difference-between-oslc-properties-mxeoslcrestwebappurl-and-mxeoslcwebappurl</strong></a></li>
 </ul>
+<p>Execute the following curl commands to check if login works. Depending on maximo configuration option 1 or option 2  must result in http-200</p>
 <p>Option 1 (for native Authentication OR for LDAP with Basic Authentication):</p>
 <pre><code>POST http://&lt;maximo-server&gt;/maximo/oslc/login
 
@@ -10288,10 +10292,8 @@ Header:
 MAXAUTH         &lt;base64(user:pw)&gt;
 Authorization   Basic &lt;base64(user:pw)&gt;
 </code></pre>
-<p>If only option 2 works (i.e maximo 7.x with LDAP) it is neccessary to configure login-routing to maxrest/oslc explicitly in insight.properties</p>
-<pre><code>    gateway.forward.insight.auth=&lt;maximo-server&gt;/maxrest/oslc
-</code></pre>
-<p>Finally login via insight must result in http-200</p>
+<p>If only option 2 works (i.e maximo 7.x with LDAP) it is necessary to configure login-routing to maxrest/oslc explicitly  with the above mentioned insight.property.</p>
+<p>Finally login via insight must result in http-200 and only if LtpaToken2 is configured in maximo an LtpaToken2 cookie must be returned.</p>
 <pre><code>POST http://localhost:8080/insight-gateway/rest/maximo/login
 
 Header:

@@ -586,18 +586,7 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#-for-users-of-the-insight-bim-adapter-the-recommended-s3-storage-has-changed-from-minio-to-seaweedfs" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        - For users of the Insight BIM Adapter, the recommended S3 storage has changed from MinIO to SeaweedFS.
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="- For users of the Insight BIM Adapter, the recommended S3 storage has changed from MinIO to SeaweedFS.">
+    <nav class="md-nav" aria-label="Breaking Changes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -9171,7 +9160,7 @@
   <span class="md-ellipsis">
     
   
-  Login
+  Login and LtpaToken
 
     
   </span>
@@ -10317,18 +10306,7 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#-for-users-of-the-insight-bim-adapter-the-recommended-s3-storage-has-changed-from-minio-to-seaweedfs" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        - For users of the Insight BIM Adapter, the recommended S3 storage has changed from MinIO to SeaweedFS.
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="- For users of the Insight BIM Adapter, the recommended S3 storage has changed from MinIO to SeaweedFS.">
+    <nav class="md-nav" aria-label="Breaking Changes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -10385,6 +10363,8 @@
   remove them. All other filter entries keep the previous, silent
   background-filter behavior.</li>
 <li>During schema upload, tree-based role configurations are transformed into permissions (for authz.origin=roles).</li>
+<li>Tree visibility for V2 and V3 configurations and data requests now uses stored permissions. Unauthorized <code>/userdata</code> and <code>/data2</code> requests return HTTP 403.</li>
+<li>The technical user's EAM roles are replicated during role replication.</li>
 <li>Backend searches using the <code>childNode/ATTRIBUTE</code> format can now also
   reference a child node in a 1:N relation, not just an inline (1:1)
   relation. The search runs over the child records, but only the parent
@@ -10412,7 +10392,12 @@
 </li>
 </ul>
 <h2 id="breaking-changes">Breaking Changes<a class="headerlink" href="#breaking-changes" title="Permanent link">&para;</a></h2>
-<h2 id="-for-users-of-the-insight-bim-adapter-the-recommended-s3-storage-has-changed-from-minio-to-seaweedfs">- For users of the Insight BIM Adapter, the recommended S3 storage has changed from MinIO to <a href="https://github.com/seaweedfs/seaweedfs/wiki/Quick-Start-with-weed-mini">SeaweedFS</a>.<a class="headerlink" href="#-for-users-of-the-insight-bim-adapter-the-recommended-s3-storage-has-changed-from-minio-to-seaweedfs" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The technical user now needs roles that grant access to the required trees. Check its replicated roles; missing roles cause <code>/userdata</code> and <code>/data2</code> requests to fail. See <a href="../../../6_operating-manual/replicateRoles/replicateRoles/">Role Replication</a>.</li>
+<li>The Maximo connector no longer exposes its <code>/auth</code> and <code>/config</code> endpoints. Route configuration requests to the V3 server.</li>
+<li>For users of the Insight BIM Adapter, the recommended S3 storage has changed from MinIO to <a href="https://github.com/seaweedfs/seaweedfs/wiki/Quick-Start-with-weed-mini">SeaweedFS</a>.</li>
+<li></li>
+</ul>
 <h3 id="wildfly-42">Wildfly 42<a class="headerlink" href="#wildfly-42" title="Permanent link">&para;</a></h3>
 <ul>
 <li>The shared container runtime now uses WildFly 42 on JDK 25. Custom
