@@ -586,7 +586,18 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Breaking Changes">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-users-of-the-insight-bim-adapter-the-recommended-s3-storage-has-changed-from-minio-to-seaweedfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        For users of the Insight BIM Adapter, the recommended S3 storage has changed from MinIO to SeaweedFS.
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="For users of the Insight BIM Adapter, the recommended S3 storage has changed from MinIO to SeaweedFS.">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -10306,7 +10317,18 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Breaking Changes">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-users-of-the-insight-bim-adapter-the-recommended-s3-storage-has-changed-from-minio-to-seaweedfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        For users of the Insight BIM Adapter, the recommended S3 storage has changed from MinIO to SeaweedFS.
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="For users of the Insight BIM Adapter, the recommended S3 storage has changed from MinIO to SeaweedFS.">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -10370,6 +10392,10 @@
   relation. The search runs over the child records, but only the parent
   record is returned. See <a href="../../../5_configuration/definedSearches/defined-searches/#backend-search-attribute-search-fields">Backend search, attribute search
   fields</a>.</li>
+<li>A wizard status <code>changedTo</code> transition can now configure
+  <a href="../../../5_configuration/wizard/wizard/"><code>menuOnContextRecord</code></a>,
+  an action menu executed on the direct parent record (e.g. the work order an
+  inspection was started from) after the status was saved successfully.</li>
 </ul>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
 <ul>
@@ -10395,8 +10421,9 @@
 <ul>
 <li>The technical user now needs roles that grant access to the required trees. Check its replicated roles; missing roles cause <code>/userdata</code> and <code>/data2</code> requests to fail. See <a href="../../../6_operating-manual/replicateRoles/replicateRoles/">Role Replication</a>.</li>
 <li>The Maximo connector no longer exposes its <code>/auth</code> and <code>/config</code> endpoints. Route configuration requests to the V3 server.</li>
-<li>For users of the Insight BIM Adapter, the recommended S3 storage has changed from MinIO to <a href="https://github.com/seaweedfs/seaweedfs/wiki/Quick-Start-with-weed-mini">SeaweedFS</a>.</li>
-<li></li>
+<li>
+<h2 id="for-users-of-the-insight-bim-adapter-the-recommended-s3-storage-has-changed-from-minio-to-seaweedfs">For users of the Insight BIM Adapter, the recommended S3 storage has changed from MinIO to <a href="https://github.com/seaweedfs/seaweedfs/wiki/Quick-Start-with-weed-mini">SeaweedFS</a>.<a class="headerlink" href="#for-users-of-the-insight-bim-adapter-the-recommended-s3-storage-has-changed-from-minio-to-seaweedfs" title="Permanent link">&para;</a></h2>
+</li>
 </ul>
 <h3 id="wildfly-42">Wildfly 42<a class="headerlink" href="#wildfly-42" title="Permanent link">&para;</a></h3>
 <ul>

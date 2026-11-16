@@ -10707,10 +10707,24 @@
 <td>optional button color. See <a href="../../layout/layout/#color">colors</a></td>
 <td>string</td>
 </tr>
+<tr>
+<td><code>menuOnContextRecord</code></td>
+<td>an action menu executed on the direct parent record after the transition was saved successfully (optional). See <a href="../../menuAndAction/menu-and-action/">menus and actions</a></td>
+<td>object</td>
+</tr>
 </tbody>
 </table>
 <!-- prettier-ignore-end -->
 
+<div class="admonition note">
+<p class="admonition-title">menuOnContextRecord</p>
+</div>
+<p><code>menuOnContextRecord</code> always targets the direct parent of the wizard's
+record, for example the work order an inspection was started from. It is
+only executed when the wizard was opened with a parent record path, and
+does nothing if no parent record is available (e.g. the wizard was opened
+standalone). A failing menu action shows an error message but does not
+block the already completed status transition.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">"wizard"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nt">"main"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">"allPagesAllowed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
@@ -10791,7 +10805,16 @@
 <span class="w">              </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Complete"</span><span class="p">,</span>
 <span class="w">              </span><span class="nt">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"icon-check"</span><span class="p">,</span>
 <span class="w">              </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"COMPLETED"</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bg-color-green"</span>
+<span class="w">              </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bg-color-green"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"menuOnContextRecord"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"form"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"actionValues"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"tree"</span><span class="p">:</span><span class="w"> </span><span class="s2">"workorder"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"node"</span><span class="p">:</span><span class="w"> </span><span class="s2">"workorder"</span>
+<span class="w">                  </span><span class="p">}</span>
+<span class="w">                </span><span class="p">]</span>
+<span class="w">              </span><span class="p">}</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">          </span><span class="p">]</span>
 <span class="w">        </span><span class="p">},</span>
