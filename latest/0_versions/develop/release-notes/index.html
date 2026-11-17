@@ -10400,6 +10400,13 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
+<p>In the <a href="../../../2_installation/client/native-apps/">Next Gen apps</a> 36.3+ for iOS and Android, the OIDC
+  login now always starts a new session for every login (as if <code>clearCache</code> were <code>true</code>), so the
+  previous IDP session is no longer reused, unless <code>clearCache</code> is explicitly set to <code>false</code> (see
+  <a href="../../../2_installation/OpenID-Connect/overview/">OIDC Overview</a>). This reliably supports the
+  shared-device scenario on iOS, which wasn't possible with the classic apps.</p>
+</li>
+<li>
 <p>An attribute that has no validator of its own, but was marked invalid by
   another attribute's <code>validation.js</code> (cross-attribute validation), now also blocks saving. Previously such an attribute could be saved despite still being shown as invalid.</p>
 </li>

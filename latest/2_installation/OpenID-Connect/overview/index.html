@@ -10871,8 +10871,9 @@ Please check the documnetation of the connector for your backend if a modified s
 </ul>
 </li>
 <li><code>clearCache</code><ul>
-<li><code>true</code>: The auth window starts with a new session. (default on android)</li>
-<li><code>false</code>: The auth window starts with an existing session. If the user was already logged in to the IDP, the login is performed immediately. (default on ios)</li>
+<li><code>true</code>: The auth window starts with a new session. Default on Android, and since Insight V36.3 also on iOS for the Next Gen apps (see below). This can't be used in the browser.</li>
+<li><code>false</code>: The auth window starts with an existing session. If the user was already logged in to the IDP, the login is performed immediately. This can't be used for shared devices.</li>
+<li>Starting with Insight V36.3, the <a href="../../client/native-apps/">Next Gen apps</a> for iOS and Android always start a new session for every login (as if <code>clearCache</code> were <code>true</code>), so the previous IDP session is no longer reused, unless <code>clearCache</code> is explicitly set to <code>false</code>. This reliably supports the shared-device scenario on iOS, which wasn't possible with the classic apps. The browser is still never affected by this setting.</li>
 </ul>
 </li>
 <li><code>endSessionLogout</code><ul>
@@ -10880,7 +10881,7 @@ Please check the documnetation of the connector for your backend if a modified s
 </ul>
 </li>
 <li><code>endSessionNoIdToken</code><ul>
-<li><code>true</code>: The endSession call is made without an <code>id_token_hint</code>. This is required by some OIDC providers that do not accept or expect the <code>id_token_hint</code> parameter during logout. </li>
+<li><code>true</code>: The endSession call is made without an <code>id_token_hint</code>. This is required by some OIDC providers that do not accept or expect the <code>id_token_hint</code> parameter during logout.</li>
 </ul>
 </li>
 </ul>
