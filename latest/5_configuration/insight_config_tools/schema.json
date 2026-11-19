@@ -2092,9 +2092,19 @@
                             "type": "boolean"
                         },
                         "showInList": {
-                            "description": "Optional value which if set to true will show the file in the list and search results",
+                            "description": "Deprecated, use on instead. If set to true the file is shown in the list and search results. Ignored if on is set.",
+                            "deprecated": true,
                             "type": "boolean",
                             "default": true
+                        },
+                        "on": {
+                            "description": "Optional list of views in which the image is shown.",
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": ["list", "map"]
+                            },
+                            "default": ["list"]
                         },
                         "existsAttribute": {
                             "description": "Optional attribute which defines if the image exists and is therefore shown on the list",

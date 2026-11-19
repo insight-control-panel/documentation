@@ -15731,6 +15731,11 @@ overview table; a runnable example for every function follows below its table.</
 <ul>
 <li><code>Date</code>:<ul>
 <li><code>pattern</code> documentation can be found at java <code>SimpleDateFormat</code></li>
+<li>If no <code>pattern</code> is configured, the date/time is formatted automatically
+  using the locale provided by the user's browser or operating system
+  (e.g. an US-locale user sees <code>9/30/2026</code>, a German-locale user sees
+  <code>30.9.2026</code>). This applies consistently in lists, tables, the details
+  view and CSV export.</li>
 </ul>
 </li>
 </ul>
