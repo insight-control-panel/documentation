@@ -10390,6 +10390,13 @@
   relation. The search runs over the child records, but only the parent
   record is returned. See <a href="../../../5_configuration/definedSearches/defined-searches/#backend-search-attribute-search-fields">Backend search, attribute search
   fields</a>.</li>
+<li>Date and time attributes without an explicitly configured
+  <a href="../../../5_configuration/dataModel/data-model/#format"><code>format</code> pattern</a>
+  are now displayed using the locale provided by the user's browser or
+  operating system, consistently in lists, tables, the details view and CSV
+  export. For example, a US-locale user now automatically sees American-style
+  dates (e.g. <code>9/30/2026</code>) instead of a fixed pattern. Attributes with an
+  explicit <code>format</code> pattern are unaffected and keep overriding the default.</li>
 </ul>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
 <ul>
