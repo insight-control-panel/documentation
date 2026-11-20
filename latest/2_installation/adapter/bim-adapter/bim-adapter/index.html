@@ -10425,7 +10425,7 @@
 <h2 id="step-1-preparation">Step 1: Preparation<a class="headerlink" href="#step-1-preparation" title="Permanent link">&para;</a></h2>
 <h3 id="bim-adapter-configuration">BIM-Adapter configuration<a class="headerlink" href="#bim-adapter-configuration" title="Permanent link">&para;</a></h3>
 <p>The BIM-Adapter requires an S3-compatible object storage. The recommended S3 storage is <a href="https://github.com/seaweedfs/seaweedfs/wiki/Quick-Start-with-weed-mini">SeaweedFS</a>.</p>
-<p>Additionally to the standard environment variables for S3, it is required to configure the following variable. Please make sure the bucket exists in S3:</p>
+<p>For IFC storage, configure <code>INSIGHT_S3_URL</code>, <code>INSIGHT_S3_KEY</code> and <code>INSIGHT_S3_SECRET</code>, plus the following variable. Please make sure the bucket exists in S3:</p>
 <ul>
 <li><code>INSIGHT_IFC_BUCKET_NAME</code> - name of the S3 bucket where IFC files are stored.</li>
 </ul>
@@ -10440,8 +10440,9 @@
 <span class="na">INSIGHT_IFC_BUCKET_NAME</span><span class="o">=</span><span class="s">insight-ifc</span>
 <span class="na">INSIGHT_S3_REGION</span><span class="o">=</span><span class="s">us-east-1</span>
 </code></pre></div>
-<p>The following properties must be set in the following file:</p>
+<p>The following file is optional. Maximo settings are library-specific and are not required for IFC/S3-only usage:</p>
 <p><strong>wildfly\standalone\configuration\insight-bim-adapter.properties</strong></p>
+<p>Configure the following properties only as required by your Maximo integration library:</p>
 <ul>
 <li>maximoBaseUrl: The base URL for Maximo's OSLC service.</li>
 <li>maximoMboBaseUrl: The URL for Maximo's MBO REST service.</li>
