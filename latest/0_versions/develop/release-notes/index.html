@@ -10384,6 +10384,12 @@
   initial value of the search attribute, so the user can see and change or
   remove them. All other filter entries keep the previous, silent
   background-filter behavior.</li>
+<li><a href="../../../5_configuration/dataModel/data-model/#selectfromtree"><code>selectFromTree</code></a>
+  on a tree with <code>rootMode: search</code> no longer starts the search initially just
+  because a background <code>filter</code> is configured. The search starts on user input,
+  or initially if <code>searchString</code> or a filter with <code>showInSearch: true</code> is configured.
+  For backend searches, clearing all search criteria clears the results without
+  starting another search based only on background filters.</li>
 <li>During schema upload, tree-based role configurations are transformed into permissions (for authz.origin=roles).</li>
 <li>Tree visibility for V2 and V3 configurations and data requests now uses stored permissions. Unauthorized <code>/userdata</code> and <code>/data2</code> requests return HTTP 403.</li>
 <li>The technical user's EAM roles are replicated during role replication.</li>
