@@ -10370,6 +10370,10 @@
   starting another search based only on background filters.</li>
 <li>During schema upload, tree-based role configurations are transformed into permissions (for authz.origin=roles).</li>
 <li>Tree visibility for V2 and V3 configurations and data requests now uses stored permissions. Unauthorized <code>/userdata</code> and <code>/data2</code> requests return HTTP 403.</li>
+<li>Calls to configured <code>insight/action/...</code> and <code>insight/eam/rpc/...</code> actions are
+  now checked against tree permissions. Calls without a matching grant or the
+  required permission return HTTP 403. See the <a href="../update/">update steps</a> and
+  the <a href="../../../5_configuration/dataModel/data-model/#remoteaction"><code>remote.action</code> URL format</a>.</li>
 <li>The technical user's EAM roles are replicated during role replication.</li>
 <li>Backend searches using the <code>childNode/ATTRIBUTE</code> format can now also
   reference a child node in a 1:N relation, not just an inline (1:1)
@@ -10417,6 +10421,9 @@
 </ul>
 <h2 id="breaking-changes">Breaking Changes<a class="headerlink" href="#breaking-changes" title="Permanent link">&para;</a></h2>
 <ul>
+<li>Action permissions require a new <code>ActionGrant</code> database table and a fresh
+  configuration upload. Remove <code>gateway.forward.insight.eam.rpc</code> from existing
+  properties if present. See the <a href="../update/">update steps</a>.</li>
 <li>The technical user now needs roles that grant access to the required trees. Check its replicated roles; missing roles cause <code>/userdata</code> and <code>/data2</code> requests to fail. See <a href="../../../6_operating-manual/replicateRoles/replicateRoles/">Role Replication</a>.</li>
 <li>The Maximo connector no longer exposes its <code>/auth</code> and <code>/config</code> endpoints. Route configuration requests to the V3 server.</li>
 <li>For users of the Insight BIM Adapter, the recommended S3 storage has changed from MinIO to <a href="https://github.com/seaweedfs/seaweedfs/wiki/Quick-Start-with-weed-mini">SeaweedFS</a>.</li>

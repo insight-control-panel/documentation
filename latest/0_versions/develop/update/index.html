@@ -585,6 +585,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#update-action-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Update action permissions
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ensure-permissions" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -10250,6 +10261,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#update-action-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Update action permissions
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ensure-permissions" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -10287,6 +10309,19 @@
                   
 
 <h1 id="update-develop">Update Develop<a class="headerlink" href="#update-develop" title="Permanent link">&para;</a></h1>
+<h2 id="update-action-permissions">Update action permissions<a class="headerlink" href="#update-action-permissions" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Set <code>INSIGHT_HIBERNATE_HBM2DDL_AUTO=update</code> for the update and start the
+   server so Hibernate creates the new <code>ActionGrant</code> table in the schema
+   database. Afterwards, set it back to <code>validate</code>. See
+   <a href="../../../6_operating-manual/database_update/database_update/">Database update</a>.</li>
+<li>Remove <code>gateway.forward.insight.eam.rpc</code> from <code>insight.properties</code> if it is
+   present. Requests to <code>insight/eam/rpc/...</code> must reach the V3 server for the
+   permission check.</li>
+<li>Upload the tree configurations again after installing the update. The upload
+   creates action grants from the configured action URLs; without it, action
+   requests have no matching grant and are rejected with HTTP 403.</li>
+</ol>
 <h2 id="ensure-permissions">Ensure Permissions<a class="headerlink" href="#ensure-permissions" title="Permanent link">&para;</a></h2>
 <p>Ensure every required V2 and V3 tree has a permission record
 in the schema database. If permissions were defined through <code>roles</code> in tree

@@ -15566,8 +15566,22 @@ overview table; a runnable example for every function follows below its table.</
 <span class="p">}</span>
 </code></pre></div>
 <h5 id="remoteaction">remote.action<a class="headerlink" href="#remoteaction" title="Permanent link">&para;</a></h5>
+<p>For actions under <code>insight/eam/rpc/</code> or <code>insight/action/</code>, the server checks
+the user's permissions for the tree containing the configuration. An action
+called from <code>attributeControl</code> requires read access; an action called from
+<code>validation</code> requires write access. A request without a matching configured
+action or the required permission returns HTTP 403.</p>
+<p>The action path must appear as a complete, quoted, concrete string in the
+<code>js</code> source so the configuration upload can register it. Use
+<code>'/eam/rpc/&lt;action&gt;'</code> or <code>'/action/&lt;backend&gt;/&lt;action&gt;'</code>, optionally
+appended to <code>insightUrl</code> (which already ends in <code>/insight</code>). The action name must not be assembled from variables
+or placeholders. Query parameters may be dynamic; they do not form part of
+the registered action path.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">"attributeControl"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">"js"</span><span class="p">:</span><span class="w"> </span><span class="s2">"remote.action('middleware/uuid').then((data) =&gt; { setValue(data.uuid); });"</span>
+<span class="w">    </span><span class="nt">"js"</span><span class="p">:</span><span class="w"> </span><span class="s2">"remote.action(insightUrl + '/eam/rpc/getCrew?WORKORDERID=' + getValueForName('WORKORDERID')).then((data) =&gt; { setValue(data.crewId); });"</span>
+<span class="p">},</span>
+<span class="nt">"validation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"js"</span><span class="p">:</span><span class="w"> </span><span class="s2">"remote.action(insightUrl + '/action/backend/check', {value: value}).then(() =&gt; valid()).catch(() =&gt; invalid('Check failed'));"</span>
 <span class="p">}</span>
 </code></pre></div>
 <p><strong>Fetch parameters</strong></p>
