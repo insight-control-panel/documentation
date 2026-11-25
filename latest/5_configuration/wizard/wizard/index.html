@@ -7789,6 +7789,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#precondition" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Precondition
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Complete action
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -10407,6 +10429,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#precondition" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Precondition
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Complete action
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -10474,8 +10518,52 @@
 </tr>
 <tr>
 <td><code>autoRefresh</code></td>
-<td>refreshs a tree automatically</td>
+<td>refreshs a tree automatically. See properties for autoRefresh.</td>
 <td>object</td>
+</tr>
+</tbody>
+</table>
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-start -->
+<table>
+<thead>
+<tr>
+<th>properties for autoRefresh</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fetchTree</code></td>
+<td>tree which is refreshed</td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>dateFilterAttribute</code></td>
+<td>attribute used to filter for new records by date</td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>interval</code></td>
+<td>refresh interval</td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>filter</code></td>
+<td>array of filters (<code>attribute</code>, <code>value</code>, <code>operator</code>)</td>
+<td>array</td>
+</tr>
+<tr>
+<td><code>userAttribute</code></td>
+<td>attribute which is filtered for the current user</td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>youngerThanMinutes</code></td>
+<td>only records younger than the given minutes are loaded</td>
+<td>number</td>
 </tr>
 </tbody>
 </table>
@@ -10540,6 +10628,16 @@
 <td>boolean</td>
 </tr>
 <tr>
+<td><code>signature</code></td>
+<td>shows a signature field in the summary. <code>documents</code> is the name of the documents entry the signature is stored in</td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>print</code></td>
+<td>shows a print button in the summary</td>
+<td>boolean</td>
+</tr>
+<tr>
 <td><code>incorrectLabelColor</code></td>
 <td>color of incorrect label. See here for more info <a href="../../layout/layout/#color">colors</a></td>
 <td>string</td>
@@ -10547,6 +10645,11 @@
 <tr>
 <td><code>openLabelColor</code></td>
 <td>color of open label. See here for more info <a href="../../layout/layout/#color">colors</a></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>toleratedLabelColor</code></td>
+<td>color of tolerated label (warnings). See here for more info <a href="../../layout/layout/#color">colors</a></td>
 <td>string</td>
 </tr>
 </tbody>
@@ -10608,11 +10711,6 @@
 <td><code>review</code></td>
 <td>Enter all attribute values for review</td>
 <td>string / Array of strings</td>
-</tr>
-<tr>
-<td><code>cancelled</code></td>
-<td>Enter the attribute value for cancelled</td>
-<td>string</td>
 </tr>
 <tr>
 <td><code>completed</code></td>
@@ -10718,13 +10816,13 @@
 
 <div class="admonition note">
 <p class="admonition-title">menuOnContextRecord</p>
-</div>
 <p><code>menuOnContextRecord</code> always targets the direct parent of the wizard's
 record, for example the work order an inspection was started from. It is
 only executed when the wizard was opened with a parent record path, and
 does nothing if no parent record is available (e.g. the wizard was opened
 standalone). A failing menu action shows an error message but does not
 block the already completed status transition.</p>
+</div>
 <div class="highlight"><pre><span></span><code><span class="nt">"wizard"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nt">"main"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">"allPagesAllowed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
@@ -10862,6 +10960,26 @@ block the already completed status transition.</p>
 <td>string</td>
 </tr>
 <tr>
+<td><code>description</code></td>
+<td>shows a description of the page. It is a reference to the attribute.</td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>number</code></td>
+<td>defines the number of the page. It is a reference to the attribute.</td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>ready</code></td>
+<td>reference to the attribute which stores whether the page is ready (completed).</td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>precondition</code></td>
+<td>the page is only shown if the precondition is fulfilled. See <a href="#precondition">precondition</a>.</td>
+<td>object</td>
+</tr>
+<tr>
 <td><code>tooltip</code></td>
 <td>can handle rich text and images (base64 formatted). It is displayed by a notification mark and triggers a popup. It is a reference to the attribute. It is a reference to the attribute. For changes change the attribtue value.</td>
 <td>string</td>
@@ -10910,8 +11028,13 @@ block the already completed status transition.</p>
 </tr>
 <tr>
 <td><code>number</code></td>
-<td>defines the number of the section</td>
+<td>defines the number of the section. With <code>hidden: true</code> the number is not displayed</td>
 <td>string / number</td>
+</tr>
+<tr>
+<td><code>precondition</code></td>
+<td>the section is only shown if the precondition is fulfilled. See <a href="#precondition">precondition</a>.</td>
+<td>object</td>
 </tr>
 <tr>
 <td><code>image</code></td>
@@ -10994,12 +11117,12 @@ block the already completed status transition.</p>
 <tbody>
 <tr>
 <td><code>attributeIdent</code></td>
-<td>need to be set to identify the value. requires an attribute reference in <code>attribute</code></td>
+<td>need to be set to identify the value. requires an attribute reference in <code>attribute</code> or a text with variables in <code>value</code></td>
 <td>object</td>
 </tr>
 <tr>
 <td><code>pageMatch</code></td>
-<td>need the groupId to match the values and the pages. requires an attribute in <code>GROUPID</code></td>
+<td>need the groupId to match the values and the pages. requires an attribute in <code>GROUPID</code>. Can also be configured with <code>mapping</code>, <code>grouping</code> and <code>title</code>. See <code>pageMatch</code></td>
 <td>object</td>
 </tr>
 <tr>
@@ -11064,7 +11187,37 @@ block the already completed status transition.</p>
 </tr>
 <tr>
 <td><code>options</code></td>
-<td>TODO</td>
+<td>the options of the value (e.g. for single or multiple selection). See <code>options</code></td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>suffix</code></td>
+<td>shows a suffix (e.g. the unit) behind the value. See <code>suffix</code></td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>withoutValue</code></td>
+<td>the value is displayed without an input (e.g. only as text). See <code>withoutValue</code></td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>selectFromTree</code></td>
+<td>selects the value from another tree. See <code>selectFromTree</code></td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>barcode</code></td>
+<td>reference to the attribute which defines the barcode configuration. requires an attribute reference in <code>attribute</code></td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>readonly</code></td>
+<td>makes the value readonly. requires a JavaScript in <code>js</code></td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>formula</code></td>
+<td>calculates the value. See <a href="#formulas">formulas</a></td>
 <td>object</td>
 </tr>
 <tr>
@@ -11076,7 +11229,7 @@ block the already completed status transition.</p>
 </table>
 <!-- prettier-ignore-end -->
 
-<div class="tabbed-set tabbed-alternate" data-tabs="2:10"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><input id="__tabbed_2_7" name="__tabbed_2" type="radio" /><input id="__tabbed_2_8" name="__tabbed_2" type="radio" /><input id="__tabbed_2_9" name="__tabbed_2" type="radio" /><input id="__tabbed_2_10" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">value</label><label for="__tabbed_2_2">type</label><label for="__tabbed_2_3">widget</label><label for="__tabbed_2_4">label</label><label for="__tabbed_2_5">tooltip</label><label for="__tabbed_2_6">labelBeside</label><label for="__tabbed_2_7">labelWithoutOpacity</label><label for="__tabbed_2_8">warnIcon</label><label for="__tabbed_2_9">multiValue</label><label for="__tabbed_2_10">actionIcon</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:15"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><input id="__tabbed_2_7" name="__tabbed_2" type="radio" /><input id="__tabbed_2_8" name="__tabbed_2" type="radio" /><input id="__tabbed_2_9" name="__tabbed_2" type="radio" /><input id="__tabbed_2_10" name="__tabbed_2" type="radio" /><input id="__tabbed_2_11" name="__tabbed_2" type="radio" /><input id="__tabbed_2_12" name="__tabbed_2" type="radio" /><input id="__tabbed_2_13" name="__tabbed_2" type="radio" /><input id="__tabbed_2_14" name="__tabbed_2" type="radio" /><input id="__tabbed_2_15" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">value</label><label for="__tabbed_2_2">type</label><label for="__tabbed_2_3">widget</label><label for="__tabbed_2_4">label</label><label for="__tabbed_2_5">tooltip</label><label for="__tabbed_2_6">labelBeside</label><label for="__tabbed_2_7">labelWithoutOpacity</label><label for="__tabbed_2_8">warnIcon</label><label for="__tabbed_2_9">multiValue</label><label for="__tabbed_2_10">actionIcon</label><label for="__tabbed_2_11">pageMatch</label><label for="__tabbed_2_12">options</label><label for="__tabbed_2_13">suffix</label><label for="__tabbed_2_14">withoutValue</label><label for="__tabbed_2_15">selectFromTree</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -11303,6 +11456,100 @@ block the already completed status transition.</p>
 <span class="w">  </span><span class="p">}</span>
 </code></pre></div>
 </div>
+<div class="tabbed-block">
+<ul>
+<li>by default the key is the attribute of the page record and the value a text with variables to match it, e.g. <code>"GROUPID": "${INSPQUESTION/GROUPID}"</code></li>
+<li>alternatively the key/value pair can be configured in <code>mapping</code>. Then <code>grouping</code> and <code>title</code> are available</li>
+<li><code>grouping</code> groups the values within a page. Either <code>attribute</code> (attribute of the value record) or <code>value</code> (text with variables)</li>
+<li><code>title.value</code> is the title of the page as text with variables</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">"pageMatch"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"mapping"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"GROUPID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${INSPQUESTION/GROUPID}"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"grouping"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GROUPNAME"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${GROUPNAME}"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>mapping</code> defines the options per field type. The key is the value of the <code>type</code> attribute (or of the attribute configured in <code>options.attribute</code>)<ul>
+<li><code>hint</code> is the source of the options: <code>&lt;child node name&gt;;&lt;attribute name&gt;</code>. The child node provides the option records, the attribute the option value. Variables like <code>${MAXDOMAIN/DOMAINTYPE}</code> are replaced with the values of the record</li>
+<li><code>info</code> attribute of the option record with additional information</li>
+<li><code>color</code> attribute of the option record with the color of the option</li>
+<li><code>sort</code> sorts the options. <code>by</code> is <code>label</code>, <code>value</code> or <code>id</code>, <code>parseInt</code> interprets the key as integer and <code>desc</code> sorts descending</li>
+<li><code>hideSignalColor</code> hides the signal color of the options</li>
+<li><code>override</code> overrides settings of single options. The key is the value of the option, e.g. <code>"OK": { "color": "GREEN" }</code></li>
+</ul>
+</li>
+<li><code>attribute</code> attribute of the value record whose value selects the <code>mapping</code> entry. By default the field type of the value is used (optional)</li>
+<li>as an alternative to <code>mapping</code> the options of one field type can be configured with <code>hint</code> and <code>enabledType</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"mapping"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"SO"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"hint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INSPFIELDOPTION;DESCRIPTION"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"info"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INSPECTORFEEDBACK"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"COLOR"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"sort"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"label"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"parseInt"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"desc"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"override"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"OK"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GREEN"</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"hint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INSPFIELDOPTION;DESCRIPTION"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"enabledType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SO"</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>attributes</code> is an array of attribute names. The first attribute with a value is shown behind the value, e.g. as unit</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">"suffix"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="s2">"unit"</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">"meter/unit"</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>js</code> JavaScript with a return statement. If it returns true, the value is displayed without an input (e.g. only as text) and is readonly</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">"withoutValue"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"js"</span><span class="p">:</span><span class="w"> </span><span class="s2">"return record.properties.INFO === true;"</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>the configuration is the same as for an attribute, see <a href="../../dataModel/data-model/#selectfromtree">selectFromTree</a></li>
+<li>additionally <code>enabledAttribute</code> (attribute of the value record which activates the selection if it is set) and <code>enabledType</code> (field type for which the selection is activated) are available</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">"selectFromTree"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"tree"</span><span class="p">:</span><span class="w"> </span><span class="s2">"locations"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"node"</span><span class="p">:</span><span class="w"> </span><span class="s2">"location"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LOCATION"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"enabledType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LO"</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+</div>
 </div>
 </div>
 <div class="highlight"><pre><span></span><code><span class="nt">"wizard"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -11501,25 +11748,63 @@ block the already completed status transition.</p>
 <span class="w">    </span><span class="nt">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"icon-clock"</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${myLabelAttribute}"</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">"wizard"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">"error"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">"threshold"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NUMBER1"</span>
-<span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">"operator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OPERATOR1"</span>
-<span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ERRORMESSAGE"</span>
-<span class="w">                    </span><span class="p">}</span>
+<span class="w">        </span><span class="nt">"error"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"threshold"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NUMBER1"</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="nt">"operator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OPERATOR1"</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ERRORMESSAGE"</span>
 <span class="w">                </span><span class="p">}</span>
-<span class="w">            </span><span class="p">]</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Please note that error and warnings need to be configured as children of the <code>value</code> nodeConfig.</p>
+<p>Please note that error and warnings need to be configured as children of the <code>value</code> nodeConfig, with <code>error</code> or <code>warning</code> directly in the <code>wizard</code> configuration of that child node.</p>
+<p>Each condition supports the following properties:</p>
+<!-- prettier-ignore-start -->
+<table>
+<thead>
+<tr>
+<th>properties</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>threshold</code></td>
+<td>the value the entered value is compared with. <code>attribute</code> is the attribute holding the threshold, <code>formula</code> a formula calculating it (variables like <code>${ATTRIBUTE}</code> are replaced)</td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>operator</code></td>
+<td>the comparison operator. <code>attribute</code> is the attribute holding the operator, <code>value</code> a fixed operator</td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>custom message. <code>attribute</code> is the attribute holding the message, <code>value</code> a fixed message</td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>active</code></td>
+<td>JavaScript (<code>js</code>) which decides whether the condition is active. Parameters: <code>object</code>, <code>record</code>, <code>userData</code>, <code>replaceObject</code></td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>inverted</code></td>
+<td>flips the logic, see below</td>
+<td>boolean</td>
+</tr>
+</tbody>
+</table>
+<!-- prettier-ignore-end -->
+
 <p>Error conditions support basic mathematical conditions which are taken from the configured <code>operator</code> attribute and compared to the configured <code>threshold</code> attribute. To show custom error messages, configure a <code>message</code> attribute. Otherwise, default error messages are shown. Supported conditions are:</p>
 <ul>
 <li><code>&gt;</code></li>
@@ -11535,21 +11820,19 @@ block the already completed status transition.</p>
 <span class="w">    </span><span class="nt">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"icon-clock"</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${myLabelAttribute}"</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">"wizard"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">"warning"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">"threshold"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NUMBER1"</span>
-<span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">"operator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OPERATOR1"</span>
-<span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WARNINGMESSAGE"</span>
-<span class="w">                    </span><span class="p">}</span>
+<span class="w">        </span><span class="nt">"warning"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"threshold"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NUMBER1"</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="nt">"operator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OPERATOR1"</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WARNINGMESSAGE"</span>
 <span class="w">                </span><span class="p">}</span>
-<span class="w">            </span><span class="p">]</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -11559,21 +11842,158 @@ block the already completed status transition.</p>
 <span class="w">    </span><span class="nt">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"icon-clock"</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${myLabelAttribute}"</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">"wizard"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">"warning"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">"inverted"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">"threshold"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NUMBER1"</span>
-<span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">"operator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OPERATOR1"</span>
-<span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WARNINGMESSAGE"</span>
-<span class="w">                    </span><span class="p">}</span>
+<span class="w">        </span><span class="nt">"warning"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"inverted"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"threshold"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NUMBER1"</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="nt">"operator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OPERATOR1"</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WARNINGMESSAGE"</span>
 <span class="w">                </span><span class="p">}</span>
-<span class="w">            </span><span class="p">]</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="precondition">Precondition<a class="headerlink" href="#precondition" title="Permanent link">&para;</a></h3>
+<p>A precondition makes a value, a page or a section dependent on the answer of another value of the same wizard. The dependent element is only visible (default) and/or required, as long as the precondition is fulfilled.</p>
+<ul>
+<li>for a <strong>value</strong> the precondition is configured with <code>precondition</code> in the <code>wizard</code> configuration of a child node of the <code>value</code> nodeConfig. Each record of that child node is one precondition</li>
+<li>for a <strong>page</strong> or a <strong>section</strong> the <code>precondition</code> property is configured directly in the <code>page</code> or <code>section</code> configuration. The attributes of the precondition then refer to the record of the page or section</li>
+</ul>
+<!-- prettier-ignore-start -->
+<table>
+<thead>
+<tr>
+<th>properties</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>preAttribute</code></td>
+<td>identifies the value which is checked. <code>attribute</code> is the attribute holding the ident (<code>attributeIdent</code>) of that value, <code>value</code> an ident as text with variables</td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>operator</code></td>
+<td>the comparison operator. <code>attributes</code> is a list of attributes, the first one with a value is used. Supported: <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>=</code>, <code>&lt;&gt;</code>, <code>!=</code></td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td>the expected value. <code>attributes</code> is a list of attributes, the first one with a value is used</td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>range</code></td>
+<td>checks a range with two operators and two values (<code>operator.attribute1/attribute2</code> and <code>value.attribute1/attribute2</code>)</td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>formula</code></td>
+<td>formula which has to be fulfilled instead of comparing a single value. <code>attribute</code> holds the formula, <code>ident</code> defines how other fields are referenced (see <a href="#formulas">formulas</a>)</td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>visible</code></td>
+<td><code>attribute</code> of the precondition record. If it is set, the precondition controls the visibility. This is the default mode</td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>required</code></td>
+<td><code>attribute</code> of the precondition record. If it is set, the precondition makes the value required</td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>preInfoText</code></td>
+<td>info text shown at the checked value if the precondition is fulfilled. <code>attribute</code> or <code>value</code> (text with variables)</td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>infoText</code></td>
+<td>info text shown at the dependent value if the precondition is fulfilled. <code>attribute</code> or <code>value</code> (text with variables)</td>
+<td>object</td>
+</tr>
+</tbody>
+</table>
+<!-- prettier-ignore-end -->
+
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"myPreconditionNode"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"wizard"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"precondition"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"preAttribute"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PREQUESTIONIDENT"</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">"operator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"OPERATOR"</span><span class="p">]</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"TXTVALUE"</span><span class="p">,</span><span class="w"> </span><span class="s2">"NUMVALUE"</span><span class="p">]</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">"visible"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ISVISIBLE"</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ISREQUIRED"</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">"infoText"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INFOTEXT"</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="complete-action">Complete action<a class="headerlink" href="#complete-action" title="Permanent link">&para;</a></h3>
+<p>With <code>completeAction</code> the user can select actions when completing the wizard. It is configured in the <code>wizard</code> configuration of a child node of the root node. Each record of that node is one selectable action. The values of the selected actions are written as JSON array into the configured attribute of the main record.</p>
+<!-- prettier-ignore-start -->
+<table>
+<thead>
+<tr>
+<th>properties</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>label</code></td>
+<td><code>attribute</code> holding the label of the action</td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>attribute</code> holding the value of the action</td>
+<td>object</td>
+</tr>
+<tr>
+<td><code>parent</code></td>
+<td><code>attribute</code> of the main record which receives the selected values</td>
+<td>object</td>
+</tr>
+</tbody>
+</table>
+<!-- prettier-ignore-end -->
+
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"completeActions"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"wizard"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"completeAction"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DESCRIPTION"</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTIONID"</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">"parent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SELECTEDACTIONS"</span>
+<span class="w">            </span><span class="p">}</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>

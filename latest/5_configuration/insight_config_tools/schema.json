@@ -113,6 +113,17 @@
                     "description": "With the acrossUsers switch, downloads can be saved on the device for all users.",
                     "type": "boolean",
                     "default": true
+                },
+                "searchModel": {
+                    "type": "object",
+                    "description": "Settings for the offline search model.",
+                    "properties": {
+                        "static": {
+                            "type": "boolean",
+                            "description": "The offline search model is built once after a download and retained as-is until the next download. Improves load times, especially for selection lists. Only use it for trees that are not modified locally.",
+                            "default": true
+                        }
+                    }
                 }
             }
         },
@@ -167,6 +178,12 @@
                         "type": ["number", "string"],
                         "description": "This attribute label gets the width in px. Works only with labelBeside = true",
                         "default": "100"
+                    },
+                    "expanded": {
+                        "title": "Expanded",
+                        "type": "boolean",
+                        "description": "Only works if the section has a label. If false, the section is collapsed. Whether a section is expanded or collapsed is saved.",
+                        "default": true
                     }
                 },
                 "additionalProperties": false,
@@ -325,6 +342,14 @@
         "clearSearch": {
             "type": "boolean",
             "description": "Removes the search text when the page is entered."
+        },
+        "scanBarcode": {
+            "type": "boolean",
+            "description": "Show the barcode scan when the page is entered."
+        },
+        "hideSectionBorder": {
+            "type": "boolean",
+            "description": "If true, all sections are packed into one card and the section borders disappear. Is superior to the definition in config.json."
         },
         "searchPattern": {
             "type": "string",
@@ -631,6 +656,26 @@
                     "description": "If a search only returns a single matching node, that node is automatically selected and the dialog closes immediately without requiring an explicit user selection.",
                     "type": "boolean",
                     "default": false
+                },
+                "searchString": {
+                    "description": "Initial search text. Starts a search when the dialog opens, including with rootMode: search. If selectFromTree is an array, it can be configured separately for each tab.",
+                    "type": "string"
+                },
+                "children": {
+                    "description": "Defines for each child node the node and the attribute to be selected.",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "node": {
+                                "type": "string"
+                            },
+                            "attribute": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "default": []
                 }
             },
             "default": {
@@ -685,6 +730,12 @@
                                         },
                                         "additionalProperties": false,
                                         "required": ["name", "attribute"]
+                                    }
+                                },
+                                "or": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object"
                                     }
                                 }
                             }
@@ -929,7 +980,83 @@
                     "description": "Defines the backend specific object type"
                 },
                 "inlineOnly": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "description": "Node is only used for inline attributes (nodename/attributename) and is not displayed in the UI."
+                },
+                "IDKEY": {
+                    "type": "string",
+                    "description": "Name of the key attribute if the database table uses a non-canonical key name. Required so Insight can present data sets immediately after their creation. Example: TICKETUID"
+                },
+                "omitQueryParams": {
+                    "type": "boolean",
+                    "description": "Loop nodes only: children are not required to fulfill the queryParams constraints of the parent node. Caution: the profile constraint is no longer applied, which may be a security concern."
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Longer description of a record. Visualized only by certain components (e.g. popup when hovering a map label). ${ATTRIBUTENAME} is dynamically replaced with the value of the attribute."
+                },
+                "tooltip": {
+                    "type": "string",
+                    "description": "Tooltip that can be seen when hovering over a record, depending on the component that visualizes the record. ${ATTRIBUTENAME} is dynamically replaced with the value of the attribute."
+                },
+                "wizard": {
+                    "$ref": "#/definitions/wizard"
+                },
+                "hierarchySelections": {
+                    "type": "array",
+                    "description": "Links selectFromTree attributes in a cascade. Selecting a value in one level automatically loads, filters and opens the next level. Changing a level clears all subsequent levels.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "levels": {
+                                "type": "array",
+                                "description": "Levels of the hierarchy in the order they are selected.",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "mainAttribute": {
+                                            "type": "string",
+                                            "description": "Name of the attribute (with selectFromTree) of this level."
+                                        },
+                                        "clearAttributes": {
+                                            "type": "array",
+                                            "description": "Additional attributes that are cleared when the main attribute of this level changes.",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    },
+                                    "required": ["mainAttribute"]
+                                }
+                            }
+                        },
+                        "required": ["levels"]
+                    },
+                    "default": []
+                },
+                "map": {
+                    "type": "object",
+                    "description": "Configuration to show the records of this node on a map.",
+                    "properties": {
+                        "layer": {
+                            "type": "object",
+                            "description": "Layer of the child node. Every child node with a layer configuration is displayed as its own layer.",
+                            "properties": {
+                                "attribute": {
+                                    "type": "string",
+                                    "description": "Attribute the layers are based on."
+                                },
+                                "label": {
+                                    "type": "string",
+                                    "description": "Label rendered for each record. Example: ${myLabelAttribute}"
+                                }
+                            }
+                        },
+                        "fontSize": {
+                            "type": "number",
+                            "description": "Font size of the rendered labels."
+                        }
+                    }
                 },
                 "title": {
                     "description": "Label for UI presentation (bucket (Insight Explorer), header (Insight Mobile))",
@@ -1300,6 +1427,48 @@
                                 },
                                 "default": []
                             },
+                            "handler": {
+                                "type": "string",
+                                "description": "Defines the documents handler to use.",
+                                "enum": ["maximo", "file", "insight"]
+                            },
+                            "minCount": {
+                                "type": "number",
+                                "description": "Number of documents/photos which have to be uploaded."
+                            },
+                            "js": {
+                                "type": "string",
+                                "description": "JavaScript function to determine whether the document bucket is shown. Return false to hide the bucket. Parameters: userData, parentRecord, isNew"
+                            },
+                            "visible": {
+                                "type": "object",
+                                "description": "Dynamically hides the document bucket. Parameters: userData, parentRecord, isNew",
+                                "properties": {
+                                    "js": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "hideUploadAction": {
+                                "type": "boolean",
+                                "description": "Hides the upload action icon of type=File configurations."
+                            },
+                            "hideViewAction": {
+                                "type": "boolean",
+                                "description": "Hides the view action icon of type=File configurations."
+                            },
+                            "fileReplace": {
+                                "type": "boolean",
+                                "description": "Must be set if the file is replaced on a documents meta record and not attached to the parent record as a new meta record."
+                            },
+                            "fileReplaceOnly": {
+                                "type": "boolean",
+                                "description": "Sets fileReplace, hideViewAction and hideUploadAction to true."
+                            },
+                            "readOnly": {
+                                "type": "boolean",
+                                "description": "Sets hideUploadAction and imageEdit.disabled to true and hides the possibly visible save button."
+                            },
                             "headerHidden": {
                                 "type": "boolean",
                                 "description": "Boolean value to hide the document section header."
@@ -1411,13 +1580,27 @@
                     "description": "Displays a previous view after saving",
                     "default": 1
                 },
-                "saveOnLeave": {
+                "saveAndTop": {
                     "type": "boolean",
+                    "description": "Pressing save on detail view scrolls to top",
+                    "default": true
+                },
+                "nextButton": {
+                    "type": ["boolean", "object"],
+                    "description": "Shows arrow buttons to move to the previous and the next list entry without returning to the list. Filters can be set to jump directly to specific list entries.",
+                    "properties": {
+                        "filter": {
+                            "$ref": "#/properties/filter"
+                        }
+                    }
+                },
+                "saveOnLeave": {
+                    "type": ["boolean", "object"],
                     "description": "Saves automatically when you leave the detail view, for example, by clicking on another list entry or returning to the list. If validation fails, the page will not be refreshed.",
                     "default": true
                 },
                 "saveOnConfirmLeave": {
-                    "type": "boolean",
+                    "type": ["boolean", "object"],
                     "description": "When you exit the detail view, a dialog box appears if there are unsaved changes. Clicking the button also displays a Save button.",
                     "default": true
                 },
@@ -1615,7 +1798,12 @@
                             "type": "boolean"
                         },
                         "insertBefore": {
-                            "type": "string"
+                            "type": "string",
+                            "description": "Name of the attribute before which the classification attributes are inserted. If not defined, they are inserted at the end of the attribute list."
+                        },
+                        "showClassifier": {
+                            "type": "boolean",
+                            "description": "The classifier attribute is hidden by default. With this property it can be shown."
                         }
                     }
                 },
@@ -1887,6 +2075,35 @@
                                     "type": "boolean",
                                     "default": false
                                 },
+                                "border": {
+                                    "description": "Adds borders between table cells.",
+                                    "type": "object",
+                                    "properties": {
+                                        "horizontal": {
+                                            "description": "Adds horizontal borders.",
+                                            "type": "boolean",
+                                            "default": false
+                                        },
+                                        "vertical": {
+                                            "description": "Adds vertical borders.",
+                                            "type": "boolean",
+                                            "default": false
+                                        }
+                                    }
+                                },
+                                "suppressDoubleClick": {
+                                    "description": "Disables the default double click behaviour for rows.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "inputStyle": {
+                                    "description": "Adds a custom style class to editable cell inputs.",
+                                    "type": "string"
+                                },
+                                "saveButtonText": {
+                                    "description": "Sets a custom label for the Save button.",
+                                    "type": "string"
+                                },
                                 "header": {
                                     "type": "object",
                                     "description": "Defines the layout and appearance of a header section, including styling, orientation, size, and groups.",
@@ -2004,6 +2221,34 @@
                             "enum": ["ellipsis"],
                             "default": "ellipsis"
                         },
+                        "inlineChildren": {
+                            "description": "Child nodes that are rendered inline in the list. The list entries become expandable and the child list entries are loaded incrementally. The child nodes must not be inlineOnly.",
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "description": "Name of the child node. Must match the name of the children object.",
+                                        "type": "string"
+                                    },
+                                    "select": {
+                                        "description": "If true, the inlineChildren can be selected.",
+                                        "type": "boolean"
+                                    }
+                                },
+                                "required": ["name"]
+                            },
+                            "default": []
+                        },
+                        "inlineChildrenPageSize": {
+                            "description": "Number of inline child entries which are loaded/shown per chunk. Further entries can be loaded with a \"Load More\" button.",
+                            "type": "number",
+                            "default": 3
+                        },
+                        "withLinks": {
+                            "description": "Loads the list entries with their children paths",
+                            "type": "boolean"
+                        },
                         "sort": {
                             "description": "Defines the sort properties of the list",
                             "type": "object",
@@ -2044,6 +2289,11 @@
                         "inline": {
                             "description": "The records can be edited directly on the parent's detail page",
                             "type": "boolean"
+                        },
+                        "visibleMenuCount": {
+                            "description": "Number of directly visible menus. The rest are shown when clicking on the 3 dots.",
+                            "type": "number",
+                            "default": 1
                         },
                         "attributes": {
                             "description": "Attributes to be shown in multi lines. Properties of the attributes can be overridden.",
@@ -2220,6 +2470,19 @@
                             "rss_14",
                             "rss_expanded"
                         ]
+                    }
+                },
+                "legacy": {
+                    "type": "boolean",
+                    "description": "Uses the old cordova based barcode scanner instead of the HTML5 based one."
+                },
+                "postProcessor": {
+                    "type": "object",
+                    "description": "Handles control characters of the barcode after the scan. Can also be configured globally in config.json. 'value' is injected as parameter.",
+                    "properties": {
+                        "js": {
+                            "type": "string"
+                        }
                     }
                 }
             }
@@ -2665,7 +2928,7 @@
                         },
                         "attribute": {
                             "description": "attribute of root node (in the referenced configuration specified in \"tree\")",
-                            "type": "boolean"
+                            "type": "string"
                         },
                         "node": {
                             "type": "string"
@@ -2843,6 +3106,117 @@
                     "type": "boolean",
                     "description": "Displays a button that inserts the current date/time."
                 },
+                "sms": {
+                    "type": "boolean",
+                    "description": "The attribute value is passed to the sms protocol which starts the default sms app."
+                },
+                "mail": {
+                    "type": "boolean",
+                    "description": "The attribute value is passed to the mailto protocol which starts the default mail app."
+                },
+                "keypad": {
+                    "type": "object",
+                    "description": "Shows a button behind the input control that displays a keypad dialog. Clicking a button adds its text to the attribute value. Can be added to a string attribute.",
+                    "properties": {
+                        "rows": {
+                            "type": "array",
+                            "description": "Rows of the keypad, each row is an array of buttons.",
+                            "items": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "value": {
+                                            "type": "string",
+                                            "description": "Value to add (mandatory)"
+                                        },
+                                        "label": {
+                                            "type": "string",
+                                            "description": "Label to display"
+                                        },
+                                        "clear": {
+                                            "type": "boolean",
+                                            "description": "Clears the whole text. Can be used to replace the whole value."
+                                        },
+                                        "styleClass": {
+                                            "type": "string",
+                                            "description": "Styling the button cell. Can be used to add color to the cell. Example: bg-color-light-blue"
+                                        }
+                                    },
+                                    "required": ["value"]
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "rows": []
+                    }
+                },
+                "sectionCollapsed": {
+                    "type": "boolean",
+                    "description": "Displays the attribute as a preview when the section is collapsed. Works only with sections.",
+                    "default": true
+                },
+                "documentName": {
+                    "type": "string",
+                    "description": "FileUpload attributes: name of the documents entry the upload is bound to."
+                },
+                "min": {
+                    "type": ["array", "number", "boolean"],
+                    "description": "Date attributes: lower limit of the date picker. Array [year, month, day], number of days relative to today, or true for today (false removes any limit)."
+                },
+                "max": {
+                    "type": ["array", "number", "boolean"],
+                    "description": "Date attributes: upper limit of the date picker. Array [year, month, day], number of days relative to today, or true for today (false removes any limit)."
+                },
+                "disable": {
+                    "type": "array",
+                    "description": "Date attributes: disables specific dates ([year, month, day]), weekdays (1-7) or ranges ({ \"from\": [..], \"to\": [..] }) in the date picker."
+                },
+                "next": {
+                    "type": ["boolean", "string"],
+                    "description": "Shifts the focus to the next attribute (true) or to the attribute with the given name after the input. Works for inputs with user selection such as Combo or SelectList."
+                },
+                "ownValuesAllowed": {
+                    "type": "boolean",
+                    "description": "SelectList widget: suggestion without validation."
+                },
+                "duration": {
+                    "type": "object",
+                    "description": "Settings of the Duration widget.",
+                    "properties": {
+                        "unit": {
+                            "type": "string",
+                            "description": "If set to minutes, the value is converted to minutes instead of decimal hours.",
+                            "enum": ["minutes"]
+                        },
+                        "maxHours": {
+                            "type": ["number", "string"],
+                            "description": "The max hours of the duration input."
+                        }
+                    }
+                },
+                "conversions": {
+                    "type": "object",
+                    "description": "TextDuration widget: custom units or overridden unit conversion factors in minutes. Example: { \"d\": \"1440\", \"month\": \"43200\" }"
+                },
+                "visible": {
+                    "type": "object",
+                    "description": "Show or hide the column (tables). object, userData and attribute are available.",
+                    "properties": {
+                        "js": {
+                            "type": "string",
+                            "description": "JavaScript with a return statement."
+                        }
+                    }
+                },
+                "ocr": {
+                    "$ref": "#/definitions/ocr"
+                },
+                "nfc": {
+                    "type": "boolean",
+                    "description": "Enables NFC tag reading to fill the attribute value."
+                },
                 "tooltip": {
                     "type": "string",
                     "description": "Displays a tooltip icon that shows a dialog with the text. i.e. ${DESCRIPTION_LONGDESCRIPTION}"
@@ -2881,6 +3255,10 @@
                                 "title": {
                                     "type": "string",
                                     "description": "Text displayed in the sub-header (e.g. units like °C, mbar, Hz)."
+                                },
+                                "style": {
+                                    "type": "string",
+                                    "description": "Coloring for the column subheader."
                                 }
                             },
                             "additionalProperties": false
@@ -2998,8 +3376,59 @@
                         "listDialog",
                         "createMulti",
                         "ifc",
-                        "searchInPlanning"
+                        "searchInPlanning",
+                        "saveDetails",
+                        "staticContent",
+                        "debug",
+                        "focus",
+                        "tab",
+                        "openMaximo",
+                        "barcodeDeeplink",
+                        "ocr",
+                        "map"
                     ]
+                },
+                "swipeColor": {
+                    "description": "Defines the color of the swipe menu or the menuOnList. For the colors see layout > color.",
+                    "type": "string"
+                },
+                "onlineOnly": {
+                    "description": "Menu actions with onlineOnly can only be executed online.",
+                    "type": "boolean"
+                },
+                "scenario": {
+                    "description": "Groups actions together even when in separate trees. Insight Explorer only.",
+                    "type": "string"
+                },
+                "tooltip": {
+                    "description": "Displays a tooltip when hovering over the menu action's button. Insight Explorer only.",
+                    "type": "string"
+                },
+                "js": {
+                    "description": "JavaScript function to process the objects. Gets the objects as an array and returns the object(s) for the action as an array or a single object. If multiple objects are transformed to one object for an action that does not support multiple objects, set allowMultipleObjects to true in an actionValue.",
+                    "type": "string"
+                },
+                "execute": {
+                    "description": "Multiselection: executes the menu action for each selected list entry. Requires multiselection: true in the actionValues.",
+                    "type": "string",
+                    "enum": ["forEach"]
+                },
+                "script": {
+                    "description": "Request action: breaks up the request url into backend and script name. Sets the request method to POST by default.",
+                    "type": "object",
+                    "properties": {
+                        "backend": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "params": {
+                            "type": "object",
+                            "freeProperties": "true"
+                        }
+                    },
+                    "required": ["backend", "name"]
                 },
                 "visible": {
                     "type": "object",
@@ -3120,6 +3549,74 @@
                                         "default": true,
                                         "title": "opens the IFC in 2D plan view"
                                     },
+                                    "activateOnly": {
+                                        "type": "boolean",
+                                        "title": "Multiselection tree menu: the active state of the menu is not shown in the UI"
+                                    },
+                                    "successMessage": {
+                                        "type": "boolean",
+                                        "title": "Multiselection with execute: forEach: shows a message with the number of successfully processed entries"
+                                    },
+                                    "treeName": {
+                                        "type": "string",
+                                        "title": "Only for the filter action. Tree the filter is applied to"
+                                    },
+                                    "close": {
+                                        "type": "boolean",
+                                        "title": "Only for the tab action. Closes the current active tab"
+                                    },
+                                    "scenario": {
+                                        "type": "string",
+                                        "title": "Only for the tab action. Closes the tab with the given scenario name"
+                                    },
+                                    "path": {
+                                        "type": "string",
+                                        "title": "Record path to focus or navigate to (focus, details, goto)"
+                                    },
+                                    "parseJson": {
+                                        "type": "boolean",
+                                        "title": "Only for the barcodeScan action. Parses the scanned barcode as JSON"
+                                    },
+                                    "newTab": {
+                                        "type": "boolean",
+                                        "title": "Forces the menu action to open in a new tab"
+                                    },
+                                    "focusAttribute": {
+                                        "type": "string",
+                                        "title": "Only for the form action. Attribute to focus when opening the dialog"
+                                    },
+                                    "saveButtonText": {
+                                        "type": "string",
+                                        "title": "Only for the form action. Custom label of the save button"
+                                    },
+                                    "dirtyCheck": {
+                                        "type": "boolean",
+                                        "title": "Only for the form action. Forces the dirty check when leaving the form"
+                                    },
+                                    "confirmLeave": {
+                                        "type": "boolean",
+                                        "title": "Only for the form action. Forces a confirm dialog when leaving the form"
+                                    },
+                                    "createCount": {
+                                        "type": "object",
+                                        "title": "Only for the createMulti action. Creates several new data records from a selected data record"
+                                    },
+                                    "listEdit": {
+                                        "type": "object",
+                                        "title": "Overwrites the listEdit configuration of the child node (createMulti, goto)"
+                                    },
+                                    "target": {
+                                        "type": "string",
+                                        "title": "Only for the openMaximo action. Named browser tab target which is reused for subsequent calls with the same name"
+                                    },
+                                    "uniqueid": {
+                                        "type": "string",
+                                        "title": "Only for the openMaximo action. Unique ID of the object to load, e.g. ${WORKORDERID}"
+                                    },
+                                    "ocr": {
+                                        "$ref": "#/definitions/ocr",
+                                        "title": "Only for the ocr action"
+                                    },
                                     "operator": {
                                         "type": "string",
                                         "default": "",
@@ -3197,6 +3694,11 @@
                                     "type": "string"
                                 }
                             }
+                        },
+                        "timeout": {
+                            "type": "number",
+                            "description": "Request timeout. Default: 60",
+                            "default": 60
                         }
                     },
                     "required": ["url"]
@@ -3231,9 +3733,17 @@
                 },
                 "on": {
                     "type": "array",
+                    "description": "Specifies where the menu entry should be placed.\n- top: on table header and mobile buckets instead of context menu/details/swipe\n- wizard: shows the menu in the wizard header\n- ifc: can be used by one menu to be executed on the IFC\n- gantt: shows the menu on the gantt\n- list: shows the menu on each list entry\n- inlineChildren: shows parent menus under the inlineChildren",
                     "items": {
                         "type": "string",
-                        "enum": ["top", "wizard", "ifc", "gantt"]
+                        "enum": [
+                            "top",
+                            "wizard",
+                            "ifc",
+                            "gantt",
+                            "list",
+                            "inlineChildren"
+                        ]
                     },
                     "default": [""]
                 }
@@ -3693,6 +4203,30 @@
                 "jetSearch": {
                     "type": "string"
                 },
+                "leftJoinOn": {
+                    "type": "string",
+                    "description": "Maximo only: defines the relationship between parent and child directly as a join condition. Required for inline attributes used for sorting or filtering. A relation or a constraint must still be configured. Example: DOCLINKSLOC.ownertable = 'LOCATIONS' and DOCLINKSLOC.ownerid = Standort.locationsid"
+                },
+                "chain": {
+                    "type": "array",
+                    "description": "openTALOS only: array of relations that traverse from parent to child, used to skip unwanted intermediate nodes. The first relation must be adjacent to the parent, the last to the child.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "relation": {
+                                "type": "string"
+                            },
+                            "direction": {
+                                "type": "string",
+                                "enum": ["TOP_DOWN", "BOTTOM_UP"]
+                            },
+                            "constraint": {
+                                "type": ["object", "string"]
+                            }
+                        },
+                        "required": ["relation", "direction"]
+                    }
+                },
                 "constraint": {
                     "type": ["object", "string"],
                     "properties": {
@@ -3894,6 +4428,7 @@
                         "enum": [
                             "eq",
                             "ne",
+                            "match",
                             "lt",
                             "le",
                             "gt",
@@ -3905,6 +4440,22 @@
                         ]
                     },
                     "value": {},
+                    "instanceOf": {
+                        "type": "string",
+                        "description": "Model-Id of the class (InstanceOf constraint)"
+                    },
+                    "relation": {
+                        "type": "string",
+                        "description": "Model-Id of the association which joins the related type (relation constraint)"
+                    },
+                    "direction": {
+                        "type": "string",
+                        "enum": ["TOP_DOWN", "BOTTOM_UP"]
+                    },
+                    "constraint": {
+                        "type": ["object", "array"],
+                        "description": "Constraint that must hold for the associated objects of a relation constraint"
+                    },
                     "and": {
                         "$ref": "#/definitions/constraintObject"
                     },
@@ -4344,6 +4895,1086 @@
                 }
             },
             "required": ["attribute"]
+        },
+        "ocr": {
+            "type": "object",
+            "description": "OCR (Optical Character Recognition): the device camera reads text and uses it to fill the attribute value (attribute) or to trigger filter actions (ocr menu action). Insight Mobile only (iOS and Android). The minimal configuration is an empty object.",
+            "properties": {
+                "split": {
+                    "description": "Defines how the recognized text is split for selection.",
+                    "type": "string",
+                    "enum": ["words", "lines"],
+                    "default": "lines"
+                },
+                "openSingleResult": {
+                    "description": "If only one result is found after splitting, it is accepted automatically without showing a selection list.",
+                    "type": "boolean"
+                },
+                "recordRequired": {
+                    "description": "The user must select an entry from the findInTree result list. The raw OCR text cannot be accepted directly.",
+                    "type": "boolean"
+                },
+                "postProcessor": {
+                    "description": "JavaScript function to transform the recognized text lines before they are shown for selection. 'lines' (array of strings) is injected and a modified array must be returned.",
+                    "type": "object",
+                    "properties": {
+                        "js": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "findInTree": {
+                    "description": "Searches for matching records in a tree for each OCR text candidate. Use ${ocrEachText} as placeholder for the current candidate in the filter.",
+                    "type": "object",
+                    "properties": {
+                        "tree": {
+                            "type": "string",
+                            "description": "Name of the tree to search in."
+                        },
+                        "node": {
+                            "type": "string",
+                            "description": "Name of the node within the tree."
+                        },
+                        "attribute": {
+                            "type": "string",
+                            "description": "The attribute to filter on."
+                        },
+                        "filter": {
+                            "type": "object",
+                            "description": "Filter criteria. Use ${ocrEachText} as placeholder for the current OCR candidate text."
+                        },
+                        "autoFill": {
+                            "type": "array",
+                            "description": "Fills additional attributes from the selected tree record.",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "src": {
+                                        "type": "string",
+                                        "description": "Attribute name in the matched tree record (source)."
+                                    },
+                                    "dst": {
+                                        "type": "string",
+                                        "description": "Attribute name in the current form (destination)."
+                                    }
+                                }
+                            },
+                            "default": []
+                        }
+                    }
+                },
+                "scanFrame": {
+                    "description": "Defines a custom rectangular scan frame. Only the area within the frame is analyzed by the OCR engine.",
+                    "type": "object",
+                    "properties": {
+                        "width": {
+                            "type": "number",
+                            "description": "Width in pixels"
+                        },
+                        "height": {
+                            "type": "number",
+                            "description": "Height in pixels"
+                        }
+                    }
+                },
+                "useNativeCamera": {
+                    "description": "Uses the native device camera instead of the integrated scanner.",
+                    "type": "boolean"
+                }
+            },
+            "default": {}
+        },
+        "wizardAttributeRef": {
+            "type": "object",
+            "description": "Reference to an attribute. The value is taken from the referenced attribute of the record.",
+            "properties": {
+                "attribute": {
+                    "type": "string",
+                    "description": "Name of the referenced attribute."
+                },
+                "hidden": {
+                    "type": "boolean",
+                    "description": "Hides the element."
+                }
+            },
+            "default": {
+                "attribute": ""
+            }
+        },
+        "wizardTooltip": {
+            "type": "object",
+            "description": "Can handle rich text and images (base64 formatted). Displayed by a notification mark which triggers a popup.",
+            "properties": {
+                "attribute": {
+                    "type": "string",
+                    "description": "Reference to the attribute containing the tooltip."
+                },
+                "existsAttribute": {
+                    "type": "string",
+                    "description": "Attribute that checks if a tooltip exists."
+                },
+                "sideLoad": {
+                    "type": "object",
+                    "description": "Reduces the traffic and improves the performance. The tooltip is loaded by clicking.",
+                    "properties": {
+                        "attribute": {
+                            "type": "string",
+                            "description": "Reference to the attribute."
+                        },
+                        "fetchTree": {
+                            "type": "string",
+                            "description": "Defines the extra tree."
+                        },
+                        "fetchNode": {
+                            "type": "string",
+                            "description": "Defines the node."
+                        }
+                    }
+                }
+            }
+        },
+        "wizardWarnIcon": {
+            "type": "object",
+            "description": "Displays a warning icon next to the label.",
+            "properties": {
+                "attribute": {
+                    "type": "string",
+                    "description": "Attribute reference. Its value selects the mapping entry."
+                },
+                "mapping": {
+                    "type": "object",
+                    "description": "The keys are the different values of the referenced attribute.",
+                    "additionalProperties": {
+                        "type": "object",
+                        "properties": {
+                            "icon": {
+                                "$ref": "#/definitions/iconClass",
+                                "description": "The icon to be displayed."
+                            },
+                            "color": {
+                                "type": "string",
+                                "description": "Color of the icon (optional). Example: color-red"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "wizardCondition": {
+            "type": "object",
+            "description": "Condition comparing the entered value to a threshold.",
+            "properties": {
+                "threshold": {
+                    "type": "object",
+                    "description": "Value the entered value is compared with.",
+                    "properties": {
+                        "attribute": {
+                            "type": "string",
+                            "description": "Attribute holding the threshold."
+                        },
+                        "formula": {
+                            "type": "string",
+                            "description": "Formula calculating the threshold. Variables like ${ATTRIBUTE} are replaced with values of the record."
+                        }
+                    }
+                },
+                "operator": {
+                    "type": "object",
+                    "description": "Comparison operator. Supported: >, <, >=, <=, =, !=",
+                    "properties": {
+                        "attribute": {
+                            "type": "string",
+                            "description": "Attribute holding the operator."
+                        },
+                        "value": {
+                            "type": "string",
+                            "description": "Fixed operator."
+                        }
+                    }
+                },
+                "message": {
+                    "type": "object",
+                    "description": "Custom message. Otherwise default messages are shown.",
+                    "properties": {
+                        "attribute": {
+                            "type": "string",
+                            "description": "Attribute holding the message."
+                        },
+                        "value": {
+                            "type": "string",
+                            "description": "Fixed message."
+                        }
+                    }
+                },
+                "active": {
+                    "type": "object",
+                    "description": "JavaScript which decides whether the condition is active. Return true to activate. Parameters: object, record, userData, replaceObject",
+                    "properties": {
+                        "js": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "inverted": {
+                    "type": "boolean",
+                    "description": "Flips the logic: a success message is created if the condition is met, instead of an error when it is not met."
+                }
+            }
+        },
+        "wizardValueRef": {
+            "type": "object",
+            "description": "Reference to an attribute (attribute) or a text with variables (value).",
+            "properties": {
+                "attribute": {
+                    "type": "string",
+                    "description": "Name of the referenced attribute."
+                },
+                "value": {
+                    "type": "string",
+                    "description": "Text. Variables like ${ATTRIBUTE} are replaced with values of the record."
+                }
+            }
+        },
+        "wizardPrecondition": {
+            "type": "object",
+            "description": "Shows (visible) and/or requires (required) the value, page or section depending on the answer of another value of the same wizard. Configured at a child node of the value node (value), or at the page or section node.",
+            "properties": {
+                "preAttribute": {
+                    "type": "object",
+                    "description": "Identifies the value which is checked (attributeIdent of the value).",
+                    "properties": {
+                        "attribute": {
+                            "type": "string",
+                            "description": "Attribute holding the ident."
+                        },
+                        "value": {
+                            "type": "string",
+                            "description": "Ident as text with variables, e.g. ${valueRecord.ATTRIBUTE}."
+                        }
+                    }
+                },
+                "operator": {
+                    "type": "object",
+                    "description": "Comparison operator. Supported: >, <, >=, <=, =, !=, <>",
+                    "properties": {
+                        "attributes": {
+                            "type": "array",
+                            "description": "Attributes holding the operator. The first attribute with a value is used.",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "value": {
+                    "type": "object",
+                    "description": "Expected value.",
+                    "properties": {
+                        "attributes": {
+                            "type": "array",
+                            "description": "Attributes holding the expected value. The first attribute with a value is used.",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "range": {
+                    "type": "object",
+                    "description": "Range check with two operators and two values.",
+                    "properties": {
+                        "operator": {
+                            "type": "object",
+                            "properties": {
+                                "attribute1": {
+                                    "type": "string"
+                                },
+                                "attribute2": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "value": {
+                            "type": "object",
+                            "properties": {
+                                "attribute1": {
+                                    "type": "string"
+                                },
+                                "attribute2": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "formula": {
+                    "type": "object",
+                    "description": "Formula which has to be fulfilled instead of comparing a single value.",
+                    "properties": {
+                        "attribute": {
+                            "type": "string",
+                            "description": "Attribute holding the formula."
+                        },
+                        "ident": {
+                            "type": "string",
+                            "description": "How to reference other fields of the same wizard. Example: REF${sequence}${fieldType}"
+                        }
+                    }
+                },
+                "visible": {
+                    "type": "object",
+                    "description": "Attribute of the precondition record. If it is set (truthy), the precondition controls the visibility. This is the default mode if neither visible nor required is set.",
+                    "properties": {
+                        "attribute": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": {
+                    "type": "object",
+                    "description": "Attribute of the precondition record. If it is set (truthy), the precondition makes the value required.",
+                    "properties": {
+                        "attribute": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "preInfoText": {
+                    "$ref": "#/definitions/wizardValueRef",
+                    "description": "Info text shown at the checked value if the precondition is fulfilled."
+                },
+                "infoText": {
+                    "$ref": "#/definitions/wizardValueRef",
+                    "description": "Info text shown at the dependent value if the precondition is fulfilled."
+                }
+            }
+        },
+        "wizardCompleteAction": {
+            "type": "object",
+            "description": "Selection of actions that can be chosen when completing the wizard. Configured at a child node, the selected values are written as JSON array to the parent attribute.",
+            "properties": {
+                "label": {
+                    "$ref": "#/definitions/wizardAttributeRef",
+                    "description": "Attribute holding the label of the action."
+                },
+                "value": {
+                    "$ref": "#/definitions/wizardAttributeRef",
+                    "description": "Attribute holding the value of the action."
+                },
+                "parent": {
+                    "$ref": "#/definitions/wizardAttributeRef",
+                    "description": "Attribute of the main record which receives the selected values."
+                }
+            }
+        },
+        "wizardStatusMapping": {
+            "description": "Simple format: attribute value (or array of values). Extended format: configuration object.",
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "value": {
+                            "description": "The attribute value(s) for this status.",
+                            "type": ["string", "array"],
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "readonly": {
+                            "type": "object",
+                            "description": "Restricts editing based on a JavaScript condition (optional).",
+                            "properties": {
+                                "js": {
+                                    "type": "string",
+                                    "description": "JavaScript condition. If true, the wizard is readonly."
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "description": "Message shown when the wizard is readonly."
+                                }
+                            }
+                        },
+                        "changedTo": {
+                            "type": "array",
+                            "description": "Transition buttons to change to another status (optional).",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "label": {
+                                        "type": "string",
+                                        "description": "Label of the transition button."
+                                    },
+                                    "icon": {
+                                        "$ref": "#/definitions/iconClass",
+                                        "description": "Icon of the transition button."
+                                    },
+                                    "value": {
+                                        "type": "string",
+                                        "description": "Target status value to transition to."
+                                    },
+                                    "color": {
+                                        "type": "string",
+                                        "description": "Optional button color. Example: bg-color-green"
+                                    },
+                                    "menuOnContextRecord": {
+                                        "$ref": "#/definitions/menu",
+                                        "description": "Action menu executed on the direct parent record (e.g. the work order the inspection was started from) after the transition was saved successfully. Only executed if the wizard was opened with a parent record path. A failing menu shows an error but does not block the transition."
+                                    }
+                                },
+                                "required": ["value"]
+                            },
+                            "default": []
+                        }
+                    }
+                }
+            ]
+        },
+        "wizard": {
+            "title": "Wizard",
+            "type": "object",
+            "description": "Configures the wizard (guided, page-wise input, e.g. for inspections). 'main' is configured at the root node. 'page', 'section', 'value', 'precondition', 'error', 'warning' and 'completeAction' are configured at child nodes of the root node.",
+            "properties": {
+                "main": {
+                    "type": "object",
+                    "description": "Main information of the wizard. Configured at the root node.",
+                    "properties": {
+                        "allPagesAllowed": {
+                            "type": "boolean",
+                            "description": "Allows to go to another page before finishing the current page. Normally it goes straight from the first page to the last page."
+                        },
+                        "complete": {
+                            "type": "object",
+                            "description": "Defines the behavior when saving and on the summary.",
+                            "properties": {
+                                "save": {
+                                    "type": "object",
+                                    "description": "What happens if the inspection is saved, e.g. changing the status to 'COMPLETE'. Key is the name of the attribute, value the value to be set when saving.",
+                                    "additionalProperties": {
+                                        "type": "string"
+                                    },
+                                    "default": {}
+                                },
+                                "summary": {
+                                    "type": "object",
+                                    "description": "UI of the summary at the end.",
+                                    "properties": {
+                                        "compact": {
+                                            "type": "boolean",
+                                            "description": "If true, the summary only displays the amount of answered, open and failed questions."
+                                        },
+                                        "signature": {
+                                            "type": "object",
+                                            "description": "Shows a signature field in the summary.",
+                                            "properties": {
+                                                "documents": {
+                                                    "type": "string",
+                                                    "description": "Name of the documents entry the signature is stored in."
+                                                }
+                                            }
+                                        },
+                                        "print": {
+                                            "type": "boolean",
+                                            "description": "Shows a print button in the summary."
+                                        },
+                                        "incorrectLabelColor": {
+                                            "type": "string",
+                                            "description": "Color of the incorrect label. Example: color-red"
+                                        },
+                                        "openLabelColor": {
+                                            "type": "string",
+                                            "description": "Color of the open label. Example: color-yellow"
+                                        },
+                                        "toleratedLabelColor": {
+                                            "type": "string",
+                                            "description": "Color of the tolerated label (warnings). Example: color-green"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": {
+                            "$ref": "#/definitions/wizardAttributeRef",
+                            "description": "Shows an attribute as title for the wizard. To change it, change the attribute value."
+                        },
+                        "tooltip": {
+                            "$ref": "#/definitions/wizardTooltip"
+                        },
+                        "autoRefresh": {
+                            "type": "object",
+                            "description": "Refreshes a tree automatically.",
+                            "properties": {
+                                "fetchTree": {
+                                    "type": "string",
+                                    "description": "Tree to refresh."
+                                },
+                                "dateFilterAttribute": {
+                                    "type": "string",
+                                    "description": "Attribute used to filter for new records by date."
+                                },
+                                "interval": {
+                                    "type": "number",
+                                    "description": "Refresh interval."
+                                },
+                                "filter": {
+                                    "type": "array",
+                                    "description": "Filters of the refresh.",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "attribute": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": [
+                                                    "string",
+                                                    "number",
+                                                    "boolean"
+                                                ]
+                                            },
+                                            "operator": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    },
+                                    "default": []
+                                },
+                                "userAttribute": {
+                                    "type": "string",
+                                    "description": "Attribute which is filtered for the current user."
+                                },
+                                "youngerThanMinutes": {
+                                    "type": "number",
+                                    "description": "Only records younger than the given minutes are loaded."
+                                }
+                            }
+                        },
+                        "status": {
+                            "type": "object",
+                            "description": "Status handling of the wizard record.",
+                            "properties": {
+                                "attribute": {
+                                    "type": "string",
+                                    "description": "Name of the attribute which handles the status of the inspection."
+                                },
+                                "mapping": {
+                                    "type": "object",
+                                    "description": "Mapping of the different status values. Each key maps either directly to the attribute value(s) (simple format) or to a configuration object (extended format with additional behavior per status).",
+                                    "properties": {
+                                        "pending": {
+                                            "$ref": "#/definitions/wizardStatusMapping"
+                                        },
+                                        "inProgress": {
+                                            "$ref": "#/definitions/wizardStatusMapping"
+                                        },
+                                        "review": {
+                                            "$ref": "#/definitions/wizardStatusMapping"
+                                        },
+                                        "completed": {
+                                            "$ref": "#/definitions/wizardStatusMapping"
+                                        }
+                                    },
+                                    "additionalProperties": false
+                                },
+                                "historyMenu": {
+                                    "$ref": "#/definitions/menu",
+                                    "description": "An action menu to show the inspection history (optional)."
+                                }
+                            }
+                        }
+                    }
+                },
+                "page": {
+                    "type": "object",
+                    "description": "Information about the page. Configured at a child node of the root node.",
+                    "properties": {
+                        "title": {
+                            "$ref": "#/definitions/wizardAttributeRef",
+                            "description": "Shows the title of the page. To change it, change the attribute value."
+                        },
+                        "description": {
+                            "$ref": "#/definitions/wizardAttributeRef",
+                            "description": "Shows a description of the page."
+                        },
+                        "number": {
+                            "$ref": "#/definitions/wizardAttributeRef",
+                            "description": "Defines the number of the page."
+                        },
+                        "ready": {
+                            "$ref": "#/definitions/wizardAttributeRef",
+                            "description": "Attribute which stores whether the page is ready (completed)."
+                        },
+                        "tooltip": {
+                            "$ref": "#/definitions/wizardTooltip"
+                        },
+                        "precondition": {
+                            "$ref": "#/definitions/wizardPrecondition"
+                        }
+                    }
+                },
+                "section": {
+                    "type": "object",
+                    "description": "Information about the section. Configured at a child node of the root node.",
+                    "properties": {
+                        "label": {
+                            "$ref": "#/definitions/wizardAttributeRef",
+                            "description": "Shows the label of the section. To change it, change the attribute value."
+                        },
+                        "tooltip": {
+                            "$ref": "#/definitions/wizardTooltip"
+                        },
+                        "warnIcon": {
+                            "$ref": "#/definitions/wizardWarnIcon"
+                        },
+                        "number": {
+                            "$ref": "#/definitions/wizardAttributeRef",
+                            "description": "Defines the number of the section. With hidden: true the number is not shown."
+                        },
+                        "image": {
+                            "$ref": "#/definitions/wizardAttributeRef",
+                            "description": "No Maximo standard. Can handle a rich text image (base64 formatted). Displayed between label and the values of the section."
+                        },
+                        "precondition": {
+                            "$ref": "#/definitions/wizardPrecondition"
+                        }
+                    }
+                },
+                "value": {
+                    "type": "object",
+                    "description": "Information about a value (input). Configured at a child node of the root node.",
+                    "properties": {
+                        "attributeIdent": {
+                            "type": "object",
+                            "description": "Needs to be set to identify the value.",
+                            "properties": {
+                                "attribute": {
+                                    "type": "string",
+                                    "description": "Attribute holding the ident."
+                                },
+                                "value": {
+                                    "type": "string",
+                                    "description": "Ident as text with variables, e.g. ${ATTRIBUTE}. Used instead of attribute."
+                                }
+                            }
+                        },
+                        "pageMatch": {
+                            "type": "object",
+                            "description": "Matches the values and the pages. Either a flat key/value pair (page attribute: value with variables, e.g. { \"GROUPID\": \"${INSPQUESTION/GROUPID}\" }) or the mapping form with optional grouping and title.",
+                            "properties": {
+                                "mapping": {
+                                    "type": "object",
+                                    "description": "Key/value pair matching the page attribute to the value. Example: { \"GROUPID\": \"${GROUPID}\" }"
+                                },
+                                "grouping": {
+                                    "type": "object",
+                                    "description": "Groups the values within a page.",
+                                    "properties": {
+                                        "attribute": {
+                                            "type": "string",
+                                            "description": "Attribute of the value record to group by."
+                                        },
+                                        "value": {
+                                            "type": "string",
+                                            "description": "Group as text with variables. Used instead of attribute."
+                                        }
+                                    }
+                                },
+                                "title": {
+                                    "type": "object",
+                                    "description": "Title of the page.",
+                                    "properties": {
+                                        "value": {
+                                            "type": "string",
+                                            "description": "Title as text with variables."
+                                        }
+                                    }
+                                }
+                            },
+                            "default": {
+                                "GROUPID": ""
+                            }
+                        },
+                        "sectionMatch": {
+                            "type": "object",
+                            "description": "Matches the values and the sections. Example: { \"INSPQUESTIONNUM\": \"${INSPQUESTIONNUM}\" }",
+                            "default": {
+                                "INSPQUESTIONNUM": ""
+                            }
+                        },
+                        "value": {
+                            "type": "object",
+                            "description": "Defines which attribute is interpreted as which value type.",
+                            "properties": {
+                                "attributes": {
+                                    "type": "object",
+                                    "description": "Insight can handle String, Decimal, Date and Boolean. The value is the attribute holding the response.",
+                                    "properties": {
+                                        "String": {
+                                            "type": "string"
+                                        },
+                                        "Decimal": {
+                                            "type": "string"
+                                        },
+                                        "Date": {
+                                            "type": "string"
+                                        },
+                                        "Boolean": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "typeValue": {
+                                    "type": "object",
+                                    "description": "For special attributes like time and date. The key is the field type, the value the attribute or an object with date and time attributes.",
+                                    "additionalProperties": {
+                                        "oneOf": [
+                                            {
+                                                "type": "string"
+                                            },
+                                            {
+                                                "type": "object",
+                                                "properties": {
+                                                    "date": {
+                                                        "type": "string"
+                                                    },
+                                                    "time": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "object",
+                            "description": "Type of the value. The assignment in the mapping refers to the different values of the referenced attribute.",
+                            "properties": {
+                                "attribute": {
+                                    "type": "string",
+                                    "description": "Attribute reference."
+                                },
+                                "mapping": {
+                                    "type": "object",
+                                    "description": "Key: Insight type (String, Decimal, Date, Boolean, FileUpload, Signature). Value: value(s) of the referenced attribute.",
+                                    "additionalProperties": {
+                                        "type": ["string", "array"],
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "js": {
+                                    "type": "string",
+                                    "description": "JavaScript for special cases."
+                                }
+                            }
+                        },
+                        "widget": {
+                            "type": "object",
+                            "description": "Widget of the value (see layout > widgets). The assignment in the mapping refers to the different values of the referenced attribute.",
+                            "properties": {
+                                "attribute": {
+                                    "type": "string",
+                                    "description": "Attribute reference."
+                                },
+                                "mapping": {
+                                    "type": "object",
+                                    "description": "Key: widget. Value: value(s) of the referenced attribute.",
+                                    "additionalProperties": {
+                                        "type": ["string", "array"],
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "js": {
+                                    "type": "string",
+                                    "description": "JavaScript for special cases."
+                                }
+                            }
+                        },
+                        "required": {
+                            "$ref": "#/definitions/wizardAttributeRef",
+                            "description": "Defines if a value is required."
+                        },
+                        "readonly": {
+                            "type": "object",
+                            "description": "Makes the value readonly depending on a JavaScript condition. Example: return record.properties.formulaAttribute ? true : false;",
+                            "properties": {
+                                "js": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "withoutValue": {
+                            "type": "object",
+                            "description": "JavaScript condition. If true, the value is displayed without an input (e.g. only a text). Also makes the value readonly.",
+                            "properties": {
+                                "js": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "label": {
+                            "type": "object",
+                            "description": "Label of the value.",
+                            "properties": {
+                                "attribute": {
+                                    "type": "string",
+                                    "description": "Attribute reference."
+                                },
+                                "additional": {
+                                    "type": "array",
+                                    "description": "Additional information such as meter name, meter type or meter description.",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "js": {
+                                    "type": "string",
+                                    "description": "JavaScript to modify the label. The label is injected as parameter."
+                                }
+                            }
+                        },
+                        "suffix": {
+                            "type": "object",
+                            "description": "Suffix shown behind the value, e.g. the unit.",
+                            "properties": {
+                                "attributes": {
+                                    "type": "array",
+                                    "description": "Attributes holding the suffix. The first attribute with a value is used.",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        },
+                        "tooltip": {
+                            "$ref": "#/definitions/wizardTooltip"
+                        },
+                        "labelBeside": {
+                            "type": "object",
+                            "description": "If true, the label is displayed inline next to the input.",
+                            "properties": {
+                                "attribute": {
+                                    "type": "string",
+                                    "description": "Attribute reference."
+                                },
+                                "enabled": {
+                                    "type": ["string", "array"],
+                                    "description": "If a string matches the value of the attribute, the label is switched automatically.",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "labelWidth": {
+                                    "type": "string",
+                                    "description": "Width of the label, reduces the input. By default the label is 30%. Example: 70%"
+                                }
+                            }
+                        },
+                        "labelWithoutOpacity": {
+                            "type": "object",
+                            "description": "If true, the label is displayed in the text color without opacity.",
+                            "properties": {
+                                "attribute": {
+                                    "type": "string",
+                                    "description": "Attribute reference."
+                                },
+                                "enabled": {
+                                    "type": ["string", "array"],
+                                    "description": "If a string matches the value of the attribute, the label is switched automatically.",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        },
+                        "warnIcon": {
+                            "$ref": "#/definitions/wizardWarnIcon"
+                        },
+                        "multiValue": {
+                            "type": "object",
+                            "description": "Enables/disables the multiselection of values.",
+                            "properties": {
+                                "attribute": {
+                                    "type": "string",
+                                    "description": "Attribute reference."
+                                },
+                                "enabled": {
+                                    "type": ["string", "array"],
+                                    "description": "Enables the multiselection if a string matches the value of the attribute.",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        },
+                        "actionIcon": {
+                            "type": "object",
+                            "description": "Shows an icon next to the label. It triggers a menu action if clicked.",
+                            "properties": {
+                                "icon": {
+                                    "$ref": "#/definitions/iconClass"
+                                },
+                                "menus": {
+                                    "type": "array",
+                                    "description": "Menus to be executed.",
+                                    "items": {
+                                        "$ref": "#/definitions/menu"
+                                    },
+                                    "default": []
+                                },
+                                "js": {
+                                    "type": "string",
+                                    "description": "Makes it possible to switch between two or more menus, e.g. executeMenu(0);"
+                                },
+                                "visible": {
+                                    "type": "object",
+                                    "description": "Like menu visible.",
+                                    "properties": {
+                                        "js": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "options": {
+                            "type": "object",
+                            "description": "Options of the values (e.g. for single or multiple selection).",
+                            "properties": {
+                                "hint": {
+                                    "type": "string",
+                                    "description": "Source of the options: \"<child node name>;<attribute name>\". Used together with enabledType."
+                                },
+                                "enabledType": {
+                                    "type": "string",
+                                    "description": "Field type for which hint is used."
+                                },
+                                "attribute": {
+                                    "type": "string",
+                                    "description": "Attribute whose value selects the mapping entry. By default the field type of the value is used."
+                                },
+                                "mapping": {
+                                    "type": "object",
+                                    "description": "Key: field type (or value of the attribute). Value: where the options come from and how they are displayed.",
+                                    "additionalProperties": {
+                                        "type": "object",
+                                        "properties": {
+                                            "hint": {
+                                                "type": "string",
+                                                "description": "Source of the options: \"<child node name>;<attribute name>\". Variables like ${MAXDOMAIN/DOMAINTYPE} are replaced. Example: INSPFIELDOPTION;DESCRIPTION"
+                                            },
+                                            "info": {
+                                                "type": "string",
+                                                "description": "Attribute of the option record with additional information."
+                                            },
+                                            "color": {
+                                                "type": "string",
+                                                "description": "Attribute of the option record with the color of the option."
+                                            },
+                                            "sort": {
+                                                "type": "object",
+                                                "description": "Sorting of the options.",
+                                                "properties": {
+                                                    "by": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "label",
+                                                            "value",
+                                                            "id"
+                                                        ],
+                                                        "description": "Sort by label, value or id of the option."
+                                                    },
+                                                    "parseInt": {
+                                                        "type": "boolean",
+                                                        "description": "Interprets the sort key as integer."
+                                                    },
+                                                    "desc": {
+                                                        "type": "boolean",
+                                                        "description": "Sorts descending."
+                                                    }
+                                                }
+                                            },
+                                            "hideSignalColor": {
+                                                "type": "boolean",
+                                                "description": "Hides the signal color of the options."
+                                            },
+                                            "override": {
+                                                "type": "object",
+                                                "description": "Overrides the settings for single options. The key is the option value.",
+                                                "additionalProperties": {
+                                                    "type": "object"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "selectFromTree": {
+                            "$ref": "#/definitions/selectFromTreeConfig",
+                            "description": "Selection of the value from another tree. Like selectFromTree of an attribute, additionally with enabledAttribute (attribute of the value record, which activates the selection if it is set) and enabledType (field type, for which the selection is activated)."
+                        },
+                        "barcode": {
+                            "$ref": "#/definitions/wizardAttributeRef",
+                            "description": "Attribute which defines the barcode configuration."
+                        },
+                        "image": {
+                            "$ref": "#/definitions/wizardAttributeRef",
+                            "description": "No Maximo standard. Can handle a rich text image (base64 formatted). Displayed between label and the values of the section."
+                        },
+                        "formula": {
+                            "type": "object",
+                            "description": "Mathematical formula. The resulting value is written to the attribute value. Operators: + - * /, functions: SUM(), MIN(), MAX(), AVG(). Date and time values can only be subtracted.",
+                            "properties": {
+                                "attribute": {
+                                    "type": "string",
+                                    "description": "Attribute from which the formula is retrieved. Example: REF1SE + MIN(1, 5)"
+                                },
+                                "ident": {
+                                    "type": "string",
+                                    "description": "How to reference other fields of the same wizard. Must not contain special characters, a reference cannot start with a number. Example: REF${sequence}${fieldType}"
+                                }
+                            }
+                        }
+                    }
+                },
+                "precondition": {
+                    "$ref": "#/definitions/wizardPrecondition"
+                },
+                "error": {
+                    "type": "array",
+                    "description": "Error conditions. A value is invalid as long as it does not pass the condition, which blocks saving the current record.",
+                    "items": {
+                        "$ref": "#/definitions/wizardCondition"
+                    },
+                    "default": []
+                },
+                "warning": {
+                    "type": "array",
+                    "description": "Warning conditions. Like error conditions, but do not block saving.",
+                    "items": {
+                        "$ref": "#/definitions/wizardCondition"
+                    },
+                    "default": []
+                },
+                "completeAction": {
+                    "$ref": "#/definitions/wizardCompleteAction"
+                }
+            },
+            "additionalProperties": false
         }
     }
 }
