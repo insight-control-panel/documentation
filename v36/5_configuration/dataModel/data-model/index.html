@@ -14797,6 +14797,11 @@ o <code>false</code> --&gt; field is enabled</p>
   the search attribute, so it is visible to the user and can be changed or removed again. All other
   (non-<code>showInSearch</code>) entries keep the previous behavior and are silently appended to the search
   request in the background.</li>
+<li>If the selected tree uses <code>rootMode: search</code> (see <a href="../../layout/layout/">layout</a>), background filters
+  alone do not trigger an initial search. An initial search can still be triggered by <code>searchString</code>
+  or a filter with <code>showInSearch: true</code>. Background filters remain applied to subsequent searches.
+  For backend searches, clearing all search criteria clears the results without triggering another
+  request based only on background filters.</li>
 </ul>
 <table>
 <thead>
@@ -14831,6 +14836,11 @@ o <code>false</code> --&gt; field is enabled</p>
 <td><code>search</code></td>
 <td>object</td>
 <td>Search name to use when selecting. The search must be defined in the given <code>tree</code>. See: <a href="../../definedSearches/defined-searches/">searches</a>.</td>
+</tr>
+<tr>
+<td><code>searchString</code></td>
+<td>string</td>
+<td>Initial search text. Starts a search when the dialog opens, including with <code>rootMode: search</code>. When <code>selectFromTree</code> is an array, it can be configured separately for each tab.</td>
 </tr>
 <tr>
 <td><code>autofill</code></td>

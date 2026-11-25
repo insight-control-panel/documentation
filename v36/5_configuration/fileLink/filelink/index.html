@@ -7490,10 +7490,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#url" class="md-nav__link">
+  <a href="#file-link" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        URL
+        File Link
       </span>
     </span>
   </a>
@@ -7501,26 +7501,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nodereference" class="md-nav__link">
+  <a href="#thumbnail" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        NodeReference
+        Thumbnail
       </span>
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#list-preview" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        List Preview
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="List Preview">
+    <nav class="md-nav" aria-label="Thumbnail">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -7528,6 +7517,62 @@
     <span class="md-ellipsis">
       <span class="md-typeset">
         Style
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thumbnail-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Thumbnail Cache
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Thumbnail Cache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Configuration
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Download
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Download">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Risks
       </span>
     </span>
   </a>
@@ -10274,10 +10319,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#url" class="md-nav__link">
+  <a href="#file-link" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        URL
+        File Link
       </span>
     </span>
   </a>
@@ -10285,26 +10330,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nodereference" class="md-nav__link">
+  <a href="#thumbnail" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        NodeReference
+        Thumbnail
       </span>
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#list-preview" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        List Preview
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="List Preview">
+    <nav class="md-nav" aria-label="Thumbnail">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -10312,6 +10346,62 @@
     <span class="md-ellipsis">
       <span class="md-typeset">
         Style
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thumbnail-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Thumbnail Cache
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Thumbnail Cache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Configuration
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Download
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Download">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Risks
       </span>
     </span>
   </a>
@@ -10339,44 +10429,64 @@
                   
 
 <h1 id="filelink">FileLink<a class="headerlink" href="#filelink" title="Permanent link">&para;</a></h1>
-<p>Using <code>fileLink</code>, a file can be linked to the record. The file can be retrieved via a URL or a node reference indicating the node that contains the file data. The deposited files can also be downloaded or shown on the records list item.</p>
-<h2 id="url">URL<a class="headerlink" href="#url" title="Permanent link">&para;</a></h2>
+<p><code>fileLink</code> links files to a record. The file itself is never part of the record, it is always retrieved from the server via a URL. The configuration is used for two different purposes:</p>
+<table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th>Typical properties</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#file-link">Attach a file to a record</a></td>
+<td><code>url</code>, <code>fileName</code></td>
+<td>Documents, e.g. a <code>DOCLINKS</code> meta record</td>
+</tr>
+<tr>
+<td><a href="#thumbnail">Show a thumbnail</a></td>
+<td><code>url</code>, <code>on</code>, <code>existsAttribute</code></td>
+<td>Business records with an image, e.g. an item/asset</td>
+</tr>
+</tbody>
+</table>
+<p>Additionally, files can be stored offline with the <a href="#download">download</a> option. Read the <a href="#risks">risks</a> before using it.</p>
+<h2 id="file-link">File Link<a class="headerlink" href="#file-link" title="Permanent link">&para;</a></h2>
+<p>Use <code>fileLink</code> on a document meta record (for example <code>DOCLINKS</code>) to assign the file to the record. The meta record contains the information needed to build the URL and the file name. The file is opened, viewed or edited using this configuration.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">"root"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"fileLink"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"insight/document/${DOCLINKSID}"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${filename}"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><code>url</code>: URL to retrieve the file from the server. Variables of the record can be used, see <a href="../../workingWithVariables/variables-values/">variables/values</a>.</li>
+<li><code>fileName</code>: To store the file with a correct file name. This property is optional and only must be set if the url does not contain a file name with extension.</li>
+</ul>
+<p>More information about documents: <a href="../../filesAndPhotos/documents/">Documents</a>.</p>
+<h2 id="thumbnail">Thumbnail<a class="headerlink" href="#thumbnail" title="Permanent link">&para;</a></h2>
+<p>A thumbnail assigns a small image to a business record. It is shown in the root list, child list and search results and optionally in the popup of a record on the map.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">"root"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">"fileLink"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"insight/document/insight/${identifier}"</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${filename}"</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">"download"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">"showInList"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"on"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"list"</span><span class="p">,</span><span class="w"> </span><span class="s2">"map"</span><span class="p">],</span>
 <span class="w">        </span><span class="nt">"existsAttribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"identifier"</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <ul>
-<li><code>url</code>: to retrieve the file.</li>
-<li><code>fileName</code>: to store the file with a correct filename. This property is optional and only must be set if the url does not contain a file name with extension.</li>
-<li><code>download</code>: Boolean, to download the files when the common download is performed. (<a href="../../offline_dataSynch/offline/#download-strategy">Download configuration</a>) The max file count per config is 100 files. The defalut value can be overridden in the <a href="../../client-configuration/general/#maxDocuments">Client-Configuration</a>.</li>
-<li><code>showInList</code>: Optional value which if set to true will show the file in the list and search results. If not set file is not shown.</li>
-<li><code>existsAttribute</code>: Optional attribute which defines if the image exists and is therefore shown on the list. If not set file is always shown.</li>
+<li><code>url</code>: URL to retrieve the image from the server. Use an image quality suitable for thumbnails, see <a href="../../../6_operating-manual/usingImages/image-quality/">Image quality</a>.</li>
+<li><code>on</code>: List of views in which the image is shown: <code>list</code> (root list, child list and search results) and <code>map</code> (popup of a record on the map). If not set, no image is shown. <code>on</code> replaces the former property <code>showInList</code>.</li>
+<li><code>existsAttribute</code>: Optional attribute which defines if an image exists. If the value of the attribute is <code>undefined</code>, <code>null</code>, <code>0</code> or an empty string, no request is sent and the placeholder is shown. If not set, the image is always requested.</li>
 </ul>
-<h2 id="nodereference">NodeReference<a class="headerlink" href="#nodereference" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="nt">"root"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">"fileLink"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">"nodeReference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${targetNode}"</span>
-<span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">"showInList"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">"existsAttribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IMGLIBID"</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<ul>
-<li><code>nodeReference</code>: to provide the node name containing the file data. This can be used for building the path to the file (e.g. to build the path to a thumbnail image).</li>
-</ul>
-<h2 id="list-preview">List Preview<a class="headerlink" href="#list-preview" title="Permanent link">&para;</a></h2>
-<p>If <code>showInList</code> is set to <code>true</code> the image is shown in the root list, child list and search results. The <code>existsAttribute</code> can be used to define an attribute which defines if the image is shown. If the value of the attribute is <code>undefined</code>, <code>null</code>, <code>0</code> or an empty string the image is not shown.</p>
+<details class="tip" open="open">
+<summary>Avoid unnecessary requests</summary>
+<p>Always set <code>existsAttribute</code> if not every record has an image. Otherwise the client requests an image for every visible list item, which fails for records without an image.</p>
+</details>
 <h3 id="style">Style<a class="headerlink" href="#style" title="Permanent link">&para;</a></h3>
-<p>A list item can contain a thumbnail image.
-To change the default style of the image, the following classes can be used:</p>
+<p>To change the default style of the image, the following classes can be used:</p>
 <ul>
 <li><code>item-image</code> on the list item when it has an image. This class is also set when the <code>existsAttribute</code> returns false.</li>
 <li><code>item-image-placeholder</code> on the placeholder image which is shown while the image is loading or no image exists.</li>
@@ -10404,6 +10514,67 @@ To change the default style of the image, the following classes can be used:</p>
 <span class="p">}</span>
 </code></pre></div>
 <p>The variables are explained <a href="../../customize/customize/#imageplaceholder-image-in-list">here</a>.</p>
+<h3 id="thumbnail-cache">Thumbnail Cache<a class="headerlink" href="#thumbnail-cache" title="Permanent link">&para;</a></h3>
+<p>The thumbnail cache stores thumbnails on the device once they were loaded. When the same thumbnail is needed again (scrolling, searching, reopening a list), it is shown from the cache instead of requesting it from the server again. This saves network traffic, speeds up lists and makes already loaded thumbnails available offline.</p>
+<ul>
+<li>Only thumbnails which were displayed are cached. They are not downloaded in advance and are independent of the <a href="#download">download</a>.</li>
+<li>The cache size is limited. If the limit is exceeded, the least recently used thumbnails are removed.</li>
+<li>Cached thumbnails are <strong>not updated</strong> automatically. If an image changes on the server but the URL stays the same, the old image is still shown. To force a reload, the URL must change, e.g. by adding a change date of the record: <code>insight/thumbnail?REFOBJECT=ITEM&amp;REFOBJECTID=${ITEMID}&amp;IMGLIBID=${imglib/IMGLIBID}</code>.</li>
+<li>The cache is removed when all local data of the client is removed.</li>
+</ul>
+<h4 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h4>
+<p>The cache is <strong>enabled by default</strong> and works without any configuration. The defaults can optionally be adjusted, or the cache can be turned off, in the <a href="../../client-configuration/general/#thumbnailCache">Client Configuration</a> (<code>config.json</code>). All parameters are optional.</p>
+<ul>
+<li><code>maxEntries</code>: Maximum number of cached thumbnails. Default: <code>10000</code>.</li>
+<li><code>cleanupInterval</code>: Interval in minutes how often the number of entries is checked. Default: <code>30</code>.</li>
+<li><code>disabled</code>: Set to <code>true</code> to turn the cache off. All thumbnails are then always requested from the server. Default: <code>false</code>.</li>
+</ul>
+<p>Example with adjusted values:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"thumbnailCache"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"maxEntries"</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"cleanupInterval"</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Example to turn the cache off:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"thumbnailCache"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"disabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="download">Download<a class="headerlink" href="#download" title="Permanent link">&para;</a></h2>
+<p>With <code>download</code> the files of a <code>fileLink</code> are stored on the device when the common download is performed (<a href="../../offline_dataSynch/offline/#download-strategy">Download configuration</a>). They are then also available offline.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">"root"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"fileLink"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"insight/document/${DOCLINKSID}"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${filename}"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"download"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><code>download</code>: Boolean, to download the files when the common download is performed. Default: <code>false</code>.</li>
+</ul>
+<p>The maximum file count per config is 100 files. The default value can be overridden in the <a href="../../client-configuration/general/#maxDocuments">Client-Configuration</a>.</p>
+<h3 id="risks">Risks<a class="headerlink" href="#risks" title="Permanent link">&para;</a></h3>
+<details class="warning" open="open">
+<summary>Downloading files can produce very large amounts of data</summary>
+<p>Files are usually much larger than the data records. The download can quickly become the most expensive part of a download.</p>
+<ul>
+<li><strong>Storage:</strong> All files are stored on the device. Many or large files (photos, PDFs, drawings) can fill up the device storage, which can slow down the device or the app and can even prevent further downloads.</li>
+<li><strong>Network:</strong> All files are transferred on every download of new or changed data. This can load the server and the network and is expensive on mobile data connections.</li>
+<li><strong>Duration:</strong> The download takes considerably longer. The user has to wait, and an interrupted connection can lead to incomplete downloads.</li>
+</ul>
+</details>
+<p>Recommendations:</p>
+<ul>
+<li>Set <code>download</code> only if the files are really needed offline. Thumbnails in lists do <strong>not</strong> need <code>download</code>, use the <a href="#thumbnail-cache">thumbnail cache</a> instead.</li>
+<li>Estimate the data volume: number of records × average file size. Test with realistic data and a realistic network.</li>
+<li>Reduce the file size on the server, see <a href="../../../6_operating-manual/usingImages/image-quality/">Image quality</a>.</li>
+<li>Keep <code>maxDocuments</code> as low as possible. The limit is applied per tree config.</li>
+</ul>
 
 
 
